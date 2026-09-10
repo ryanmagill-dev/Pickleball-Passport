@@ -6,20 +6,11 @@ import { ArrowRight, Calendar, Star } from 'lucide-react';
 /* ─────────────────────── DATA ─────────────────────── */
 
 const routeA = [
-  { month: 'July 2026', price: 3888, label: 'With BK Karunakaran', featured: true, href: '/trips/bangkok-hua-hin/july-16-2026' },
-  { month: 'August 2026', price: 3888, label: null, featured: false, href: null },
-  { month: 'September 2026', price: 3888, label: null, featured: false, href: null },
-  { month: 'October 2026', price: 3888, label: null, featured: false, href: null },
   { month: 'November 2026', price: 3888, label: null, featured: false, href: null },
   { month: 'December 2026', price: 3888, label: null, featured: false, href: null },
 ];
 
 const routeB = [
-  { month: 'July 2026', price: 3888, label: null, special: false, href: null },
-  { month: 'August 2026', price: 3888, label: null, special: false, href: null },
-  { month: 'September 2026', price: 3888, label: null, special: false, href: null },
-  { month: 'October 2026', price: 3888, label: null, special: false, href: null },
-  { month: 'November 2026', price: 5688, label: 'Loy Krathong Festival', special: true, href: '/trips/loy-krathong' },
   { month: 'December 2026', price: 4860, label: 'Peak Season', special: false, href: null },
   { month: 'January 2027', price: 4860, label: 'Phuket Extension available', special: false, href: '/trips/bangkok-chiang-mai/january-14-2027' },
 ];
@@ -107,35 +98,6 @@ export default function CalendarPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {routeB.map((row) => <MonthCard key={row.month} {...row} />)}
-          </div>
-        </div>
-
-        {/* ── Segment Options ── */}
-        <div>
-          <div className="mb-5">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Segment Options</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">Join just Bangkok or just Hua Hin. Available monthly, July through December 2026.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="bg-white rounded-2xl border border-[#B08D55]/10 p-5">
-              <p className="font-serif font-bold text-[#1D2D44] text-lg mb-1">Bangkok Weekend</p>
-              <p className="text-2xl font-bold text-[#1D2D44] mb-1">$1,488 <span className="text-sm font-normal text-[#1D2D44]/40">/person</span></p>
-              <p className="text-xs text-[#1D2D44]/40 mb-4">3 nights · Bangkok riverside hotel · Available July–December</p>
-              <Link href="/trips/bangkok-weekend" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors">
-                View details <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-            <div className="bg-white rounded-2xl border border-[#B08D55]/10 p-5">
-              <p className="font-serif font-bold text-[#1D2D44] text-lg mb-1">Hua Hin Escape</p>
-              <p className="text-2xl font-bold text-[#1D2D44] mb-1">$2,488 <span className="text-sm font-normal text-[#1D2D44]/40">/person</span></p>
-              <p className="text-xs text-[#1D2D44]/40 mb-4">4 nights · Our 5-Star Hua Hin Resort · Available July–December</p>
-              <Link href="/trips/hua-hin-escape" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors">
-                View details <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-          </div>
-          <div className="mt-4 bg-[#1D2D44] rounded-xl px-5 py-4">
-            <p className="text-white/60 text-sm">Bangkok ($1,488) + Hua Hin ($2,488) = <span className="line-through text-white/30">$3,976</span>. The full 9-day trip is <span className="text-[#B08D55] font-bold">$3,888</span> and includes more.</p>
           </div>
         </div>
 

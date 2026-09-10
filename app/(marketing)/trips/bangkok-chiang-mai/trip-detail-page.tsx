@@ -21,11 +21,6 @@ interface Departure {
 }
 
 const departures: Departure[] = [
-  { month: 'July 2026', price: 3888, season: 'Standard Season', status: 'live', note: 'Jul 2–10 confirmed' },
-  { month: 'August 2026', price: 3888, season: 'Standard Season', status: 'open' },
-  { month: 'September 2026', price: 3888, season: 'Standard Season', status: 'open' },
-  { month: 'October 2026', price: 3888, season: 'Standard Season', status: 'open' },
-  { month: 'November 2026', price: 5688, season: 'Loy Krathong Festival', status: 'special', specialHref: '/trips/loy-krathong', note: 'Nov 19–27 confirmed' },
   { month: 'December 2026', price: 4860, season: 'High Season', status: 'open', note: 'Dec 17–25 confirmed' },
   { month: 'January 2027', price: 4860, season: 'High Season', status: 'open', phuket: true, dedicatedHref: '/trips/bangkok-chiang-mai/january-14-2027', note: 'Jan 14–22 confirmed' },
 ];
@@ -109,12 +104,6 @@ export function BangkokChiangMaiPage() {
               <div className="text-3xl font-bold text-[#1D2D44]">$4,860<span className="text-sm font-normal text-[#1D2D44]/40 ml-1">/person</span></div>
             </div>
           </div>
-          <p className="mt-4 text-xs text-[#1D2D44]/40 max-w-xl">
-            For our special Loy Krathong Festival departure (Nov 22–26), see{' '}
-            <Link href="/loy-krathong" className="text-[#B08D55] hover:underline font-medium inline-flex items-center gap-0.5">
-              our dedicated event page <ExternalLink className="w-3 h-3" />
-            </Link>.
-          </p>
         </div>
       </section>
 

@@ -429,52 +429,22 @@ export default function ClinicsPage() {
           <p className="text-[#1D2D44]/60 mb-8">
             A clinic gets you on the court with BK for a day. The trips get you 3–9 days of pickleball, five-star hotels, group dinners, and cultural experiences.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 max-w-sm">
             <Link
-              href="/trips/bangkok-weekend"
-              className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 p-5 hover:border-[#B08D55]/30 hover:shadow-md transition-all group"
-            >
-              <p className="text-xs font-bold tracking-widest uppercase text-[#B08D55] mb-1">3 Nights</p>
-              <p className="font-serif font-bold text-[#1D2D44] text-lg mb-1">Bangkok Weekend</p>
-              <p className="text-[#1D2D44]/50 text-sm mb-3">Bangkok riverside hotel · 2 sessions with BK</p>
-              <p className="font-bold text-[#1D2D44]">$1,488 <span className="text-sm font-normal text-[#1D2D44]/40">/person</span></p>
-              <div className="flex items-center gap-1 mt-3 text-[#B08D55] text-sm font-semibold group-hover:gap-2 transition-all">
-                View details <ArrowRight className="w-4 h-4" />
-              </div>
-            </Link>
-
-            <Link
-              href="/trips/hua-hin-escape"
-              className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 p-5 hover:border-[#B08D55]/30 hover:shadow-md transition-all group"
-            >
-              <p className="text-xs font-bold tracking-widest uppercase text-[#B08D55] mb-1">4 Nights</p>
-              <p className="font-serif font-bold text-[#1D2D44] text-lg mb-1">Hua Hin Escape</p>
-              <p className="text-[#1D2D44]/50 text-sm mb-3">Our 5-Star Hua Hin Resort · 2 sessions with BK</p>
-              <p className="font-bold text-[#1D2D44]">$2,488 <span className="text-sm font-normal text-[#1D2D44]/40">/person</span></p>
-              <div className="flex items-center gap-1 mt-3 text-[#B08D55] text-sm font-semibold group-hover:gap-2 transition-all">
-                View details <ArrowRight className="w-4 h-4" />
-              </div>
-            </Link>
-
-            <Link
-              href="/trips/bangkok-hua-hin/july-16-2026"
+              href="/trips/bangkok-hua-hin"
               className="bg-[#0F1A2A] rounded-2xl border border-[#B08D55]/30 p-5 hover:border-[#B08D55]/60 hover:shadow-md transition-all group"
             >
               <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-[#B08D55] text-white text-xs font-bold mb-2">
                 BEST VALUE
               </div>
               <p className="font-serif font-bold text-white text-lg mb-1">Full 9-Day Trip</p>
-              <p className="text-white/50 text-sm mb-3">Both cities · 4 sessions with BK · 8 nights</p>
+              <p className="text-white/50 text-sm mb-3">Both cities · 8 nights</p>
               <p className="font-bold text-white">$3,888 <span className="text-sm font-normal text-white/40">/person</span></p>
               <div className="flex items-center gap-1 mt-3 text-[#B08D55] text-sm font-semibold group-hover:gap-2 transition-all">
                 View details <ArrowRight className="w-4 h-4" />
               </div>
             </Link>
           </div>
-
-          <p className="text-xs text-[#1D2D44]/40 mt-4 text-center">
-            Bangkok ($1,488) + Hua Hin ($2,488) separately = $3,976. The full 9-day trip is $3,888 and includes more.
-          </p>
         </div>
       </section>
 

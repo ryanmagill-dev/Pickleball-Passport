@@ -1,6 +1,5 @@
 import { HeroSection } from '@/components/marketing/hero-section';
 import { BrandPillars } from '@/components/marketing/brand-pillars';
-import { FeaturedDeparture } from '@/components/marketing/featured-departure';
 import { WhyThailand } from '@/components/marketing/why-thailand';
 import { SafetySection } from '@/components/marketing/safety-section';
 import { ConciergeSection } from '@/components/marketing/concierge-section';
@@ -59,7 +58,6 @@ export default function Home() {
     <>
       <HeroSection />
       <BrandPillars />
-      <FeaturedDeparture />
       <WhyThailand />
       <SafetySection />
       <ConciergeSection />

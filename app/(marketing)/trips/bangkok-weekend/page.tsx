@@ -152,7 +152,7 @@ export default function BangkokWeekendPage() {
               <p className="text-white font-semibold mt-1">The full 9-day trip is <span className="text-[#B08D55] font-bold">$3,888</span>  ·  less money, both cities, more included.</p>
             </div>
             <Link
-              href="/trips/bangkok-hua-hin/july-16-2026"
+              href="/trips/bangkok-hua-hin"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm whitespace-nowrap shrink-0"
             >
               Book Full Trip  ·  $3,888
@@ -286,24 +286,17 @@ export default function BangkokWeekendPage() {
         </div>
       </section>
 
-      {/* ── Upsell to Hua Hin / Full Trip ── */}
+      {/* ── Upsell to Full Trip ── */}
       <section className="py-10 bg-[#0F1A2A]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           <div>
             <p className="text-white/50 text-sm mb-1">Going further?</p>
-            <p className="text-white font-serif font-bold text-xl">Add the Hua Hin Escape  ·  $2,488</p>
-            <p className="text-white/40 text-sm">4 nights at Our 5-Star Hua Hin Resort · 2 more sessions with BK</p>
+            <p className="text-white font-serif font-bold text-xl">The Full 9-Day Trip  ·  $3,888</p>
+            <p className="text-white/40 text-sm">Both cities · Bangkok riverside hotel + Our 5-Star Hua Hin Resort</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Link
-              href="/trips/hua-hin-escape"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
-            >
-              View Hua Hin Escape
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/trips/bangkok-hua-hin/july-16-2026"
+              href="/trips/bangkok-hua-hin"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm"
             >
               Book Full 9-Day Trip  ·  $3,888
