@@ -1,25 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Calendar, Star } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 
 /* ─────────────────────── DATA ─────────────────────── */
 
 const routeA = [
-  { month: 'November 2026', price: 3888, label: null, featured: false, href: null },
-  { month: 'December 2026', price: 3888, label: null, featured: false, href: null },
+  { month: 'November 2026', price: 5500, label: 'Nov 1–9', featured: false, href: '/trips/bangkok-hua-hin' },
+  { month: 'December 2026', price: 5500, label: 'Dec 10–18', featured: false, href: '/trips/bangkok-hua-hin' },
 ];
 
 const routeB = [
-  { month: 'December 2026', price: 4860, label: 'Peak Season', special: false, href: null },
-  { month: 'January 2027', price: 4860, label: 'Phuket Extension available', special: false, href: '/trips/bangkok-chiang-mai/january-14-2027' },
-];
-
-const clinicDates = [
-  { date: 'Fri Jul 17', venue: 'Arise Pickleball, Bangkok', spots: 12 },
-  { date: 'Sat Jul 18', venue: 'Papaya Pickleball, Bangkok', spots: 12 },
-  { date: 'Mon Jul 20', venue: 'Sports Life Hua Hin', spots: 12 },
-  { date: 'Wed Jul 22', venue: 'Sports Life Hua Hin', spots: 12 },
+  { month: 'January 2027', price: 5500, label: 'Phuket Extension available', special: false, href: '/trips/bangkok-chiang-mai/january-14-2027' },
 ];
 
 /* ─────────────────────── MONTH CARD ─────────────────────── */
@@ -83,7 +75,7 @@ export default function CalendarPage() {
         <div>
           <div className="mb-5">
             <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Route A: Bangkok + Hua Hin</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">9 days / 8 nights · Bangkok riverside hotel + Our 5-Star Hua Hin Resort · $3,888/person</p>
+            <p className="text-[#1D2D44]/50 text-sm mt-0.5">9 days / 8 nights · Bangkok riverside hotel + Our 5-Star Hua Hin Resort · $5,500/person</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {routeA.map((row) => <MonthCard key={row.month} {...row} />)}
@@ -101,31 +93,18 @@ export default function CalendarPage() {
           </div>
         </div>
 
-        {/* ── Day Clinics ── */}
+        {/* ── Clinic Week ── */}
         <div>
           <div className="mb-5">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Day Clinics: July 2026</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">Drop-in sessions with BK. $60 per session. No trip required.</p>
+            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Clinic Week Bangkok</h2>
+            <p className="text-[#1D2D44]/50 text-sm mt-0.5">Nov 1–5, 2026. $299 full week, $169 Two-Day Pass. No trip required.</p>
           </div>
-          <div className="space-y-3">
-            {clinicDates.map((c) => (
-              <div key={c.date} className="bg-white rounded-xl border border-[#B08D55]/10 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-[#B08D55]" />
-                    <span className="font-semibold text-[#1D2D44] text-sm">{c.date}</span>
-                  </div>
-                  <span className="text-[#1D2D44]/50 text-sm">{c.venue}</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="text-xs text-[#1D2D44]/40">{c.spots} spots</span>
-                  <Link href="/clinics" className="text-xs font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors">
-                    Book · $60 →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Link
+            href="/clinics"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors"
+          >
+            See Clinic Week <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
 
       </div>
