@@ -14,7 +14,7 @@ export function HeroSection() {
         muted
         loop
         playsInline
-        poster="/images/anantara-hua-hin.jpg"
+        poster="/images/posters/hero-drone-poster.jpg"
         className="absolute inset-0 w-full h-full object-cover object-center"
       >
         <source src="/hero-drone.mp4" type="video/mp4" />

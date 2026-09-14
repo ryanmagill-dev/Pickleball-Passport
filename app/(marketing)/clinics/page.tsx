@@ -2,17 +2,12 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle, X, MapPin, Users, Clock, ArrowRight, QrCode, MessageCircle } from 'lucide-react';
-
-/* ─────────────────────── AVAILABILITY ─────────────────────── */
-
-const TOTAL_SPOTS = 16;
-const SPOTS_REMAINING = 4;
+import { CheckCircle, X, MapPin, Clock, ArrowRight, QrCode, MessageCircle } from 'lucide-react';
 
 /* ─────────────────────── THE WEEK ─────────────────────── */
 
 const weekSchedule = [
-  { day: 'Sun 1 Nov', label: 'Arrivals. No pickleball.' },
+  { day: 'Sun 1 Nov', label: 'Arrivals. Welcome and priming dinner in the evening.' },
   { day: 'Mon 2 Nov', label: "Mindset seminar with Travis, morning." },
   { day: 'Tue 3 Nov', label: 'Coaching and open play, morning.' },
   { day: 'Wed 4 Nov', label: "Mindset seminar with Travis, morning." },
@@ -38,14 +33,6 @@ const notIncluded = [
   'Tours and sightseeing',
 ];
 
-/* ─────────────────────── REVIEWS (placeholder) ─────────────────────── */
-
-const reviews = [
-  { id: '[REVIEW_1]', name: '', location: '', product: '' },
-  { id: '[REVIEW_2]', name: '', location: '', product: '' },
-  { id: '[REVIEW_3]', name: '', location: '', product: '' },
-];
-
 /* ─────────────────────── PAGE ─────────────────────── */
 
 export default function ClinicsPage() {
@@ -59,7 +46,7 @@ export default function ClinicsPage() {
           muted
           loop
           playsInline
-          poster="/images/phuket-sunset.jpg"
+          poster="/images/posters/tpp-aerial-0467-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
           <source src="/tpp-aerial-0467.mp4" type="video/mp4" />
@@ -96,10 +83,6 @@ export default function ClinicsPage() {
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
                   Arise Pickleball courts, Udom Suk
-                </div>
-                <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
-                  <Users className="h-4 w-4 text-[#B08D55]" />
-                  {SPOTS_REMAINING} of {TOTAL_SPOTS} spots open
                 </div>
               </div>
 
@@ -170,7 +153,7 @@ export default function ClinicsPage() {
             ))}
           </div>
           <p className="text-[#1D2D44]/40 text-xs mt-4">
-            All sessions run in the morning. Days can move if Travis&apos;s schedule needs them to.
+            All sessions run in the morning.
           </p>
         </div>
       </section>
@@ -249,21 +232,33 @@ export default function ClinicsPage() {
       <section className="py-12 sm:py-16 bg-white border-t border-[#B08D55]/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-2">
-            Venue
+            Venues
           </h2>
-          <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden mb-8 max-w-lg">
-            <div className="relative h-44">
-              <Image
-                src="/sportlifecourts.png"
-                alt="Arise Pickleball courts, Udom Suk"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 480px"
-              />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8 max-w-3xl">
+            <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
+              <div className="relative h-44 bg-[#0F1A2A] flex items-center justify-center">
+                <span className="text-white/30 font-serif text-lg">Arise Pickleball</span>
+              </div>
+              <div className="p-4">
+                <p className="font-serif font-bold text-[#1D2D44] text-base">Arise Pickleball courts</p>
+                <p className="text-[#1D2D44]/60 text-sm">Udom Suk, Bangkok · Nov 1–5</p>
+              </div>
             </div>
-            <div className="p-4">
-              <p className="font-serif font-bold text-[#1D2D44] text-base">Arise Pickleball courts</p>
-              <p className="text-[#1D2D44]/60 text-sm">Udom Suk, Bangkok</p>
+
+            <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
+              <div className="relative h-44">
+                <Image
+                  src="/sportlifecourts.png"
+                  alt="Sports Life Hua Hin"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 340px"
+                />
+              </div>
+              <div className="p-4">
+                <p className="font-serif font-bold text-[#1D2D44] text-base">Sports Life Hua Hin</p>
+                <p className="text-[#1D2D44]/60 text-sm">Hua Hin · Nov 7–8</p>
+              </div>
             </div>
           </div>
 
@@ -299,24 +294,6 @@ export default function ClinicsPage() {
             </Link>{' '}
             for details.
           </p>
-        </div>
-      </section>
-
-      {/* ── Reviews (placeholder) ── */}
-      <section className="py-12 sm:py-16 bg-white border-t border-[#B08D55]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-8">
-            What Players Say
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <div key={r.id} className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 p-5">
-                <p className="text-[#1D2D44]/40 text-sm italic mb-4">{r.id}</p>
-                <p className="font-serif font-bold text-[#1D2D44] text-sm">{r.name || 'Name'}</p>
-                <p className="text-[#1D2D44]/50 text-xs">{r.location || 'Location'} · {r.product || 'Product'}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

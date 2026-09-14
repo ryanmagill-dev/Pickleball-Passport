@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Apply for Your Transformation Journey | The Pickleball Passport',
-  description: 'Start your pickleball adventure in Thailand. Apply now for exclusive access to premier pickleball trips, wellness, and cultural experiences.',
-  keywords: ['apply', 'pickleball trip', 'wellness application', 'pickleball retreat', 'Thailand travel'],
+  title: 'Apply for The Pickleball Passport | The Pickleball Passport',
+  description: 'Apply for a Pickleball Passport trip to Thailand. Tell us about your trip and our team will follow up with dates, pricing, and next steps.',
+  keywords: ['apply', 'pickleball trip', 'pickleball travel application', 'Thailand pickleball trip'],
   openGraph: {
-    title: 'Apply for Your Transformation Journey | The Pickleball Passport',
-    description: 'Start your wellness transformation in Thailand. Apply now for exclusive access to premier experiences.',
+    title: 'Apply for The Pickleball Passport',
+    description: 'Apply for a Pickleball Passport trip to Thailand. Tell us about your trip and our team will follow up.',
     url: 'https://thepickleballpassport.org/apply',
     siteName: 'The Pickleball Passport',
     images: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         url: '/og-images/apply.jpg',
         width: 1200,
         height: 630,
-        alt: 'Apply for The Pickleball Passport - Begin Your Journey',
+        alt: 'Apply for The Pickleball Passport',
       },
     ],
     locale: 'en_US',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Apply for Your Transformation Journey | The Pickleball Passport',
-    description: 'Start your wellness transformation in Thailand. Apply now for exclusive access to premier experiences.',
+    title: 'Apply for The Pickleball Passport',
+    description: 'Apply for a Pickleball Passport trip to Thailand. Tell us about your trip and our team will follow up.',
     images: ['/og-images/apply.jpg'],
     site: '@PickleballPass',
     creator: '@PickleballPass',

@@ -38,7 +38,7 @@ export function NewsletterPage() {
           muted
           loop
           playsInline
-          poster="/images/bangkok-skyline.jpg"
+          poster="/images/posters/tpp-aerial-0450-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
           <source src="/tpp-aerial-0450.mp4" type="video/mp4" />
