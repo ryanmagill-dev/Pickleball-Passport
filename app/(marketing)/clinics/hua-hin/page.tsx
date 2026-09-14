@@ -65,15 +65,13 @@ export default function ClinicsHuaHinPage() {
 
           {GATE_STATUS === 'open' && (
             <>
-              <a
-                href="https://wa.me/15125648522?text=Hi%2C%20I%27m%20interested%20in%20the%20Two-Day%20Pass%2C%20Hua%20Hin%2C%20November%207%20to%208."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
               >
                 Reserve your spot · $169
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
               <p className="text-white/50 text-xs mt-3 max-w-md">
                 This weekend runs with ten players or more. If we don&apos;t get there by November 1, everyone booked is refunded in full.
               </p>
@@ -82,15 +80,13 @@ export default function ClinicsHuaHinPage() {
 
           {GATE_STATUS === 'confirmed' && (
             <>
-              <a
-                href="https://wa.me/15125648522?text=Hi%2C%20I%27m%20interested%20in%20the%20Two-Day%20Pass%2C%20Hua%20Hin%2C%20November%207%20to%208."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
               >
                 Reserve your spot · $169
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
               <p className="text-white/50 text-xs mt-3">Confirmed and running.</p>
             </>
           )}
@@ -98,12 +94,12 @@ export default function ClinicsHuaHinPage() {
           {GATE_STATUS === 'closed' && (
             <>
               <p className="text-white text-lg font-semibold mb-3">Not running this November.</p>
-              <a
-                href="mailto:hello@thepickleballpassport.org?subject=Join%20the%20list%20-%20Hua%20Hin%20Two-Day%20Pass"
+              <Link
+                href="/notify"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
               >
                 Join the list
-              </a>
+              </Link>
             </>
           )}
         </div>
@@ -158,15 +154,13 @@ export default function ClinicsHuaHinPage() {
       {/* ── Contact ── */}
       <section className="py-10 bg-white border-t border-[#B08D55]/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <a
-            href="https://wa.me/15125648522"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#25D366] text-white font-semibold text-sm hover:bg-[#1ebe5a] transition-colors"
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#1D2D44] text-white font-semibold text-sm hover:bg-[#1D2D44]/80 transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
-            Questions? Message us on WhatsApp
-          </a>
+            Questions? Contact us
+          </Link>
         </div>
       </section>
 

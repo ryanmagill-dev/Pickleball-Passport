@@ -213,12 +213,12 @@ export function TripsListingPage() {
             <p className="text-[#1D2D44]/60 text-sm leading-relaxed">
               Route A and Route B run on a rolling schedule through 2027. Bangkok with Hua Hin year-round, or Bangkok with Chiang Mai or Phuket depending on the season. New dates are announced as they confirm.
             </p>
-            <a
-              href="mailto:hello@thepickleballpassport.org"
+            <Link
+              href="/notify"
               className="inline-flex items-center gap-1.5 mt-3 text-sm font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors"
             >
               Get notified <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

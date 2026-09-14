@@ -147,15 +147,13 @@ export function BangkokChiangMaiPage() {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 ) : (
-                  <a
-                    href="https://wa.me/15125648522"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/contact"
                     className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg border border-[#B08D55]/30 text-[#B08D55] text-xs font-semibold hover:bg-[#B08D55]/5 transition-colors"
                   >
-                    I'm interested
+                    I&apos;m interested
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}

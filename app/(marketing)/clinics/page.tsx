@@ -104,15 +104,13 @@ export default function ClinicsPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="https://wa.me/15125648522?text=Hi%2C%20I%27m%20interested%20in%20Clinic%20Week%20Bangkok%2C%20November%201%20to%205."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
                 >
                   Reserve your spot · $299
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
                 <a
                   href="#two-day-pass"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
@@ -287,15 +285,13 @@ export default function ClinicsPage() {
           <p className="text-[#1D2D44]/70 text-base leading-relaxed mb-6">
             Can&apos;t do the full week? $169 gets you two sessions, one mindset seminar with Travis and one coaching and open play block. Bangkok on November 4 and 5, or Hua Hin on the 7th and 8th. Pick your city when you book.
           </p>
-          <a
-            href="https://wa.me/15125648522?text=Hi%2C%20I%27m%20interested%20in%20the%20Two-Day%20Pass."
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
           >
             Two-Day Pass · $169
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
           <p className="text-[#1D2D44]/40 text-xs mt-3">
             Hua Hin runs only with ten or more players by November 1. See the{' '}
             <Link href="/clinics/hua-hin" className="text-[#B08D55] hover:underline font-medium">

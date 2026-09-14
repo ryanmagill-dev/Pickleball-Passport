@@ -19,6 +19,19 @@ interface Partner {
 
 const partners: Partner[] = [
   {
+    name: 'Bharat "BK" Karunakaran',
+    credentialLine: 'Bharat "BK" Karunakaran · BK Pickleball · Pro Player & Content Creator',
+    category: 'Pro Player & Content Creator',
+    bio: 'Bharat "BK" Karunakaran is a Professional Pickleball Player and Content Creator based in Orlando, and a featured guest coach on TPP departures. Originally from Chennai, India, BK came up in tennis and badminton from age five, studied Sport Management at NC State, and spent three years with the USTA as National Coordinator of Junior Programs before going full-time pickleball pro in 2024. A Level 1 PPR Certified Pro with a 5.5 DUPR, BK has tournament wins over Anna Bright, Parris Todd, and multiple Top 100 PPA pros. Find him at @bk_pickleball.',
+    siteUrl: 'https://www.bk-pickleball.com',
+    siteName: 'bk-pickleball.com',
+    imageSrc: '/bk-karunakaran.jpeg',
+    imageType: 'photo',
+    imagePlaceholder: 'BK',
+    logoSrc: '/bk-logo.png',
+    logoDark: true,
+  },
+  {
     name: 'Travis Rhea',
     credentialLine: 'Travis Rhea · Mind Your Pickle · Pickleball Coach & Mental Performance Specialist',
     category: 'Coach & Mental Performance Specialist',
