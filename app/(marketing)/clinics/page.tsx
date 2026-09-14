@@ -2,58 +2,48 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle, MapPin, Users, Clock, Calendar, ArrowRight, QrCode, MessageCircle } from 'lucide-react';
+import { CheckCircle, X, MapPin, Users, Clock, ArrowRight, QrCode, MessageCircle } from 'lucide-react';
 
-/* ─────────────────────── VENUES ─────────────────────── */
+/* ─────────────────────── AVAILABILITY ─────────────────────── */
 
-const TOTAL_SPOTS = 12;
+const TOTAL_SPOTS = 16;
+const SPOTS_REMAINING = 4;
 
-const venues = [
-  {
-    name: 'Arise Pickleball',
-    subtitle: 'Bangkok 5-Star Riverside Hotel',
-    courts: '3 courts',
-    capacity: '12 spots per session',
-    note: 'Small-group coaching at a five-star hotel.',
-    image: '/images/sterling-pickleball.jpg',
-    logo: false,
-  },
-  {
-    name: 'Papaya Pickleball',
-    subtitle: 'Bangkok',
-    courts: 'Multiple courts',
-    capacity: '12 spots per session',
-    note: 'Coaching clinic in the heart of Bangkok.',
-    image: '/papayalogo.png',
-    logo: true,
-  },
-  {
-    name: 'Sports Life Hua Hin',
-    subtitle: "Hua Hin's biggest facility",
-    courts: '13 courts (8 new)',
-    capacity: '12 spots per session',
-    note: "Right in the expat hub. Thailand's best pickleball setup.",
-    image: '/sportlifecourts.png',
-    logo: false,
-  },
-];
+/* ─────────────────────── THE WEEK ─────────────────────── */
 
-/* ─────────────────────── JULY DATES ─────────────────────── */
-
-const julyDates = [
-  { date: 'Fri Jul 17', venue: 'Arise Pickleball, Bangkok', spotsLeft: 8, link: 'https://link.fastpaydirect.com/payment-link/6a1e819203b17c94f571411a' },
-  { date: 'Sat Jul 18', venue: 'Papaya Pickleball, Bangkok', spotsLeft: 8, link: 'https://link.fastpaydirect.com/payment-link/6a1e80d403b17c94f5714119' },
-  { date: 'Mon Jul 20', venue: 'Sports Life Hua Hin', spotsLeft: 8, link: 'https://link.fastpaydirect.com/payment-link/6a1e81c003b17c94f571411b' },
-  { date: 'Wed Jul 22', venue: 'Sports Life Hua Hin', spotsLeft: 8, link: 'https://link.fastpaydirect.com/payment-link/6a48fe4da655fa0b802a2af4' },
+const weekSchedule = [
+  { day: 'Sun 1 Nov', label: 'Arrivals. No pickleball.' },
+  { day: 'Mon 2 Nov', label: "Mindset seminar with Travis, morning." },
+  { day: 'Tue 3 Nov', label: 'Coaching and open play, morning.' },
+  { day: 'Wed 4 Nov', label: "Mindset seminar with Travis, morning." },
+  { day: 'Thu 5 Nov', label: 'Final session. Round robin, group photo, awards.' },
 ];
 
 /* ─────────────────────── WHAT'S INCLUDED ─────────────────────── */
 
 const included = [
-  '2 hours coaching: technique, strategy, and game sense',
-  'Structured drills and match play',
-  '1 hour open play alongside BK',
-  'Water and refreshments',
+  'Two mindset seminars with Coach Travis Rhea',
+  'Coaching and open play with Jaron',
+  'All court time, balls, water, setup',
+  'Group WhatsApp thread for the week',
+  'Our Bangkok list',
+  'Photos and video afterwards',
+];
+
+const notIncluded = [
+  'Accommodation',
+  'Flights, visas, insurance',
+  'Transport to and from the courts',
+  'Meals',
+  'Tours and sightseeing',
+];
+
+/* ─────────────────────── REVIEWS (placeholder) ─────────────────────── */
+
+const reviews = [
+  { id: '[REVIEW_1]', name: '', location: '', product: '' },
+  { id: '[REVIEW_2]', name: '', location: '', product: '' },
+  { id: '[REVIEW_3]', name: '', location: '', product: '' },
 ];
 
 /* ─────────────────────── PAGE ─────────────────────── */
@@ -89,55 +79,55 @@ export default function ClinicsPage() {
             {/* Left — copy */}
             <div>
               <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-3">
-                Day Clinics · Bangkok & Hua Hin
+                Clinic Week · Bangkok
               </p>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-                Drop-In Pickleball<br className="hidden sm:block" /> Clinics with BK
+                Four mornings.<br className="hidden sm:block" /> One week. Just the pickleball.
               </h1>
               <p className="text-xl text-white mb-8 max-w-2xl">
-                9 AM – 12 PM. 2 hours of coaching with a PPR Certified Pro, then 1 hour of open play. $60 USD · 12 spots per session.
+                Coach Travis Rhea on mindset. Jaron on court. Four mornings in Bangkok, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10">
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <Clock className="h-4 w-4 text-[#B08D55]" />
-                  9 AM – 12 PM
+                  Nov 1–5, 2026
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
-                  Bangkok &amp; Hua Hin
+                  Arise Pickleball courts, Udom Suk
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <Users className="h-4 w-4 text-[#B08D55]" />
-                  12 spots per session
+                  {SPOTS_REMAINING} of {TOTAL_SPOTS} spots open
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="#dates"
+                  href="https://wa.me/15125648522?text=Hi%2C%20I%27m%20interested%20in%20Clinic%20Week%20Bangkok%2C%20November%201%20to%205."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
                 >
-                  See July Dates
+                  Reserve your spot · $299
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://wa.me/15125648522"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#two-day-pass"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
                 >
-                  Have Questions? Message Us
+                  Two-Day Pass · $169
                 </a>
               </div>
             </div>
 
-            {/* Right — BK action photo */}
+            {/* Right — Coach Travis Rhea */}
             <div className="relative hidden lg:block">
               <div className="relative h-[480px] rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/bk1.jpg"
-                  alt="BK Karunakaran pickleball coaching"
+                  src="/travis-rhea.jpg"
+                  alt="Coach Travis Rhea, Mind Your Pickle"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 0px, 500px"
@@ -145,26 +135,102 @@ export default function ClinicsPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F1A2A]/60 via-transparent to-transparent" />
               </div>
-              <p className="mt-2 text-xs text-white/30 text-center">Bharat "BK" Karunakaran · PPR Certified Pro Coach</p>
+              <p className="mt-2 text-xs text-white/30 text-center">Coach Travis Rhea · Mind Your Pickle</p>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* ── What's Included ── */}
+      {/* ── What this is ── */}
       <section className="py-12 sm:py-16 bg-white border-b border-[#B08D55]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-[#1D2D44]/75 text-base leading-relaxed">
+          <p>
+            Most pickleball travel makes you buy the whole thing. Hotel, transport, guide, itinerary, whether you wanted it or not.
+          </p>
+          <p>
+            Clinic Week is the opposite. Just the pickleball, priced to match. You book your own room, you get yourself to the courts, and your afternoons are your own.
+          </p>
+          <p>
+            Sixteen players. Four courts. Nobody hides at the back of a drill line.
+          </p>
+        </div>
+      </section>
+
+      {/* ── The week ── */}
+      <section className="py-12 sm:py-16 bg-[#FDF8F3] border-b border-[#B08D55]/10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-6">
-            What You Get
+            The Week
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {included.map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
-                <span className="text-[#1D2D44]/80">{item}</span>
+          <div className="space-y-3">
+            {weekSchedule.map((row) => (
+              <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4">
+                <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
+                <span className="text-[#1D2D44]/70 text-sm">{row.label}</span>
               </div>
             ))}
+          </div>
+          <p className="text-[#1D2D44]/40 text-xs mt-4">
+            All sessions run in the morning. Days can move if Travis&apos;s schedule needs them to.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Coach Travis Rhea ── */}
+      <section className="py-12 sm:py-16 bg-white border-b border-[#B08D55]/10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-8 items-center">
+          <div className="relative h-56 sm:h-64 rounded-2xl overflow-hidden mx-auto sm:mx-0 max-w-xs w-full">
+            <Image
+              src="/travis-rhea.png"
+              alt="Coach Travis Rhea"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 640px) 100vw, 200px"
+            />
+          </div>
+          <div>
+            <div className="relative h-8 w-40 mb-4">
+              <Image
+                src="/Mindyourpickle.jpeg"
+                alt="Mind Your Pickle"
+                fill
+                className="object-contain object-left"
+                sizes="160px"
+              />
+            </div>
+            <h2 className="text-2xl font-serif font-bold text-[#1D2D44] mb-3">Coach Travis Rhea</h2>
+            <p className="text-[#1D2D44]/70 text-base leading-relaxed">
+              Travis built Mind Your Pickle around one idea. The players who win close games aren&apos;t hitting better shots, they&apos;re managing themselves better. He flies in from Arizona for this week.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Included / Not included ── */}
+      <section className="py-12 sm:py-16 bg-[#FDF8F3] border-b border-[#B08D55]/10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 gap-10">
+          <div>
+            <h3 className="font-serif font-bold text-[#1D2D44] text-xl mb-5">Included</h3>
+            <ul className="space-y-3">
+              {included.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle className="w-4 h-4 text-[#B08D55] flex-shrink-0 mt-0.5" />
+                  <span className="text-[#1D2D44]/75 text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-serif font-bold text-[#1D2D44] text-xl mb-5">Not Included</h3>
+            <ul className="space-y-3">
+              {notIncluded.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <X className="w-4 h-4 text-[#1D2D44]/30 flex-shrink-0 mt-0.5" />
+                  <span className="text-[#1D2D44]/50 text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -181,123 +247,79 @@ export default function ClinicsPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
       </section>
 
-      {/* ── Venues ── */}
-      <section className="py-12 sm:py-16 bg-[#FDF8F3]">
+      {/* ── Venue / Getting there ── */}
+      <section className="py-12 sm:py-16 bg-white border-t border-[#B08D55]/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-2">
-            Venues
+            Venue
           </h2>
-          <p className="text-[#1D2D44]/50 text-sm mb-8">
-            Sessions run at three locations. Choose based on the date and city you're in.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {venues.map((v) => (
-              <div key={v.name} className="bg-white rounded-2xl border border-[#B08D55]/10 overflow-hidden shadow-sm">
-                {v.logo ? (
-                  <div className="relative h-44 bg-[#FDF8F3] flex items-center justify-center p-8">
-                    <Image
-                      src={v.image}
-                      alt={v.name}
-                      fill
-                      className="object-contain p-8"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                ) : (
-                  <div className="relative h-44">
-                    <Image
-                      src={v.image}
-                      alt={v.name}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-3 left-4">
-                      <p className="text-white font-serif font-bold text-base leading-tight">{v.name}</p>
-                      <p className="text-white/70 text-xs">{v.subtitle}</p>
-                    </div>
-                  </div>
-                )}
-                <div className="p-4 space-y-2">
-                  {v.logo && (
-                    <p className="font-serif font-bold text-[#1D2D44] text-base leading-tight">{v.name}</p>
-                  )}
-                  <div className="flex items-center gap-2 text-sm text-[#1D2D44]/70">
-                    <MapPin className="w-3.5 h-3.5 text-[#B08D55]" />
-                    {v.courts}
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-[#1D2D44]/70">
-                    <Users className="w-3.5 h-3.5 text-[#B08D55]" />
-                    {v.capacity}
-                  </div>
-                  <p className="text-sm text-[#1D2D44]/60 pt-1">{v.note}</p>
-                </div>
-              </div>
-            ))}
+          <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden mb-8 max-w-lg">
+            <div className="relative h-44">
+              <Image
+                src="/sportlifecourts.png"
+                alt="Arise Pickleball courts, Udom Suk"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 480px"
+              />
+            </div>
+            <div className="p-4">
+              <p className="font-serif font-bold text-[#1D2D44] text-base">Arise Pickleball courts</p>
+              <p className="text-[#1D2D44]/60 text-sm">Udom Suk, Bangkok</p>
+            </div>
+          </div>
+
+          <div className="bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10 p-5 max-w-lg">
+            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-2">Getting There. Not Optional.</p>
+            <p className="text-[#1D2D44]/70 text-sm leading-relaxed">
+              Courts are in Udom Suk. If you&apos;re staying central, budget 30 to 40 minutes by Grab, roughly 150 to 250 baht each way. Easy, but worth knowing before you arrive rather than on the first morning.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── July Dates ── */}
-      <section id="dates" className="py-12 sm:py-16 bg-white border-t border-[#B08D55]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── Two-Day Pass ── */}
+      <section id="two-day-pass" className="py-12 sm:py-16 bg-[#FDF8F3] border-t border-[#B08D55]/10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-2">
-            July 2026 Dates
+            Two-Day Pass
           </h2>
-          <p className="text-[#1D2D44]/50 text-sm mb-8">
-            These sessions run during the July 16–24 BK Karunakaran departure. Join for the day. No trip required.
+          <p className="text-[#1D2D44]/70 text-base leading-relaxed mb-6">
+            Can&apos;t do the full week? $169 gets you two sessions, one mindset seminar with Travis and one coaching and open play block. Bangkok on November 4 and 5, or Hua Hin on the 7th and 8th. Pick your city when you book.
           </p>
+          <a
+            href="https://wa.me/15125648522?text=Hi%2C%20I%27m%20interested%20in%20the%20Two-Day%20Pass."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
+          >
+            Two-Day Pass · $169
+            <ArrowRight className="w-4 h-4" />
+          </a>
+          <p className="text-[#1D2D44]/40 text-xs mt-3">
+            Hua Hin runs only with ten or more players by November 1. See the{' '}
+            <Link href="/clinics/hua-hin" className="text-[#B08D55] hover:underline font-medium">
+              Hua Hin weekend page
+            </Link>{' '}
+            for details.
+          </p>
+        </div>
+      </section>
 
-          <div className="space-y-3 mb-8">
-            {julyDates.map((d) => {
-              const taken = TOTAL_SPOTS - d.spotsLeft;
-              const pct = Math.round((taken / TOTAL_SPOTS) * 100);
-              return (
-                <div
-                  key={d.date}
-                  className="bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10 p-4"
-                >
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-[#B08D55]" />
-                        <span className="font-semibold text-[#1D2D44] text-sm">{d.date}</span>
-                      </div>
-                      <span className="text-[#1D2D44]/60 text-sm">{d.venue}</span>
-                    </div>
-                    <div className="flex flex-col items-end gap-1 self-start sm:self-auto">
-                      <a
-                        href={d.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 rounded-lg bg-[#1D2D44] text-white text-xs font-semibold hover:bg-[#1D2D44]/80 transition-colors whitespace-nowrap"
-                      >
-                        Book · $60 USD
-                      </a>
-                      <span className="text-xs text-[#1D2D44]/40">฿2,000 via PromptPay</span>
-                    </div>
-                  </div>
-                  {/* Availability bar */}
-                  <div className="mt-3">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-semibold text-[#1D2D44]">
-                        {d.spotsLeft} of {TOTAL_SPOTS} spots remaining
-                      </span>
-                      {d.spotsLeft <= 4 && (
-                        <span className="text-xs font-bold text-amber-600">Almost full</span>
-                      )}
-                    </div>
-                    <div className="h-1.5 w-full bg-[#1D2D44]/10 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-[#B08D55] to-[#CFB78D] rounded-full transition-all"
-                        style={{ width: `${Math.max(pct, 4)}%` }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+      {/* ── Reviews (placeholder) ── */}
+      <section className="py-12 sm:py-16 bg-white border-t border-[#B08D55]/10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-8">
+            What Players Say
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {reviews.map((r) => (
+              <div key={r.id} className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 p-5">
+                <p className="text-[#1D2D44]/40 text-sm italic mb-4">{r.id}</p>
+                <p className="font-serif font-bold text-[#1D2D44] text-sm">{r.name || 'Name'}</p>
+                <p className="text-[#1D2D44]/50 text-xs">{r.location || 'Location'} · {r.product || 'Product'}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -317,10 +339,10 @@ export default function ClinicsPage() {
                 PromptPay: No Stripe Fees
               </h3>
               <p className="text-[#1D2D44]/60 text-sm leading-relaxed mb-3">
-                If you're based in Thailand, scan the QR code below to pay via PromptPay, standard Thai bank transfer, zero international fees. Screenshot it and go.
+                If you&apos;re based in Thailand, scan the QR code below to pay via PromptPay, standard Thai bank transfer, zero international fees. Screenshot it and go.
               </p>
               <p className="text-sm font-semibold text-[#1D2D44]">
-                ฿2,000 per session
+                ฿9,700 for the full week · ฿5,500 for the Two-Day Pass
               </p>
             </div>
           </div>
@@ -359,7 +381,7 @@ export default function ClinicsPage() {
                 Chat with Jaron on LINE
               </h3>
               <p className="text-[#1D2D44]/60 text-sm leading-relaxed mb-4">
-                Scan the QR code or tap below to add Jaron on LINE — ask questions, confirm you're on the list for a specific clinic day, or just say hi before you send a PromptPay payment.
+                Scan the QR code or tap below to add Jaron on LINE — ask questions, confirm your spot, or just say hi before you send a PromptPay payment.
               </p>
               <a
                 href="https://line.me/ti/p/-PkfPC68L8"
@@ -392,7 +414,7 @@ export default function ClinicsPage() {
                 Chat with Jaron on WhatsApp
               </h3>
               <p className="text-[#1D2D44]/60 text-sm leading-relaxed mb-4">
-                Scan the QR code or tap below to add Jaron on WhatsApp — ask questions, confirm you're on the list for a specific clinic day, or just say hi before you send a PromptPay payment.
+                Scan the QR code or tap below to add Jaron on WhatsApp — ask questions, confirm your spot, or just say hi before you send a PromptPay payment.
               </p>
               <a
                 href="https://wa.me/qr/GELZNRU2267RE1"
@@ -408,43 +430,15 @@ export default function ClinicsPage() {
         </div>
       </section>
 
-      {/* ── Social photo ── */}
-      <section className="relative h-64 sm:h-80 overflow-hidden">
-        <Image
-          src="/images/bk2.jpg"
-          alt="BK Karunakaran in action"
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-      </section>
-
-      {/* ── Upsell to full experience ── */}
-      <section className="py-12 sm:py-16 bg-white border-t border-[#B08D55]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-serif font-bold text-[#1D2D44] mb-2">
-            Want the full experience?
-          </h2>
-          <p className="text-[#1D2D44]/60 mb-8">
-            A clinic gets you on the court with BK for a day. The trips get you 3–9 days of pickleball, five-star hotels, group dinners, and cultural experiences.
+      {/* ── Trip link ── */}
+      <section className="py-10 bg-white border-t border-[#B08D55]/10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-[#1D2D44]/60 text-sm">
+            Want the whole thing? We also run a{' '}
+            <Link href="/trips" className="text-[#B08D55] hover:underline font-medium">
+              9-day, 8-night trip
+            </Link>.
           </p>
-          <div className="grid grid-cols-1 max-w-sm">
-            <Link
-              href="/trips/bangkok-hua-hin"
-              className="bg-[#0F1A2A] rounded-2xl border border-[#B08D55]/30 p-5 hover:border-[#B08D55]/60 hover:shadow-md transition-all group"
-            >
-              <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-[#B08D55] text-white text-xs font-bold mb-2">
-                BEST VALUE
-              </div>
-              <p className="font-serif font-bold text-white text-lg mb-1">Full 9-Day Trip</p>
-              <p className="text-white/50 text-sm mb-3">Both cities · 8 nights</p>
-              <p className="font-bold text-white">$3,888 <span className="text-sm font-normal text-white/40">/person</span></p>
-              <div className="flex items-center gap-1 mt-3 text-[#B08D55] text-sm font-semibold group-hover:gap-2 transition-all">
-                View details <ArrowRight className="w-4 h-4" />
-              </div>
-            </Link>
-          </div>
         </div>
       </section>
 
