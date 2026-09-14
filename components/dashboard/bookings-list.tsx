@@ -163,8 +163,8 @@ export function BookingsList({ bookings }: BookingsListProps) {
               }
             </p>
             {statusFilter === 'ALL' && (
-              <Link href="/packages">
-                <Button>Browse Packages</Button>
+              <Link href="/trips">
+                <Button>Browse Trips</Button>
               </Link>
             )}
           </CardContent>

@@ -325,25 +325,16 @@ export default function FAQPage() {
             Explore More
           </h2>
           <p className="text-[#1D2D44]/70 mb-8 max-w-2xl mx-auto">
-            Learn more about our transformation packages and how we can help you.
+            Learn more about our trips and how we can help you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/how-it-works">
-              <Button
-                size="lg"
-                className="bg-[#1D2D44] hover:bg-[#002B42] text-white px-10 py-7 text-lg rounded-xl font-semibold"
-              >
-                How It Works
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/packages">
+            <Link href="/trips">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-[#1D2D44] text-[#1D2D44] hover:bg-[#1D2D44] hover:text-white px-10 py-7 text-lg rounded-xl font-semibold"
               >
-                View Packages
+                View Trips
               </Button>
             </Link>
           </div>

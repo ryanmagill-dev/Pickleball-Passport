@@ -153,8 +153,8 @@ export function PurchaserGiftsList({ gifts }: PurchaserGiftsListProps) {
           <p className="text-sm text-muted-foreground mb-4">
             You haven&apos;t purchased any gifts yet. Gift a transformation trip to someone special!
           </p>
-          <Link href="/packages">
-            <Button>Browse Packages</Button>
+          <Link href="/trips">
+            <Button>Browse Trips</Button>
           </Link>
         </CardContent>
       </Card>

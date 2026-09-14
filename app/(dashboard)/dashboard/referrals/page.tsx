@@ -140,9 +140,9 @@ export default function GuestReferralsPage() {
                 )}
               </Button>
             ) : (
-              <Link href="/packages">
+              <Link href="/trips">
                 <Button size="lg">
-                  Browse Packages
+                  Browse Trips
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>

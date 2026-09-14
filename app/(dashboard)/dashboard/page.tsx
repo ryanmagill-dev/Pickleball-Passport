@@ -137,8 +137,8 @@ export default async function DashboardPage() {
               <p className="text-sm text-muted-foreground mb-4">
                 Ready to start your transformation journey?
               </p>
-              <Link href="/packages">
-                <Button>Browse Packages</Button>
+              <Link href="/trips">
+                <Button>Browse Trips</Button>
               </Link>
             </CardContent>
           </Card>

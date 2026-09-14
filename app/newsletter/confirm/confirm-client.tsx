@@ -131,15 +131,14 @@ export default function ConfirmClient({ token }: ConfirmClientProps) {
         </h1>
         <p className="text-gray-600 mb-6">{message}</p>
         <p className="text-sm text-gray-500 mb-6">
-          You'll start receiving our newsletter with exclusive offers, wellness
-          tips, and pickleball adventures.
+          You'll start receiving our newsletter with trip updates and pickleball news.
         </p>
         <div className="space-y-3">
           <a
-            href="/packages"
+            href="/trips"
             className="block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition"
           >
-            Explore Packages
+            Explore Trips
           </a>
           <a
             href="/"
