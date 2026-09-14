@@ -9,8 +9,8 @@ import { TripSectionContentHuaHin } from '@/components/trips/trip-section-conten
 /* ─────────────────────── DEPARTURE DATA ─────────────────────── */
 
 const departures = [
-  { month: 'November 2026', price: 3888, href: null, confirmed: false },
-  { month: 'December 2026', price: 3888, href: null, confirmed: false },
+  { month: 'November 1–9, 2026', price: 5500, href: null, confirmed: true },
+  { month: 'December 10–18, 2026', price: 5500, href: null, confirmed: true },
 ];
 
 export function BangkokHuaHinPage() {
@@ -94,7 +94,10 @@ export function BangkokHuaHinPage() {
               2026 Departures
             </h2>
             <p className="text-sm text-[#1D2D44]/50">
-              From $3,888/person, double occupancy. Single supplement $600. Available year-round  ·  including February through April when Chiang Mai trips are paused for smoke season.
+              $5,500/person, double occupancy. Available year-round  ·  including February through April when Chiang Mai trips are paused for smoke season.
+            </p>
+            <p className="text-sm text-[#1D2D44]/50 mt-2">
+              Travelling solo? A private room is $900. Or tell us and we&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.
             </p>
           </div>
 
@@ -146,10 +149,8 @@ export function BangkokHuaHinPage() {
       <TripDetailLayout
         tripName="Bangkok + Hua Hin"
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Hua Hin Beachfront Resort"
-        dates="Multiple 2026 departures"
-        price={3888}
-        hidePaymentPlan={true}
-        fullLink="https://buy.stripe.com/eVq5kD1K33435i5fQN2cg09"
+        dates="Nov 1–9 or Dec 10–18, 2026"
+        price={5500}
         spotsLeft={16}
         totalSpots={16}
         ContentComponent={TripSectionContentHuaHin}

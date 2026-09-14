@@ -8,31 +8,13 @@ import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
 /* ─────────────────────── PHUKET DATA ─────────────────────── */
 
-const phuketOptions = [
-  {
-    hotel: 'Banyan Tree Phuket',
-    tier: 'Luxury',
-    options: [
-      { nights: 3, price: 1988 },
-      { nights: 5, price: 2988 },
-    ],
-  },
-  {
-    hotel: 'Angsana Laguna Phuket',
-    tier: 'Premium',
-    options: [
-      { nights: 3, price: 1488 },
-      { nights: 5, price: null },
-    ],
-  },
-];
-
 const phuketIncludes = [
-  'Hotel accommodation at your chosen property',
-  'Daily breakfast',
-  'Pickleball at Raccoon Pickleball Club',
-  'Private airport transfer (Chiang Mai → Phuket flight not included)',
-  'Trip ends in Phuket. Fly home from HKT.',
+  '3 nights beachfront with daily breakfast',
+  'Domestic flight, Chiang Mai to Phuket',
+  'Private transfers',
+  'Full-day private speedboat charter through Phang Nga Bay, James Bond Island, kayaking and snorkelling',
+  'Welcome and farewell dinners',
+  'Optional pickleball nearby',
 ];
 
 /* ─────────────────────── COMPONENT ─────────────────────── */
@@ -62,7 +44,7 @@ export function January14Page() {
             </p>
 
             <p className="text-white/70 text-base leading-relaxed mb-8 max-w-2xl">
-              The January 14 departure follows the standard Route B format: 9 days across Bangkok and Chiang Mai, with one distinction. This is the only Chiang Mai departure where you can add a Phuket extension and fly home from the beach. Choose 3 or 5 nights at Banyan Tree Phuket or Angsana Laguna Phuket.
+              The January 14 departure follows the standard Route B format: 9 days across Bangkok and Chiang Mai, with one distinction. This is the only Chiang Mai departure where you can add a Phuket extension and fly home from the beach. Three nights at a beachfront resort on Bang Tao Beach.
             </p>
 
             {/* Badges */}
@@ -87,25 +69,20 @@ export function January14Page() {
 
             {/* Price */}
             <div className="mb-8">
-              <span className="text-4xl font-bold text-white">$4,860</span>
+              <span className="text-4xl font-bold text-white">$5,500</span>
               <span className="text-white/50 text-lg ml-2">USD / person</span>
-              <p className="text-white/40 text-xs mt-1">Double occupancy · Single supplement $600</p>
+              <p className="text-white/40 text-xs mt-1">Double occupancy · Private room $1,750</p>
+              <p className="text-white/40 text-xs mt-1">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="#stripe-jan14-4860"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
-              >
-                Reserve Your Spot  ·  $4,860
-                <ArrowRight className="w-4 h-4" />
-              </a>
               <Link
                 href={reserveHref}
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
               >
-                Have Questions? Message Us
+                Apply for The Pickleball Passport
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -128,34 +105,19 @@ export function January14Page() {
               Phuket Extension
             </h2>
             <p className="text-[#1D2D44]/60 text-sm max-w-2xl leading-relaxed">
-              After your 9 days in Bangkok and Chiang Mai, extend into Phuket instead of flying home. Available only on this departure. Trip ends in Phuket  ·  fly home from HKT.
+              After your 9 days in Bangkok and Chiang Mai, extend into Phuket instead of flying home. Available only on this departure. Trip ends in Phuket  ·  fly home from HKT, departing January 25.
             </p>
           </div>
 
-          {/* Hotel options */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
-            {phuketOptions.map((option) => (
-              <div key={option.hotel} className="bg-white rounded-2xl border border-[#B08D55]/10 shadow-sm overflow-hidden">
-                <div className="bg-[#0F1A2A] px-5 py-3">
-                  <span className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55]">{option.tier}</span>
-                  <h3 className="text-base font-serif font-bold text-white mt-0.5">{option.hotel}</h3>
-                </div>
-                <div className="p-5 space-y-3">
-                  {option.options.map((o) => (
-                    <div key={o.nights} className="flex items-center justify-between py-2 border-b border-[#B08D55]/8 last:border-0">
-                      <span className="text-sm text-[#1D2D44]/70">{o.nights} nights / {o.nights + 1} days</span>
-                      {o.price ? (
-                        <span className="text-sm font-bold text-[#1D2D44]">
-                          +${o.price.toLocaleString()}<span className="text-xs font-normal text-[#1D2D44]/40">/person</span>
-                        </span>
-                      ) : (
-                        <span className="text-xs text-[#1D2D44]/40 italic">Pricing on request</span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+          {/* Price */}
+          <div className="bg-white rounded-2xl border border-[#B08D55]/10 shadow-sm p-6 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <p className="font-serif font-bold text-[#1D2D44] text-lg mb-1">3 nights, Bang Tao Beach</p>
+              <p className="text-[#1D2D44]/50 text-sm">Beachfront resort. Private room $450.</p>
+            </div>
+            <div className="text-2xl font-bold text-[#1D2D44] shrink-0">
+              $1,488<span className="text-sm font-normal text-[#1D2D44]/40 ml-1">/person</span>
+            </div>
           </div>
 
           {/* What's included */}
@@ -171,7 +133,7 @@ export function January14Page() {
             </div>
             <div className="mt-5 pt-4 border-t border-[#B08D55]/10">
               <p className="text-xs text-[#1D2D44]/40 leading-relaxed">
-                Chiang Mai → Phuket domestic flight not included. Extension pricing is per person, double occupancy. Single supplement available on request.
+                Extension guests fly home from Phuket, not Chiang Mai. Book your return flight from HKT, departing January 25. Return flight home not included.
               </p>
             </div>
           </div>
@@ -195,10 +157,8 @@ export function January14Page() {
         tripName="Bangkok + Chiang Mai (Jan 14–22)"
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Chiang Mai Riverside Resort"
         dates="Jan 14 – Jan 22, 2027"
-        price={4860}
-        depositLink="https://buy.stripe.com/eVqbJ12O7fQPh0N1ZX2cg06"
-        fullLink="https://buy.stripe.com/eVq5kD1K33435i5fQN2cg09"
-        spotsLeft={8}
+        price={5500}
+        spotsLeft={6}
         totalSpots={16}
         ContentComponent={TripSectionContentChiangMai}
       />

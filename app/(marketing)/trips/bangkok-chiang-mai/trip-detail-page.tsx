@@ -21,8 +21,7 @@ interface Departure {
 }
 
 const departures: Departure[] = [
-  { month: 'December 2026', price: 4860, season: 'High Season', status: 'open', note: 'Dec 17–25 confirmed' },
-  { month: 'January 2027', price: 4860, season: 'High Season', status: 'open', phuket: true, dedicatedHref: '/trips/bangkok-chiang-mai/january-14-2027', note: 'Jan 14–22 confirmed' },
+  { month: 'January 2027', price: 5500, season: 'High Season', status: 'open', phuket: true, dedicatedHref: '/trips/bangkok-chiang-mai/january-14-2027', note: 'Jan 14–22 confirmed' },
 ];
 
 export function BangkokChiangMaiPage() {
@@ -82,28 +81,6 @@ export function BangkokChiangMaiPage() {
               fill="#FDF8F3"
             />
           </svg>
-        </div>
-      </section>
-
-      {/* Seasonal Pricing */}
-      <section className="py-10 sm:py-14 bg-[#FDF8F3] border-b border-[#B08D55]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-6">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44] mb-1">Pricing by Season</h2>
-            <p className="text-sm text-[#1D2D44]/50">All prices per person, double occupancy. Single supplement $600.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
-            <div className="bg-white rounded-2xl border border-[#B08D55]/10 p-5 shadow-sm">
-              <div className="text-xs font-bold tracking-[0.15em] uppercase text-[#1D2D44]/40 mb-1">Standard Season</div>
-              <div className="text-xs text-[#1D2D44]/50 mb-3">May – October</div>
-              <div className="text-3xl font-bold text-[#1D2D44]">$3,888<span className="text-sm font-normal text-[#1D2D44]/40 ml-1">/person</span></div>
-            </div>
-            <div className="bg-white rounded-2xl border border-[#B08D55]/20 p-5 shadow-sm">
-              <div className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-1">High Season</div>
-              <div className="text-xs text-[#1D2D44]/50 mb-3">November – January</div>
-              <div className="text-3xl font-bold text-[#1D2D44]">$4,860<span className="text-sm font-normal text-[#1D2D44]/40 ml-1">/person</span></div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -202,10 +179,8 @@ export function BangkokChiangMaiPage() {
       <TripDetailLayout
         tripName="Bangkok + Chiang Mai"
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Chiang Mai Riverside Resort"
-        dates="Multiple 2026–27 departures"
-        price={3888}
-        depositLink="https://buy.stripe.com/eVqbJ12O7fQPh0N1ZX2cg06"
-        fullLink="https://buy.stripe.com/eVq5kD1K33435i5fQN2cg09"
+        dates="January 14–22, 2027"
+        price={5500}
         spotsLeft={16}
         totalSpots={16}
         ContentComponent={TripSectionContentChiangMai}
