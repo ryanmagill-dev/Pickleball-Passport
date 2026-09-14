@@ -48,7 +48,7 @@ export function HeroSection() {
               asChild
               className="text-lg px-10 py-7 bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#1D2D44] font-bold shadow-xl shadow-[#B08D55]/30 transition-all hover:shadow-2xl hover:shadow-[#B08D55]/40 hover:scale-105 rounded-xl"
             >
-              <Link href="/trips/bangkok-weekend">
+              <Link href="/trips">
                 Plan My Trip
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

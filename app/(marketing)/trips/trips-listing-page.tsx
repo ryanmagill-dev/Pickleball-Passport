@@ -7,22 +7,34 @@ import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
 /* ─────────────────────── PRODUCTS ─────────────────────── */
 
-const products = [
+const trips = [
   {
-    label: 'Day Clinic',
-    price: '$60',
-    duration: '3 hours',
-    description: '2 hours of coaching, then 1 hour of open play with BK. Drop in, no trip required.',
+    label: 'January',
+    dates: 'Jan 14–22, 2027',
+    destination: 'Bangkok + Chiang Mai',
+    price: '$5,500',
+    seatsRemaining: 6,
+    badge: 'FEWEST SEATS LEFT',
+    href: '/trips/bangkok-chiang-mai/january-14-2027',
+    dark: true,
+  },
+  {
+    label: 'November',
+    dates: 'Nov 1–9, 2026',
+    destination: 'Bangkok + Hua Hin',
+    price: '$5,500',
+    seatsRemaining: null,
     badge: null,
-    href: '/clinics',
+    href: '/trips/bangkok-hua-hin',
     dark: false,
   },
   {
-    label: 'Full 9-Day Trip',
-    price: '$3,888',
-    duration: '9 days / 8 nights',
-    description: 'Both cities. Bangkok riverside hotel + Our 5-Star Hua Hin Resort.',
-    badge: 'BEST VALUE',
+    label: 'December',
+    dates: 'Dec 10–18, 2026',
+    destination: 'Bangkok + Hua Hin',
+    price: '$5,500',
+    seatsRemaining: null,
+    badge: null,
     href: '/trips/bangkok-hua-hin',
     dark: false,
   },
@@ -143,58 +155,88 @@ export function TripsListingPage() {
         </div>
       </section>
 
-      {/* ── Products ── */}
+      {/* ── Trips ── */}
       <section className="py-14 sm:py-20 bg-[#FDF8F3]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-1">
-              Choose Your Experience
+              Upcoming Trips
             </h2>
             <p className="text-[#1D2D44]/50 text-sm">
-              Drop-in clinic to full immersion. Bangkok. Hua Hin. Your call.
+              9 days, 8 nights. Coached pickleball, five-star accommodation, a group worth traveling with.
             </p>
-            <p className="text-[#1D2D44]/35 text-xs mt-1">All prices in USD</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
-            {products.map((p) => (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {trips.map((t) => (
               <Link
-                key={p.label}
-                href={p.href}
+                key={t.label}
+                href={t.href}
                 className={`rounded-2xl border p-5 flex flex-col hover:shadow-md transition-all group ${
-                  p.dark
+                  t.dark
                     ? 'bg-[#0F1A2A] border-[#B08D55]/40 hover:border-[#B08D55]/70'
                     : 'bg-white border-[#B08D55]/10 hover:border-[#B08D55]/30'
                 }`}
               >
-                {p.badge && (
+                {t.badge && (
                   <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#B08D55] text-white text-xs font-bold mb-3 self-start">
-                    {p.badge}
+                    {t.badge}
                   </span>
                 )}
-                <p className={`text-xs font-bold tracking-widest uppercase mb-1 ${p.dark ? 'text-[#B08D55]' : 'text-[#B08D55]'}`}>
-                  {p.duration}
+                <p className={`text-xs font-bold tracking-widest uppercase mb-1 text-[#B08D55]`}>
+                  {t.dates}
                 </p>
-                <p className={`font-serif font-bold text-lg mb-2 ${p.dark ? 'text-white' : 'text-[#1D2D44]'}`}>
-                  {p.label}
+                <p className={`font-serif font-bold text-lg mb-1 ${t.dark ? 'text-white' : 'text-[#1D2D44]'}`}>
+                  {t.label}
                 </p>
-                <p className={`text-sm leading-relaxed mb-4 flex-1 ${p.dark ? 'text-white/50' : 'text-[#1D2D44]/50'}`}>
-                  {p.description}
+                <p className={`text-sm mb-4 flex-1 ${t.dark ? 'text-white/50' : 'text-[#1D2D44]/50'}`}>
+                  {t.destination}
                 </p>
+                {t.seatsRemaining !== null && (
+                  <p className={`text-xs font-semibold mb-3 ${t.dark ? 'text-[#B08D55]' : 'text-[#B08D55]'}`}>
+                    {t.seatsRemaining} of 16 seats open
+                  </p>
+                )}
                 <div className="flex items-center justify-between mt-auto">
-                  <span className={`font-bold text-xl ${p.dark ? 'text-white' : 'text-[#1D2D44]'}`}>
-                    {p.price}
+                  <span className={`font-bold text-xl ${t.dark ? 'text-white' : 'text-[#1D2D44]'}`}>
+                    {t.price}
                   </span>
-                  <ArrowRight className={`w-4 h-4 group-hover:translate-x-1 transition-transform ${p.dark ? 'text-[#B08D55]' : 'text-[#B08D55]'}`} />
+                  <span className={`text-xs font-semibold flex items-center gap-1 group-hover:gap-2 transition-all ${t.dark ? 'text-[#B08D55]' : 'text-[#B08D55]'}`}>
+                    Apply <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
                 </div>
               </Link>
             ))}
           </div>
-          <div className="mt-5">
-            <Link
-              href="/trips/calendar"
-              className="text-sm font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors inline-flex items-center gap-1"
+
+          {/* What's next */}
+          <div className="mt-8 bg-white rounded-2xl border border-[#B08D55]/10 p-6 max-w-3xl">
+            <p className="text-[#1D2D44]/60 text-sm leading-relaxed">
+              Route A and Route B run on a rolling schedule through 2027. Bangkok with Hua Hin year-round, or Bangkok with Chiang Mai or Phuket depending on the season. New dates are announced as they confirm.
+            </p>
+            <a
+              href="mailto:hello@thepickleballpassport.org"
+              className="inline-flex items-center gap-1.5 mt-3 text-sm font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors"
             >
-              Full departure calendar <ArrowRight className="w-3.5 h-3.5" />
+              Get notified <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Day Clinics ── */}
+      <section className="py-10 sm:py-14 bg-white border-t border-[#B08D55]/10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#0F1A2A] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+            <div>
+              <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#B08D55] mb-2">Not ready for the full trip?</p>
+              <h2 className="font-serif text-xl sm:text-2xl font-bold text-white mb-1">Clinic Week Bangkok, with Coach Travis Rhea</h2>
+              <p className="text-white/50 text-sm">Just the pickleball. Mind Your Pickle mindset coaching, on court in Bangkok.</p>
+            </div>
+            <Link
+              href="/clinics"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shrink-0 whitespace-nowrap"
+            >
+              See Clinic Week <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
