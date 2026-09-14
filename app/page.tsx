@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Your Personal Pickleball Concierge in Thailand | The Pickleball Passport',
   description:
-    'We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it. Pickleball travel to Thailand from $1,488.',
+    'We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it. Pickleball travel to Thailand from $169.',
   keywords: [
     'pickleball',
     'pickleball travel',

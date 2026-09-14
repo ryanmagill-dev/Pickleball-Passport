@@ -15,7 +15,7 @@ interface BookingModuleMobileProps {
 }
 
 export function BookingModuleMobile({
-  price = 3888,
+  price = 5500,
   depositAmount = 1163,
   depositLink,
   fullLink,
