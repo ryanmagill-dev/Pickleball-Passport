@@ -28,7 +28,7 @@ export default function ClinicsHuaHinPage() {
       <section className="relative overflow-hidden text-white py-16 sm:py-20">
         <div className="relative h-full">
           <Image
-            src="/sportlifecourts.png"
+            src="/images/sports-life-hua-hin.jpg"
             alt="Sports Life Hua Hin"
             fill
             priority

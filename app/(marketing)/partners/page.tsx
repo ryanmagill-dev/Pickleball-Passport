@@ -66,7 +66,7 @@ const partners: Partner[] = [
     bio: 'Sports Life Hua Hin hosts TPP sessions on the coast, including the Two-Day Pass clinic weekend. A dedicated pickleball facility in Hua Hin, built for serious play.',
     siteUrl: '#',
     siteName: 'Sports Life Hua Hin',
-    imageSrc: '/sportlifecourts.png',
+    imageSrc: '/images/sports-life-hua-hin.jpg',
     imageType: 'photo',
     imagePlaceholder: 'Sports Life',
     logoDark: false,

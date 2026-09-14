@@ -248,7 +248,7 @@ export default function ClinicsPage() {
             <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
               <div className="relative h-44">
                 <Image
-                  src="/sportlifecourts.png"
+                  src="/images/sports-life-hua-hin.jpg"
                   alt="Sports Life Hua Hin"
                   fill
                   className="object-cover"
