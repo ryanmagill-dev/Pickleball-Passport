@@ -5,41 +5,6 @@ import { ArrowRight } from 'lucide-react';
 import { ComingSoonCard } from '@/components/trips/coming-soon-card';
 import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
-/* ─────────────────────── PRODUCTS ─────────────────────── */
-
-const trips = [
-  {
-    label: 'January',
-    dates: 'Jan 14–22, 2027',
-    destination: 'Bangkok + Chiang Mai',
-    price: '$5,500',
-    seatsRemaining: 6,
-    badge: 'FEWEST SEATS LEFT',
-    href: '/trips/bangkok-chiang-mai/january-14-2027',
-    dark: true,
-  },
-  {
-    label: 'November',
-    dates: 'Nov 1–9, 2026',
-    destination: 'Bangkok + Hua Hin',
-    price: '$5,500',
-    seatsRemaining: null,
-    badge: null,
-    href: '/trips/bangkok-hua-hin',
-    dark: false,
-  },
-  {
-    label: 'December',
-    dates: 'Dec 10–18, 2026',
-    destination: 'Bangkok + Hua Hin',
-    price: '$5,500',
-    seatsRemaining: null,
-    badge: null,
-    href: '/trips/bangkok-hua-hin',
-    dark: false,
-  },
-];
-
 /* ─────────────────────── COMING SOON ─────────────────────── */
 
 const comingSoonDestinations = [
@@ -122,63 +87,57 @@ export function TripsListingPage() {
         </div>
       </section>
 
-      {/* ── Trips ── */}
+      {/* ── January Trip ── */}
       <section className="py-14 sm:py-20 bg-[#FDF8F3]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-1">
-              Upcoming Trips
+              The January Trip
             </h2>
             <p className="text-[#1D2D44]/50 text-sm">
               9 days, 8 nights. Coached pickleball, five-star accommodation, a group worth traveling with.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {trips.map((t) => (
-              <Link
-                key={t.label}
-                href={t.href}
-                className={`rounded-2xl border p-5 flex flex-col hover:shadow-md transition-all group ${
-                  t.dark
-                    ? 'bg-[#0F1A2A] border-[#B08D55]/40 hover:border-[#B08D55]/70'
-                    : 'bg-white border-[#B08D55]/10 hover:border-[#B08D55]/30'
-                }`}
-              >
-                {t.badge && (
-                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#B08D55] text-white text-xs font-bold mb-3 self-start">
-                    {t.badge}
-                  </span>
-                )}
-                <p className={`text-xs font-bold tracking-widest uppercase mb-1 text-[#B08D55]`}>
-                  {t.dates}
-                </p>
-                <p className={`font-serif font-bold text-lg mb-1 ${t.dark ? 'text-white' : 'text-[#1D2D44]'}`}>
-                  {t.label}
-                </p>
-                <p className={`text-sm mb-4 flex-1 ${t.dark ? 'text-white/50' : 'text-[#1D2D44]/50'}`}>
-                  {t.destination}
-                </p>
-                {t.seatsRemaining !== null && (
-                  <p className={`text-xs font-semibold mb-3 ${t.dark ? 'text-[#B08D55]' : 'text-[#B08D55]'}`}>
-                    {t.seatsRemaining} of 16 seats open
-                  </p>
-                )}
-                <div className="flex items-center justify-between mt-auto">
-                  <span className={`font-bold text-xl ${t.dark ? 'text-white' : 'text-[#1D2D44]'}`}>
-                    {t.price}
-                  </span>
-                  <span className={`text-xs font-semibold flex items-center gap-1 group-hover:gap-2 transition-all ${t.dark ? 'text-[#B08D55]' : 'text-[#B08D55]'}`}>
-                    Apply <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+
+          <Link
+            href="/trips/bangkok-chiang-mai/january-14-2027"
+            className="group relative block rounded-3xl overflow-hidden min-h-[420px] sm:min-h-[500px] shadow-xl shadow-[#1D2D44]/10"
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/images/posters/tpp-aerial-0453b-poster.jpg"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            >
+              <source src="/tpp-aerial-0453b.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10 transition-all group-hover:from-black/90" />
+
+            <div className="relative z-10 h-full flex flex-col justify-end p-8 sm:p-12">
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#B08D55] text-[#0F1A2A] text-xs font-bold mb-4 self-start">
+                6 of 16 seats open
+              </span>
+              <p className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#B08D55] mb-2">
+                Jan 14–22, 2027 · Bangkok + Chiang Mai
+              </p>
+              <h3 className="font-serif text-4xl sm:text-6xl font-bold text-white mb-6">
+                January
+              </h3>
+              <div className="flex items-center justify-between gap-4 flex-wrap">
+                <span className="font-bold text-2xl sm:text-3xl text-white">$5,500</span>
+                <span className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#1D2D44] font-bold text-sm group-hover:gap-3 transition-all">
+                  Apply for The Pickleball Passport <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </div>
+          </Link>
 
           {/* What's next */}
           <div className="mt-8 bg-white rounded-2xl border border-[#B08D55]/10 p-6 max-w-3xl">
             <p className="text-[#1D2D44]/60 text-sm leading-relaxed">
-              Route A and Route B run on a rolling schedule through 2027. Bangkok with Hua Hin year-round, or Bangkok with Chiang Mai or Phuket depending on the season. New dates are announced as they confirm.
+              We&apos;re locking down dates for February, March, and beyond. New trips are announced once dates are confirmed.
             </p>
             <Link
               href="/notify"

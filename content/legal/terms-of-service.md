@@ -1,296 +1,228 @@
 ---
-title: Terms of Service
-lastUpdated: 2026-01-03
-description: Review The Pickleball Passport's terms of service including booking policies, cancellation terms, liability disclaimers, and dispute resolution.
+title: Terms and Conditions
+lastUpdated: 2026-09-15
+description: The Pickleball Passport's terms and conditions covering Clinic Products and Trip Products, including booking, payment, cancellation, insurance, and liability.
 ---
 
-## Acceptance of Terms
+**The Pickleball Passport**
+Last updated: 15 September 2026
 
-By accessing or using the The Pickleball Passport website, mobile applications, or any services provided by The Pickleball Passport ("we," "us," or "our"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Services.
+These terms apply to everything we sell. By booking, you agree to them.
 
-These Terms constitute a legally binding agreement between you and The Pickleball Passport. We reserve the right to modify these Terms at any time. Your continued use of our Services after any changes constitutes acceptance of the modified Terms.
+We sell two different kinds of thing, and the rules differ between them:
 
-## Services Description
+- **Clinic Products** — coaching and court time only. Clinic Week, Two-Day
+  Passes, single sessions. No accommodation, transport or meals.
+- **Trip Products** — multi-day hosted travel including accommodation,
+  transfers, activities and host support. Also covers add-ons such as room
+  supplements and trip extensions.
 
-The Pickleball Passport provides curated group travel experiences that combine pickleball with cultural immersion in Thailand. Our services include:
+---
 
-- **All-Inclusive Packages:** Accommodations, activities, group meals, and local transportation
-- **Travel Coordination:** Airport transfers, domestic flights, travel logistics, and concierge services
-- **Pickleball Experiences:** Court reservations, structured play sessions, coaching, and equipment access
-- **Cultural Excursions:** Temple tours, cooking classes, street food walks, and adventure activities
+## 1. Booking and payment
 
-Our services are provided in partnership with hotels, activity providers, and local travel operators in Thailand. We act as a travel facilitator and coordinator.
+All prices are in US dollars. Payment in full confirms your place. We do not
+hold places before payment clears.
 
-## User Accounts
+Card payments are processed by our payment provider. We don't store your card
+details.
 
-### Account Creation
+If a price is displayed incorrectly due to an error, we'll tell you before
+taking payment and you can cancel without charge.
 
-To book packages or access certain features, you may need to create an account. When creating an account, you agree to:
+---
 
-- Provide accurate, current, and complete information
-- Maintain and update your information as needed
-- Keep your password secure and confidential
-- Accept responsibility for all activities under your account
-- Notify us immediately of any unauthorized access
+## 2. What's included
 
-### Account Termination
+What you get is whatever is listed on the product page at the time you book.
+If it isn't listed, it isn't included.
 
-We reserve the right to suspend or terminate accounts that:
+For **Clinic Products** this means court time, coaching, and the equipment we
+provide on court. Accommodation, flights, visas, transport to and from the
+venue, meals, insurance and everything else is yours to arrange and pay for.
 
-- Violate these Terms
-- Contain false or misleading information
-- Are used for fraudulent purposes
-- Remain inactive for extended periods
+For **Trip Products** the product page sets out the accommodation, transfers,
+activities, meals and sessions included. International airfare, travel
+insurance, visa fees, lunches, alcohol, spa treatments, personal spending and
+gratuities are not included unless stated.
 
-## Booking and Payment
+---
 
-### Package Pricing
+## 3. Cancellation by you
 
-All prices are displayed in US Dollars (USD) unless otherwise specified. Prices include:
+All cancellations must be sent in writing to jaron@thepickleballpassport.org.
+The date we receive your email is the cancellation date.
 
-- Cultural excursions and group activities as specified in the itinerary
-- Accommodation for the duration of your stay
-- Airport transfers and local transportation
-- Pickleball court access and activities
-- Concierge support throughout your trip
+### Clinic Products
 
-Prices do not include:
+- **30 or more days** before your first session — full refund.
+- **Fewer than 30 days** — no refund, but you may transfer your place to
+  another player at no charge. Just tell us who is coming instead.
 
-- International airfare
-- Travel insurance (required)
-- Personal expenses and gratuities
-- Procedures or treatments not specified in your package
-- Visa fees (if applicable)
+### Trip Products
 
-### Deposit Requirements
+- **90 or more days** before departure — full refund less a $500 per person
+  administration fee.
+- **60 to 89 days** — 50% refund.
+- **30 to 59 days** — 25% refund.
+- **Fewer than 30 days** — no refund.
 
-A non-refundable deposit of **25%** of the total package price is required to confirm your booking. This deposit:
+These terms exist because we pay hotels, airlines and local operators in
+advance on your behalf, and those payments are not refundable to us.
 
-- Secures your reservation and trip accommodations
-- Is applied toward the total package price
-- Is non-refundable except as outlined in the Cancellation Policy
-- Must be paid within 7 days of booking confirmation
+### Transfers
 
-### Full Payment Timeline
+You may transfer a Trip Product booking to another person up to 30 days
+before departure at no charge, subject to our approval of the replacement
+guest and any supplier name-change fees, which you pay.
 
-The remaining **75%** of the package price must be paid:
+---
 
-- **30 days before departure** for packages under $10,000
-- **45 days before departure** for packages $10,000 and over
+## 4. Minimum numbers
 
-Failure to complete payment by the deadline may result in cancellation and forfeiture of your deposit.
+Some sessions and departures run only if a minimum number of people book. Where
+that applies, it is stated on the product page along with the date we confirm
+by.
 
-### Payment Methods
+If a session or departure does not reach its minimum, you may either move to
+another available session or date, or take a full refund of the affected
+portion. We are not liable for any travel, accommodation or other costs you
+have incurred.
 
-We accept the following payment methods:
+---
 
-- Credit cards (Visa, Mastercard, American Express)
-- Debit cards
-- Bank transfers (for bookings over $5,000)
+## 5. Changes and cancellation by us
 
-All payments are processed securely through Stripe. Your payment information is encrypted and never stored on our servers.
+We may change hotels, restaurants, activities, venues, coaches, session times
+and running order where availability, weather, safety or circumstances require
+it. We will substitute experiences of comparable quality wherever we can and
+tell you as early as we reasonably can.
 
-## Cancellation and Refunds
+If we cancel a booking for any reason other than force majeure, you receive a
+full refund of what you paid us. That refund is our entire liability. We are
+not responsible for airfare, visa fees, insurance premiums, accommodation or
+any other cost you have incurred.
 
-### Cancellation by Guest
+---
 
-Cancellations must be submitted in writing to support@thepickleballpassport.org. Refunds are calculated as follows:
+## 6. Travel insurance
 
-| Cancellation Timing | Refund Amount |
-|---------------------|---------------|
-| 60+ days before departure | 90% refund (minus deposit) |
-| 30-59 days before departure | 70% refund (minus deposit) |
-| 14-29 days before departure | 50% refund |
-| Under 14 days before departure | Non-refundable |
+For **Trip Products**, comprehensive travel insurance including medical cover,
+emergency evacuation and trip cancellation is a **condition of travelling with
+us**. You must hold a policy before departure and give us the details on
+request. If you travel without insurance you do so entirely at your own risk
+and against our advice.
 
-**Note:** The 25% deposit is non-refundable in all cases except for cancellations due to documented medical emergencies or force majeure events.
+For **Clinic Products** we strongly recommend travel and medical insurance. We
+provide no cover of any kind.
 
-### Cancellation by The Pickleball Passport
+---
 
-We reserve the right to cancel bookings due to:
+## 7. Passports, visas and entry
 
-- Insufficient enrollment for group packages
-- Safety or security concerns at the destination
-- Natural disasters or force majeure events
+Valid travel documents, visas, vaccinations and entry permissions are your
+responsibility. Requirements change and you should check them yourself close
+to travel.
 
-In such cases, guests will receive a **full refund** including the deposit, or the option to reschedule without penalty.
+We are not liable if you are denied boarding, refused entry to Thailand, or
+unable to join any part of what you booked because of documentation. No refund
+is due in those circumstances.
 
-### Refund Processing
+---
 
-- Refunds are processed within **14 business days** of cancellation confirmation
-- Refunds are issued to the original payment method
-- Bank processing times may add 5-10 additional business days
+## 8. Health, fitness and assumption of risk
 
-## Rescheduling
+Pickleball is a physical activity. Our trips involve full days, walking,
+heat, humidity and travel.
 
-### Guest-Initiated Rescheduling
+By booking you confirm that you are fit to take part, and that you will tell
+us in advance of any medical condition, injury, mobility limitation, allergy
+or dietary requirement that affects your participation or our duty of care.
 
-You may request to reschedule your trip under the following terms:
+**You take part in all activities at your own risk.** You are responsible for
+your own health, safety and belongings. We are not medical providers and do
+not supervise your health.
 
-| Request Timing | Fee |
-|----------------|-----|
-| First reschedule (30+ days before departure) | No fee |
-| Subsequent reschedules | $250 administrative fee |
-| Reschedule within 30 days of departure | Subject to availability; may incur additional costs |
+We may decline to let you take part in any activity where we reasonably
+believe it is unsafe for you or for others. No refund is due in that case.
 
-Rescheduled trips must be completed within **12 months** of the original departure date. Failure to complete the trip within this period will result in forfeiture of all payments.
+---
 
-## Travel Responsibilities
+## 9. Conduct
 
-### Travel Documents
+We may remove you from a session, trip or venue without refund if your
+behaviour endangers others, damages property, breaks local law, or makes the
+experience unreasonable for other guests. You are responsible for any damage
+you cause and for getting yourself home.
 
-You are solely responsible for:
+---
 
-- Valid passport (minimum 6 months validity beyond travel dates)
-- Thai tourist visa (if required for your nationality)
-- Any transit visas for connecting flights
-- Health documentation as required by Thai authorities
+## 10. Photography and media
 
-### Travel Insurance
+We photograph and film our sessions and trips, and we use that material in our
+marketing.
 
-**Travel insurance is mandatory** for all guests. Your policy must include:
+By booking you agree that we may use images, video and audio of you for this
+purpose, without payment. If you'd rather we didn't, tell us in writing before
+your first session or departure and we will respect that.
 
-- Medical coverage of at least $100,000
-- Emergency medical evacuation coverage
-- Trip cancellation/interruption coverage
-- Coverage valid for the entire duration of your stay
+---
 
-Proof of insurance must be provided at least 14 days before departure. We reserve the right to cancel bookings without adequate insurance coverage.
+## 11. Force majeure
 
-### Health Requirements
+We are not liable for any failure or delay caused by events beyond our
+reasonable control, including natural disaster, extreme weather, epidemic or
+pandemic, war, terrorism, civil unrest, strikes, government action, border
+closures, airport or airline failure, or supplier insolvency.
 
-You must comply with all health requirements for entry to Thailand, including:
+Where force majeure prevents a booking going ahead, we will refund whatever we
+can recover from our suppliers, less costs we have already incurred and cannot
+recover.
 
-- Required vaccinations (as per current Thai regulations)
-- COVID-19 protocols (if applicable)
-- Health declarations or certifications
-- Quarantine requirements (if any)
+---
 
-## Liability Limitations
+## 12. Liability
 
-### Limitation of Liability
+Nothing in these terms excludes liability that cannot be excluded by law,
+including for death or personal injury caused by our negligence.
 
-To the maximum extent permitted by law, The Pickleball Passport and its officers, directors, employees, and agents shall not be liable for:
+Subject to that, our total liability to you for any claim arising out of your
+booking is limited to the amount you paid us for it. We are not liable for
+indirect or consequential loss, including lost airfare, lost holiday time, or
+loss of enjoyment.
 
-- Personal illness or pre-existing health conditions
-- Personal injury or property damage during your trip
-- Flight delays, cancellations, or travel disruptions
-- Acts of third-party service providers
-- Loss of personal belongings or valuables
-- Consequential, incidental, or punitive damages
+We use independent suppliers — hotels, airlines, transport operators, venues,
+guides and coaches. We select them with care but we do not control them and we
+are not liable for their acts or omissions.
 
-Our total liability for any claim shall not exceed the amount you paid for the specific service giving rise to the claim.
+---
 
-### Assumption of Risk
+## 13. Complaints
 
-By booking with The Pickleball Passport, you acknowledge and accept the inherent risks of:
+Tell us at the time. If something is wrong during a session or trip, raise it
+with your host immediately so we have a chance to fix it. Complaints raised
+only after the event are much harder for us to put right.
 
-- International travel
-- Wellness and recovery activities
-- Participation in physical activities (pickleball, tours)
-- Dietary and environmental changes
+Written complaints go to jaron@thepickleballpassport.org within 28 days.
 
-### Third-Party Services
+---
 
-We are not responsible for the acts or omissions of:
+## 14. Governing law
 
-- Airlines and transportation providers
-- Hotels and accommodation providers
-- Restaurants and entertainment venues
-- Wellness and spa providers
-- Tour operators and activity providers
+These terms are governed by the laws of Thailand, and the courts of Thailand
+have exclusive jurisdiction.
 
-## Indemnification
+---
 
-You agree to indemnify, defend, and hold harmless The Pickleball Passport, its affiliates, and their respective officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from:
+## 15. Changes to these terms
 
-- Your violation of these Terms
-- Your use of our Services
-- Your travel activities
-- False or misleading information you provide
-- Your violation of any third-party rights
+We may update these terms. The version in force is the one published on this
+page on the date you book, so save a copy if you want one.
 
-## Intellectual Property
+---
 
-### Our Content
+## 16. Contact
 
-All content on our website and applications, including text, graphics, logos, images, and software, is the property of The Pickleball Passport or its licensors and is protected by intellectual property laws.
-
-You may not:
-
-- Reproduce, distribute, or modify our content without permission
-- Use our trademarks or branding without authorization
-- Create derivative works from our content
-- Use our content for commercial purposes without license
-
-### User Content
-
-By submitting reviews, photos, or other content, you grant The Pickleball Passport a non-exclusive, royalty-free, worldwide license to use, reproduce, and display such content for marketing and promotional purposes.
-
-## Dispute Resolution
-
-### Informal Resolution
-
-Before initiating formal proceedings, you agree to contact us at support@thepickleballpassport.org to attempt informal resolution. We will endeavor to resolve disputes within 30 days.
-
-### Binding Arbitration
-
-If informal resolution is unsuccessful, disputes shall be resolved through binding arbitration administered by the American Arbitration Association (AAA) under its Consumer Arbitration Rules.
-
-- Arbitration shall be conducted in English
-- The arbitration location shall be [State/City to be determined]
-- The arbitrator's decision shall be final and binding
-- Each party shall bear its own costs
-
-### Class Action Waiver
-
-You agree to resolve disputes individually and waive any right to participate in class action lawsuits or class-wide arbitration.
-
-### Exceptions
-
-The following disputes are exempt from arbitration:
-
-- Small claims court matters
-- Intellectual property disputes
-- Injunctive relief for ongoing harm
-
-## Governing Law
-
-These Terms shall be governed by and construed in accordance with the laws of the State of [State to be determined], United States, without regard to conflict of law principles.
-
-## Severability
-
-If any provision of these Terms is found to be unenforceable, the remaining provisions shall continue in full force and effect. The unenforceable provision shall be modified to the minimum extent necessary to make it enforceable.
-
-## Entire Agreement
-
-These Terms, together with our Privacy Policy and any booking confirmations, constitute the entire agreement between you and The Pickleball Passport regarding your use of our Services. Any prior agreements or communications are superseded.
-
-## Changes to Terms
-
-We may modify these Terms at any time. Changes are effective when posted on our website. For material changes, we will:
-
-- Provide 30 days' notice via email for registered users
-- Display a prominent notice on our website
-- Update the "Last Updated" date at the top of this page
-
-Your continued use of our Services after changes constitutes acceptance of the modified Terms.
-
-## Contact Information
-
-For questions about these Terms of Service, please contact us:
-
-**Email:** support@thepickleballpassport.org
-
-**Mail:**
 The Pickleball Passport
-Legal Department
-[Address to be added]
-
-**Phone:** +1 (512) 564-8522
-
-**Customer Support:** support@thepickleballpassport.org
-
----
-
-*These Terms of Service are provided as a template and should be reviewed by legal counsel before use. The Pickleball Passport recommends consulting with a licensed attorney to ensure compliance with applicable laws and regulations.*
+jaron@thepickleballpassport.org
+www.thepickleballpassport.org

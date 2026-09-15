@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle, X, MapPin, Clock, ArrowRight, QrCode, MessageCircle } from 'lucide-react';
+import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, MessageCircle } from 'lucide-react';
 
 /* ─────────────────────── THE WEEK ─────────────────────── */
 
@@ -14,23 +14,45 @@ const weekSchedule = [
   { day: 'Thu 5 Nov', label: 'Final session. Round robin, group photo, awards.' },
 ];
 
-/* ─────────────────────── WHAT'S INCLUDED ─────────────────────── */
+/* ─────────────────────── PASSES ─────────────────────── */
 
-const included = [
-  'Two mindset seminars with Coach Travis Rhea',
-  'Coaching and open play with Jaron and Ryan',
-  'All court time, balls, water, setup',
-  'Group WhatsApp thread for the week',
-  'Our Bangkok list',
-  'Photos and video afterwards',
-];
-
-const notIncluded = [
-  'Accommodation',
-  'Flights, visas, insurance',
-  'Transport to and from the courts',
-  'Meals',
-  'Tours and sightseeing',
+const passes = [
+  {
+    name: 'Clinic Week',
+    summary: 'All four mornings, Nov 2–5, Arise Pickleball',
+    price: '$299',
+    link: 'https://link.fastpaydirect.com/payment-link/6aa938f6ceb12d9fc1a8cf9b',
+    featured: true,
+    includes: [
+      'Two mindset seminars with Coach Travis Rhea',
+      'Coaching and open play with Jaron and Ryan',
+      'All court time, balls, water, setup',
+    ],
+  },
+  {
+    name: 'Two-Day Pass — Bangkok',
+    summary: 'Any two sessions, Nov 2–5, Arise Pickleball',
+    price: '$169',
+    link: 'https://link.fastpaydirect.com/payment-link/6aa93a4cceb12d9fc1a8cf9d',
+    featured: false,
+    includes: ['Two sessions of your choice', 'All court time, balls, water'],
+  },
+  {
+    name: 'Two-Day Pass — Hua Hin',
+    summary: 'Nov 7–8, Sports Life Hua Hin',
+    price: '$169',
+    link: 'https://link.fastpaydirect.com/payment-link/6aa93ddcceb12d9fc1a8cfa2',
+    featured: false,
+    includes: ['One mindset seminar with Travis', 'One coaching and open play block'],
+  },
+  {
+    name: 'Two-Day Pass — Bangkok + Hua Hin',
+    summary: 'One session in each city',
+    price: '$169',
+    link: 'https://link.fastpaydirect.com/payment-link/6aa93edfceb12d9fc1a8cfa6',
+    featured: false,
+    includes: ['One Bangkok session', 'One Hua Hin session'],
+  },
 ];
 
 /* ─────────────────────── PAGE ─────────────────────── */
@@ -205,44 +227,67 @@ export default function ClinicsPage() {
         </div>
       </section>
 
-      {/* ── Included / Not included ── */}
-      <section className="py-12 sm:py-16 bg-[#FDF8F3] border-b border-[#B08D55]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 gap-10">
-          <div>
-            <h3 className="font-serif font-bold text-[#1D2D44] text-xl mb-5">Included</h3>
-            <ul className="space-y-3">
-              {included.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle className="w-4 h-4 text-[#B08D55] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#1D2D44]/75 text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-serif font-bold text-[#1D2D44] text-xl mb-5">Not Included</h3>
-            <ul className="space-y-3">
-              {notIncluded.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <X className="w-4 h-4 text-[#1D2D44]/30 flex-shrink-0 mt-0.5" />
-                  <span className="text-[#1D2D44]/50 text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+      {/* ── Choose Your Pass ── */}
+      <section id="two-day-pass" className="py-12 sm:py-16 bg-[#FDF8F3] border-b border-[#B08D55]/10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-2">
+            Choose Your Pass
+          </h2>
+          <p className="text-[#1D2D44]/60 text-sm mb-8">
+            Court time, coaching, and equipment. Room, transport, and meals are yours to arrange.
+          </p>
 
-      {/* ── Wat Pho photo strip ── */}
-      <section className="relative h-56 sm:h-72 overflow-hidden">
-        <Image
-          src="/images/jaron-ryan-wat-pho-1.jpg"
-          alt="Jaron and Ryan at Wat Pho, Bangkok"
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {passes.map((pass) => (
+              <a
+                key={pass.name}
+                href={pass.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`rounded-2xl border p-6 flex flex-col hover:shadow-md transition-all group ${
+                  pass.featured
+                    ? 'bg-[#0F1A2A] border-[#B08D55]/40 hover:border-[#B08D55]/70'
+                    : 'bg-white border-[#B08D55]/10 hover:border-[#B08D55]/30'
+                }`}
+              >
+                {pass.featured && (
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#B08D55] text-white text-xs font-bold mb-3 self-start">
+                    BEST VALUE
+                  </span>
+                )}
+                <p className={`font-serif font-bold text-lg mb-1 ${pass.featured ? 'text-white' : 'text-[#1D2D44]'}`}>
+                  {pass.name}
+                </p>
+                <p className={`text-sm mb-4 ${pass.featured ? 'text-white/50' : 'text-[#1D2D44]/50'}`}>
+                  {pass.summary}
+                </p>
+                <ul className="space-y-1.5 mb-5 flex-1">
+                  {pass.includes.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <CheckCircle className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${pass.featured ? 'text-[#B08D55]' : 'text-[#B08D55]'}`} />
+                      <span className={`text-xs ${pass.featured ? 'text-white/70' : 'text-[#1D2D44]/70'}`}>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-center justify-between mt-auto">
+                  <span className={`font-bold text-xl ${pass.featured ? 'text-white' : 'text-[#1D2D44]'}`}>
+                    {pass.price}
+                  </span>
+                  <span className="flex items-center gap-1 text-[#B08D55] font-bold text-sm group-hover:gap-2 transition-all">
+                    Reserve <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <p className="text-[#1D2D44]/40 text-xs mt-6">
+            Not included on any pass: accommodation, flights, visas, insurance, transport, meals. Hua Hin passes run only with ten or more players by November 1 — see the{' '}
+            <Link href="/clinics/hua-hin" className="text-[#B08D55] hover:underline font-medium">
+              Hua Hin weekend page
+            </Link>.
+          </p>
+        </div>
       </section>
 
       {/* ── Venue / Getting there ── */}
@@ -294,73 +339,6 @@ export default function ClinicsPage() {
         </div>
       </section>
 
-      {/* ── Two-Day Pass ── */}
-      <section id="two-day-pass" className="py-12 sm:py-16 bg-[#FDF8F3] border-t border-[#B08D55]/10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-2">
-            Two-Day Pass
-          </h2>
-          <p className="text-[#1D2D44]/70 text-base leading-relaxed mb-8">
-            Can&apos;t do the full week? $169 gets you any two sessions. Choose Bangkok, Hua Hin, or one of each.
-          </p>
-
-          <div className="space-y-4">
-            <a
-              href="https://link.fastpaydirect.com/payment-link/6aa93a4cceb12d9fc1a8cf9d"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-5 hover:border-[#B08D55]/30 hover:shadow-md transition-all group"
-            >
-              <div>
-                <p className="font-serif font-bold text-[#1D2D44]">Bangkok</p>
-                <p className="text-[#1D2D44]/50 text-sm">Two sessions at Arise Pickleball, Nov 2–5</p>
-              </div>
-              <span className="flex items-center gap-2 text-[#B08D55] font-bold text-sm shrink-0">
-                $169 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </a>
-
-            <a
-              href="https://link.fastpaydirect.com/payment-link/6aa93ddcceb12d9fc1a8cfa2"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-5 hover:border-[#B08D55]/30 hover:shadow-md transition-all group"
-            >
-              <div>
-                <p className="font-serif font-bold text-[#1D2D44]">Hua Hin</p>
-                <p className="text-[#1D2D44]/50 text-sm">Two sessions at Sports Life Hua Hin, Nov 7–8</p>
-              </div>
-              <span className="flex items-center gap-2 text-[#B08D55] font-bold text-sm shrink-0">
-                $169 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </a>
-
-            <a
-              href="https://link.fastpaydirect.com/payment-link/6aa93edfceb12d9fc1a8cfa6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-5 hover:border-[#B08D55]/30 hover:shadow-md transition-all group"
-            >
-              <div>
-                <p className="font-serif font-bold text-[#1D2D44]">Bangkok + Hua Hin</p>
-                <p className="text-[#1D2D44]/50 text-sm">One session in each city</p>
-              </div>
-              <span className="flex items-center gap-2 text-[#B08D55] font-bold text-sm shrink-0">
-                $169 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </a>
-          </div>
-
-          <p className="text-[#1D2D44]/40 text-xs mt-6">
-            Hua Hin runs only with ten or more players by November 1. See the{' '}
-            <Link href="/clinics/hua-hin" className="text-[#B08D55] hover:underline font-medium">
-              Hua Hin weekend page
-            </Link>{' '}
-            for details.
-          </p>
-        </div>
-      </section>
-
       {/* ── PromptPay QR (Thailand local payments) ── */}
       <section className="py-12 sm:py-16 bg-[#FDF8F3] border-t border-[#B08D55]/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -399,69 +377,52 @@ export default function ClinicsPage() {
             </p>
           </div>
 
-          {/* ── LINE contact (questions before paying) ── */}
-          <div className="mt-6 bg-white rounded-2xl border border-[#B08D55]/10 p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
-            <div className="relative w-40 h-40 sm:w-44 sm:h-44 flex-shrink-0 overflow-hidden rounded-lg border border-[#B08D55]/10">
-              <Image
-                src="/line-qr-jaron.png"
-                alt="Add Jaron on LINE — QR code"
-                fill
-                className="object-cover"
-                sizes="176px"
-              />
-            </div>
-            <div className="text-center sm:text-left">
-              <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-1">
-                Questions before you pay?
-              </p>
-              <h3 className="font-serif text-xl font-bold text-[#1D2D44] mb-2">
-                Chat with Jaron on LINE
-              </h3>
-              <p className="text-[#1D2D44]/60 text-sm leading-relaxed mb-4">
-                Scan the QR code or tap below to add Jaron on LINE — ask questions, confirm your spot, or just say hi before you send a PromptPay payment.
-              </p>
-              <a
-                href="https://line.me/ti/p/-PkfPC68L8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#06C755] text-white font-semibold text-sm hover:bg-[#05a648] transition-colors"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Add Jaron on LINE
-              </a>
-            </div>
-          </div>
-
-          {/* ── WhatsApp contact (questions before paying) ── */}
-          <div className="mt-6 bg-white rounded-2xl border border-[#B08D55]/10 p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
-            <div className="relative w-40 h-40 sm:w-44 sm:h-44 flex-shrink-0 overflow-hidden rounded-lg border border-[#B08D55]/10">
-              <Image
-                src="/whatsapp-qr-jaron.png"
-                alt="Add Jaron on WhatsApp — QR code"
-                fill
-                className="object-contain bg-[#5CBD6D]"
-                sizes="176px"
-              />
-            </div>
-            <div className="text-center sm:text-left">
-              <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-1">
-                Prefer WhatsApp?
-              </p>
-              <h3 className="font-serif text-xl font-bold text-[#1D2D44] mb-2">
-                Chat with Jaron on WhatsApp
-              </h3>
-              <p className="text-[#1D2D44]/60 text-sm leading-relaxed mb-4">
-                Scan the QR code or tap below to add Jaron on WhatsApp — ask questions, confirm your spot, or just say hi before you send a PromptPay payment.
-              </p>
-              <a
-                href="https://wa.me/qr/GELZNRU2267RE1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#25D366] text-white font-semibold text-sm hover:bg-[#1ebe5a] transition-colors"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Add Jaron on WhatsApp
-              </a>
+          {/* ── LINE + WhatsApp (questions before paying) ── */}
+          <div className="mt-6 bg-white rounded-2xl border border-[#B08D55]/10 p-6 sm:p-8">
+            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-4 text-center sm:text-left">
+              Questions before you pay? Chat with Jaron
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="flex items-center gap-4">
+                <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg border border-[#B08D55]/10">
+                  <Image
+                    src="/line-qr-jaron.png"
+                    alt="Add Jaron on LINE — QR code"
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
+                </div>
+                <a
+                  href="https://line.me/ti/p/-PkfPC68L8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#06C755] text-white font-semibold text-sm hover:bg-[#05a648] transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Add on LINE
+                </a>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg border border-[#B08D55]/10">
+                  <Image
+                    src="/whatsapp-qr-jaron.png"
+                    alt="Add Jaron on WhatsApp — QR code"
+                    fill
+                    className="object-contain bg-[#5CBD6D]"
+                    sizes="80px"
+                  />
+                </div>
+                <a
+                  href="https://wa.me/qr/GELZNRU2267RE1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#25D366] text-white font-semibold text-sm hover:bg-[#1ebe5a] transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Add on WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>
