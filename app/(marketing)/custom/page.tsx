@@ -1,9 +1,13 @@
 'use client';
 
+import { Suspense } from 'react';
 import Script from 'next/script';
 import Link from 'next/link';
+import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
-export default function CustomPage() {
+function CustomContent() {
+  const reserveHref = useReserveHref();
+
   return (
     <main className="min-h-screen bg-[#FDF8F3]">
       {/* Header */}
@@ -44,6 +48,17 @@ export default function CustomPage() {
             />
             <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
           </div>
+          <div className="text-center mt-6">
+            <p className="text-[#1D2D44]/50 text-sm mb-3">
+              Prefer to talk it through first?
+            </p>
+            <Link
+              href={reserveHref}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-[#1D2D44]/20 text-[#1D2D44] font-bold text-sm hover:border-[#1D2D44]/40 transition-all"
+            >
+              Schedule a Call
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -56,5 +71,13 @@ export default function CustomPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+export default function CustomPage() {
+  return (
+    <Suspense>
+      <CustomContent />
+    </Suspense>
   );
 }

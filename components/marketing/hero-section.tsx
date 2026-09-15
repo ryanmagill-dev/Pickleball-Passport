@@ -38,7 +38,7 @@ export function HeroSection() {
 
           {/* Subheadline */}
           <p className="text-lg text-white/80 sm:text-xl max-w-3xl leading-relaxed">
-            Bad courts and avoidable injuries can ruin a trip halfway around the world. We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it.
+            We vet every court and handle every detail, so you just show up and play.
           </p>
 
           {/* CTA Buttons */}

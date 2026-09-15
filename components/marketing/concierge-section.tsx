@@ -3,7 +3,6 @@ import { CheckCircle2 } from 'lucide-react';
 const beforeItems = [
   'Your health background and any physical limitations',
   'Dietary habits and food preferences',
-  'How you like to start your mornings',
   'What you want most from the trip',
   'Your skill level and play style',
 ];
@@ -13,7 +12,6 @@ const afterItems = [
   'Transport arranged from the moment you land',
   'Hotel preferences matched and confirmed',
   'Your health intake reviewed and actioned',
-  'A welcome experience ready when you walk in',
 ];
 
 export function ConciergeSection() {
@@ -34,7 +32,7 @@ export function ConciergeSection() {
           {/* Real story */}
           <div className="bg-[#F5E6D3] rounded-2xl p-7 border border-[#B08D55]/20 mb-14">
             <p className="text-[#1D2D44] text-base leading-relaxed">
-              One Bangkok trip, half the group's partners didn't play. Their wives were on court for three hours. We had Chinatown organized for the morning: river boat to get there, tuk-tuk back, cold beer at a spot that's been there for decades. They didn't want to come back for lunch.
+              On one trip, half the group's partners didn't play. We had Chinatown organized for the morning: river boat there, tuk-tuk back. They didn't want to come back for lunch.
             </p>
             <p className="text-[#B08D55] text-sm font-medium mt-4">
               That's the job: not just the players, everyone.

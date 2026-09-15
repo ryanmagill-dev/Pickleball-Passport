@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
 interface BookingModuleMobileProps {
   tripName?: string;
@@ -23,7 +22,6 @@ export function BookingModuleMobile({
   hidePaymentPlan = false,
 }: BookingModuleMobileProps) {
   const [showPaymentOptions, setShowPaymentOptions] = useState(false);
-  const reserveHref = useReserveHref();
 
   return (
     <>
@@ -46,12 +44,12 @@ export function BookingModuleMobile({
             )}
           </div>
           <div className="flex gap-2 flex-shrink-0">
-            {/* Primary  ·  talk to team */}
+            {/* Primary  ·  apply form */}
             <Link
-              href={reserveHref}
+              href="/apply"
               className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-xs shadow-lg shadow-[#B08D55]/25"
             >
-              Meet Our Team
+              Apply
             </Link>
             {/* Secondary  ·  direct payment */}
             {hidePaymentPlan && fullLink ? (

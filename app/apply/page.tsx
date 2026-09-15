@@ -1,10 +1,14 @@
 'use client';
 
+import { Suspense } from 'react';
 import Script from 'next/script';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
-export default function ApplyPage() {
+function ApplyContent() {
+  const reserveHref = useReserveHref();
+
   return (
     <main className="min-h-screen bg-[#FDF8F3]">
       {/* Header */}
@@ -47,7 +51,7 @@ export default function ApplyPage() {
           </div>
           <div className="text-center mt-6">
             <p className="text-[#1D2D44]/50 text-sm mb-3">
-              Prefer to pay right away? All new departures (November, December, January) are $5,500.
+              Prefer to pay right away? Departures: January 2027, $5,500.
             </p>
             <a
               href="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
@@ -58,6 +62,12 @@ export default function ApplyPage() {
               Reserve Your Spot · $5,500
               <ArrowRight className="w-4 h-4" />
             </a>
+            <p className="text-[#1D2D44]/40 text-xs mt-5">
+              Prefer to talk it through first?{' '}
+              <Link href={reserveHref} className="text-[#B08D55] hover:underline font-medium">
+                Schedule a call
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -71,5 +81,13 @@ export default function ApplyPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+export default function ApplyPage() {
+  return (
+    <Suspense>
+      <ApplyContent />
+    </Suspense>
   );
 }
