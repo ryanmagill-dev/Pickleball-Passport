@@ -8,9 +8,9 @@ import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, MessageCircle } from 'l
 
 const weekSchedule = [
   { day: 'Sun 1 Nov', label: 'Arrivals. Welcome and priming dinner in the evening.' },
-  { day: 'Mon 2 Nov', label: "Mindset seminar with Travis, morning." },
-  { day: 'Tue 3 Nov', label: 'Coaching and open play, morning.' },
-  { day: 'Wed 4 Nov', label: "Mindset seminar with Travis, morning." },
+  { day: 'Mon 2 Nov', label: 'Mindset seminar with Travis.' },
+  { day: 'Tue 3 Nov', label: 'Coaching and open play.' },
+  { day: 'Wed 4 Nov', label: 'Mindset seminar with Travis.' },
   { day: 'Thu 5 Nov', label: 'Final session. Round robin, group photo, awards.' },
 ];
 
@@ -172,9 +172,12 @@ export default function ClinicsPage() {
       {/* ── The week ── */}
       <section className="py-12 sm:py-16 bg-[#FDF8F3] border-b border-[#B08D55]/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-6">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-1">
             The Week
           </h2>
+          <p className="text-[#1D2D44]/50 text-sm mb-6">
+            Arise Pickleball, Udom Suk · Mornings
+          </p>
           <div className="space-y-3">
             {weekSchedule.map((row) => (
               <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4">
@@ -184,7 +187,7 @@ export default function ClinicsPage() {
             ))}
           </div>
           <p className="text-[#1D2D44]/40 text-xs mt-4">
-            All sessions run in the morning.
+            Exact times to be confirmed closer to the week.
           </p>
         </div>
       </section>
