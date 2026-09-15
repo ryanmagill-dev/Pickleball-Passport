@@ -287,6 +287,17 @@ export default function ClinicsPage() {
               Hua Hin weekend page
             </Link>.
           </p>
+          <p className="text-[#1D2D44]/40 text-xs mt-2">
+            Need travel insurance?{' '}
+            <a
+              href="https://www.squaremouth.com/?aid=24050"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#B08D55] hover:underline font-medium"
+            >
+              Compare plans with our partner, Squaremouth
+            </a>.
+          </p>
         </div>
       </section>
 

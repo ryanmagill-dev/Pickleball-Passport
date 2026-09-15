@@ -135,6 +135,19 @@ export default function ClinicsHuaHinPage() {
             </ul>
           </div>
         </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-[#1D2D44]/40 text-xs mt-6">
+            Need travel insurance?{' '}
+            <a
+              href="https://www.squaremouth.com/?aid=24050"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#B08D55] hover:underline font-medium"
+            >
+              Compare plans with our partner, Squaremouth
+            </a>.
+          </p>
+        </div>
       </section>
 
       {/* ── Trip link ── */}

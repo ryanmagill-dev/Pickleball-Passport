@@ -339,6 +339,17 @@ function TripDetailsChiangMai() {
             </div>
           ))}
         </div>
+        <p className="text-sm text-[#1D2D44]/50 mt-4">
+          Need travel insurance?{' '}
+          <a
+            href="https://www.squaremouth.com/?aid=24050"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#B08D55] hover:underline font-medium"
+          >
+            Compare plans with our partner, Squaremouth
+          </a>.
+        </p>
       </div>
     </div>
   );
