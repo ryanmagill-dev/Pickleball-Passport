@@ -236,8 +236,14 @@ export default function ClinicsPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8 max-w-3xl">
             <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
-              <div className="relative h-44 bg-[#0F1A2A] flex items-center justify-center">
-                <span className="text-white/30 font-serif text-lg">Arise Pickleball</span>
+              <div className="relative h-44 bg-white flex items-center justify-center p-8">
+                <Image
+                  src="/Arise-Pickleball-Black-02.png"
+                  alt="Arise Pickleball"
+                  fill
+                  className="object-contain p-8"
+                  sizes="(max-width: 768px) 100vw, 340px"
+                />
               </div>
               <div className="p-4">
                 <p className="font-serif font-bold text-[#1D2D44] text-base">Arise Pickleball courts</p>
