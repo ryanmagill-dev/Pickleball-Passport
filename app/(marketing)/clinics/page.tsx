@@ -14,6 +14,8 @@ const weekSchedule = [
   { day: 'Thu 5 Nov', label: 'Final session. Round robin, group photo, awards.' },
 ];
 
+const huaHinExtension = { day: 'Sat–Sun 7–8 Nov', label: 'Two-Day Pass extension at Sports Life Hua Hin, mornings.' };
+
 /* ─────────────────────── WHAT'S INCLUDED ─────────────────────── */
 
 const included = [
@@ -84,6 +86,13 @@ export default function ClinicsPage() {
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
                   Arise Pickleball courts, Udom Suk
                 </div>
+                <Link
+                  href="/clinics/hua-hin"
+                  className="flex items-center gap-2 bg-[#B08D55]/20 hover:bg-[#B08D55]/30 rounded-full px-4 py-2 text-sm transition-colors"
+                >
+                  <Clock className="h-4 w-4 text-[#B08D55]" />
+                  + Nov 7–8, Sports Life Hua Hin
+                </Link>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -123,6 +132,24 @@ export default function ClinicsPage() {
         </div>
       </section>
 
+      {/* ── Hua Hin extension photo strip ── */}
+      <section className="relative h-48 sm:h-64 overflow-hidden">
+        <Image
+          src="/images/sports-life-hua-hin.jpg"
+          alt="Sports Life Hua Hin"
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-1">Nov 7–8, 2026</p>
+            <p className="font-serif text-xl sm:text-2xl font-bold text-white">Two-Day Pass extension at Sports Life Hua Hin</p>
+          </div>
+        </div>
+      </section>
+
       {/* ── What this is ── */}
       <section className="py-12 sm:py-16 bg-white border-b border-[#B08D55]/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-[#1D2D44]/75 text-base leading-relaxed">
@@ -155,6 +182,17 @@ export default function ClinicsPage() {
           <p className="text-[#1D2D44]/40 text-xs mt-4">
             All sessions run in the morning.
           </p>
+
+          <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mt-8 mb-3">
+            Extending to Hua Hin
+          </p>
+          <Link
+            href="/clinics/hua-hin"
+            className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/30 p-4 hover:border-[#B08D55]/60 transition-colors"
+          >
+            <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{huaHinExtension.day}</span>
+            <span className="text-[#1D2D44]/70 text-sm">{huaHinExtension.label}</span>
+          </Link>
         </div>
       </section>
 

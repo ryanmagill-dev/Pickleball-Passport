@@ -36,30 +36,34 @@ const statItems = [
 ];
 
 const includedItems = [
-  '8 nights at two five-star hotels (Our 5-Star Bangkok riverside hotel + Our 5-Star Chiang Mai Riverside Resort)',
-  'Daily breakfast at both properties (8 breakfasts)',
-  '4-5 group dinners: welcome, farewell, and 2-3 curated group dinners',
-  'Domestic flights Bangkok to Chiang Mai and Chiang Mai to Bangkok',
-  'All private ground transportation (air-con vans, airport transfers)',
-  '4 pickleball sessions with court fees, equipment, and structured programming',
-  'Guided Chinatown street food walk (all tastings included)',
-  'Wat Pho guided temple tour (Reclining Buddha)',
-  'Thai cooking class with market tour (half day)',
-  'Elephant Nature Park visit (ethical, observation-based)',
-  'Hotel wellness amenities: spa, pools, fitness centers',
-  'Dedicated trip host throughout',
-  'Welcome pack with trip essentials',
+  '8 nights accommodation, five-star throughout, with daily breakfast',
+  '4 coached pickleball sessions, 8 to 10 hours',
+  'Domestic flight, Bangkok to Chiang Mai',
+  'All transfers, private dedicated van',
+  '4 curated group dinners',
+  'Sunset long-tail boat cruise in Bangkok',
+  'Guided Wat Pho tour',
+  'Guided Chinatown street food walk',
+  'Wiang Kum Kam bike tour',
+  'Elephant Nature Park',
+  'Chiang Rai day trip',
+  'Dedicated local guide and van',
+  'Trip host support throughout',
+  'Passport membership, member profile, community access, first stamp',
 ];
 
 const extrasItems = [
-  'International airfare to/from Bangkok (BKK)',
-  'Travel and medical insurance',
-  'Michelin dining upgrades (optional group outings to starred restaurants)',
-  'Optional spa treatments beyond hotel amenities',
-  'Alcoholic beverages beyond group dinner inclusions',
-  'Meals on designated free nights',
-  'Personal shopping and souvenirs',
-  'Gratuities for guides, drivers, and hotel staff',
+  'International airfare to and from Bangkok',
+  'Travel insurance',
+  'Visa fees',
+  'Free-night dinners',
+  'Lunches not part of activities',
+  'Alcoholic beverages',
+  'Spa treatments',
+  'Personal shopping',
+  'Single supplement',
+  'Phuket extension',
+  'Return flight from Chiang Mai (CNX)',
 ];
 
 /* ─────────────────────── ITINERARY DATA ─────────────────────── */
@@ -98,7 +102,7 @@ const days: ItineraryDay[] = [
     vibe: 'Land, breathe, bond',
     icon: 'sparkles',
     slots: [
-      { label: 'Highlights', description: 'Land in Bangkok, settle into our hotel, wellness session, welcome dinner on the river.' },
+      { label: 'Highlights', description: 'Land in Bangkok, check in, welcome dinner.' },
     ],
   },
   {
@@ -109,7 +113,7 @@ const days: ItineraryDay[] = [
     vibe: 'Shake off the rust, then cruise the river',
     icon: 'trophy',
     slots: [
-      { label: 'Highlights', description: 'Morning session on court at Bangkok riverside hotel. Afternoon long-tail boat cruise through Bangkok\u2019s canals past the Grand Palace and Wat Arun at sunset. Group dinner on the river.' },
+      { label: 'Highlights', description: 'First pickleball session. Sunset long-tail boat cruise on the Chao Phraya. Riverside group dinner.' },
     ],
   },
   {
@@ -120,7 +124,7 @@ const days: ItineraryDay[] = [
     vibe: 'One temple done right, eat everything, then play',
     icon: 'landmark',
     slots: [
-      { label: 'Highlights', description: 'Guided tour of Wat Pho (Reclining Buddha), street food walk through Chinatown, afternoon pickleball session at Bangkok riverside hotel. Free evening to explore.' },
+      { label: 'Highlights', description: 'Guided tour of Wat Pho (Reclining Buddha), street food walk through Chinatown, second pickleball session. Free evening to explore.' },
     ],
   },
   {
@@ -131,62 +135,62 @@ const days: ItineraryDay[] = [
     vibe: 'New city, ancient ruins, welcome feast',
     icon: 'plane',
     slots: [
-      { label: 'Highlights', description: 'Short flight to Chiang Mai. Explore ancient Lanna ruins at Wiang Kum Kam by bicycle. Welcome dinner at a Michelin Bib Gourmand restaurant.' },
+      { label: 'Highlights', description: 'Domestic flight to Chiang Mai. Wiang Kum Kam bike tour through the ancient Lanna ruins. Welcome dinner.' },
     ],
   },
   {
     day: 5,
-    title: 'Cooking Class + Pickleball',
+    title: 'Pickleball + Elephant Nature Park',
     city: 'Chiang Mai',
     hotel: 'Our 5-Star Chiang Mai Riverside Resort',
-    vibe: 'Cook like a local, then compete',
-    icon: 'landmark',
+    vibe: 'Compete, then meet the elephants',
+    icon: 'trophy',
     slots: [
-      { label: 'Highlights', description: 'Thai cooking class with market tour. Cook 5-6 dishes. Afternoon pickleball session at BokBok. Dinner at a Michelin-recommended restaurant.' },
+      { label: 'Highlights', description: 'Third pickleball session. Full-day visit to Elephant Nature Park, ethical and observation-based.' },
     ],
   },
   {
     day: 6,
-    title: 'Elephant Nature Park',
+    title: 'Chiang Rai Day Trip',
     city: 'Chiang Mai',
     hotel: 'Our 5-Star Chiang Mai Riverside Resort',
-    vibe: 'Once-in-a-lifetime, then unwind',
-    icon: 'sparkles',
+    vibe: 'White Temple, Blue Temple, mountain country',
+    icon: 'landmark',
     slots: [
-      { label: 'Highlights', description: 'Full-day visit to Elephant Nature Park. Ethical, observation-based experience. Return to hotel for pool and spa time. Riverside dinner with live folk music.' },
+      { label: 'Highlights', description: 'Full-day trip to Chiang Rai. Wat Rong Khun, the White Temple, and Wat Rong Suea Ten, the Blue Temple.' },
     ],
   },
   {
     day: 7,
-    title: 'Final Pickleball + Exploration',
+    title: 'Final Pickleball + Tournament',
     city: 'Chiang Mai',
     hotel: 'Our 5-Star Chiang Mai Riverside Resort',
-    vibe: 'Compete, celebrate, explore',
+    vibe: 'Compete, celebrate, choose your afternoon',
     icon: 'trophy',
     slots: [
-      { label: 'Highlights', description: 'Final pickleball session at BokBok. Fun tournament, awards, and group photos. Free afternoon to explore Old City temples, spas, or Doi Suthep. Farewell dinner.' },
+      { label: 'Highlights', description: 'Fourth pickleball session and fun tournament, awards and group photos. Afternoon free to choose your own activity.' },
     ],
   },
   {
     day: 8,
-    title: 'Fly Back to Bangkok + Farewell',
-    city: 'Bangkok',
-    hotel: 'Our 5-Star Bangkok riverside hotel',
-    vibe: 'One last night together',
-    icon: 'plane',
+    title: 'Chiang Mai at Your Own Pace',
+    city: 'Chiang Mai',
+    hotel: 'Our 5-Star Chiang Mai Riverside Resort',
+    vibe: 'Slow morning, one last night together',
+    icon: 'sparkles',
     slots: [
-      { label: 'Highlights', description: 'Flight back to Bangkok, check into our hotel for one last night. Free afternoon to explore. Bangkok farewell dinner. Trip recap and toasts.' },
+      { label: 'Highlights', description: 'Free day to explore Chiang Mai at your own pace. Farewell dinner in the evening.' },
     ],
   },
   {
     day: 9,
     title: 'Departure Day',
-    city: 'Bangkok',
-    hotel: 'Our 5-Star Bangkok riverside hotel',
-    vibe: 'Hugs, promises to come back',
+    city: 'Chiang Mai',
+    hotel: 'Our 5-Star Chiang Mai Riverside Resort',
+    vibe: 'Fly home from Chiang Mai, or on to Phuket',
     icon: 'plane',
     slots: [
-      { label: 'Highlights', description: 'Final breakfast at the hotel. Private transfer to the airport. Head home with new friends and plans to come back.' },
+      { label: 'Highlights', description: 'Breakfast, check out. Fly home from Chiang Mai (CNX), or continue to the Phuket extension. No return flight to Bangkok.' },
     ],
   },
 ];
@@ -235,7 +239,7 @@ const hotels = [
     name: 'Our 5-Star Bangkok riverside hotel',
     city: 'Bangkok',
     location: 'Riverside, Charoenkrung Road',
-    duration: '3 Nights + 1 Farewell Night',
+    duration: '3 Nights',
     highlights: [
       'Five-star riverside luxury on the Chao Phraya River',
       'On-site pickleball courts, spa, and world-class restaurants',
@@ -246,7 +250,7 @@ const hotels = [
     name: 'Our 5-Star Chiang Mai Riverside Resort',
     city: 'Chiang Mai',
     location: 'Wiang Kum Kam / Ping River',
-    duration: '4 Nights',
+    duration: '5 Nights',
     highlights: [
       'Riverside boutique resort near ancient Lanna ruins',
       'Spa, wellness facilities, and free bicycles for exploration',
@@ -262,13 +266,13 @@ const groupDinners = [
     city: 'Bangkok',
     label: 'Welcome Dinner',
     restaurant: 'Riverside dining',
-    description: 'Welcome dinner on the river at the hotel',
+    description: 'Welcome dinner on arrival night',
   },
   {
     city: 'Bangkok',
     label: 'River Dinner',
     restaurant: 'Curated restaurant',
-    description: 'Group dinner along the Chao Phraya',
+    description: 'Group dinner after the sunset boat cruise',
   },
   {
     city: 'Chiang Mai',
@@ -278,15 +282,9 @@ const groupDinners = [
   },
   {
     city: 'Chiang Mai',
-    label: 'Cultural Dinner',
-    restaurant: 'Curated local restaurant',
-    description: 'Riverside dining with live folk music',
-  },
-  {
-    city: 'Bangkok',
     label: 'Farewell Dinner',
-    restaurant: 'Curated fine dining',
-    description: 'Final night celebration back in Bangkok',
+    restaurant: 'Curated local restaurant',
+    description: 'Final night celebration in Chiang Mai',
   },
 ];
 
@@ -305,15 +303,13 @@ function TripDetailsChiangMai() {
     <div className="space-y-10">
       <StatBar items={statItems} />
 
-      {/* Bookend Structure Visual */}
+      {/* Route Visual */}
       <div className="bg-gradient-to-r from-[#1D2D44] to-[#495F87] rounded-2xl p-6 text-white">
-        <h3 className="font-serif text-lg font-bold mb-4">The Bookend Experience</h3>
+        <h3 className="font-serif text-lg font-bold mb-4">The Route</h3>
         <div className="flex items-center gap-3 text-sm flex-wrap">
-          <span className="px-3 py-1.5 rounded-full bg-white/20 font-medium">Our 5-Star Bangkok 5-Star Hotel (3 nights)</span>
+          <span className="px-3 py-1.5 rounded-full bg-white/20 font-medium">Our 5-Star Bangkok riverside hotel (3 nights)</span>
           <span className="text-[#B08D55]">&rarr;</span>
-          <span className="px-3 py-1.5 rounded-full bg-[#B08D55]/30 font-medium">Our 5-Star Chiang Mai Riverside Resort (4 nights)</span>
-          <span className="text-[#B08D55]">&rarr;</span>
-          <span className="px-3 py-1.5 rounded-full bg-white/20 font-medium">Bangkok 5-Star Hotel (1 farewell night)</span>
+          <span className="px-3 py-1.5 rounded-full bg-[#B08D55]/30 font-medium">Our 5-Star Chiang Mai Riverside Resort (5 nights)</span>
         </div>
       </div>
 
@@ -358,7 +354,7 @@ function ItineraryAccordion() {
           Day-by-Day Itinerary
         </h2>
         <p className="text-[#1D2D44]/60 text-sm">
-          9 days across Bangkok and Chiang Mai, with a farewell night back at our Bangkok hotel. Click any day to see the highlights.
+          9 days across Bangkok and Chiang Mai. 3 nights in Bangkok, 5 in Chiang Mai. Click any day to see the highlights.
         </p>
       </div>
 
@@ -449,8 +445,8 @@ function AccommodationsChiangMai() {
     <div className="space-y-8">
       <p className="text-[#1D2D44]/70 text-base leading-relaxed max-w-3xl">
         Two five-star properties selected for their location, wellness amenities, and proximity
-        to our pickleball venues. You start and finish at our Bangkok 5-star hotel, with
-        our 5-Star Chiang Mai riverside resort as your destination in between.
+        to our pickleball venues. Three nights on the river in Bangkok, five nights at our
+        riverside resort in Chiang Mai.
       </p>
 
       <div className="space-y-6">
@@ -564,7 +560,7 @@ function DiningChiangMai() {
   return (
     <div className="space-y-10">
       <p className="text-[#1D2D44]/70 text-base leading-relaxed max-w-3xl">
-        4-5 group dinners included, from riverside restaurants in Bangkok to Northern Thai
+        4 group dinners included, from riverside restaurants in Bangkok to Northern Thai
         cuisine in Chiang Mai. Daily breakfast at both hotels. Free nights give you a chance
         to explore on your own. Your trip host will share curated recommendations.
       </p>
