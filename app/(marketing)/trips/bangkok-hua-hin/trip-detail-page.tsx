@@ -149,6 +149,8 @@ export function BangkokHuaHinPage() {
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Hua Hin Beachfront Resort"
         dates="Nov 1–9 or Dec 10–18, 2026"
         price={5500}
+        hidePaymentPlan={true}
+        fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
         spotsLeft={16}
         totalSpots={16}
         ContentComponent={TripSectionContentHuaHin}

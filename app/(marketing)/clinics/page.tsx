@@ -18,7 +18,7 @@ const weekSchedule = [
 
 const included = [
   'Two mindset seminars with Coach Travis Rhea',
-  'Coaching and open play with Jaron',
+  'Coaching and open play with Jaron and Ryan',
   'All court time, balls, water, setup',
   'Group WhatsApp thread for the week',
   'Our Bangkok list',
@@ -72,7 +72,7 @@ export default function ClinicsPage() {
                 Four mornings.<br className="hidden sm:block" /> One week. Just the pickleball.
               </h1>
               <p className="text-xl text-white mb-8 max-w-2xl">
-                Coach Travis Rhea on mindset. Jaron on court. Four mornings in Bangkok, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
+                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four mornings in Bangkok, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10">
@@ -94,13 +94,15 @@ export default function ClinicsPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://link.fastpaydirect.com/payment-link/6aa938f6ceb12d9fc1a8cf9b"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
                 >
                   Reserve your spot · $299
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
                 <a
                   href="#two-day-pass"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
@@ -188,9 +190,17 @@ export default function ClinicsPage() {
               />
             </div>
             <h2 className="text-2xl font-serif font-bold text-[#1D2D44] mb-3">Coach Travis Rhea</h2>
-            <p className="text-[#1D2D44]/70 text-base leading-relaxed">
+            <p className="text-[#1D2D44]/70 text-base leading-relaxed mb-3">
               Travis built Mind Your Pickle around one idea. The players who win close games aren&apos;t hitting better shots, they&apos;re managing themselves better. He flies in from Arizona for this week.
             </p>
+            <a
+              href="https://mindyourpickle.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors"
+            >
+              mindyourpickle.com
+            </a>
           </div>
         </div>
       </section>
@@ -290,17 +300,58 @@ export default function ClinicsPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-2">
             Two-Day Pass
           </h2>
-          <p className="text-[#1D2D44]/70 text-base leading-relaxed mb-6">
-            Can&apos;t do the full week? $169 gets you any two sessions. Two seminars, a seminar and a coaching day, or add the Hua Hin weekend on the 7th and 8th. Tell us which two when you book.
+          <p className="text-[#1D2D44]/70 text-base leading-relaxed mb-8">
+            Can&apos;t do the full week? $169 gets you any two sessions. Choose Bangkok, Hua Hin, or one of each.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
-          >
-            Two-Day Pass · $169
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-          <p className="text-[#1D2D44]/40 text-xs mt-3">
+
+          <div className="space-y-4">
+            <a
+              href="https://link.fastpaydirect.com/payment-link/6aa93a4cceb12d9fc1a8cf9d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-5 hover:border-[#B08D55]/30 hover:shadow-md transition-all group"
+            >
+              <div>
+                <p className="font-serif font-bold text-[#1D2D44]">Bangkok</p>
+                <p className="text-[#1D2D44]/50 text-sm">Two sessions at Arise Pickleball, Nov 2–5</p>
+              </div>
+              <span className="flex items-center gap-2 text-[#B08D55] font-bold text-sm shrink-0">
+                $169 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </a>
+
+            <a
+              href="https://link.fastpaydirect.com/payment-link/6aa93ddcceb12d9fc1a8cfa2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-5 hover:border-[#B08D55]/30 hover:shadow-md transition-all group"
+            >
+              <div>
+                <p className="font-serif font-bold text-[#1D2D44]">Hua Hin</p>
+                <p className="text-[#1D2D44]/50 text-sm">Two sessions at Sports Life Hua Hin, Nov 7–8</p>
+              </div>
+              <span className="flex items-center gap-2 text-[#B08D55] font-bold text-sm shrink-0">
+                $169 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </a>
+
+            <a
+              href="https://link.fastpaydirect.com/payment-link/6aa93edfceb12d9fc1a8cfa6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-5 hover:border-[#B08D55]/30 hover:shadow-md transition-all group"
+            >
+              <div>
+                <p className="font-serif font-bold text-[#1D2D44]">Bangkok + Hua Hin</p>
+                <p className="text-[#1D2D44]/50 text-sm">One session in each city</p>
+              </div>
+              <span className="flex items-center gap-2 text-[#B08D55] font-bold text-sm shrink-0">
+                $169 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </a>
+          </div>
+
+          <p className="text-[#1D2D44]/40 text-xs mt-6">
             Hua Hin runs only with ten or more players by November 1. See the{' '}
             <Link href="/clinics/hua-hin" className="text-[#B08D55] hover:underline font-medium">
               Hua Hin weekend page

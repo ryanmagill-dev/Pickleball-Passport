@@ -179,6 +179,8 @@ export function BangkokChiangMaiPage() {
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Chiang Mai Riverside Resort"
         dates="January 14–22, 2027"
         price={5500}
+        hidePaymentPlan={true}
+        fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
         spotsLeft={16}
         totalSpots={16}
         ContentComponent={TripSectionContentChiangMai}

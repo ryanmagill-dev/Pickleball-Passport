@@ -2,6 +2,7 @@
 
 import Script from 'next/script';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function ApplyPage() {
   return (
@@ -44,9 +45,20 @@ export default function ApplyPage() {
             />
             <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
           </div>
-          <p className="text-[#1D2D44]/50 text-sm text-center mt-6">
-            Prefer to pay right away? A direct payment link will be added here once your trip is confirmed.
-          </p>
+          <div className="text-center mt-6">
+            <p className="text-[#1D2D44]/50 text-sm mb-3">
+              Prefer to pay right away? All new departures (November, December, January) are $5,500.
+            </p>
+            <a
+              href="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
+            >
+              Reserve Your Spot · $5,500
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </section>
 

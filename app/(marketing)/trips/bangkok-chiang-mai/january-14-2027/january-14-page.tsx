@@ -116,7 +116,7 @@ export function January14Page() {
               <p className="text-[#1D2D44]/50 text-sm">Beachfront resort. Private room $450.</p>
             </div>
             <div className="text-2xl font-bold text-[#1D2D44] shrink-0">
-              $1,488<span className="text-sm font-normal text-[#1D2D44]/40 ml-1">/person</span>
+              $2,088<span className="text-sm font-normal text-[#1D2D44]/40 ml-1">/person</span>
             </div>
           </div>
 
@@ -138,12 +138,21 @@ export function January14Page() {
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="mt-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <a
+              href="https://link.fastpaydirect.com/payment-link/6aa94055ceb12d9fc1a8cfa9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
+            >
+              Reserve the Phuket Extension · $2,088
+              <ArrowRight className="w-4 h-4" />
+            </a>
             <Link
               href={reserveHref}
               className="inline-flex items-center gap-2 text-sm font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors"
             >
-              Talk to our team about the Phuket Extension
+              Talk to our team first
               <ExternalLink className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -158,6 +167,8 @@ export function January14Page() {
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Chiang Mai Riverside Resort"
         dates="Jan 14 – Jan 22, 2027"
         price={5500}
+        hidePaymentPlan={true}
+        fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
         spotsLeft={6}
         totalSpots={16}
         ContentComponent={TripSectionContentChiangMai}

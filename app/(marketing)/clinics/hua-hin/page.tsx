@@ -12,7 +12,7 @@ const GATE_STATUS: GateStatus = 'open';
 
 const included = [
   'One mindset seminar with Coach Travis Rhea',
-  'One TPP coaching and open play block with Jaron',
+  'One TPP coaching and open play block with Jaron and Ryan',
   'All court time, balls, water',
   'Group WhatsApp thread',
   'Photos afterwards',
@@ -65,13 +65,15 @@ export default function ClinicsHuaHinPage() {
 
           {GATE_STATUS === 'open' && (
             <>
-              <Link
-                href="/contact"
+              <a
+                href="https://link.fastpaydirect.com/payment-link/6aa93ddcceb12d9fc1a8cfa2"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
               >
                 Reserve your spot · $169
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
               <p className="text-white/50 text-xs mt-3 max-w-md">
                 This weekend runs with ten players or more. If we don&apos;t get there by November 1, everyone booked is refunded in full.
               </p>
@@ -80,13 +82,15 @@ export default function ClinicsHuaHinPage() {
 
           {GATE_STATUS === 'confirmed' && (
             <>
-              <Link
-                href="/contact"
+              <a
+                href="https://link.fastpaydirect.com/payment-link/6aa93ddcceb12d9fc1a8cfa2"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
               >
                 Reserve your spot · $169
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
               <p className="text-white/50 text-xs mt-3">Confirmed and running.</p>
             </>
           )}
