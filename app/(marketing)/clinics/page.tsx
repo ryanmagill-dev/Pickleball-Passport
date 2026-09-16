@@ -272,7 +272,7 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Want to split your sessions between Bangkok and Hua Hin? On Clinic Week, that&apos;s one mindset seminar and one live open play session in each city. On the Two-Day Pass, one mindset in one city and one live open play in the other. Tell us your preference when you book.
+            * Clinic Week is two mindset seminars and two live open play sessions. The Two-Day Pass is one of each. Want to split them across Bangkok and Hua Hin instead of doing them all in one city? That&apos;s available — just tell us how you&apos;d like them arranged when you book.
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">
