@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { January14Page } from './january-14-page';
 
 export const metadata: Metadata = {
-  title: 'Bangkok + Chiang Mai — January 14–22, 2027 | Phuket Extension Available | The Pickleball Passport',
+  title: 'Bangkok + Chiang Mai: January 14–22, 2027 | Phuket Extension Available | The Pickleball Passport',
   description:
     'The January 14–22, 2027 departure is the only Bangkok + Chiang Mai trip with an optional Phuket extension. 9 days. Our 5-Star Bangkok riverside hotel · Our 5-Star Chiang Mai Riverside Resort. $5,500/person.',
   keywords: [
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'Thailand pickleball travel',
   ],
   openGraph: {
-    title: 'Bangkok + Chiang Mai — January 14–22, 2027 | Phuket Extension Available',
+    title: 'Bangkok + Chiang Mai: January 14–22, 2027 | Phuket Extension Available',
     description:
       'The only Bangkok + Chiang Mai departure with an optional Phuket extension. Add 3 nights at a beachfront resort on Bang Tao Beach. $5,500/person.',
     url: 'https://www.thepickleballpassport.org/trips/bangkok-chiang-mai/january-14-2027',

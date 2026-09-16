@@ -4,14 +4,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, MessageCircle } from 'lucide-react';
 
-/* ─────────────────────── THE WEEK ─────────────────────── */
+/* ─────────────────────── SCHEDULE ─────────────────────── */
 
-const weekSchedule = [
+const bangkokSchedule = [
   { day: 'Sun 1 Nov', label: 'Arrivals. Welcome and priming dinner in the evening.' },
-  { day: 'Mon 2 Nov', label: 'Mindset seminar with Travis.' },
+  { day: 'Mon 2 Nov', label: 'Mind Your Pickle mindset session with Travis.' },
   { day: 'Tue 3 Nov', label: 'Live open play.' },
-  { day: 'Wed 4 Nov', label: 'Mindset seminar with Travis.' },
-  { day: 'Thu 5 Nov', label: 'Final session. Round robin, group photo, awards.' },
+  { day: 'Wed 4 Nov', label: 'Mind Your Pickle mindset session with Travis.' },
+  { day: 'Thu 5 Nov', label: 'Final live open play session, mini tournament.' },
+];
+
+const huaHinSchedule = [
+  { day: 'Sat 7 Nov', label: 'Mind Your Pickle mindset session with Travis.' },
+  { day: 'Sun 8 Nov', label: 'Live open play.' },
 ];
 
 /* ─────────────────────── PASSES ─────────────────────── */
@@ -19,25 +24,26 @@ const weekSchedule = [
 const passes = [
   {
     name: 'Clinic Week',
-    summary: '4 sessions — 2 mindset, 2 live open play',
+    summary: '4 sessions: 2 mindset, 2 live open play',
     price: '$299',
     link: 'https://link.fastpaydirect.com/payment-link/6aa938f6ceb12d9fc1a8cf9b',
     featured: true,
     includes: [
-      'Two mindset seminars with Coach Travis Rhea',
+      'Two Mind Your Pickle mindset sessions with Coach Travis Rhea',
       'Two live open play sessions with Jaron and Ryan',
-      'All court time, balls, water, setup',
+      'All court time, balls, water, snacks, and setup',
     ],
   },
   {
     name: 'Two-Day Pass',
-    summary: '2 sessions — 1 mindset, 1 live open play',
+    summary: '2 sessions: 1 mindset, 1 live open play',
     price: '$169',
     link: 'https://link.fastpaydirect.com/payment-link/6aa93edfceb12d9fc1a8cfa6',
     featured: false,
     includes: [
-      'One mindset seminar with Coach Travis Rhea',
+      'One Mind Your Pickle mindset session with Coach Travis Rhea',
       'One live open play session with Jaron and Ryan',
+      'All court time, balls, water, snacks, and setup',
     ],
   },
 ];
@@ -156,23 +162,39 @@ export default function ClinicsPage() {
         </div>
       </section>
 
-      {/* ── The week ── */}
+      {/* ── Schedule ── */}
       <section className="py-12 sm:py-16 bg-[#FDF8F3] border-b border-[#B08D55]/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-1">
-            The Week
+            Clinic Week Schedule
           </h2>
           <p className="text-[#1D2D44]/50 text-sm mb-6">
             Arise Pickleball, Udom Suk · Mornings
           </p>
           <div className="space-y-3">
-            {weekSchedule.map((row) => (
+            {bangkokSchedule.map((row) => (
               <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4">
                 <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
                 <span className="text-[#1D2D44]/70 text-sm">{row.label}</span>
               </div>
             ))}
           </div>
+
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-1 mt-12">
+            Hua Hin Schedule
+          </h2>
+          <p className="text-[#1D2D44]/50 text-sm mb-6">
+            Sports Life Hua Hin · Mornings
+          </p>
+          <div className="space-y-3">
+            {huaHinSchedule.map((row) => (
+              <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4">
+                <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
+                <span className="text-[#1D2D44]/70 text-sm">{row.label}</span>
+              </div>
+            ))}
+          </div>
+
           <p className="text-[#1D2D44]/40 text-xs mt-4">
             Exact times to be confirmed closer to the week.
           </p>
@@ -272,11 +294,11 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week is two mindset seminars and two live open play sessions. The Two-Day Pass is one of each. Want to split them across Bangkok and Hua Hin instead of doing them all in one city? That&apos;s available — just tell us how you&apos;d like them arranged when you book.
+            * Clinic Week is two mindset sessions and two live open play sessions. The Two-Day Pass is one of each. Want to split them across Bangkok and Hua Hin instead of doing them all in one city? That&apos;s available. Just tell us how you&apos;d like them arranged when you book.
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">
-            Not included on any pass: accommodation, flights, visas, insurance, transport, meals. Hua Hin sessions run only with ten or more players by November 1 — see the{' '}
+            Not included on any pass: accommodation, flights, visas, insurance, transport, meals. Hua Hin sessions run only with ten or more players by November 1. See the{' '}
             <Link href="/clinics/hua-hin" className="text-[#B08D55] hover:underline font-medium">
               Hua Hin weekend page
             </Link>.
@@ -371,7 +393,7 @@ export default function ClinicsPage() {
             <div className="relative w-56 h-56 sm:w-64 sm:h-64 overflow-hidden rounded-lg">
               <Image
                 src="/images/newpromptpay-qr.png"
-                alt="PromptPay QR code — Jaron Dhillon Shoptaugh"
+                alt="PromptPay QR code, Jaron Dhillon Shoptaugh"
                 fill
                 className="object-contain"
                 sizes="256px"
@@ -392,7 +414,7 @@ export default function ClinicsPage() {
                 <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg border border-[#B08D55]/10">
                   <Image
                     src="/line-qr-jaron.png"
-                    alt="Add Jaron on LINE — QR code"
+                    alt="Add Jaron on LINE, QR code"
                     fill
                     className="object-cover"
                     sizes="80px"
@@ -412,7 +434,7 @@ export default function ClinicsPage() {
                 <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg border border-[#B08D55]/10">
                   <Image
                     src="/whatsapp-qr-jaron.png"
-                    alt="Add Jaron on WhatsApp — QR code"
+                    alt="Add Jaron on WhatsApp, QR code"
                     fill
                     className="object-contain bg-[#5CBD6D]"
                     sizes="80px"

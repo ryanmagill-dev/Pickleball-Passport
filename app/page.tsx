@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'pickleball trips Thailand',
   ],
   openGraph: {
-    title: 'The Pickleball Passport — Your Personal Pickleball Concierge in Thailand',
+    title: 'The Pickleball Passport: Your Personal Pickleball Concierge in Thailand',
     description:
       'We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it.',
     url: 'https://www.thepickleballpassport.org',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: '/og-images/homepage.jpg',
         width: 1200,
         height: 630,
-        alt: 'The Pickleball Passport — Pickleball Concierge in Thailand',
+        alt: 'The Pickleball Passport: Pickleball Concierge in Thailand',
       },
     ],
     locale: 'en_US',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Pickleball Passport — Your Personal Pickleball Concierge in Thailand',
+    title: 'The Pickleball Passport: Your Personal Pickleball Concierge in Thailand',
     description:
       'We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it.',
     images: ['/og-images/homepage.jpg'],

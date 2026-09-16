@@ -11,9 +11,9 @@ type GateStatus = 'open' | 'confirmed' | 'closed';
 const GATE_STATUS: GateStatus = 'open';
 
 const included = [
-  'One mindset seminar with Coach Travis Rhea',
+  'One Mind Your Pickle mindset session with Coach Travis Rhea',
   'One live open play session with Jaron and Ryan',
-  'All court time, balls, water',
+  'All court time, balls, water, and snacks',
   'Group WhatsApp thread',
   'Photos afterwards',
 ];

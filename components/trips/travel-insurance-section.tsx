@@ -70,7 +70,7 @@ export function TravelInsuranceSection() {
 
       {/* Affiliate disclosure */}
       <p className="text-xs text-[#1D2D44]/40 leading-relaxed">
-        Disclosure: we&apos;re an affiliate of the providers linked above. If you buy a policy through these links, we may earn a small commission at no extra cost to you. The Pickleball Passport does not sell, underwrite, or arrange travel insurance directly — please review each policy&apos;s terms and choose what&apos;s right for your trip.
+        Disclosure: we&apos;re an affiliate of the providers linked above. If you buy a policy through these links, we may earn a small commission at no extra cost to you. The Pickleball Passport does not sell, underwrite, or arrange travel insurance directly. Please review each policy&apos;s terms and choose what&apos;s right for your trip.
       </p>
 
       {/* Tip */}

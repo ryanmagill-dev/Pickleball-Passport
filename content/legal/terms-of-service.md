@@ -11,9 +11,9 @@ These terms apply to everything we sell. By booking, you agree to them.
 
 We sell two different kinds of thing, and the rules differ between them:
 
-- **Clinic Products** — coaching and court time only. Clinic Week, Two-Day
+- **Clinic Products**: coaching and court time only. Clinic Week, Two-Day
   Passes, single sessions. No accommodation, transport or meals.
-- **Trip Products** — multi-day hosted travel including accommodation,
+- **Trip Products**: multi-day hosted travel including accommodation,
   transfers, activities and host support. Also covers add-ons such as room
   supplements and trip extensions.
 
@@ -55,17 +55,17 @@ The date we receive your email is the cancellation date.
 
 ### Clinic Products
 
-- **30 or more days** before your first session — full refund.
-- **Fewer than 30 days** — no refund, but you may transfer your place to
+- **30 or more days** before your first session: full refund.
+- **Fewer than 30 days**: no refund, but you may transfer your place to
   another player at no charge. Just tell us who is coming instead.
 
 ### Trip Products
 
-- **90 or more days** before departure — full refund less a $500 per person
+- **90 or more days** before departure: full refund less a $500 per person
   administration fee.
-- **60 to 89 days** — 50% refund.
-- **30 to 59 days** — 25% refund.
-- **Fewer than 30 days** — no refund.
+- **60 to 89 days**: 50% refund.
+- **30 to 59 days**: 25% refund.
+- **Fewer than 30 days**: no refund.
 
 These terms exist because we pay hotels, airlines and local operators in
 advance on your behalf, and those payments are not refundable to us.
@@ -191,7 +191,7 @@ booking is limited to the amount you paid us for it. We are not liable for
 indirect or consequential loss, including lost airfare, lost holiday time, or
 loss of enjoyment.
 
-We use independent suppliers — hotels, airlines, transport operators, venues,
+We use independent suppliers: hotels, airlines, transport operators, venues,
 guides and coaches. We select them with care but we do not control them and we
 are not liable for their acts or omissions.
 
