@@ -9,7 +9,7 @@ import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, MessageCircle } from 'l
 const weekSchedule = [
   { day: 'Sun 1 Nov', label: 'Arrivals. Welcome and priming dinner in the evening.' },
   { day: 'Mon 2 Nov', label: 'Mindset seminar with Travis.' },
-  { day: 'Tue 3 Nov', label: 'Coaching and open play.' },
+  { day: 'Tue 3 Nov', label: 'Live open play.' },
   { day: 'Wed 4 Nov', label: 'Mindset seminar with Travis.' },
   { day: 'Thu 5 Nov', label: 'Final session. Round robin, group photo, awards.' },
 ];
@@ -19,39 +19,26 @@ const weekSchedule = [
 const passes = [
   {
     name: 'Clinic Week',
-    summary: 'All four mornings, Nov 2–5, Arise Pickleball',
+    summary: '4 sessions — 2 mindset, 2 live open play',
     price: '$299',
     link: 'https://link.fastpaydirect.com/payment-link/6aa938f6ceb12d9fc1a8cf9b',
     featured: true,
     includes: [
       'Two mindset seminars with Coach Travis Rhea',
-      'Coaching and open play with Jaron and Ryan',
+      'Two live open play sessions with Jaron and Ryan',
       'All court time, balls, water, setup',
     ],
   },
   {
-    name: 'Two-Day Pass — Bangkok',
-    summary: 'Any two sessions, Nov 2–5, Arise Pickleball',
-    price: '$169',
-    link: 'https://link.fastpaydirect.com/payment-link/6aa93a4cceb12d9fc1a8cf9d',
-    featured: false,
-    includes: ['Two sessions of your choice', 'All court time, balls, water'],
-  },
-  {
-    name: 'Two-Day Pass — Hua Hin',
-    summary: 'Nov 7–8, Sports Life Hua Hin',
-    price: '$169',
-    link: 'https://link.fastpaydirect.com/payment-link/6aa93ddcceb12d9fc1a8cfa2',
-    featured: false,
-    includes: ['One mindset seminar with Travis', 'One coaching and open play block'],
-  },
-  {
-    name: 'Two-Day Pass — Bangkok + Hua Hin',
-    summary: 'One session in each city',
+    name: 'Two-Day Pass',
+    summary: '2 sessions — 1 mindset, 1 live open play',
     price: '$169',
     link: 'https://link.fastpaydirect.com/payment-link/6aa93edfceb12d9fc1a8cfa6',
     featured: false,
-    includes: ['One Bangkok session', 'One Hua Hin session'],
+    includes: [
+      'One mindset seminar with Coach Travis Rhea',
+      'One live open play session with Jaron and Ryan',
+    ],
   },
 ];
 
@@ -284,8 +271,12 @@ export default function ClinicsPage() {
             ))}
           </div>
 
-          <p className="text-[#1D2D44]/40 text-xs mt-6">
-            Not included on any pass: accommodation, flights, visas, insurance, transport, meals. Hua Hin passes run only with ten or more players by November 1 — see the{' '}
+          <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
+            * Want to split your sessions between Bangkok and Hua Hin? On Clinic Week, that&apos;s one mindset seminar and one live open play session in each city. On the Two-Day Pass, one mindset in one city and one live open play in the other. Tell us your preference when you book.
+          </p>
+
+          <p className="text-[#1D2D44]/40 text-xs mt-4">
+            Not included on any pass: accommodation, flights, visas, insurance, transport, meals. Hua Hin sessions run only with ten or more players by November 1 — see the{' '}
             <Link href="/clinics/hua-hin" className="text-[#B08D55] hover:underline font-medium">
               Hua Hin weekend page
             </Link>.

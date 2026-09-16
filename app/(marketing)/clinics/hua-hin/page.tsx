@@ -12,7 +12,7 @@ const GATE_STATUS: GateStatus = 'open';
 
 const included = [
   'One mindset seminar with Coach Travis Rhea',
-  'One TPP coaching and open play block with Jaron and Ryan',
+  'One live open play session with Jaron and Ryan',
   'All court time, balls, water',
   'Group WhatsApp thread',
   'Photos afterwards',
