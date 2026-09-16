@@ -9,14 +9,14 @@ import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, MessageCircle } from 'l
 const bangkokSchedule = [
   { day: 'Sun 1 Nov', label: 'Arrivals. Welcome and priming dinner in the evening.' },
   { day: 'Mon 2 Nov', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Tue 3 Nov', label: 'Live open play.' },
+  { day: 'Tue 3 Nov', label: 'Live coaching session.' },
   { day: 'Wed 4 Nov', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Thu 5 Nov', label: 'Final live open play session, mini tournament.' },
+  { day: 'Thu 5 Nov', label: 'Final live coaching session, mini tournament.' },
 ];
 
 const huaHinSchedule = [
   { day: 'Sat 7 Nov', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Sun 8 Nov', label: 'Live open play.' },
+  { day: 'Sun 8 Nov', label: 'Live coaching session.' },
 ];
 
 /* ─────────────────────── PASSES ─────────────────────── */
@@ -24,25 +24,25 @@ const huaHinSchedule = [
 const passes = [
   {
     name: 'Clinic Week',
-    summary: '4 sessions: 2 mindset, 2 live open play',
+    summary: '4 sessions: 2 mindset, 2 live coaching',
     price: '$299',
-    link: 'https://link.fastpaydirect.com/payment-link/6aa938f6ceb12d9fc1a8cf9b',
+    link: 'https://link.fastpaydirect.com/payment-link/6aaa56229f7ff2c808a75e19',
     featured: true,
     includes: [
       'Two Mind Your Pickle mindset sessions with Coach Travis Rhea',
-      'Two live open play sessions with Jaron and Ryan',
+      'Two live coaching sessions with Jaron and Ryan',
       'All court time, balls, water, snacks, and setup',
     ],
   },
   {
     name: 'Two-Day Pass',
-    summary: '2 sessions: 1 mindset, 1 live open play',
+    summary: '2 sessions: 1 mindset, 1 live coaching',
     price: '$169',
-    link: 'https://link.fastpaydirect.com/payment-link/6aa93edfceb12d9fc1a8cfa6',
+    link: 'https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6',
     featured: false,
     includes: [
       'One Mind Your Pickle mindset session with Coach Travis Rhea',
-      'One live open play session with Jaron and Ryan',
+      'One live coaching session with Jaron and Ryan',
       'All court time, balls, water, snacks, and setup',
     ],
   },
@@ -110,7 +110,7 @@ export default function ClinicsPage() {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://link.fastpaydirect.com/payment-link/6aa938f6ceb12d9fc1a8cf9b"
+                  href="https://link.fastpaydirect.com/payment-link/6aaa56229f7ff2c808a75e19"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
@@ -294,7 +294,7 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week is two mindset sessions and two live open play sessions. The Two-Day Pass is one of each. Want to split them across Bangkok and Hua Hin instead of doing them all in one city? That&apos;s available. Just tell us how you&apos;d like them arranged when you book.
+            * Clinic Week is two mindset sessions and two live coaching sessions. The Two-Day Pass is one of each. Want to split them across Bangkok and Hua Hin instead of doing them all in one city? That&apos;s available. Just tell us how you&apos;d like them arranged when you book.
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">

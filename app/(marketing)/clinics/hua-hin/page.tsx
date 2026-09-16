@@ -12,7 +12,7 @@ const GATE_STATUS: GateStatus = 'open';
 
 const included = [
   'One Mind Your Pickle mindset session with Coach Travis Rhea',
-  'One live open play session with Jaron and Ryan',
+  'One live coaching session with Jaron and Ryan',
   'All court time, balls, water, and snacks',
   'Group WhatsApp thread',
   'Photos afterwards',
@@ -66,7 +66,7 @@ export default function ClinicsHuaHinPage() {
           {GATE_STATUS === 'open' && (
             <>
               <a
-                href="https://link.fastpaydirect.com/payment-link/6aa93ddcceb12d9fc1a8cfa2"
+                href="https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
@@ -83,7 +83,7 @@ export default function ClinicsHuaHinPage() {
           {GATE_STATUS === 'confirmed' && (
             <>
               <a
-                href="https://link.fastpaydirect.com/payment-link/6aa93ddcceb12d9fc1a8cfa2"
+                href="https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
