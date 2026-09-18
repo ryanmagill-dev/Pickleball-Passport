@@ -87,7 +87,7 @@ export default function ClinicsPage() {
                 Four mornings.<br className="hidden sm:block" /> One week. Just the pickleball.
               </h1>
               <p className="text-xl text-white mb-8 max-w-2xl">
-                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four mornings in Bangkok, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
+                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions, split across Bangkok and Hua Hin however you like, capped at twenty players. You book your own room and eat where you like. We run the pickleball.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10">
@@ -157,7 +157,7 @@ export default function ClinicsPage() {
             Clinic Week is the opposite. Just the pickleball, priced to match. You book your own room, you get yourself to the courts, and your afternoons are your own.
           </p>
           <p>
-            Sixteen players. Four courts. Nobody hides at the back of a drill line.
+            Twenty players, split across Bangkok and Hua Hin. Nobody hides at the back of a drill line.
           </p>
         </div>
       </section>
@@ -313,6 +313,9 @@ export default function ClinicsPage() {
             >
               Compare plans with our partner, Squaremouth
             </a>.
+          </p>
+          <p className="text-[#1D2D44]/40 text-xs mt-2">
+            Want just one session, or one-on-one coaching with Travis, Jaron, or Ryan? Message us on WhatsApp or LINE below and we&apos;ll set it up.
           </p>
         </div>
       </section>
