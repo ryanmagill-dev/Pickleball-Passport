@@ -10,6 +10,11 @@ type GateStatus = 'open' | 'confirmed' | 'closed';
 
 const GATE_STATUS: GateStatus = 'open';
 
+const schedule = [
+  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Mindset seminar with Coach Travis Rhea.' },
+  { day: 'Sun 8 Nov', time: '9am–12pm', label: 'Coached open play with Jaron and Ryan.' },
+];
+
 const included = [
   'One Mind Your Pickle mindset session with Coach Travis Rhea',
   'One live coaching session with Jaron and Ryan',
@@ -106,6 +111,27 @@ export default function ClinicsHuaHinPage() {
               </Link>
             </>
           )}
+        </div>
+      </section>
+
+      {/* ── Schedule ── */}
+      <section className="py-12 sm:py-16 bg-white border-b border-[#B08D55]/10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-1">
+            Schedule
+          </h2>
+          <p className="text-[#1D2D44]/50 text-sm mb-6">
+            Sports Life Hua Hin · 9am to 12pm
+          </p>
+          <div className="space-y-3">
+            {schedule.map((row) => (
+              <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10 p-4">
+                <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
+                <span className="text-[#B08D55] text-xs font-semibold w-20 shrink-0">{row.time}</span>
+                <span className="text-[#1D2D44]/70 text-sm">{row.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

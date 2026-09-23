@@ -2,21 +2,21 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, MessageCircle } from 'lucide-react';
+import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, MessageCircle, Users, Globe, Package, Award } from 'lucide-react';
 
 /* ─────────────────────── SCHEDULE ─────────────────────── */
 
 const bangkokSchedule = [
-  { day: 'Sun 1 Nov', label: 'Arrivals. Welcome and priming dinner in the evening.' },
-  { day: 'Mon 2 Nov', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Tue 3 Nov', label: 'Live coaching session.' },
-  { day: 'Wed 4 Nov', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Thu 5 Nov', label: 'Final live coaching session, mini tournament.' },
+  { day: 'Sun 1 Nov', time: 'Evening', label: 'Arrivals. Welcome and priming dinner. No pickleball.' },
+  { day: 'Mon 2 Nov', time: '11am–2pm', label: 'Mind Your Pickle mindset session with Travis.' },
+  { day: 'Tue 3 Nov', time: '11am–2pm', label: 'Live coaching session.' },
+  { day: 'Wed 4 Nov', time: '11am–2pm', label: 'Mind Your Pickle mindset session with Travis.' },
+  { day: 'Thu 5 Nov', time: '11am–2pm', label: 'Final live coaching session, mini tournament.' },
 ];
 
 const huaHinSchedule = [
-  { day: 'Sat 7 Nov', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Sun 8 Nov', label: 'Live coaching session.' },
+  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Mind Your Pickle mindset session with Travis.' },
+  { day: 'Sun 8 Nov', time: '9am–12pm', label: 'Live coaching session.' },
 ];
 
 /* ─────────────────────── PASSES ─────────────────────── */
@@ -84,7 +84,7 @@ export default function ClinicsPage() {
                 Clinic Week · Bangkok
               </p>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-                Four mornings.<br className="hidden sm:block" /> One week. Just the pickleball.
+                Four sessions.<br className="hidden sm:block" /> One week. Just the pickleball.
               </h1>
               <p className="text-xl text-white mb-8 max-w-2xl">
                 Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions, split across Bangkok and Hua Hin however you like, capped at twenty players. You book your own room and eat where you like. We run the pickleball.
@@ -154,7 +154,7 @@ export default function ClinicsPage() {
             Most pickleball travel makes you buy the whole thing. Hotel, transport, guide, itinerary, whether you wanted it or not.
           </p>
           <p>
-            Clinic Week is the opposite. Just the pickleball, priced to match. You book your own room, you get yourself to the courts, and your afternoons are your own.
+            Clinic Week is the opposite. Just the pickleball, priced to match. You book your own room, you get yourself to the courts, and your mornings and evenings are your own.
           </p>
           <p>
             Twenty players, split across Bangkok and Hua Hin. Nobody hides at the back of a drill line.
@@ -169,12 +169,13 @@ export default function ClinicsPage() {
             Clinic Week Schedule
           </h2>
           <p className="text-[#1D2D44]/50 text-sm mb-6">
-            Arise Pickleball, Udom Suk · Mornings
+            Arise Pickleball, Udom Suk · 11am to 2pm
           </p>
           <div className="space-y-3">
             {bangkokSchedule.map((row) => (
               <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4">
                 <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
+                <span className="text-[#B08D55] text-xs font-semibold w-20 shrink-0">{row.time}</span>
                 <span className="text-[#1D2D44]/70 text-sm">{row.label}</span>
               </div>
             ))}
@@ -184,20 +185,70 @@ export default function ClinicsPage() {
             Hua Hin Schedule
           </h2>
           <p className="text-[#1D2D44]/50 text-sm mb-6">
-            Sports Life Hua Hin · Mornings
+            Sports Life Hua Hin · 9am to 12pm
           </p>
           <div className="space-y-3">
             {huaHinSchedule.map((row) => (
               <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4">
                 <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
+                <span className="text-[#B08D55] text-xs font-semibold w-20 shrink-0">{row.time}</span>
                 <span className="text-[#1D2D44]/70 text-sm">{row.label}</span>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <p className="text-[#1D2D44]/40 text-xs mt-4">
-            Exact times to be confirmed closer to the week.
-          </p>
+      {/* ── Details ── */}
+      <section className="py-12 sm:py-16 bg-white border-b border-[#B08D55]/10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-8">
+            Details
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex items-start gap-3">
+              <MapPin className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Where</p>
+                <p className="text-[#1D2D44]/70 text-sm">Arise Pickleball courts, Udom Suk, Bangkok. Close to the BTS.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Award className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Level</p>
+                <p className="text-[#1D2D44]/70 text-sm">Built for intermediate players and up. Newer players welcome, tell us when you book and we&apos;ll group you well.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Users className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Group</p>
+                <p className="text-[#1D2D44]/70 text-sm">Twenty players, split across Bangkok and Hua Hin.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Globe className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Language</p>
+                <p className="text-[#1D2D44]/70 text-sm">English, with live Thai translation and Thai slides in the mindset sessions.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Package className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Bring</p>
+                <p className="text-[#1D2D44]/70 text-sm">Paddle, court shoes, water bottle. Balls and water are on us.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Clock className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Getting there</p>
+                <p className="text-[#1D2D44]/70 text-sm">30 to 40 minutes by Grab from central Bangkok, roughly 150 to 250 baht each way.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
