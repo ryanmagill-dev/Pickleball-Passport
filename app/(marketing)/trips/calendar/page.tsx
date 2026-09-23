@@ -79,7 +79,6 @@ function ProvisionalRow({ month, route, dates }: { month: string; route: string;
     <div className="rounded-xl border border-[#1D2D44]/10 bg-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
       <div className="flex items-center gap-3 flex-wrap">
         <p className="font-serif font-bold text-[#1D2D44] text-base">{month}</p>
-        <span className="text-xs px-2 py-0.5 rounded-full bg-[#1D2D44]/8 text-[#1D2D44]/50 font-medium">Provisional</span>
         <span className="text-xs text-[#1D2D44]/50">{route}</span>
         <span className="text-xs text-[#1D2D44]/40">{dates}</span>
       </div>
@@ -177,13 +176,13 @@ export default function CalendarPage() {
         <div>
           <div className="mb-5">
             <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">The Rest of 2027</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">One departure a month, alternating Chiang Mai and Hua Hin. Dates below are provisional.</p>
+            <p className="text-[#1D2D44]/50 text-sm mt-0.5">One departure a month, alternating Chiang Mai and Hua Hin.</p>
           </div>
           <div className="space-y-2.5">
             {provisional2027.map((row) => <ProvisionalRow key={row.month} {...row} />)}
           </div>
           <p className="text-[#1D2D44]/40 text-xs mt-4 leading-relaxed max-w-2xl">
-            Provisional dates are confirmed about 90 days before departure, once rooms are locked. If a date moves, everyone on the list hears first.
+            Dates are confirmed about 90 days before departure, once rooms are locked. If a date moves, everyone on the list hears first.
           </p>
         </div>
 
