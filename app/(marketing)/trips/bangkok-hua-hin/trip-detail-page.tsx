@@ -18,15 +18,17 @@ export function BangkokHuaHinPage() {
     <main className="min-h-screen bg-[#FDF8F3]">
       {/* Trip Header */}
       <section className="relative overflow-hidden text-white py-16 sm:py-20">
-        {/* Background photo */}
-        <Image
-          src="/images/anantara-hua-hin-aerial.jpg"
-          alt="Our 5-Star Bangkok riverside hotel pool"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
+        {/* Background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/posters/hua-hin-cave-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/hua-hin-cave.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Calendar, MapPin, Users, TreePalm, ExternalLink } from 'lucide-react';
 import { TripDetailLayout } from '@/components/trips/trip-detail-layout';
@@ -27,16 +26,17 @@ export function January14Page() {
     <main className="min-h-screen bg-[#FDF8F3]">
 
       {/* ── Hero ── */}
-      {/* TODO: swap this placeholder photo for real Chiang Mai/January drone footage once uploaded to /public */}
       <section className="relative overflow-hidden text-white py-16 sm:py-20">
-        <Image
-          src="/images/posters/tpp-aerial-0453b-poster.jpg"
-          alt="Thailand aerial view"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/posters/chiang-mai-header-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/chiang-mai-header.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#0F1A2A]/90" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">

@@ -109,10 +109,10 @@ export function TripsListingPage() {
               muted
               loop
               playsInline
-              poster="/images/posters/tpp-aerial-0453b-poster.jpg"
+              poster="/images/posters/chiang-mai-pill-poster.jpg"
               className="absolute inset-0 w-full h-full object-cover object-center"
             >
-              <source src="/tpp-aerial-0453b.mp4" type="video/mp4" />
+              <source src="/chiang-mai-pill.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10 transition-all group-hover:from-black/90" />
 
