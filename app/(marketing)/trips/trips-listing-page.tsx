@@ -138,13 +138,13 @@ export function TripsListingPage() {
           {/* What's next */}
           <div className="mt-8 bg-white rounded-2xl border border-[#B08D55]/10 p-6 max-w-3xl">
             <p className="text-[#1D2D44]/60 text-sm leading-relaxed">
-              We&apos;re locking down dates for February, March, and beyond. New trips are announced once dates are confirmed.
+              February, March, and a Songkran edition in April are now open. Dates for the rest of 2027 are provisional, one departure a month.
             </p>
             <Link
-              href="/notify"
+              href="/trips/calendar"
               className="inline-flex items-center gap-1.5 mt-3 text-sm font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors"
             >
-              Get notified <ArrowRight className="w-3.5 h-3.5" />
+              See the full departure calendar <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
         </div>
