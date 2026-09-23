@@ -119,7 +119,7 @@ const days: ItineraryDay[] = [
     vibe: 'Play, then the beach',
     icon: 'trophy',
     slots: [
-      { label: 'Highlights', description: 'Pickleball session 2 at Sports Life Hua Hin. Afternoon on the coast, beach or pool. Group dinner.' },
+      { label: 'Highlights', description: 'Pickleball session 2 in Hua Hin. Afternoon on the coast, beach or pool. Group dinner.' },
     ],
   },
   {
@@ -130,7 +130,7 @@ const days: ItineraryDay[] = [
     vibe: 'Last session on the coast',
     icon: 'trophy',
     slots: [
-      { label: 'Highlights', description: 'Pickleball session 3 at Sports Life Hua Hin. Free afternoon, explore Hua Hin town or relax at the resort.' },
+      { label: 'Highlights', description: 'Pickleball session 3 in Hua Hin. Free afternoon, explore Hua Hin town or relax at the resort.' },
     ],
   },
   {
@@ -204,7 +204,7 @@ const pickleballSessions = [
   {
     number: 2,
     city: 'Hua Hin',
-    venue: 'Sports Life Hua Hin',
+    venue: 'Venue to be confirmed',
     day: 'Day 3',
     time: 'Morning',
     focus: 'Coaching clinic + doubles play',
@@ -212,7 +212,7 @@ const pickleballSessions = [
   {
     number: 3,
     city: 'Hua Hin',
-    venue: 'Sports Life Hua Hin',
+    venue: 'Venue to be confirmed',
     day: 'Day 4',
     time: 'Morning',
     focus: 'Coaching clinic + round-robin',

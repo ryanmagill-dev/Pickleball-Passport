@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle, X, MapPin, Users, Clock, ArrowRight, MessageCircle } from 'lucide-react';
 
@@ -11,13 +10,12 @@ type GateStatus = 'open' | 'confirmed' | 'closed';
 const GATE_STATUS: GateStatus = 'open';
 
 const schedule = [
-  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Mindset seminar with Coach Travis Rhea.' },
-  { day: 'Sun 8 Nov', time: '9am–12pm', label: 'Coached open play with Jaron and Ryan.' },
+  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Coaching clinic with Jaron and Ryan.' },
+  { day: 'Sun 8 Nov', time: '9am–12pm', label: 'Coaching clinic with Jaron and Ryan.' },
 ];
 
 const included = [
-  'One Mind Your Pickle mindset session with Coach Travis Rhea',
-  'One live coaching session with Jaron and Ryan',
+  'Two coaching clinics with Jaron and Ryan',
   'All court time, balls, water, and snacks',
   'Group WhatsApp thread',
   'Photos afterwards',
@@ -30,18 +28,9 @@ export default function ClinicsHuaHinPage() {
     <main className="min-h-screen bg-[#FDF8F3]">
 
       {/* ── Hero ── */}
+      {/* TODO: swap flat navy for real photos of the new Hua Hin venue once confirmed */}
       <section className="relative overflow-hidden text-white py-16 sm:py-20">
-        <div className="relative h-full">
-          <Image
-            src="/images/sports-life-hua-hin.jpg"
-            alt="Sports Life Hua Hin"
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/40" />
+        <div className="absolute inset-0 bg-[#0F1A2A]" />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-3">
             Two-Day Pass · Hua Hin
@@ -50,7 +39,7 @@ export default function ClinicsHuaHinPage() {
             Two sessions. One weekend. Hua Hin.
           </h1>
           <p className="text-xl text-white mb-8 max-w-2xl">
-            Coach Travis Rhea brings the mindset work down the coast. Two sessions at Sports Life Hua Hin, capped at sixteen. Same deal as Bangkok, you sort your own room and we run the pickleball.
+            Two coaching clinics with Jaron and Ryan on the coast in Hua Hin, capped at sixteen. Same deal as Bangkok, you sort your own room and we run the pickleball.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10">
@@ -60,7 +49,7 @@ export default function ClinicsHuaHinPage() {
             </div>
             <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
               <MapPin className="h-4 w-4 text-[#B08D55]" />
-              Sports Life Hua Hin
+              Hua Hin · venue to be announced
             </div>
             <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
               <Users className="h-4 w-4 text-[#B08D55]" />
@@ -121,7 +110,7 @@ export default function ClinicsHuaHinPage() {
             Schedule
           </h2>
           <p className="text-[#1D2D44]/50 text-sm mb-6">
-            Sports Life Hua Hin · 9am to 12pm
+            Hua Hin · 9am to 12pm
           </p>
           <div className="space-y-3">
             {schedule.map((row) => (

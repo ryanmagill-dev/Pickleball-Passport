@@ -65,8 +65,8 @@ const upcomingDepartures = [
     route: 'Songkran Edition',
     price: '$5,500',
     href: '/trips/bangkok-hua-hin/songkran-april-2027',
-    video: null,
-    poster: null,
+    video: '/songkran-street.mp4',
+    poster: '/images/posters/songkran-street-poster.jpg',
   },
 ];
 

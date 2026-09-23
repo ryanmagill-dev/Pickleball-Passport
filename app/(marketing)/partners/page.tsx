@@ -60,18 +60,6 @@ const partners: Partner[] = [
     logoDark: false,
   },
   {
-    name: 'Sports Life Hua Hin',
-    credentialLine: 'Sports Life Hua Hin · Clinic Venue Partner',
-    category: 'Clinic Venue Partner',
-    bio: 'Sports Life Hua Hin hosts TPP sessions on the coast, including the Two-Day Pass clinic weekend. A dedicated pickleball facility in Hua Hin, built for serious play.',
-    siteUrl: '#',
-    siteName: 'Sports Life Hua Hin',
-    imageSrc: '/images/sports-life-hua-hin.jpg',
-    imageType: 'photo',
-    imagePlaceholder: 'Sports Life',
-    logoDark: false,
-  },
-  {
     name: 'Neil Friedenberg',
     credentialLine: 'Neil Friedenberg · The Dinking Dad · Pickleball Coach & Community Builder',
     category: 'Coach & Community Builder',

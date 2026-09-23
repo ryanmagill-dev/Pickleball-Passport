@@ -15,8 +15,8 @@ const bangkokSchedule = [
 ];
 
 const huaHinSchedule = [
-  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Sun 8 Nov', time: '9am–12pm', label: 'Live coaching session.' },
+  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Coaching clinic with Jaron and Ryan.' },
+  { day: 'Sun 8 Nov', time: '9am–12pm', label: 'Coaching clinic with Jaron and Ryan.' },
 ];
 
 /* ─────────────────────── PASSES ─────────────────────── */
@@ -36,13 +36,13 @@ const passes = [
   },
   {
     name: 'Two-Day Pass',
-    summary: '2 sessions: 1 mindset, 1 live coaching',
+    summary: 'Bangkok: 1 mindset + 1 coaching. Hua Hin: 2 coaching clinics.',
     price: '$169',
     link: 'https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6',
     featured: false,
     includes: [
-      'One Mind Your Pickle mindset session with Coach Travis Rhea',
-      'One live coaching session with Jaron and Ryan',
+      'Bangkok: one Mind Your Pickle mindset session with Coach Travis Rhea + one live coaching session with Jaron and Ryan',
+      'Hua Hin: two coaching clinics with Jaron and Ryan',
       'All court time, balls, water, snacks, and setup',
     ],
   },
@@ -104,7 +104,7 @@ export default function ClinicsPage() {
                   className="flex items-center gap-2 bg-[#B08D55]/20 hover:bg-[#B08D55]/30 rounded-full px-4 py-2 text-sm transition-colors"
                 >
                   <Clock className="h-4 w-4 text-[#B08D55]" />
-                  + Nov 7–8, Sports Life Hua Hin
+                  + Nov 7–8, Hua Hin
                 </Link>
               </div>
 
@@ -185,7 +185,7 @@ export default function ClinicsPage() {
             Hua Hin Schedule
           </h2>
           <p className="text-[#1D2D44]/50 text-sm mb-6">
-            Sports Life Hua Hin · 9am to 12pm
+            Hua Hin · 9am to 12pm
           </p>
           <div className="space-y-3">
             {huaHinSchedule.map((row) => (
@@ -345,7 +345,7 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week is two mindset sessions and two live coaching sessions. The Two-Day Pass is one of each. Want to split them across Bangkok and Hua Hin instead of doing them all in one city? That&apos;s available. Just tell us how you&apos;d like them arranged when you book.
+            * Clinic Week is two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan. Mindset sessions run in Bangkok only. Want your live coaching sessions in Hua Hin instead of Bangkok? That&apos;s available. Just tell us how you&apos;d like them arranged when you book.
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">
@@ -395,17 +395,11 @@ export default function ClinicsPage() {
             </div>
 
             <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
-              <div className="relative h-44">
-                <Image
-                  src="/images/sports-life-hua-hin.jpg"
-                  alt="Sports Life Hua Hin"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 340px"
-                />
+              <div className="relative h-44 bg-[#0F1A2A] flex items-center justify-center">
+                <p className="text-white/40 text-sm font-medium">Venue to be announced</p>
               </div>
               <div className="p-4">
-                <p className="font-serif font-bold text-[#1D2D44] text-base">Sports Life Hua Hin</p>
+                <p className="font-serif font-bold text-[#1D2D44] text-base">Hua Hin courts</p>
                 <p className="text-[#1D2D44]/60 text-sm">Hua Hin · Nov 7–8</p>
               </div>
             </div>
