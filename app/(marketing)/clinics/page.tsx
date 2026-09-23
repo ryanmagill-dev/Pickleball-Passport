@@ -87,7 +87,7 @@ export default function ClinicsPage() {
                 Four sessions.<br className="hidden sm:block" /> One week. Just the pickleball.
               </h1>
               <p className="text-xl text-white mb-8 max-w-2xl">
-                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions, split across Bangkok and Hua Hin however you like, capped at twenty players. You book your own room and eat where you like. We run the pickleball.
+                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions, split across Bangkok and Hua Hin however you like, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10">
@@ -157,7 +157,7 @@ export default function ClinicsPage() {
             Clinic Week is the opposite. Just the pickleball, priced to match. You book your own room, you get yourself to the courts, and your mornings and evenings are your own.
           </p>
           <p>
-            Twenty players, split across Bangkok and Hua Hin. Nobody hides at the back of a drill line.
+            Sixteen players, four courts. Nobody hides at the back of a drill line.
           </p>
         </div>
       </section>
@@ -224,7 +224,7 @@ export default function ClinicsPage() {
               <Users className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Group</p>
-                <p className="text-[#1D2D44]/70 text-sm">Twenty players, split across Bangkok and Hua Hin.</p>
+                <p className="text-[#1D2D44]/70 text-sm">Maximum sixteen. Four courts.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">

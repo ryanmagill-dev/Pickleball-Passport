@@ -9,8 +9,8 @@ import { TripSectionContentHuaHin } from '@/components/trips/trip-section-conten
 /* ─────────────────────── DEPARTURE DATA ─────────────────────── */
 
 const departures = [
-  { month: 'November 1–9, 2026', price: 5500, href: '/reserve', confirmed: true },
-  { month: 'December 10–18, 2026', price: 5500, href: '/reserve', confirmed: true },
+  { month: 'November 1–9, 2026', price: 5500, href: '/reserve', confirmed: true, includesClinicWeek: true },
+  { month: 'December 10–18, 2026', price: 5500, href: '/reserve', confirmed: true, includesClinicWeek: false },
 ];
 
 export function BangkokHuaHinPage() {
@@ -136,6 +136,16 @@ export function BangkokHuaHinPage() {
                     I&apos;m interested
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
+                )}
+                {dep.includesClinicWeek && (
+                  <div className="flex items-center gap-2 pt-3 mt-1 border-t border-[#B08D55]/10">
+                    <div className="relative w-7 h-7 rounded-full overflow-hidden flex-shrink-0">
+                      <Image src="/travis-rhea.jpg" alt="Coach Travis Rhea" fill className="object-cover object-top" sizes="28px" />
+                    </div>
+                    <p className="text-[11px] text-[#1D2D44]/50 leading-tight">
+                      <span className="font-semibold text-[#1D2D44]/70">Includes Clinic Week.</span> Both Mind Your Pickle mindset sessions in Bangkok, plus the Hua Hin session, alongside the rest of the Clinic Week group.
+                    </p>
+                  </div>
                 )}
               </div>
             ))}

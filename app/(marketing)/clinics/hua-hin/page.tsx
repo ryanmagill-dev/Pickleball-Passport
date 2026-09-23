@@ -50,7 +50,7 @@ export default function ClinicsHuaHinPage() {
             Two sessions. One weekend. Hua Hin.
           </h1>
           <p className="text-xl text-white mb-8 max-w-2xl">
-            Coach Travis Rhea brings the mindset work down the coast. Two sessions at Sports Life Hua Hin, capped at twenty. Same deal as Bangkok, you sort your own room and we run the pickleball.
+            Coach Travis Rhea brings the mindset work down the coast. Two sessions at Sports Life Hua Hin, capped at sixteen. Same deal as Bangkok, you sort your own room and we run the pickleball.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10">
@@ -64,7 +64,7 @@ export default function ClinicsHuaHinPage() {
             </div>
             <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
               <Users className="h-4 w-4 text-[#B08D55]" />
-              20 spots
+              16 spots
             </div>
           </div>
 

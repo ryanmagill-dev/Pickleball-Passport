@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { ComingSoonCard } from '@/components/trips/coming-soon-card';
@@ -149,21 +150,44 @@ export function TripsListingPage() {
         </div>
       </section>
 
-      {/* ── Day Clinics ── */}
+      {/* ── Clinic Week cross-promote ── */}
       <section className="py-10 sm:py-14 bg-white border-t border-[#B08D55]/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0F1A2A] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
-            <div>
-              <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#B08D55] mb-2">Not ready for the full trip?</p>
-              <h2 className="font-serif text-xl sm:text-2xl font-bold text-white mb-1">Clinic Week Bangkok, with Coach Travis Rhea</h2>
-              <p className="text-white/50 text-sm">Just the pickleball. Mind Your Pickle mindset coaching, on court in Bangkok.</p>
+          <div className="relative overflow-hidden bg-[#0F1A2A] rounded-2xl">
+            <div className="relative z-10 p-6 sm:p-10 flex flex-col sm:flex-row sm:items-center gap-8">
+              <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden flex-shrink-0 mx-auto sm:mx-0">
+                <Image
+                  src="/travis-rhea.jpg"
+                  alt="Coach Travis Rhea"
+                  fill
+                  className="object-cover object-top"
+                  sizes="128px"
+                />
+              </div>
+              <div className="min-w-0">
+                <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#B08D55] mb-2">Also this November</p>
+                <h2 className="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Clinic Week with Coach Travis Rhea</h2>
+                <p className="text-white/60 text-sm leading-relaxed max-w-2xl mb-4">
+                  Four sessions of mindset work and coached play in Bangkok, November 2 to 5, 11am to 2pm. Sixteen players, four courts. You sort your own hotel, we run the pickleball. Two-day passes in Bangkok or Hua Hin if you can&apos;t do the whole week.
+                </p>
+                <div className="flex flex-wrap items-center gap-2 mb-5">
+                  {['Nov 2', 'Nov 3', 'Nov 4', 'Nov 5', 'Hua Hin Nov 7–8'].map((d) => (
+                    <span key={d} className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">
+                      {d}
+                    </span>
+                  ))}
+                  <span className="px-3 py-1 rounded-full bg-[#B08D55]/20 text-[#B08D55] text-xs font-bold">
+                    Spots open now
+                  </span>
+                </div>
+                <Link
+                  href="/clinics"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm whitespace-nowrap"
+                >
+                  See Clinic Week <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
-            <Link
-              href="/clinics"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shrink-0 whitespace-nowrap"
-            >
-              See Clinic Week <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </div>
       </section>
