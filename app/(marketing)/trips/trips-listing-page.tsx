@@ -55,8 +55,8 @@ const upcomingDepartures = [
     route: 'Bangkok + Phuket',
     price: '$5,500',
     href: '/trips/bangkok-phuket/march-18-2027',
-    video: '/hero-drone.mp4',
-    poster: '/images/posters/hero-drone-poster.jpg',
+    video: '/phuket-pill.mp4',
+    poster: '/images/posters/phuket-pill-poster.jpg',
   },
   {
     id: 'april',
