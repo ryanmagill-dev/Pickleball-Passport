@@ -7,16 +7,15 @@ import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, MessageCircle, Users, G
 /* ─────────────────────── SCHEDULE ─────────────────────── */
 
 const bangkokSchedule = [
-  { day: 'Sun 1 Nov', time: 'Evening', label: 'Arrivals. Welcome and priming dinner. No pickleball.' },
-  { day: 'Mon 2 Nov', time: '11am–2pm', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Tue 3 Nov', time: '11am–2pm', label: 'Live coaching session.' },
-  { day: 'Wed 4 Nov', time: '11am–2pm', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Thu 5 Nov', time: '11am–2pm', label: 'Final live coaching session, mini tournament.' },
+  { day: 'Sun 1 Nov', time: 'Evening', venue: '', label: 'Arrivals. Welcome and priming dinner. No pickleball.' },
+  { day: 'Mon 2 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },
+  { day: 'Tue 3 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Live coaching session.' },
+  { day: 'Wed 4 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },
+  { day: 'Thu 5 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Final live coaching session, mini tournament.' },
 ];
 
 const huaHinSchedule = [
-  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Coaching clinic with Jaron and Ryan.' },
-  { day: 'Sun 8 Nov', time: '9am–12pm', label: 'Coaching clinic with Jaron and Ryan.' },
+  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Skills clinic, then open play to put it into action.' },
 ];
 
 /* ─────────────────────── PASSES ─────────────────────── */
@@ -36,13 +35,13 @@ const passes = [
   },
   {
     name: 'Two-Day Pass',
-    summary: 'Bangkok: 1 mindset + 1 coaching. Hua Hin: 2 coaching clinics.',
+    summary: 'Bangkok: 1 mindset + 1 coaching, across 2 days. Hua Hin: clinic + open play, in 1 day.',
     price: '$169',
     link: 'https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6',
     featured: false,
     includes: [
       'Bangkok: one Mind Your Pickle mindset session with Coach Travis Rhea + one live coaching session with Jaron and Ryan',
-      'Hua Hin: two coaching clinics with Jaron and Ryan',
+      'Hua Hin: one skills clinic plus open play to put it into action, both in a single day',
       'All court time, balls, water, snacks, and setup',
     ],
   },
@@ -104,7 +103,7 @@ export default function ClinicsPage() {
                   className="flex items-center gap-2 bg-[#B08D55]/20 hover:bg-[#B08D55]/30 rounded-full px-4 py-2 text-sm transition-colors"
                 >
                   <Clock className="h-4 w-4 text-[#B08D55]" />
-                  + Nov 7–8, Hua Hin
+                  + Nov 7, Hua Hin
                 </Link>
               </div>
 
@@ -169,14 +168,17 @@ export default function ClinicsPage() {
             Clinic Week Schedule
           </h2>
           <p className="text-[#1D2D44]/50 text-sm mb-6">
-            Arise Pickleball, Udom Suk · 11am to 2pm
+            Bangkok · 11am to 2pm · Arise Pickleball and Papaya Pickleball Club
           </p>
           <div className="space-y-3">
             {bangkokSchedule.map((row) => (
               <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4">
                 <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
                 <span className="text-[#B08D55] text-xs font-semibold w-20 shrink-0">{row.time}</span>
-                <span className="text-[#1D2D44]/70 text-sm">{row.label}</span>
+                <span className="text-[#1D2D44]/70 text-sm flex-1">{row.label}</span>
+                {row.venue && (
+                  <span className="text-[#1D2D44]/40 text-xs font-medium shrink-0">{row.venue}</span>
+                )}
               </div>
             ))}
           </div>
@@ -210,7 +212,7 @@ export default function ClinicsPage() {
               <MapPin className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Where</p>
-                <p className="text-[#1D2D44]/70 text-sm">Arise Pickleball courts, Udom Suk, Bangkok. Close to the BTS.</p>
+                <p className="text-[#1D2D44]/70 text-sm">Arise Pickleball (Mon &amp; Wed) and Papaya Pickleball Club (Tue &amp; Thu), both in Bangkok.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -345,13 +347,13 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week is two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan. Mindset sessions run in Bangkok only. Want your live coaching sessions in Hua Hin instead of Bangkok? That&apos;s available. Just tell us how you&apos;d like them arranged when you book.
+            * Clinic Week is two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan, across Arise Pickleball and Papaya Pickleball Club. Mindset sessions run in Bangkok only. Want your live coaching sessions in Hua Hin instead of Bangkok? That&apos;s available, delivered as a single-day clinic and open play. Just tell us how you&apos;d like them arranged when you book.
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">
-            Not included on any pass: accommodation, flights, visas, insurance, transport, meals. Hua Hin sessions run only with ten or more players by November 1. See the{' '}
+            Not included on any pass: accommodation, flights, visas, insurance, transport, meals. Hua Hin runs only with ten or more players by November 1. See the{' '}
             <Link href="/clinics/hua-hin" className="text-[#B08D55] hover:underline font-medium">
-              Hua Hin weekend page
+              Hua Hin day page
             </Link>.
           </p>
           <p className="text-[#1D2D44]/40 text-xs mt-2">
@@ -377,7 +379,7 @@ export default function ClinicsPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-2">
             Venues
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8 max-w-3xl">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8 max-w-5xl">
             <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
               <div className="relative h-44 bg-white flex items-center justify-center p-8">
                 <Image
@@ -390,7 +392,23 @@ export default function ClinicsPage() {
               </div>
               <div className="p-4">
                 <p className="font-serif font-bold text-[#1D2D44] text-base">Arise Pickleball courts</p>
-                <p className="text-[#1D2D44]/60 text-sm">Udom Suk, Bangkok · Nov 1–5</p>
+                <p className="text-[#1D2D44]/60 text-sm">Udom Suk, Bangkok · Mon &amp; Wed</p>
+              </div>
+            </div>
+
+            <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
+              <div className="relative h-44">
+                <Image
+                  src="/papayalogo.png"
+                  alt="Papaya Pickleball Club"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 340px"
+                />
+              </div>
+              <div className="p-4">
+                <p className="font-serif font-bold text-[#1D2D44] text-base">Papaya Pickleball Club</p>
+                <p className="text-[#1D2D44]/60 text-sm">Bangkok · Tue &amp; Thu</p>
               </div>
             </div>
 
@@ -400,7 +418,7 @@ export default function ClinicsPage() {
               </div>
               <div className="p-4">
                 <p className="font-serif font-bold text-[#1D2D44] text-base">Hua Hin courts</p>
-                <p className="text-[#1D2D44]/60 text-sm">Hua Hin · Nov 7–8</p>
+                <p className="text-[#1D2D44]/60 text-sm">Hua Hin · Nov 7</p>
               </div>
             </div>
           </div>
@@ -408,7 +426,7 @@ export default function ClinicsPage() {
           <div className="bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10 p-5 max-w-lg">
             <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-2">Getting There. Not Optional.</p>
             <p className="text-[#1D2D44]/70 text-sm leading-relaxed">
-              Courts are in Udom Suk. If you&apos;re staying central, budget 30 to 40 minutes by Grab, roughly 150 to 250 baht each way. Easy, but worth knowing before you arrive rather than on the first morning.
+              Arise Pickleball is in Udom Suk. If you&apos;re staying central, budget 30 to 40 minutes by Grab, roughly 150 to 250 baht each way. Papaya Pickleball Club travel times to follow. Easy either way, but worth knowing before you arrive rather than on the first morning.
             </p>
           </div>
         </div>

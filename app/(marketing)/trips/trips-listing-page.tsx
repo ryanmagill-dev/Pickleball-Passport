@@ -252,7 +252,7 @@ export function TripsListingPage() {
                   Four sessions of mindset work and coached play in Bangkok, November 2 to 5, 11am to 2pm. Sixteen players, four courts. You sort your own hotel, we run the pickleball. Two-day passes in Bangkok or Hua Hin if you can&apos;t do the whole week.
                 </p>
                 <div className="flex flex-wrap items-center gap-2 mb-5">
-                  {['Nov 2', 'Nov 3', 'Nov 4', 'Nov 5', 'Hua Hin Nov 7–8'].map((d) => (
+                  {['Nov 2', 'Nov 3', 'Nov 4', 'Nov 5', 'Hua Hin Nov 7'].map((d) => (
                     <span key={d} className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">
                       {d}
                     </span>

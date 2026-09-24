@@ -10,12 +10,12 @@ type GateStatus = 'open' | 'confirmed' | 'closed';
 const GATE_STATUS: GateStatus = 'open';
 
 const schedule = [
-  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Coaching clinic with Jaron and Ryan.' },
-  { day: 'Sun 8 Nov', time: '9am–12pm', label: 'Coaching clinic with Jaron and Ryan.' },
+  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Skills clinic with Jaron and Ryan, then open play to put it into action.' },
 ];
 
 const included = [
-  'Two coaching clinics with Jaron and Ryan',
+  'A skills clinic with Jaron and Ryan',
+  'Open play afterward to apply it',
   'All court time, balls, water, and snacks',
   'Group WhatsApp thread',
   'Photos afterwards',
@@ -36,16 +36,16 @@ export default function ClinicsHuaHinPage() {
             Two-Day Pass · Hua Hin
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-            Two sessions. One weekend. Hua Hin.
+            One day. Clinic and open play. Hua Hin.
           </h1>
           <p className="text-xl text-white mb-8 max-w-2xl">
-            Two coaching clinics with Jaron and Ryan on the coast in Hua Hin, capped at sixteen. Same deal as Bangkok, you sort your own room and we run the pickleball.
+            A skills clinic with Jaron and Ryan, then open play to put it into action. One day on the coast in Hua Hin, capped at sixteen. Same deal as Bangkok, you sort your own room and we run the pickleball.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10">
             <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
               <Clock className="h-4 w-4 text-[#B08D55]" />
-              Nov 7–8, 2026
+              Nov 7, 2026
             </div>
             <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
               <MapPin className="h-4 w-4 text-[#B08D55]" />
@@ -69,7 +69,7 @@ export default function ClinicsHuaHinPage() {
                 <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-white/50 text-xs mt-3 max-w-md">
-                This weekend runs with ten players or more. If we don&apos;t get there by November 1, everyone booked is refunded in full.
+                This day runs with ten players or more. If we don&apos;t get there by November 1, everyone booked is refunded in full.
               </p>
             </>
           )}
