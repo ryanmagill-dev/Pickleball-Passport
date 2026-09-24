@@ -1,13 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { CheckCircle, X, MapPin, Users, Clock, ArrowRight, MessageCircle } from 'lucide-react';
-
-/* ─────────────────────── GO / NO-GO GATE ─────────────────────── */
-
-type GateStatus = 'open' | 'confirmed' | 'closed';
-
-const GATE_STATUS: GateStatus = 'open';
+import { CheckCircle, X, MapPin, Users, Clock, MessageCircle } from 'lucide-react';
 
 const schedule = [
   { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Skills clinic with Jaron and Ryan, then open play to put it into action.' },
@@ -33,13 +27,13 @@ export default function ClinicsHuaHinPage() {
         <div className="absolute inset-0 bg-[#0F1A2A]" />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-3">
-            Two-Day Pass · Hua Hin
+            Hua Hin Day · Coming Soon
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
             One day. Clinic and open play. Hua Hin.
           </h1>
           <p className="text-xl text-white mb-8 max-w-2xl">
-            A skills clinic with Jaron and Ryan, then open play to put it into action. One day on the coast in Hua Hin, capped at sixteen. Same deal as Bangkok, you sort your own room and we run the pickleball.
+            A skills clinic with Jaron and Ryan, then open play to put it into action. One day on the coast in Hua Hin, capped at sixteen. Pricing and booking details to follow, booked and paid locally in Thailand.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10">
@@ -57,49 +51,29 @@ export default function ClinicsHuaHinPage() {
             </div>
           </div>
 
-          {GATE_STATUS === 'open' && (
-            <>
-              <a
-                href="https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
-              >
-                Reserve your spot · $169
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <p className="text-white/50 text-xs mt-3 max-w-md">
-                This day runs with ten players or more. If we don&apos;t get there by November 1, everyone booked is refunded in full.
-              </p>
-            </>
-          )}
-
-          {GATE_STATUS === 'confirmed' && (
-            <>
-              <a
-                href="https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
-              >
-                Reserve your spot · $169
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <p className="text-white/50 text-xs mt-3">Confirmed and running.</p>
-            </>
-          )}
-
-          {GATE_STATUS === 'closed' && (
-            <>
-              <p className="text-white text-lg font-semibold mb-3">Not running this November.</p>
-              <Link
-                href="/notify"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
-              >
-                Join the list
-              </Link>
-            </>
-          )}
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href="https://line.me/ti/p/-PkfPC68L8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-[#06C755] text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Message us on LINE
+            </a>
+            <a
+              href="https://wa.me/qr/GELZNRU2267RE1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Message us on WhatsApp
+            </a>
+          </div>
+          <p className="text-white/50 text-xs mt-3 max-w-md">
+            Tell us you want in and we&apos;ll follow up with pricing and booking once it&apos;s locked. This day runs if we get ten players or more confirmed by November 1.
+          </p>
         </div>
       </section>
 

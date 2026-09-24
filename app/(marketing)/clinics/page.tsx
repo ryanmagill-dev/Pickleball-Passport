@@ -26,6 +26,7 @@ const passes = [
     summary: '4 sessions: 2 mindset, 2 live coaching',
     price: '$299',
     link: 'https://link.fastpaydirect.com/payment-link/6aaa56229f7ff2c808a75e19',
+    external: true,
     featured: true,
     includes: [
       'Two Mind Your Pickle mindset sessions with Coach Travis Rhea',
@@ -35,14 +36,28 @@ const passes = [
   },
   {
     name: 'Two-Day Pass',
-    summary: 'Bangkok: 1 mindset + 1 coaching, across 2 days. Hua Hin: clinic + open play, in 1 day.',
+    summary: '2 sessions in Bangkok: 1 mindset, 1 live coaching',
     price: '$169',
     link: 'https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6',
+    external: true,
     featured: false,
     includes: [
-      'Bangkok: one Mind Your Pickle mindset session with Coach Travis Rhea + one live coaching session with Jaron and Ryan',
-      'Hua Hin: one skills clinic plus open play to put it into action, both in a single day',
+      'One Mind Your Pickle mindset session with Coach Travis Rhea',
+      'One live coaching session with Jaron and Ryan',
       'All court time, balls, water, snacks, and setup',
+    ],
+  },
+  {
+    name: 'Hua Hin Day',
+    summary: 'Skills clinic + open play, one day on the coast',
+    price: 'Details soon',
+    link: '/clinics/hua-hin',
+    external: false,
+    featured: false,
+    includes: [
+      'One skills clinic with Jaron and Ryan',
+      'Open play afterward to put it into action',
+      'Paid locally in Thailand, booking details to follow',
     ],
   },
 ];
@@ -86,7 +101,7 @@ export default function ClinicsPage() {
                 Four sessions.<br className="hidden sm:block" /> One week. Just the pickleball.
               </h1>
               <p className="text-xl text-white mb-8 max-w-2xl">
-                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions, split across Bangkok and Hua Hin however you like, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
+                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions in Bangkok, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10">
@@ -302,52 +317,58 @@ export default function ClinicsPage() {
             Court time, coaching, and equipment. Room, transport, and meals are yours to arrange.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {passes.map((pass) => (
-              <a
-                key={pass.name}
-                href={pass.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`rounded-2xl border p-6 flex flex-col hover:shadow-md transition-all group ${
-                  pass.featured
-                    ? 'bg-[#0F1A2A] border-[#B08D55]/40 hover:border-[#B08D55]/70'
-                    : 'bg-white border-[#B08D55]/10 hover:border-[#B08D55]/30'
-                }`}
-              >
-                {pass.featured && (
-                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#B08D55] text-white text-xs font-bold mb-3 self-start">
-                    BEST VALUE
-                  </span>
-                )}
-                <p className={`font-serif font-bold text-lg mb-1 ${pass.featured ? 'text-white' : 'text-[#1D2D44]'}`}>
-                  {pass.name}
-                </p>
-                <p className={`text-sm mb-4 ${pass.featured ? 'text-white/50' : 'text-[#1D2D44]/50'}`}>
-                  {pass.summary}
-                </p>
-                <ul className="space-y-1.5 mb-5 flex-1">
-                  {pass.includes.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <CheckCircle className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${pass.featured ? 'text-[#B08D55]' : 'text-[#B08D55]'}`} />
-                      <span className={`text-xs ${pass.featured ? 'text-white/70' : 'text-[#1D2D44]/70'}`}>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex items-center justify-between mt-auto">
-                  <span className={`font-bold text-xl ${pass.featured ? 'text-white' : 'text-[#1D2D44]'}`}>
-                    {pass.price}
-                  </span>
-                  <span className="flex items-center gap-1 text-[#B08D55] font-bold text-sm group-hover:gap-2 transition-all">
-                    Reserve <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
-              </a>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {passes.map((pass) => {
+              const cardClass = `rounded-2xl border p-6 flex flex-col hover:shadow-md transition-all group ${
+                pass.featured
+                  ? 'bg-[#0F1A2A] border-[#B08D55]/40 hover:border-[#B08D55]/70'
+                  : 'bg-white border-[#B08D55]/10 hover:border-[#B08D55]/30'
+              }`;
+              const content = (
+                <>
+                  {pass.featured && (
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#B08D55] text-white text-xs font-bold mb-3 self-start">
+                      BEST VALUE
+                    </span>
+                  )}
+                  <p className={`font-serif font-bold text-lg mb-1 ${pass.featured ? 'text-white' : 'text-[#1D2D44]'}`}>
+                    {pass.name}
+                  </p>
+                  <p className={`text-sm mb-4 ${pass.featured ? 'text-white/50' : 'text-[#1D2D44]/50'}`}>
+                    {pass.summary}
+                  </p>
+                  <ul className="space-y-1.5 mb-5 flex-1">
+                    {pass.includes.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <CheckCircle className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${pass.featured ? 'text-[#B08D55]' : 'text-[#B08D55]'}`} />
+                        <span className={`text-xs ${pass.featured ? 'text-white/70' : 'text-[#1D2D44]/70'}`}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center justify-between mt-auto">
+                    <span className={`font-bold text-xl ${pass.featured ? 'text-white' : 'text-[#1D2D44]'}`}>
+                      {pass.price}
+                    </span>
+                    <span className="flex items-center gap-1 text-[#B08D55] font-bold text-sm group-hover:gap-2 transition-all">
+                      {pass.external ? 'Reserve' : 'Learn more'} <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </>
+              );
+              return pass.external ? (
+                <a key={pass.name} href={pass.link} target="_blank" rel="noopener noreferrer" className={cardClass}>
+                  {content}
+                </a>
+              ) : (
+                <Link key={pass.name} href={pass.link} className={cardClass}>
+                  {content}
+                </Link>
+              );
+            })}
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week is two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan, across Arise Pickleball and Papaya Pickleball Club. Mindset sessions run in Bangkok only. Want your live coaching sessions in Hua Hin instead of Bangkok? That&apos;s available, delivered as a single-day clinic and open play. Just tell us how you&apos;d like them arranged when you book.
+            * Clinic Week and the Two-Day Pass are Bangkok only: two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan, across Arise Pickleball and Papaya Pickleball Club. The Hua Hin day is a separate, single-day clinic, booked and paid locally in Thailand.
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">
