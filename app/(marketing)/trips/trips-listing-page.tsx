@@ -10,24 +10,12 @@ import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
 const comingSoonDestinations = [
   {
-    destination: 'BALI',
-    imageUrl: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80',
-  },
-  {
     destination: 'VIETNAM',
     imageUrl: 'https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80',
   },
   {
-    destination: 'JAPAN',
-    imageUrl: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80',
-  },
-  {
     destination: 'DUBAI',
     imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80',
-  },
-  {
-    destination: 'MALAYSIA',
-    imageUrl: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80',
   },
   {
     destination: 'PHILIPPINES',

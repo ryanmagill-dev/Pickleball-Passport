@@ -23,8 +23,19 @@ const points = [
 
 export function SafetySection() {
   return (
-    <section className="bg-[#1D2D44] py-20">
-      <div className="container px-4 mx-auto">
+    <section className="relative overflow-hidden py-20">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/posters/tpp-aerial-0453-poster.jpg"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      >
+        <source src="/tpp-aerial-0453.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-[#1D2D44]/90" />
+      <div className="container px-4 mx-auto relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold tracking-widest text-[#B08D55] uppercase mb-3">Trust & Safety</p>

@@ -69,8 +69,19 @@ export function NewsletterPage() {
       </section>
 
       {/* GHL Form */}
-      <section className="py-16 sm:py-20">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+      <section className="relative overflow-hidden py-16 sm:py-20">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/posters/hero-drone-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/hero-drone.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[#FDF8F3]/70" />
+        <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6">
           <div className="bg-white rounded-2xl shadow-xl shadow-[#1D2D44]/10 border border-[#B08D55]/10 overflow-hidden">
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/vkJ4qmu5BNpd2FgpGy0O"

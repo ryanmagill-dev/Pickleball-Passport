@@ -29,19 +29,23 @@ const statItems = [
     value: '6/10',
     label: 'Activity Level',
     tooltip:
-      '6/10: Moderate. Pickleball sessions run in Pattaya. Festival days in both cities are no-pickleball days: plenty of walking and, if you want it, getting soaked.',
+      '6/10: Moderate. Pickleball is optional and open in Pattaya. Festival days in both cities are no-pickleball days: plenty of walking and, if you want it, getting soaked.',
   },
-  { value: '2', label: 'Pickleball Sessions' },
+  {
+    value: 'Optional',
+    label: 'Pickleball',
+    tooltip: 'Open sessions in Pattaya on non-festival days. Come to as many as you like, or skip them entirely.',
+  },
   { value: '4', label: 'Festival Days' },
 ];
 
 const includedItems = [
-  '8 nights (4 nights Bangkok + 4 nights Pattaya)',
+  '8 nights (3 nights Bangkok + 4 nights Pattaya + 1 night Bangkok)',
   'Daily breakfast throughout (8 breakfasts)',
-  '4 group dinners: welcome, Pattaya welcome, a Songkran street food night, and farewell',
-  'Private ground transfer Bangkok to Pattaya (about 2 hours)',
-  'Private transfer from Pattaya to Bangkok airport (BKK) on departure day',
-  '2 pickleball sessions in Pattaya with court fees, equipment, and structured programming',
+  '4 group dinners: welcome, a Songkran street food night, Pattaya welcome, and farewell',
+  'Private ground transfer Bangkok to Pattaya and back (about 2 hours each way)',
+  'All private ground transportation (air-con vans, airport transfers)',
+  'Optional pickleball sessions in Pattaya with court fees, equipment, and structured programming, join as many as you like',
   'Songkran water blessing ceremony at a Bangkok temple',
   'Guided access to Bangkok’s Songkran street festivities and Pattaya’s Wan Lai finale',
   'Hotel wellness amenities: spa, pools, fitness centers',
@@ -124,68 +128,68 @@ const days: ItineraryDay[] = [
   },
   {
     day: 4,
-    title: 'Last Day of Bangkok Songkran',
-    city: 'Bangkok',
-    hotel: 'Our 5-Star Bangkok riverside hotel',
-    vibe: 'Last splash in the capital',
-    icon: 'droplets',
+    title: 'Last Bangkok Songkran Day, Then Pattaya',
+    city: 'Bangkok → Pattaya',
+    hotel: 'Beachfront resort, Pattaya',
+    vibe: 'One last splash, then the coast',
+    icon: 'ship',
     slots: [
-      { label: 'Highlights', description: 'Final official day of Songkran in Bangkok. Traditional merit-making and temple visits for anyone who wants a quieter morning, festival streets for everyone else in the afternoon.' },
+      { label: 'Highlights', description: 'Final official day of Songkran in Bangkok: temple visits and merit-making in the morning for anyone who wants a quieter start. Afternoon private transfer to Pattaya, about 2 hours down the coast. Check in, evening at Beach Road.' },
     ],
   },
   {
     day: 5,
-    title: 'Bangkok to Pattaya',
-    city: 'Bangkok → Pattaya',
+    title: 'Pattaya, Open Day',
+    city: 'Pattaya',
     hotel: 'Beachfront resort, Pattaya',
-    vibe: 'The party moves to the coast',
-    icon: 'ship',
+    vibe: 'Optional pickleball, then the water war',
+    icon: 'trophy',
     slots: [
-      { label: 'Highlights', description: 'Private transfer to Pattaya, about 2 hours down the coast. Check into our beachfront resort. Evening at Beach Road, already warming up ahead of Wan Lai.' },
+      { label: 'Highlights', description: 'Optional pickleball, venue to be confirmed, come if you want it. Beach Road is now a kilometer-long water war zone with live music stages and beach access.' },
     ],
   },
   {
     day: 6,
-    title: 'Pickleball + Beach Road',
+    title: 'Pattaya, Open Day',
     city: 'Pattaya',
     hotel: 'Beachfront resort, Pattaya',
-    vibe: 'Play, then join the water war',
+    vibe: 'Optional pickleball, then explore',
     icon: 'trophy',
     slots: [
-      { label: 'Highlights', description: 'Pickleball session 1, venue to be confirmed. Afternoon and evening on Beach Road, now a kilometer-long water war zone with live music stages and beach access.' },
+      { label: 'Highlights', description: 'Optional pickleball, venue to be confirmed. Daytime festivities and nightlife on Walking Street, or a quieter cultural stop at Lan Pho Naklua Public Park for traditional merit-making.' },
     ],
   },
   {
     day: 7,
-    title: 'Pickleball + Walking Street',
+    title: 'Free Day, Pattaya',
     city: 'Pattaya',
     hotel: 'Beachfront resort, Pattaya',
-    vibe: 'Play, then explore',
-    icon: 'trophy',
+    vibe: 'Rest up before the finale',
+    icon: 'sparkles',
     slots: [
-      { label: 'Highlights', description: 'Pickleball session 2, venue to be confirmed. Daytime festivities and nightlife on Walking Street, or a quieter cultural stop at Lan Pho Naklua Public Park for traditional merit-making.' },
+      { label: 'Highlights', description: 'A free day to recover, beach, pool, or explore Pattaya at your own pace, ahead of Wan Lai tomorrow.' },
     ],
   },
   {
     day: 8,
-    title: 'Wan Lai Pattaya',
-    city: 'Pattaya',
-    hotel: 'Beachfront resort, Pattaya',
-    vibe: 'The grand finale',
+    title: 'Wan Lai Pattaya, Then Back to Bangkok',
+    city: 'Pattaya → Bangkok',
+    hotel: 'Our 5-Star Bangkok riverside hotel',
+    vibe: 'The grand finale, then home turf for the night',
     icon: 'droplets',
     slots: [
-      { label: 'Highlights', description: 'Pattaya’s Wan Lai, the biggest day of the festival here and the reason we route through Pattaya at all. Beach Road at full scale: live music, beach access, the whole city out. No pickleball today. Farewell dinner in the evening.' },
+      { label: 'Highlights', description: 'Wan Lai, the biggest day of the festival in Pattaya and the reason we route through here at all. Beach Road at full scale: live music, beach access, the whole city out. No pickleball today. Evening transfer back to Bangkok for one last night, farewell dinner.' },
     ],
   },
   {
     day: 9,
     title: 'Departure Day',
-    city: 'Pattaya',
-    hotel: 'Beachfront resort, Pattaya',
+    city: 'Bangkok',
+    hotel: 'Our 5-Star Bangkok riverside hotel',
     vibe: 'Hugs, promises to come back',
     icon: 'plane',
     slots: [
-      { label: 'Highlights', description: 'Final breakfast at the resort. Private transfer to Bangkok airport (BKK), about 2 hours. Head home, still finding water in your shoes.' },
+      { label: 'Highlights', description: 'Final breakfast at the hotel. Private transfer to the airport. Head home, still finding water in your shoes.' },
     ],
   },
 ];
@@ -197,16 +201,16 @@ const pickleballSessions = [
     number: 1,
     city: 'Pattaya',
     venue: 'Venue to be confirmed',
-    day: 'Day 6',
-    time: 'Morning',
+    day: 'Day 5',
+    time: 'Morning, optional',
     focus: 'Assessment, warm-up, coaching + round-robin',
   },
   {
     number: 2,
     city: 'Pattaya',
     venue: 'Venue to be confirmed',
-    day: 'Day 7',
-    time: 'Morning',
+    day: 'Day 6',
+    time: 'Morning, optional',
     focus: 'Coaching clinic + doubles play',
   },
 ];
@@ -218,7 +222,7 @@ const hotels = [
     name: 'Our 5-Star Bangkok riverside hotel',
     city: 'Bangkok',
     location: 'Riverside, Charoenkrung Road',
-    duration: '4 Nights',
+    duration: '4 Nights (3 + 1, split by the Pattaya leg)',
     highlights: [
       'Five-star riverside luxury on the Chao Phraya River',
       'On-site pickleball courts, spa, and world-class restaurants',
@@ -255,7 +259,7 @@ const groupDinners = [
   },
   {
     label: 'Farewell Dinner',
-    description: 'Final night celebration after Wan Lai, trip recap and toasts',
+    description: 'Back in Bangkok after Wan Lai, trip recap and toasts',
   },
 ];
 
@@ -276,11 +280,13 @@ function TripDetailsSongkran() {
       <div className="bg-gradient-to-r from-[#1D2D44] to-[#495F87] rounded-2xl p-6 text-white">
         <h3 className="font-serif text-lg font-bold mb-4">The Route</h3>
         <div className="flex items-center gap-3 text-sm flex-wrap">
-          <span className="px-3 py-1.5 rounded-full bg-white/20 font-medium">Bangkok (4 nights, Songkran)</span>
+          <span className="px-3 py-1.5 rounded-full bg-white/20 font-medium">Bangkok (3 nights, Songkran)</span>
           <span className="text-[#B08D55]">&rarr;</span>
           <span className="px-3 py-1.5 rounded-full bg-[#B08D55]/30 font-medium">Pattaya (4 nights, Wan Lai)</span>
+          <span className="text-[#B08D55]">&rarr;</span>
+          <span className="px-3 py-1.5 rounded-full bg-white/20 font-medium">Bangkok (1 night)</span>
         </div>
-        <p className="text-white/50 text-xs mt-3">Bangkok&apos;s Songkran runs April 13&ndash;15. Pattaya peaks later, culminating in Wan Lai on April 19, so we follow the festival down the coast.</p>
+        <p className="text-white/50 text-xs mt-3">Bangkok&apos;s Songkran runs April 13&ndash;15. Pattaya peaks later, culminating in Wan Lai on April 19. One last night back in Bangkok puts everyone close to the airport before flying home.</p>
       </div>
 
       <div>
@@ -335,8 +341,9 @@ function ItineraryAccordion() {
           Day-by-Day Itinerary
         </h2>
         <p className="text-[#1D2D44]/60 text-sm">
-          9 days: four in Bangkok for the official Songkran, four in Pattaya for the extended
-          celebration and Wan Lai. Click any day to see the highlights.
+          9 days: three in Bangkok for official Songkran, four in Pattaya for the extended
+          celebration and Wan Lai, then one last night back in Bangkok before flying home. Click
+          any day to see the highlights.
         </p>
       </div>
 
@@ -426,8 +433,9 @@ function AccommodationsSongkran() {
   return (
     <div className="space-y-8">
       <p className="text-[#1D2D44]/70 text-base leading-relaxed max-w-3xl">
-        Two properties, one on the river and one on the beach: four nights in Bangkok for the
-        official Songkran, then four nights in Pattaya through Wan Lai.
+        Two properties, one on the river and one on the beach: three nights in Bangkok for
+        official Songkran, four nights in Pattaya through Wan Lai, then one last night back in
+        Bangkok before flying home.
       </p>
 
       <div className="space-y-6">
@@ -476,15 +484,16 @@ function PickleballSongkran() {
   return (
     <div className="space-y-10">
       <p className="text-[#1D2D44]/70 text-base leading-relaxed max-w-3xl">
-        2 sessions, both in Pattaya, once the group has moved down the coast. No pickleball
-        during Bangkok Songkran (April 13&ndash;15) or on Wan Lai in Pattaya (April 19). That&apos;s
-        a feature, not a gap.
+        Pickleball on this trip is optional and open, in Pattaya only, on the days between
+        Bangkok Songkran and Wan Lai. Come to one, come to both, or skip it and just do the
+        festival. No pickleball during Bangkok Songkran (April 13&ndash;15) or on Wan Lai in
+        Pattaya (April 19).
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         {[
-          { value: '2', label: 'Total Sessions' },
-          { value: '4-5 hrs', label: 'Total Court Time' },
+          { value: 'Optional', label: 'Sessions' },
+          { value: 'Up to 4 hrs', label: 'Total Court Time' },
           { value: 'Coaching', label: 'Clinics Each Session' },
           { value: '3.0–5.0+', label: 'All Skill Levels' },
         ].map((item, idx) => (
@@ -542,8 +551,8 @@ function DiningSongkran() {
   return (
     <div className="space-y-10">
       <p className="text-[#1D2D44]/70 text-base leading-relaxed max-w-3xl">
-        4 group dinners included, from the river in Bangkok to the beach in Pattaya. Daily
-        breakfast throughout. Free time gives you room to explore both festivals your own way.
+        4 group dinners included, from the river in Bangkok to the beach in Pattaya and back.
+        Daily breakfast throughout. Free time gives you room to explore both festivals your own way.
       </p>
 
       <div>

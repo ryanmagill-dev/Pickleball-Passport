@@ -177,17 +177,28 @@ export default function ClinicsPage() {
       </section>
 
       {/* ── Schedule ── */}
-      <section className="py-12 sm:py-16 bg-[#FDF8F3] border-b border-[#B08D55]/10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-1">
+      <section className="relative overflow-hidden py-12 sm:py-16 border-b border-[#B08D55]/10">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/posters/tpp-aerial-0450-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/tpp-aerial-0450.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0F1A2A]/85 via-[#0F1A2A]/80 to-[#0F1A2A]/90" />
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-1">
             Clinic Week Schedule
           </h2>
-          <p className="text-[#1D2D44]/50 text-sm mb-6">
+          <p className="text-white/50 text-sm mb-6">
             Bangkok · 11am to 2pm · Arise Pickleball and Papaya Pickleball Club
           </p>
           <div className="space-y-3">
             {bangkokSchedule.map((row) => (
-              <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4">
+              <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4 shadow-lg">
                 <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
                 <span className="text-[#B08D55] text-xs font-semibold w-20 shrink-0">{row.time}</span>
                 <span className="text-[#1D2D44]/70 text-sm flex-1">{row.label}</span>
@@ -198,15 +209,15 @@ export default function ClinicsPage() {
             ))}
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-1 mt-12">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-1 mt-12">
             Hua Hin Schedule
           </h2>
-          <p className="text-[#1D2D44]/50 text-sm mb-6">
+          <p className="text-white/50 text-sm mb-6">
             Hua Hin · 9am to 12pm
           </p>
           <div className="space-y-3">
             {huaHinSchedule.map((row) => (
-              <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4">
+              <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4 shadow-lg">
                 <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
                 <span className="text-[#B08D55] text-xs font-semibold w-20 shrink-0">{row.time}</span>
                 <span className="text-[#1D2D44]/70 text-sm">{row.label}</span>
@@ -420,7 +431,7 @@ export default function ClinicsPage() {
             <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
               <div className="relative h-44">
                 <Image
-                  src="/Papaya_Pickleball_Group.jpg"
+                  src="/papaya2.jpg"
                   alt="The Pickleball Passport group at Papaya Pickleball Club"
                   fill
                   className="object-cover object-top"
