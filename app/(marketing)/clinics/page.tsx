@@ -420,10 +420,10 @@ export default function ClinicsPage() {
             <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
               <div className="relative h-44">
                 <Image
-                  src="/papayalogo.png"
-                  alt="Papaya Pickleball Club"
+                  src="/Papaya_Pickleball_Group.jpg"
+                  alt="The Pickleball Passport group at Papaya Pickleball Club"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 340px"
                 />
               </div>
@@ -434,8 +434,20 @@ export default function ClinicsPage() {
             </div>
 
             <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
-              <div className="relative h-44 bg-[#0F1A2A] flex items-center justify-center">
-                <p className="text-white/40 text-sm font-medium">Venue to be announced</p>
+              <div className="relative h-44">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  poster="/images/posters/hua-hin-cave-poster.jpg"
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                >
+                  <source src="/hua-hin-cave.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <p className="text-white/70 text-sm font-medium">Venue to be announced</p>
+                </div>
               </div>
               <div className="p-4">
                 <p className="font-serif font-bold text-[#1D2D44] text-base">Hua Hin courts</p>

@@ -22,9 +22,19 @@ export default function ClinicsHuaHinPage() {
     <main className="min-h-screen bg-[#FDF8F3]">
 
       {/* ── Hero ── */}
-      {/* TODO: swap flat navy for real photos of the new Hua Hin venue once confirmed */}
+      {/* TODO: swap for real photos of the new Hua Hin venue once confirmed */}
       <section className="relative overflow-hidden text-white py-16 sm:py-20">
-        <div className="absolute inset-0 bg-[#0F1A2A]" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/posters/hua-hin-cave-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/hua-hin-cave.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#0F1A2A]/90" />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-3">
             Hua Hin Day · Coming Soon

@@ -47,7 +47,7 @@ export function BookingModuleMobile({
             {/* Primary  ·  apply form */}
             <Link
               href="/apply"
-              className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-xs shadow-lg shadow-[#B08D55]/25"
+              className="inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-xs shadow-lg shadow-[#B08D55]/25"
             >
               Apply
             </Link>
@@ -57,7 +57,7 @@ export function BookingModuleMobile({
                 href={fullLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2.5 rounded-xl border border-[#1D2D44]/20 text-[#1D2D44]/70 font-bold text-xs"
+                className="inline-flex items-center justify-center px-4 py-2.5 rounded-xl border border-[#1D2D44]/20 text-[#1D2D44]/70 font-bold text-xs"
               >
                 Reserve Your Spot
               </a>
@@ -65,7 +65,7 @@ export function BookingModuleMobile({
               <button
                 type="button"
                 onClick={() => setShowPaymentOptions(!showPaymentOptions)}
-                className="px-4 py-2.5 rounded-xl border border-[#1D2D44]/20 text-[#1D2D44]/70 font-bold text-xs"
+                className="inline-flex items-center justify-center px-4 py-2.5 rounded-xl border border-[#1D2D44]/20 text-[#1D2D44]/70 font-bold text-xs"
               >
                 Pay now
               </button>

@@ -18,10 +18,10 @@ export function SongkranAprilPage() {
           muted
           loop
           playsInline
-          poster="/images/posters/songkran-street-poster.jpg"
+          poster="/images/posters/songkran-sunset-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/songkran-street.mp4" type="video/mp4" />
+          <source src="/songkran-sunset.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-[#0F1A2A]/85" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
