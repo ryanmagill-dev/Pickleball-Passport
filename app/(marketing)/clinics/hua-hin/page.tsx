@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle, X, MapPin, Users, Clock, MessageCircle } from 'lucide-react';
 
@@ -61,28 +62,8 @@ export default function ClinicsHuaHinPage() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a
-              href="https://line.me/ti/p/-PkfPC68L8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-[#06C755] text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Message us on LINE
-            </a>
-            <a
-              href="https://wa.me/qr/GELZNRU2267RE1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Message us on WhatsApp
-            </a>
-          </div>
-          <p className="text-white/50 text-xs mt-3 max-w-md">
-            Tell us you want in and we&apos;ll follow up with pricing and booking once it&apos;s locked. This day runs if we get ten players or more confirmed by November 1.
+          <p className="text-white/50 text-xs max-w-md">
+            Tell us you want in and we&apos;ll follow up with pricing and booking once it&apos;s locked. This day runs if we get ten players or more confirmed by November 1. Scan to reach Jaron below.
           </p>
         </div>
       </section>
@@ -146,6 +127,81 @@ export default function ClinicsHuaHinPage() {
               Compare plans with our partner, Squaremouth
             </a>.
           </p>
+        </div>
+      </section>
+
+      {/* ── PromptPay QR (Thailand local payments) ── */}
+      <section className="py-12 sm:py-16 bg-[#FDF8F3] border-b border-[#B08D55]/10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl border border-[#B08D55]/10 p-6 sm:p-8 text-center">
+            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-1">
+              Paying in Thailand? ชำระเงินในไทย
+            </p>
+            <h3 className="font-serif text-xl font-bold text-[#1D2D44] mb-2">
+              PromptPay: No Stripe Fees
+            </h3>
+            <p className="text-[#1D2D44]/60 text-sm leading-relaxed max-w-md mx-auto">
+              This day is booked and paid locally. Once pricing is confirmed, scan to pay via PromptPay, standard Thai bank transfer, zero international fees.
+            </p>
+          </div>
+
+          <div className="mt-6 bg-white rounded-2xl border border-[#B08D55]/10 p-6 flex flex-col items-center">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 overflow-hidden rounded-lg">
+              <Image
+                src="/newqr.jpeg"
+                alt="PromptPay QR code"
+                fill
+                className="object-contain"
+                sizes="320px"
+              />
+            </div>
+            <p className="text-xs text-[#1D2D44]/40 mt-3">
+              PromptPay · Screenshot and scan in any Thai banking app
+            </p>
+          </div>
+
+          {/* ── LINE + WhatsApp ── */}
+          <div className="mt-6 bg-white rounded-2xl border border-[#B08D55]/10 p-6 sm:p-8">
+            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-4 text-center">
+              Questions? Chat with Jaron
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
+              <a
+                href="https://line.me/ti/p/-PkfPC68L8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2"
+              >
+                <div className="relative w-40 h-40 sm:w-44 sm:h-44 overflow-hidden rounded-xl border border-[#B08D55]/10">
+                  <Image
+                    src="/line-qr-jaron.png"
+                    alt="Add Jaron on LINE, QR code"
+                    fill
+                    className="object-cover"
+                    sizes="176px"
+                  />
+                </div>
+                <span className="text-xs font-semibold text-[#1D2D44]/60">Scan to add on LINE</span>
+              </a>
+              <a
+                href="https://wa.me/qr/GELZNRU2267RE1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2"
+              >
+                <div className="relative w-48 h-48 sm:w-52 sm:h-52 overflow-hidden rounded-xl border border-[#B08D55]/10">
+                  <Image
+                    src="/whatsapp-qr-jaron.png"
+                    alt="Add Jaron on WhatsApp, QR code"
+                    fill
+                    className="object-contain bg-[#5CBD6D]"
+                    sizes="208px"
+                  />
+                </div>
+                <span className="text-xs font-semibold text-[#1D2D44]/60">Scan to add on WhatsApp</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

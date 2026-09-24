@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, MessageCircle, Users, Globe, Package, Award } from 'lucide-react';
+import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, Users, Globe, Package, Award } from 'lucide-react';
 
 /* ─────────────────────── SCHEDULE ─────────────────────── */
 
@@ -500,66 +500,60 @@ export default function ClinicsPage() {
           </div>
 
           <div className="mt-6 bg-white rounded-2xl border border-[#B08D55]/10 p-6 flex flex-col items-center">
-            <div className="relative w-56 h-56 sm:w-64 sm:h-64 overflow-hidden rounded-lg">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 overflow-hidden rounded-lg">
               <Image
-                src="/images/newpromptpay-qr.png"
-                alt="PromptPay QR code, Jaron Dhillon Shoptaugh"
+                src="/newqr.jpeg"
+                alt="PromptPay QR code"
                 fill
                 className="object-contain"
-                sizes="256px"
+                sizes="320px"
               />
             </div>
             <p className="text-xs text-[#1D2D44]/40 mt-3">
-              PromptPay · Jaron Dhillon Shoptaugh · Screenshot and scan in any Thai banking app
+              PromptPay · Screenshot and scan in any Thai banking app
             </p>
           </div>
 
           {/* ── LINE + WhatsApp (questions before paying) ── */}
           <div className="mt-6 bg-white rounded-2xl border border-[#B08D55]/10 p-6 sm:p-8">
-            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-4 text-center sm:text-left">
+            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-4 text-center">
               Questions before you pay? Chat with Jaron
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="flex items-center gap-4">
-                <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg border border-[#B08D55]/10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
+              <a
+                href="https://line.me/ti/p/-PkfPC68L8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2"
+              >
+                <div className="relative w-40 h-40 sm:w-44 sm:h-44 overflow-hidden rounded-xl border border-[#B08D55]/10">
                   <Image
                     src="/line-qr-jaron.png"
                     alt="Add Jaron on LINE, QR code"
                     fill
                     className="object-cover"
-                    sizes="80px"
+                    sizes="176px"
                   />
                 </div>
-                <a
-                  href="https://line.me/ti/p/-PkfPC68L8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#06C755] text-white font-semibold text-sm hover:bg-[#05a648] transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Add on LINE
-                </a>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="relative w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg border border-[#B08D55]/10">
+                <span className="text-xs font-semibold text-[#1D2D44]/60">Scan to add on LINE</span>
+              </a>
+              <a
+                href="https://wa.me/qr/GELZNRU2267RE1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2"
+              >
+                <div className="relative w-48 h-48 sm:w-52 sm:h-52 overflow-hidden rounded-xl border border-[#B08D55]/10">
                   <Image
                     src="/whatsapp-qr-jaron.png"
                     alt="Add Jaron on WhatsApp, QR code"
                     fill
                     className="object-contain bg-[#5CBD6D]"
-                    sizes="80px"
+                    sizes="208px"
                   />
                 </div>
-                <a
-                  href="https://wa.me/qr/GELZNRU2267RE1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#25D366] text-white font-semibold text-sm hover:bg-[#1ebe5a] transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Add on WhatsApp
-                </a>
-              </div>
+                <span className="text-xs font-semibold text-[#1D2D44]/60">Scan to add on WhatsApp</span>
+              </a>
             </div>
           </div>
         </div>
