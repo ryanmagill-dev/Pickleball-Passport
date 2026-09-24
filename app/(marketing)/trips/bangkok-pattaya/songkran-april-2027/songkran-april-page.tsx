@@ -27,24 +27,26 @@ export function SongkranAprilPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-4">
-              Apr 8–16, 2027 · Songkran Edition
+              Apr 12–20, 2027 · Songkran + Wan Lai
             </p>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-              Songkran in Bangkok
+              Songkran + Wan Lai
             </h1>
 
             <p className="text-xl text-[#B08D55] italic mb-4">
-              Nine days built around Thailand&apos;s New Year.
+              Nine days built around Thailand&apos;s biggest water festival, Bangkok to the coast.
             </p>
 
             <p className="text-white/70 text-base leading-relaxed mb-4 max-w-2xl">
-              Three days of coached pickleball on the coast in Hua Hin, then back into Bangkok
-              for the biggest water festival on earth.
+              Four days of official Songkran in Bangkok: Khao San Road&apos;s water gun battles,
+              foam parties and water slides on Silom Road and Siam Square, Buddha-bathing and
+              merit-making at the temples for the traditional side. Then we follow the festival
+              down the coast to Pattaya, where it runs longer, building to Wan Lai on April 19.
             </p>
 
             <p className="text-white/70 text-base leading-relaxed mb-4 max-w-2xl">
-              Songkran is three days when the whole country stops. People go home to their
+              Songkran is the days when the whole country stops. People go home to their
               families, pour water over their elders&apos; hands for luck, and then the streets
               turn into one enormous, good-natured water fight.
             </p>
@@ -57,11 +59,11 @@ export function SongkranAprilPage() {
             <div className="flex flex-wrap gap-3 mb-10">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                 <Calendar className="h-4 w-4 text-[#B08D55]" />
-                Apr 8 – Apr 16, 2027
+                Apr 12 – Apr 20, 2027
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                 <MapPin className="h-4 w-4 text-[#B08D55]" />
-                Bangkok + Hua Hin
+                Bangkok + Pattaya
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                 <Users className="h-4 w-4 text-[#B08D55]" />
@@ -69,7 +71,7 @@ export function SongkranAprilPage() {
               </div>
               <div className="flex items-center gap-2 bg-[#B08D55]/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold">
                 <Droplets className="h-4 w-4 text-[#B08D55]" />
-                Songkran
+                Wan Lai Apr 19
               </div>
             </div>
 
@@ -78,7 +80,7 @@ export function SongkranAprilPage() {
               <span className="text-white/50 text-lg ml-2">USD / person</span>
               <p className="text-white/40 text-xs mt-1">Double occupancy · Private room $950</p>
               <p className="text-white/40 text-xs mt-1">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
-              <p className="text-[#B08D55] text-xs mt-2 font-medium">Festival-week hotel rate is being confirmed. Price may adjust if festival pricing pushes cost up materially.</p>
+              <p className="text-[#B08D55] text-xs mt-2 font-medium">New route. Festival-week hotel rates in both cities are being confirmed, price may adjust.</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -101,11 +103,11 @@ export function SongkranAprilPage() {
         </div>
       </section>
 
-      {/* ── Songkran Edition Details ── */}
+      {/* ── Songkran + Wan Lai Edition Details ── */}
       <TripDetailLayout
-        tripName="Songkran in Bangkok (Apr 8–16)"
-        cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Hua Hin Beachfront Resort"
-        dates="Apr 8 – Apr 16, 2027"
+        tripName="Songkran + Wan Lai (Apr 12–20)"
+        cities="Our 5-Star Bangkok riverside hotel · Beachfront resort, Pattaya"
+        dates="Apr 12 – Apr 20, 2027"
         price={5500}
         hidePaymentPlan={true}
         fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"

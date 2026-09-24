@@ -20,7 +20,7 @@ const routeC = [
 ];
 
 const songkran = [
-  { month: 'April 2027 · Songkran', price: 5500, label: 'Apr 8–16', featured: true, href: '/trips/bangkok-hua-hin/songkran-april-2027' },
+  { month: 'April 2027 · Songkran + Wan Lai', price: 5500, label: 'Apr 12–20', featured: true, href: '/trips/bangkok-pattaya/songkran-april-2027' },
 ];
 
 const provisional2027 = [
@@ -150,8 +150,8 @@ export default function CalendarPage() {
         {/* ── Songkran Edition ── */}
         <div>
           <div className="mb-5">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Songkran Edition</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">9 days / 8 nights · Route A, reversed: Bangkok, then Hua Hin, then back to Bangkok for Thailand&apos;s New Year · $5,500/person</p>
+            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Songkran + Wan Lai Edition</h2>
+            <p className="text-[#1D2D44]/50 text-sm mt-0.5">9 days / 8 nights · Bangkok for official Songkran, then Pattaya through the Wan Lai finale · $5,500/person</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {songkran.map((row) => <MonthCard key={row.month} {...row} />)}

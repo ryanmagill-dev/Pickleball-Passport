@@ -61,10 +61,10 @@ const upcomingDepartures = [
   {
     id: 'april',
     label: 'April',
-    dates: 'Apr 8–16, 2027',
-    route: 'Songkran Edition',
+    dates: 'Apr 12–20, 2027',
+    route: 'Songkran + Wan Lai',
     price: '$5,500',
-    href: '/trips/bangkok-hua-hin/songkran-april-2027',
+    href: '/trips/bangkok-pattaya/songkran-april-2027',
     video: '/songkran-street.mp4',
     poster: '/images/posters/songkran-street-poster.jpg',
   },
