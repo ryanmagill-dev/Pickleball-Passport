@@ -78,7 +78,7 @@ export function BookingModule({
           {/* Primary  ·  apply form (gold) */}
           <Link
             href="/apply"
-            className="flex w-full h-12 items-center justify-center rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-semibold text-sm uppercase tracking-wider shadow-lg shadow-[#B08D55]/25 hover:shadow-xl hover:shadow-[#B08D55]/30 transition-all hover:-translate-y-0.5"
+            className="flex w-full min-h-12 px-5 py-3 items-center justify-center text-center text-balance leading-snug rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-semibold text-sm uppercase tracking-wider shadow-lg shadow-[#B08D55]/25 hover:shadow-xl hover:shadow-[#B08D55]/30 transition-all hover:-translate-y-0.5"
           >
             Apply for The Pickleball Passport
           </Link>

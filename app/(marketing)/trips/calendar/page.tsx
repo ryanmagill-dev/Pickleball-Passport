@@ -8,19 +8,6 @@ import { ArrowRight, Star } from 'lucide-react';
 const routeA = [
   { month: 'November 2026', price: 5500, label: 'Nov 1–9', featured: false, href: '/trips/bangkok-hua-hin' },
   { month: 'December 2026', price: 5500, label: 'Dec 10–18', featured: false, href: '/trips/bangkok-hua-hin' },
-  { month: 'February 2027', price: 5500, label: 'Feb 18–26', featured: true, href: '/trips/bangkok-hua-hin/february-18-2027' },
-];
-
-const routeB = [
-  { month: 'January 2027', price: 5500, label: 'Phuket Extension available', special: false, href: '/trips/bangkok-chiang-mai/january-14-2027' },
-];
-
-const routeC = [
-  { month: 'March 2027', price: 5500, label: 'Mar 18–26', featured: true, href: '/trips/bangkok-phuket/march-18-2027' },
-];
-
-const songkran = [
-  { month: 'April 2027 · Songkran + Wan Lai', price: 5500, label: 'Apr 12–20', featured: true, href: '/trips/bangkok-pattaya/songkran-april-2027' },
 ];
 
 const provisional2027 = [
@@ -102,13 +89,30 @@ export default function CalendarPage() {
     <main className="min-h-screen bg-[#FDF8F3]">
 
       {/* ── Header ── */}
-      <section className="bg-[#0F1A2A] text-white py-14 sm:py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden text-white py-14 sm:py-20">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/posters/songkran-sunset-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/songkran-sunset.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-[#0F1A2A]/85" />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-3">All Dates</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-3">2026–27 Departure Calendar</h1>
-          <p className="text-white/50 text-base max-w-2xl">
+          <p className="text-white/70 text-base max-w-2xl">
             Every product, every month. Reserve your month and we&apos;ll confirm exact dates with you.
           </p>
+          <Link
+            href="/trips"
+            className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-[#B08D55] hover:text-[#CFB78D] transition-colors"
+          >
+            Looking for January to April 2027? See our featured departures <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
       </section>
 
@@ -122,39 +126,6 @@ export default function CalendarPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {routeA.map((row) => <MonthCard key={row.month} {...row} />)}
-          </div>
-        </div>
-
-        {/* ── Route B ── */}
-        <div>
-          <div className="mb-5">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Route B: Bangkok + Chiang Mai</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">9 days / 8 nights · Bangkok riverside hotel + Our 5-Star Chiang Mai Resort · price varies by season</p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {routeB.map((row) => <MonthCard key={row.month} {...row} />)}
-          </div>
-        </div>
-
-        {/* ── Route C ── */}
-        <div>
-          <div className="mb-5">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Route C: Bangkok + Phuket</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">9 days / 8 nights · Bangkok riverside hotel + beachfront resort, Bang Tao Beach · $5,500/person. New route, never May to October.</p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {routeC.map((row) => <MonthCard key={row.month} {...row} />)}
-          </div>
-        </div>
-
-        {/* ── Songkran Edition ── */}
-        <div>
-          <div className="mb-5">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Songkran + Wan Lai Edition</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">9 days / 8 nights · Bangkok for official Songkran, then Pattaya through the Wan Lai finale · $5,500/person</p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {songkran.map((row) => <MonthCard key={row.month} {...row} />)}
           </div>
         </div>
 

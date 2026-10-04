@@ -58,23 +58,27 @@ export function January14Page() {
               The January 14 departure follows the standard Route B format: 9 days across Bangkok and Chiang Mai, with one distinction. This is the only Chiang Mai departure where you can add a Phuket extension and fly home from the beach. Three nights at a beachfront resort on Bang Tao Beach.
             </p>
 
-            {/* Badges */}
-            <div className="flex flex-wrap gap-3 mb-10">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
-                <Calendar className="h-4 w-4 text-[#B08D55]" />
-                Jan 14 – Jan 22, 2027
+            {/* Badges: two rows so the elephant in the hero footage stays visible */}
+            <div className="flex flex-col gap-3 mb-10">
+              <div className="flex flex-wrap gap-3">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
+                  <Calendar className="h-4 w-4 text-[#B08D55]" />
+                  Jan 14 – Jan 22, 2027
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
+                  <MapPin className="h-4 w-4 text-[#B08D55]" />
+                  2 Cities + Optional Phuket
+                </div>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
-                <MapPin className="h-4 w-4 text-[#B08D55]" />
-                2 Cities + Optional Phuket
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
-                <Users className="h-4 w-4 text-[#B08D55]" />
-                6 of 16 spaces remaining
-              </div>
-              <div className="flex items-center gap-2 bg-[#B08D55]/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold">
-                <TreePalm className="h-4 w-4 text-[#B08D55]" />
-                Phuket Extension Available
+              <div className="flex flex-wrap gap-3">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
+                  <Users className="h-4 w-4 text-[#B08D55]" />
+                  6 of 16 spaces remaining
+                </div>
+                <div className="flex items-center gap-2 bg-[#B08D55]/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold">
+                  <TreePalm className="h-4 w-4 text-[#B08D55]" />
+                  Phuket Extension Available
+                </div>
               </div>
             </div>
 
@@ -184,20 +188,6 @@ export function January14Page() {
         totalSpots={16}
         ContentComponent={TripSectionContentChiangMai}
       />
-
-      {/* Cross-link */}
-      <section className="py-12 bg-[#0F1A2A]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70 text-base mb-3">Not travelling in January? View all Bangkok + Chiang Mai departures.</p>
-          <Link
-            href="/trips/bangkok-chiang-mai"
-            className="inline-flex items-center gap-2 text-[#B08D55] hover:text-[#CFB78D] font-semibold transition-colors"
-          >
-            All Chiang Mai departures
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
     </main>
   );
 }
