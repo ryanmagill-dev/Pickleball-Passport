@@ -1,14 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 /* ─────────────────────── DATA ─────────────────────── */
-
-const routeA = [
-  { month: 'November 2026', price: 5500, label: 'Nov 1–9', featured: false, href: '/trips/bangkok-hua-hin' },
-  { month: 'December 2026', price: 5500, label: 'Dec 10–18', featured: false, href: '/trips/bangkok-hua-hin' },
-];
 
 const provisional2027 = [
   { month: 'May 2027', route: 'Route B · Chiang Mai', dates: 'Thu May 20 – Fri May 28' },
@@ -20,44 +15,6 @@ const provisional2027 = [
   { month: 'November 2027', route: 'Route B · Chiang Mai', dates: 'Thu Nov 11 – Fri Nov 19' },
   { month: 'December 2027', route: 'Route A · Hua Hin', dates: 'Thu Dec 9 – Fri Dec 17' },
 ];
-
-/* ─────────────────────── MONTH CARD ─────────────────────── */
-
-function MonthCard({
-  month, price, label, featured, special, href,
-}: {
-  month: string; price: number; label: string | null;
-  featured?: boolean; special?: boolean; href: string | null;
-}) {
-  const highlight = featured || special;
-  return (
-    <div className={`rounded-xl border p-4 flex flex-col gap-2 ${highlight ? 'bg-[#FDF8F3] border-[#B08D55]/30' : 'bg-white border-[#B08D55]/10'}`}>
-      <div>
-        {featured && (
-          <div className="inline-flex items-center gap-1 text-xs font-bold text-[#B08D55] mb-1">
-            <Star className="w-3 h-3" /> Featured
-          </div>
-        )}
-        <p className="font-serif font-bold text-[#1D2D44] text-base">{month}</p>
-        {label && <p className="text-xs text-[#B08D55] mt-0.5">{label}</p>}
-        {!label && <p className="text-xs text-[#1D2D44]/35 mt-0.5">Dates set once your spot is reserved</p>}
-      </div>
-      <div className="flex items-center justify-between mt-auto pt-1">
-        <span className="text-sm font-bold text-[#1D2D44]">${price.toLocaleString()}<span className="text-xs font-normal text-[#1D2D44]/40 ml-1">/person</span></span>
-        {href ? (
-          <Link href={href} className="text-xs font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors flex items-center gap-1">
-            Details <ArrowRight className="w-3 h-3" />
-          </Link>
-        ) : (
-          <Link href="/contact"
-            className="text-xs font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors flex items-center gap-1">
-            I&apos;m interested <ArrowRight className="w-3 h-3" />
-          </Link>
-        )}
-      </div>
-    </div>
-  );
-}
 
 /* ─────────────────────── PROVISIONAL ROW ─────────────────────── */
 
@@ -117,17 +74,6 @@ export default function CalendarPage() {
       </section>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-14">
-
-        {/* ── Route A ── */}
-        <div>
-          <div className="mb-5">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Route A: Bangkok + Hua Hin</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">9 days / 8 nights · Bangkok riverside hotel + Our 5-Star Hua Hin Resort · $5,500/person</p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {routeA.map((row) => <MonthCard key={row.month} {...row} />)}
-          </div>
-        </div>
 
         {/* ── Clinic Week ── */}
         <div>

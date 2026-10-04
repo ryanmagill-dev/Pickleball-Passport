@@ -104,7 +104,8 @@ export default function ClinicsPage() {
                 Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions in Bangkok, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-10">
+              <div className="flex flex-col items-start gap-3 mb-10">
+              <div className="flex flex-wrap gap-3">
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <Clock className="h-4 w-4 text-[#B08D55]" />
                   Nov 1–5, 2026
@@ -117,28 +118,31 @@ export default function ClinicsPage() {
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
                   Papaya Pickleball Club
                 </div>
+              </div>
+                {/* Separate event: own row so it doesn't read as a Papaya session */}
                 <Link
                   href="/clinics/hua-hin"
-                  className="flex items-center gap-2 bg-[#B08D55]/20 hover:bg-[#B08D55]/30 rounded-full px-4 py-2 text-sm transition-colors"
+                  className="mt-3 flex items-center gap-2 bg-[#B08D55]/20 hover:bg-[#B08D55]/30 border border-[#B08D55]/40 rounded-full px-4 py-2 text-sm transition-colors"
                 >
                   <Clock className="h-4 w-4 text-[#B08D55]" />
-                  + Nov 7, Hua Hin
+                  Separate event: Nov 7, Hua Hin
+                  <ArrowRight className="h-3.5 w-3.5 text-[#B08D55]" />
                 </Link>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
                 <a
                   href="https://link.fastpaydirect.com/payment-link/6aaa56229f7ff2c808a75e19"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
+                  className="inline-flex whitespace-nowrap items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
                 >
                   Reserve your spot · $299
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
                   href="#two-day-pass"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
+                  className="inline-flex whitespace-nowrap items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
                 >
                   Two-Day Pass · $169
                 </a>
@@ -417,12 +421,12 @@ export default function ClinicsPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8 max-w-5xl">
             <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
-              <div className="relative h-44 bg-white flex items-center justify-center p-8">
+              <div className="relative h-44">
                 <Image
-                  src="/Arise-Pickleball-Black-02.png"
-                  alt="Arise Pickleball"
+                  src="/arise-group.jpeg"
+                  alt="The Pickleball Passport group at Arise Pickleball courts"
                   fill
-                  className="object-contain p-8"
+                  className="object-cover object-[50%_72%]"
                   sizes="(max-width: 768px) 100vw, 340px"
                 />
               </div>
