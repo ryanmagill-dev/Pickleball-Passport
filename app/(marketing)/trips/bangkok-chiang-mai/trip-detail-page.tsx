@@ -175,7 +175,7 @@ export function BangkokChiangMaiPage() {
             <Leaf className="w-4 h-4 text-[#2D5A3D] flex-shrink-0 mt-0.5" />
             <p className="text-sm text-[#1D2D44]/60 leading-relaxed">
               Chiang Mai trips run May through January. February–April departures are not available due to regional air quality during the dry season burning period. For travel during those months, consider{' '}
-              <Link href="/trips/bangkok-hua-hin" className="text-[#B08D55] hover:underline font-medium">
+              <Link href="/trips/bangkok-hua-hin/february-18-2027" className="text-[#B08D55] hover:underline font-medium">
                 Route A: Bangkok + Hua Hin
               </Link>{' '}
               which operates year-round.
@@ -200,9 +200,9 @@ export function BangkokChiangMaiPage() {
       {/* Cross-link to Hua Hin route */}
       <section className="py-12 bg-[#0F1A2A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70 text-base mb-3">Prefer the beach over the mountains? Route A visits Hua Hin on Thailand's Gulf Coast and runs year-round, including February through April.</p>
+          <p className="text-white/70 text-base mb-3">Prefer the beach over the mountains? Route A visits Hua Hin on Thailand&apos;s Gulf Coast and runs year-round, including February through April.</p>
           <Link
-            href="/trips/bangkok-hua-hin"
+            href="/trips/bangkok-hua-hin/february-18-2027"
             className="inline-flex items-center gap-2 text-[#B08D55] hover:text-[#CFB78D] font-semibold transition-colors"
           >
             Explore the Bangkok + Hua Hin Route
