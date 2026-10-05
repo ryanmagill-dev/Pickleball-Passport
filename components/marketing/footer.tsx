@@ -3,11 +3,12 @@
 /**
  * Footer Component
  *
- * Tropical resort-inspired footer with newsletter signup (GHL form embed)
+ * Tropical resort-inspired footer with a GHL "Contact Us" form embed
  */
 
 import Link from 'next/link';
 import Script from 'next/script';
+import { usePathname } from 'next/navigation';
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Palmtree, Sun, Waves, type LucideProps } from 'lucide-react';
 
 const TikTokIcon = (props: LucideProps) => (
@@ -56,12 +57,16 @@ const navigation = {
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const { openLeadModal } = useLeadModal();
+  const pathname = usePathname();
+  // /contact and /apply already embed this same GHL form in the page body
+  const showContactForm = pathname !== '/contact' && pathname !== '/apply';
   return (
     <footer className="relative overflow-hidden" id="newsletter">
       {/* Decorative wave top border */}
       <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#B08D55] via-[#CFB78D] to-[#B08D55]" />
 
-      {/* Newsletter Section */}
+      {/* Contact Section */}
+      {showContactForm && (
       <div className="bg-gradient-to-b from-[#FDF8F3] to-[#F5E6D3] pt-16 pb-12 relative">
         {/* Decorative elements */}
         <div className="absolute top-8 left-8 opacity-10">
@@ -75,21 +80,21 @@ export function Footer() {
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#B08D55]/20 text-[#1D2D44] text-sm font-medium mb-4">
               <Sun className="w-4 h-4 text-[#B08D55]" />
-              Join the Adventure
+              Get in Touch
             </div>
             <h3 className="text-3xl font-serif font-bold text-[#1D2D44] mb-3">
-              Stay in the Loop
+              Questions? Reach Out
             </h3>
             <p className="text-[#1D2D44]/70 mb-8 text-lg">
-              Get exclusive offers, wellness tips, and pickleball adventures delivered to your inbox.
+              Tell us a little about yourself and our team will get back to you.
             </p>
 
-            {/* GHL "Website: Newsletter" form (signups go straight to the CRM) */}
+            {/* GHL "Website: Contact Us" form (submissions go straight to the CRM) */}
             <div className="max-w-md mx-auto bg-white rounded-2xl border border-[#B08D55]/10 shadow-lg overflow-hidden text-left">
               <iframe
-                src="https://api.leadconnectorhq.com/widget/form/vkJ4qmu5BNpd2FgpGy0O"
-                style={{ width: '100%', height: '607px', border: 'none', borderRadius: '3px' }}
-                id="inline-vkJ4qmu5BNpd2FgpGy0O"
+                src="https://api.leadconnectorhq.com/widget/form/DOYQ7o4C8pR6V0hSLxcm"
+                style={{ width: '100%', height: '778px', border: 'none', borderRadius: '3px' }}
+                id="inline-footer-DOYQ7o4C8pR6V0hSLxcm"
                 data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
                 data-trigger-value=""
@@ -97,11 +102,11 @@ export function Footer() {
                 data-activation-value=""
                 data-deactivation-type="neverDeactivate"
                 data-deactivation-value=""
-                data-form-name="Website: Newsletter"
-                data-height="607"
-                data-layout-iframe-id="inline-vkJ4qmu5BNpd2FgpGy0O"
-                data-form-id="vkJ4qmu5BNpd2FgpGy0O"
-                title="Website: Newsletter"
+                data-form-name="Website: Contact Us"
+                data-height="778"
+                data-layout-iframe-id="inline-footer-DOYQ7o4C8pR6V0hSLxcm"
+                data-form-id="DOYQ7o4C8pR6V0hSLxcm"
+                title="Website: Contact Us"
               />
               <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
             </div>
@@ -109,6 +114,7 @@ export function Footer() {
           </div>
         </div>
       </div>
+      )}
 
       {/* Main Footer Content - Deep ocean */}
       <div className="bg-gradient-to-b from-[#1D2D44] to-[#002B42] text-white relative">
