@@ -1,5 +1,6 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
-import { NextResponse } from 'next/server'
+import { clerkMiddleware, createRouteMatcher, type ClerkMiddlewareAuth } from '@clerk/nextjs/server'
+import { NextResponse, type NextRequest } from 'next/server'
+import { isClerkEnabled } from '@/lib/auth/clerk-enabled'
 import { checkRateLimit, getIpAddress, getRateLimitHeaders } from '@/lib/rate-limit'
 import { validateOrigin, isMutationMethod } from '@/lib/security/origin-validation'
 
@@ -17,7 +18,8 @@ const isWebhookRoute = createRouteMatcher([
   '/api/cron(.*)',
 ])
 
-export default clerkMiddleware(async (auth, request) => {
+// `auth` is null when Clerk is disabled (no keys): auth-only routes then fail closed.
+async function handleRequest(request: NextRequest, auth: ClerkMiddlewareAuth | null) {
   // Skip rate limiting for webhooks (they use signature verification)
   if (isWebhookRoute(request)) {
     return NextResponse.next()
@@ -57,7 +59,7 @@ export default clerkMiddleware(async (auth, request) => {
   // Admin routes: require authentication, then check role via Clerk metadata
   // Note: Database role check moved to tRPC adminProcedure (Prisma can't run in Edge Runtime)
   if (isAdminRoute(request)) {
-    const { userId, sessionClaims } = await auth()
+    const { userId, sessionClaims } = auth ? await auth() : { userId: null, sessionClaims: null }
 
     if (!userId) {
       if (isAdminApiRoute(request)) {
@@ -89,7 +91,7 @@ export default clerkMiddleware(async (auth, request) => {
 
   // All dashboard routes (non-admin): require authentication
   if (isDashboardRoute(request)) {
-    const { userId } = await auth()
+    const { userId } = auth ? await auth() : { userId: null }
 
     if (!userId) {
       const signInUrl = new URL('/sign-in', request.url)
@@ -102,7 +104,11 @@ export default clerkMiddleware(async (auth, request) => {
 
   // Public routes and all other requests -> allow through
   return NextResponse.next()
-})
+}
+
+export default isClerkEnabled
+  ? clerkMiddleware((auth, request) => handleRequest(request, auth))
+  : (request: NextRequest) => handleRequest(request, null)
 
 export const config = {
   matcher: [

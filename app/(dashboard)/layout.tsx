@@ -11,6 +11,9 @@
  * Prevents static generation since these routes require authentication
  */
 
+// Render on request: these routes use Clerk hooks, which can't prerender when Clerk is disabled
+export const dynamic = 'force-dynamic'
+
 export default function DashboardGroupLayout({
   children,
 }: {

@@ -17,6 +17,7 @@
 import { initTRPC, TRPCError } from '@trpc/server'
 import { currentUser } from '@clerk/nextjs/server'
 import { prisma } from '@/lib/db'
+import { isClerkEnabled } from '@/lib/auth/clerk-enabled'
 import superjson from 'superjson'
 
 /**
@@ -24,7 +25,7 @@ import superjson from 'superjson'
  * This runs for every request and provides the user and database client
  */
 export const createTRPCContext = async (opts: { headers: Headers }) => {
-  const user = await currentUser()
+  const user = isClerkEnabled ? await currentUser() : null
 
   return {
     user,

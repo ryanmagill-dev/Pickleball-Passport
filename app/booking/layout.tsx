@@ -11,6 +11,9 @@
  * Prevents static generation since these routes use Clerk for auth
  */
 
+// Render on request: these routes use Clerk hooks, which can't prerender when Clerk is disabled
+export const dynamic = 'force-dynamic'
+
 export default function BookingLayout({
   children,
 }: {
