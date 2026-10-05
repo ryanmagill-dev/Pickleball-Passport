@@ -7,7 +7,7 @@
  * Wraps the app to provide analytics tracking functionality.
  */
 
-import { useEffect, useRef } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { analytics } from '@/lib/utils/analytics';
 
@@ -16,6 +16,19 @@ interface AnalyticsProviderProps {
 }
 
 export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  // Only the tracker suspends on useSearchParams. Wrapping `children` in the
+  // Suspense boundary would make every page render client-side only (no SSR HTML).
+  return (
+    <>
+      <Suspense fallback={null}>
+        <PageViewTracker />
+      </Suspense>
+      {children}
+    </>
+  );
+}
+
+function PageViewTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const initialized = useRef(false);
@@ -43,5 +56,5 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     }
   }, [pathname, searchParams]);
 
-  return <>{children}</>;
+  return null;
 }

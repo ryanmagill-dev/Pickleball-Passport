@@ -13,7 +13,7 @@
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { httpBatchLink } from '@trpc/client'
-import { useState, Suspense } from 'react'
+import { useState } from 'react'
 import { trpc } from '@/lib/trpc/client'
 import superjson from 'superjson'
 import { Toaster } from 'sonner'
@@ -54,14 +54,12 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
-        <Suspense fallback={null}>
-          <AnalyticsProvider>
-            <LeadModalProvider>
-              <Toaster position="top-right" richColors />
-              {children}
-            </LeadModalProvider>
-          </AnalyticsProvider>
-        </Suspense>
+        <AnalyticsProvider>
+          <LeadModalProvider>
+            <Toaster position="top-right" richColors />
+            {children}
+          </LeadModalProvider>
+        </AnalyticsProvider>
       </QueryClientProvider>
     </trpc.Provider>
   )
