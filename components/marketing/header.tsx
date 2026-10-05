@@ -38,6 +38,9 @@ export function Header() {
     return pathname.startsWith(href);
   };
 
+  // Standalone landing pages render their own minimal header
+  if (pathname.startsWith('/group-experiences')) return null;
+
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${

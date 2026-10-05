@@ -60,6 +60,9 @@ export function Footer() {
   const pathname = usePathname();
   // /contact and /apply already embed this same GHL form in the page body
   const showContactForm = pathname !== '/contact' && pathname !== '/apply';
+
+  // Standalone landing pages render their own minimal footer
+  if (pathname.startsWith('/group-experiences')) return null;
   return (
     <footer className="relative overflow-hidden" id="newsletter">
       {/* Decorative wave top border */}
