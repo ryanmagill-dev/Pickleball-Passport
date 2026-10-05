@@ -7,12 +7,14 @@
  * - Category filtering
  * - Search functionality
  * - Responsive design
+ *
+ * Content is static (lib/data/faqs.ts) so the page works without the database.
  */
 
 'use client';
 
 import { useState, useMemo } from 'react';
-import { trpc } from '@/lib/trpc/client';
+import { faqCategories, type FAQ } from '@/lib/data/faqs';
 import {
   Accordion,
   AccordionContent,
@@ -21,11 +23,9 @@ import {
 } from '@/components/ui/accordion';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { RichTextContent } from '@/components/cms/rich-text-editor';
 import {
   Search,
   X,
-  Loader2,
   HelpCircle,
   MessageCircle,
   FolderOpen,
@@ -42,47 +42,27 @@ export default function FAQPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(null);
 
-  // Fetch FAQs
-  const { data: faqs, isLoading: faqsLoading } = trpc.faq.getPublicFAQs.useQuery({
-    categoryId: selectedCategoryId || undefined,
-    search: searchQuery || undefined,
-  });
-
-  // Fetch categories for filtering
-  const { data: categories, isLoading: categoriesLoading } =
-    trpc.faq.getPublicCategories.useQuery();
-
-  const isLoading = faqsLoading || categoriesLoading;
-
-  // Group FAQs by category for display
+  // Filter static FAQs by category and search
   const groupedFAQs = useMemo(() => {
-    if (!faqs) return {};
+    const q = searchQuery.trim().toLowerCase();
+    const matches = (faq: FAQ) =>
+      !q ||
+      faq.question.toLowerCase().includes(q) ||
+      faq.answer.some((p) => p.toLowerCase().includes(q));
 
-    return faqs.reduce(
-      (acc, faq) => {
-        const categoryName = faq.category?.name || 'General';
-        const categoryId = faq.category?.id || 'uncategorized';
-
-        if (!acc[categoryId]) {
-          acc[categoryId] = {
-            name: categoryName,
-            faqs: [],
-          };
-        }
-        acc[categoryId].faqs.push(faq);
-        return acc;
-      },
-      {} as Record<string, { name: string; faqs: typeof faqs }>
-    );
-  }, [faqs]);
+    return faqCategories
+      .filter((c) => selectedCategoryId === null || c.id === selectedCategoryId)
+      .map((c) => ({ id: c.id, name: c.name, faqs: c.faqs.filter(matches) }))
+      .filter((c) => c.faqs.length > 0);
+  }, [searchQuery, selectedCategoryId]);
 
   const clearSearch = () => {
     setSearchQuery('');
     setSelectedCategoryId(null);
   };
 
-  const hasResults = faqs && faqs.length > 0;
-  const showNoResults = !isLoading && searchQuery && !hasResults;
+  const hasResults = groupedFAQs.length > 0;
+  const showNoResults = searchQuery && !hasResults;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#FDF8F3] to-white">
@@ -145,7 +125,7 @@ export default function FAQPage() {
       <section className="py-12 sm:py-16 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Category Filter */}
-          {categories && categories.length > 0 && (
+          {faqCategories.length > 0 && (
             <div className="mb-10">
               <div className="flex flex-wrap gap-3 justify-center">
                 <Button
@@ -161,7 +141,7 @@ export default function FAQPage() {
                 >
                   All Categories
                 </Button>
-                {categories.map((category) => (
+                {faqCategories.map((category) => (
                   <Button
                     key={category.id}
                     variant={selectedCategoryId === category.id ? 'default' : 'outline'}
@@ -176,21 +156,11 @@ export default function FAQPage() {
                   >
                     {category.name}
                     <span className="ml-2 text-xs opacity-70">
-                      ({category._count?.faqs || 0})
+                      ({category.faqs.length})
                     </span>
                   </Button>
                 ))}
               </div>
-            </div>
-          )}
-
-          {/* Loading State */}
-          {isLoading && (
-            <div className="flex flex-col items-center justify-center py-16">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#1D2D44] to-[#7587A5] flex items-center justify-center mb-4">
-                <Loader2 className="h-8 w-8 animate-spin text-white" />
-              </div>
-              <p className="text-[#1D2D44]/60">Loading FAQs...</p>
             </div>
           )}
 
@@ -217,9 +187,9 @@ export default function FAQPage() {
           )}
 
           {/* FAQs by Category */}
-          {!isLoading && hasResults && (
+          {hasResults && (
             <div className="space-y-10">
-              {Object.entries(groupedFAQs).map(([categoryId, { name, faqs: categoryFaqs }]) => (
+              {groupedFAQs.map(({ id: categoryId, name, faqs: categoryFaqs }) => (
                 <div key={categoryId}>
                   {/* Category Header */}
                   {(selectedCategoryId === null || searchQuery) && (
@@ -241,8 +211,8 @@ export default function FAQPage() {
                     <Accordion type="single" collapsible className="w-full">
                       {categoryFaqs.map((faq, index) => (
                         <AccordionItem
-                          key={faq.id}
-                          value={faq.id}
+                          key={faq.question}
+                          value={`${categoryId}-${index}`}
                           className={cn(
                             'border-b border-[#B08D55]/10',
                             index === categoryFaqs.length - 1 && 'border-b-0'
@@ -255,7 +225,17 @@ export default function FAQPage() {
                           </AccordionTrigger>
                           <AccordionContent className="px-6 pb-6">
                             <div className="prose prose-sm max-w-none text-[#1D2D44]/70 leading-relaxed">
-                              <RichTextContent content={faq.answer} />
+                              {faq.answer.map((paragraph) => (
+                                <p key={paragraph}>{paragraph}</p>
+                              ))}
+                              {faq.link && (
+                                <Link
+                                  href={faq.link.href}
+                                  className="inline-flex items-center gap-1 font-semibold text-[#B08D55] hover:text-[#8D7144] no-underline"
+                                >
+                                  {faq.link.label} <ArrowRight className="w-3.5 h-3.5" />
+                                </Link>
+                              )}
                             </div>
                           </AccordionContent>
                         </AccordionItem>
@@ -267,20 +247,6 @@ export default function FAQPage() {
             </div>
           )}
 
-          {/* Empty State (no FAQs at all) */}
-          {!isLoading && !searchQuery && (!faqs || faqs.length === 0) && (
-            <div className="text-center py-16">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-[#F5E6D3] flex items-center justify-center">
-                <HelpCircle className="h-10 w-10 text-[#B08D55]" />
-              </div>
-              <h2 className="text-2xl font-serif font-bold text-[#1D2D44] mb-3">
-                No FAQs yet
-              </h2>
-              <p className="text-[#1D2D44]/60 mb-6">
-                Check back soon for frequently asked questions.
-              </p>
-            </div>
-          )}
         </div>
       </section>
 

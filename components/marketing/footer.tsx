@@ -3,21 +3,18 @@
 /**
  * Footer Component
  *
- * Tropical resort-inspired footer with newsletter signup
+ * Tropical resort-inspired footer with newsletter signup (GHL form embed)
  */
 
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Palmtree, Sun, Waves, ArrowRight, type LucideProps } from 'lucide-react';
+import Script from 'next/script';
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Palmtree, Sun, Waves, type LucideProps } from 'lucide-react';
 
 const TikTokIcon = (props: LucideProps) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
     <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.17a8.16 8.16 0 004.77 1.52V7.24a4.85 4.85 0 01-1.01-.55z" />
   </svg>
 );
-import { useState } from 'react';
-import { trpc } from '@/lib/trpc/client';
-import { toast } from 'sonner';
-import { z } from 'zod';
 import { LogoIcon } from '@/components/ui/logo';
 import { useLeadModal } from '@/components/providers/lead-modal-provider';
 
@@ -56,47 +53,15 @@ const navigation = {
   ],
 };
 
-const emailSchema = z.string().email('Please enter a valid email address');
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState('');
   const { openLeadModal } = useLeadModal();
-
-  const subscribeMutation = trpc.newsletter.subscribe.useMutation({
-    onSuccess: (data) => {
-      toast.success(data.message);
-      setEmail('');
-      setEmailError('');
-    },
-    onError: (error) => {
-      toast.error(error.message);
-      setEmailError(error.message);
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setEmailError('');
-
-    const result = emailSchema.safeParse(email);
-    if (!result.success) {
-      const error = result.error.issues[0]?.message || 'Invalid email';
-      setEmailError(error);
-      toast.error(error);
-      return;
-    }
-
-    subscribeMutation.mutate({ email });
-  };
-
   return (
     <footer className="relative overflow-hidden" id="newsletter">
       {/* Decorative wave top border */}
       <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#B08D55] via-[#CFB78D] to-[#B08D55]" />
 
-      {/* Newsletter Section - Hidden until email service is configured */}
+      {/* Newsletter Section */}
       <div className="bg-gradient-to-b from-[#FDF8F3] to-[#F5E6D3] pt-16 pb-12 relative">
         {/* Decorative elements */}
         <div className="absolute top-8 left-8 opacity-10">
@@ -119,54 +84,28 @@ export function Footer() {
               Get exclusive offers, wellness tips, and pickleball adventures delivered to your inbox.
             </p>
 
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <div className="flex-1">
-                <label htmlFor="newsletter-email" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  id="newsletter-email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    setEmailError('');
-                  }}
-                  placeholder="Enter your email"
-                  className={`w-full px-5 py-4 rounded-xl bg-white border-2 ${
-                    emailError
-                      ? 'border-red-400 focus:border-red-500 focus:ring-red-200'
-                      : 'border-[#B08D55]/30 focus:border-[#B08D55] focus:ring-[#B08D55]/20'
-                  } text-[#1D2D44] placeholder-[#1D2D44]/40 focus:outline-none focus:ring-4 transition-all shadow-lg shadow-[#1D2D44]/5`}
-                  disabled={subscribeMutation.isPending}
-                  aria-invalid={!!emailError}
-                  aria-describedby={emailError ? 'newsletter-error' : undefined}
-                />
-                {emailError && (
-                  <p id="newsletter-error" className="mt-2 text-sm text-red-500 text-left" aria-live="polite">
-                    {emailError}
-                  </p>
-                )}
-              </div>
-              <button
-                type="submit"
-                disabled={subscribeMutation.isPending}
-                className="px-8 py-4 bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#1D2D44] font-bold rounded-xl transition-all shadow-lg shadow-[#B08D55]/30 hover:shadow-xl hover:shadow-[#B08D55]/40 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap flex items-center justify-center gap-2"
-              >
-                {subscribeMutation.isPending ? (
-                  'Subscribing...'
-                ) : (
-                  <>
-                    Subscribe
-                    <ArrowRight className="w-4 h-4" />
-                  </>
-                )}
-              </button>
-            </form>
+            {/* GHL "Website: Newsletter" form (signups go straight to the CRM) */}
+            <div className="max-w-md mx-auto bg-white rounded-2xl border border-[#B08D55]/10 shadow-lg overflow-hidden text-left">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/vkJ4qmu5BNpd2FgpGy0O"
+                style={{ width: '100%', height: '607px', border: 'none', borderRadius: '3px' }}
+                id="inline-vkJ4qmu5BNpd2FgpGy0O"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Website: Newsletter"
+                data-height="607"
+                data-layout-iframe-id="inline-vkJ4qmu5BNpd2FgpGy0O"
+                data-form-id="vkJ4qmu5BNpd2FgpGy0O"
+                title="Website: Newsletter"
+              />
+              <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
+            </div>
 
-            <p className="mt-4 text-xs text-[#1D2D44]/50">
-              By subscribing, you agree to receive marketing emails from The Pickleball Passport. Unsubscribe anytime.
-            </p>
           </div>
         </div>
       </div>
