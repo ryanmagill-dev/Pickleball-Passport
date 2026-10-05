@@ -37,6 +37,9 @@ export const metadata: Metadata = {
   },
 };
 
+// Render on request: this page uses Clerk hooks, which can't prerender when Clerk is disabled
+export const dynamic = 'force-dynamic';
+
 export default function PartnerSignupLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

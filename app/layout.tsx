@@ -12,6 +12,7 @@ import { Header } from "@/components/marketing/header";
 import { Footer } from "@/components/marketing/footer";
 import { AffiliateTracker } from "@/components/affiliate-tracker";
 import { GoogleTranslateWidget } from "@/components/marketing/google-translate-widget";
+import { isClerkEnabled } from "@/lib/auth/clerk-enabled";
 
 /**
  * Pickleball Passport - Official Brand Fonts
@@ -75,8 +76,7 @@ export default function RootLayout({
     },
   };
 
-  return (
-    <ClerkProvider>
+  const page = (
       <html lang="en">
         <head>
           <script
@@ -100,6 +100,8 @@ export default function RootLayout({
           <SpeedInsights />
         </body>
       </html>
-    </ClerkProvider>
   );
+
+  // Clerk is optional: skip the provider when its keys are absent (see lib/auth/clerk-enabled.ts)
+  return isClerkEnabled ? <ClerkProvider>{page}</ClerkProvider> : page;
 }
