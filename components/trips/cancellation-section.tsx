@@ -63,7 +63,12 @@ const colorStyles: Record<string, { border: string; bg: string; icon: string; te
   },
 };
 
-export function CancellationSection() {
+interface CancellationSectionProps {
+  /** Departure is paid in full (no deposit). Currently January 2027 only. */
+  fullPaymentOnly?: boolean;
+}
+
+export function CancellationSection({ fullPaymentOnly = false }: CancellationSectionProps) {
   return (
     <div className="space-y-8">
       <div>
@@ -78,7 +83,9 @@ export function CancellationSection() {
       {/* Deposit Note */}
       <div className="rounded-xl border-2 border-[#B08D55]/30 bg-[#FDF8F3] p-4">
         <p className="text-sm font-medium text-[#1D2D44]">
-          Your 25% deposit locks in your spot and is non-refundable, but fully transferable to a future rescheduled date.
+          {fullPaymentOnly
+            ? 'Payment in full reserves your spot.'
+            : 'Your 25% deposit locks in your spot and is non-refundable, but fully transferable to a future rescheduled date.'}
         </p>
       </div>
 

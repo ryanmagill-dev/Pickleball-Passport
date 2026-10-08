@@ -7,7 +7,7 @@ import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, Users, Globe, Package, 
 /* ─────────────────────── SCHEDULE ─────────────────────── */
 
 const bangkokSchedule = [
-  { day: 'Sun 1 Nov', time: 'Evening', venue: '', label: 'Arrivals. Welcome and priming dinner. No pickleball.' },
+  { day: 'Sun 1 Nov', time: '', venue: '', label: 'Arrivals. No sessions today.' },
   { day: 'Mon 2 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },
   { day: 'Tue 3 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Live coaching session.' },
   { day: 'Wed 4 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },

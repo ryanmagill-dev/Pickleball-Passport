@@ -212,7 +212,7 @@ export default function ClinicsHuaHinPage() {
             <Link href="/clinics" className="text-[#B08D55] hover:underline font-medium">
               Full Clinic Week in Bangkok
             </Link>{' '}
-            runs the same days, November 1 to 5.
+            runs Nov 1 to 5, with sessions Nov 2 to 5.
           </p>
           <p className="text-[#1D2D44]/60 text-sm">
             Want the whole thing? We also run a{' '}

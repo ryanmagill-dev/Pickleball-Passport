@@ -79,7 +79,7 @@ export default function CalendarPage() {
         <div>
           <div className="mb-5">
             <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Clinic Week Bangkok</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">Nov 1–5, 2026. $299 full week, $169 Two-Day Pass. No trip required.</p>
+            <p className="text-[#1D2D44]/50 text-sm mt-0.5">Nov 1 to 5, 2026. $299 for 4 sessions, $169 Two-Day Pass (2 sessions). No trip required.</p>
           </div>
           <Link
             href="/clinics"
