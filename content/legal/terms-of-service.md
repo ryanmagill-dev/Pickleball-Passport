@@ -1,6 +1,6 @@
 ---
 title: Terms and Conditions
-lastUpdated: 2026-09-15
+lastUpdated: 2026-10-08
 description: The Pickleball Passport's terms and conditions covering Clinic Products and Trip Products, including booking, payment, cancellation, insurance, and liability.
 ---
 
@@ -50,7 +50,7 @@ gratuities are not included unless stated.
 
 ## 3. Cancellation by you
 
-All cancellations must be sent in writing to jaron@thepickleballpassport.org.
+All cancellations must be sent in writing to support@thepickleballpassport.org.
 The date we receive your email is the cancellation date.
 
 ### Clinic Products
@@ -203,7 +203,7 @@ Tell us at the time. If something is wrong during a session or trip, raise it
 with your host immediately so we have a chance to fix it. Complaints raised
 only after the event are much harder for us to put right.
 
-Written complaints go to jaron@thepickleballpassport.org within 28 days.
+Written complaints go to support@thepickleballpassport.org within 28 days.
 
 ---
 
@@ -224,5 +224,5 @@ page on the date you book, so save a copy if you want one.
 ## 16. Contact
 
 The Pickleball Passport
-jaron@thepickleballpassport.org
+support@thepickleballpassport.org
 www.thepickleballpassport.org
