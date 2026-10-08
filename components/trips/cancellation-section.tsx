@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckCircle, AlertTriangle, XCircle, ArrowRightLeft, CreditCard, Shield } from 'lucide-react';
+import { CheckCircle, AlertTriangle, XCircle, ArrowRightLeft, Shield } from 'lucide-react';
 
 interface PolicyTier {
   timeframe: string;
@@ -9,34 +9,29 @@ interface PolicyTier {
   icon: React.ReactNode;
 }
 
+// Mirrors Trip Products in content/legal/terms-of-service.md (section 3)
 const policyTiers: PolicyTier[] = [
   {
     timeframe: '90+ days',
-    description: '100% refund of additional payments (DP held as credit)',
+    description: 'Full refund, less a $500 per person administration fee',
     color: 'green',
     icon: <CheckCircle className="h-5 w-5" />,
   },
   {
-    timeframe: '60\u201389 days',
-    description: '75% refund of additional payments (DP held as credit)',
-    color: 'green',
-    icon: <CheckCircle className="h-5 w-5" />,
-  },
-  {
-    timeframe: '30\u201359 days',
-    description: '50% refund of additional payments (DP held as credit)',
+    timeframe: '60–89 days',
+    description: '50% refund',
     color: 'amber',
     icon: <AlertTriangle className="h-5 w-5" />,
   },
   {
-    timeframe: '15\u201329 days',
-    description: '25% refund of additional payments (DP held as credit)',
+    timeframe: '30–59 days',
+    description: '25% refund',
     color: 'amber',
     icon: <AlertTriangle className="h-5 w-5" />,
   },
   {
-    timeframe: 'Less than 15 days',
-    description: 'No refund; DP remains on file for future booking',
+    timeframe: 'Fewer than 30 days',
+    description: 'No refund',
     color: 'red',
     icon: <XCircle className="h-5 w-5" />,
   },
@@ -63,12 +58,7 @@ const colorStyles: Record<string, { border: string; bg: string; icon: string; te
   },
 };
 
-interface CancellationSectionProps {
-  /** Departure is paid in full (no deposit). Currently January 2027 only. */
-  fullPaymentOnly?: boolean;
-}
-
-export function CancellationSection({ fullPaymentOnly = false }: CancellationSectionProps) {
+export function CancellationSection() {
   return (
     <div className="space-y-8">
       <div>
@@ -80,17 +70,16 @@ export function CancellationSection({ fullPaymentOnly = false }: CancellationSec
         </p>
       </div>
 
-      {/* Deposit Note */}
+      {/* Payment Note */}
       <div className="rounded-xl border-2 border-[#B08D55]/30 bg-[#FDF8F3] p-4">
         <p className="text-sm font-medium text-[#1D2D44]">
-          {fullPaymentOnly
-            ? 'Payment in full reserves your spot.'
-            : 'Your 25% deposit locks in your spot and is non-refundable, but fully transferable to a future rescheduled date.'}
+          Payment in full reserves your spot. Refunds are based on the date we receive your
+          cancellation in writing.
         </p>
       </div>
 
       {/* Policy Tiers */}
-      <div className="grid gap-3 sm:grid-cols-5">
+      <div className="grid gap-3 sm:grid-cols-4">
         {policyTiers.map((tier, index) => {
           const styles = colorStyles[tier.color];
           return (
@@ -122,20 +111,8 @@ export function CancellationSection({ fullPaymentOnly = false }: CancellationSec
             </p>
             <p className="text-sm text-[#1D2D44]/70 mt-1 leading-relaxed">
               You may transfer your booking to another person at no charge up to
-              30 days before departure.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-start gap-3 rounded-xl border border-[#1D2D44]/10 bg-white p-4">
-          <CreditCard className="h-5 w-5 flex-shrink-0 text-[#B08D55] mt-0.5" />
-          <div>
-            <p className="font-serif font-semibold text-[#1D2D44] text-sm">
-              Deposit Credit
-            </p>
-            <p className="text-sm text-[#1D2D44]/70 mt-1 leading-relaxed">
-              Your deposit is always held as credit and can be applied toward
-              any future trip date.
+              30 days before departure, subject to our approval of the replacement
+              guest and any supplier name-change fees.
             </p>
           </div>
         </div>

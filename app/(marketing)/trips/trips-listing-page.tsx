@@ -237,7 +237,7 @@ export function TripsListingPage() {
                 <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#B08D55] mb-2">Also this November</p>
                 <h2 className="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Clinic Week with Coach Travis Rhea</h2>
                 <p className="text-white/60 text-sm leading-relaxed max-w-2xl mb-4">
-                  Clinic Week in Bangkok, Nov 1 to 5. Arrive on the 1st, then four sessions of mindset work and coached open play, Nov 2 to 5, 11am to 2pm. Sixteen players, four courts. You sort your own hotel, we run the pickleball. Two-day passes in Bangkok or Hua Hin if you can&apos;t do the whole week.
+                  Clinic Week in Bangkok, Nov 1 to 5. Arrive on the 1st, then four sessions of mindset work and coached open play, Nov 2 to 5, 11am to 2pm. Sixteen players, four courts. You sort your own hotel, we run the pickleball. Two-Day Pass if you can&apos;t do all four sessions.
                 </p>
                 <div className="flex flex-wrap items-center gap-2 mb-5">
                   {['Nov 2', 'Nov 3', 'Nov 4', 'Nov 5', 'Hua Hin Nov 7'].map((d) => (

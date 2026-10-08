@@ -75,7 +75,7 @@ export default function ApplicationSuccessPage() {
                 <div>
                   <p className="font-semibold text-slate-900">Confirm Your Booking</p>
                   <p className="text-sm text-slate-600">
-                    Review your package, select your dates, and secure your spot with a deposit.
+                    Review your package, select your dates, and secure your spot with payment in full.
                   </p>
                 </div>
               </div>

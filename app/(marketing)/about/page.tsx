@@ -222,12 +222,9 @@ export default function AboutPage() {
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1D2D44] mb-4">
             Ready to Play the World?
           </h2>
-          <p className="text-xl text-[#1D2D44]/70 mb-10 max-w-2xl mx-auto">
-            Our flagship Thailand experiences launch May 2026. Be part of
-            the first group.
-          </p>
+          <div className="mb-10" />
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/trips/thailand">
+            <Link href="/trips">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#1D2D44] font-bold px-10 py-7 text-lg rounded-xl shadow-lg shadow-[#B08D55]/30 hover:shadow-xl"

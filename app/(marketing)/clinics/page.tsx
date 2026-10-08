@@ -8,10 +8,10 @@ import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, Users, Globe, Package, 
 
 const bangkokSchedule = [
   { day: 'Sun 1 Nov', time: '', venue: '', label: 'Arrivals. No sessions today.' },
-  { day: 'Mon 2 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Tue 3 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Live coaching session.' },
-  { day: 'Wed 4 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Thu 5 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Final live coaching session, mini tournament.' },
+  { day: 'Mon 2 Nov', time: '11am–2pm', venue: 'Beat Discovery', label: 'Mind Your Pickle mindset session with Travis.' },
+  { day: 'Tue 3 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Coached open play session.' },
+  { day: 'Wed 4 Nov', time: '11am–2pm', venue: 'Beat Discovery', label: 'Mind Your Pickle mindset session with Travis.' },
+  { day: 'Thu 5 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Final coached open play session, mini tournament.' },
 ];
 
 const huaHinSchedule = [
@@ -23,27 +23,27 @@ const huaHinSchedule = [
 const passes = [
   {
     name: 'Clinic Week',
-    summary: '4 sessions: 2 mindset, 2 live coaching',
+    summary: '4 sessions: 2 mindset, 2 coached open play',
     price: '$299',
     link: 'https://link.fastpaydirect.com/payment-link/6aaa56229f7ff2c808a75e19',
     external: true,
     featured: true,
     includes: [
       'Two Mind Your Pickle mindset sessions with Coach Travis Rhea',
-      'Two live coaching sessions with Jaron and Ryan',
+      'Two coached open play sessions with Jaron and Ryan',
       'All court time, balls, water, snacks, and setup',
     ],
   },
   {
     name: 'Two-Day Pass',
-    summary: '2 sessions in Bangkok: 1 mindset, 1 live coaching',
+    summary: '2 sessions in Bangkok: 1 mindset, 1 coached open play',
     price: '$169',
     link: 'https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6',
     external: true,
     featured: false,
     includes: [
       'One Mind Your Pickle mindset session with Coach Travis Rhea',
-      'One live coaching session with Jaron and Ryan',
+      'One coached open play session with Jaron and Ryan',
       'All court time, balls, water, snacks, and setup',
     ],
   },
@@ -112,7 +112,7 @@ export default function ClinicsPage() {
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
-                  Arise Pickleball Courts, Udom Suk
+                  Beat Discovery
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
@@ -202,7 +202,7 @@ export default function ClinicsPage() {
             Clinic Week Schedule
           </h2>
           <p className="text-white/50 text-sm mb-6">
-            Bangkok · 11am to 2pm · Arise Pickleball and Papaya Pickleball Club
+            Bangkok · 11am to 2pm · Beat Discovery and Papaya Pickleball Club
           </p>
           <div className="space-y-3">
             {bangkokSchedule.map((row) => (
@@ -246,7 +246,7 @@ export default function ClinicsPage() {
               <MapPin className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Where</p>
-                <p className="text-[#1D2D44]/70 text-sm">Arise Pickleball (Mon &amp; Wed) and Papaya Pickleball Club (Tue &amp; Thu), both in Bangkok.</p>
+                <p className="text-[#1D2D44]/70 text-sm">Beat Discovery (Mon &amp; Wed) and Papaya Pickleball Club (Tue &amp; Thu), both in Bangkok.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -387,7 +387,7 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week and the Two-Day Pass are Bangkok only: two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan, across Arise Pickleball and Papaya Pickleball Club. The Hua Hin day is a separate, single-day clinic, booked and paid locally in Thailand.
+            * Clinic Week and the Two-Day Pass are Bangkok only: two mindset sessions with Coach Travis Rhea and two coached open play sessions with Jaron and Ryan, across Beat Discovery and Papaya Pickleball Club. The Hua Hin day is a separate, single-day clinic, booked and paid locally in Thailand.
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">
@@ -424,15 +424,15 @@ export default function ClinicsPage() {
               <div className="relative h-44">
                 <Image
                   src="/arise-group.jpeg"
-                  alt="The Pickleball Passport group at Arise Pickleball courts"
+                  alt="The Pickleball Passport group at Beat Discovery"
                   fill
                   className="object-cover object-[50%_72%]"
                   sizes="(max-width: 768px) 100vw, 340px"
                 />
               </div>
               <div className="p-4">
-                <p className="font-serif font-bold text-[#1D2D44] text-base">Arise Pickleball courts</p>
-                <p className="text-[#1D2D44]/60 text-sm">Udom Suk, Bangkok · Mon &amp; Wed</p>
+                <p className="font-serif font-bold text-[#1D2D44] text-base">Beat Discovery</p>
+                <p className="text-[#1D2D44]/60 text-sm">Bangkok · Mon &amp; Wed</p>
               </div>
             </div>
 
@@ -478,7 +478,7 @@ export default function ClinicsPage() {
           <div className="bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10 p-5 max-w-lg">
             <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-2">Getting There. Not Optional.</p>
             <p className="text-[#1D2D44]/70 text-sm leading-relaxed">
-              Arise Pickleball is in Udom Suk. If you&apos;re staying central, budget 30 to 40 minutes by Grab, roughly 150 to 250 baht each way. Papaya Pickleball Club travel times to follow. Easy either way, but worth knowing before you arrive rather than on the first morning.
+              Beat Discovery and Papaya Pickleball Club are both in Bangkok. We&apos;ll email exact addresses and Grab tips before the week. Check the travel time from your hotel before you arrive rather than on the first morning.
             </p>
           </div>
         </div>

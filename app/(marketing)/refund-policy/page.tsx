@@ -33,42 +33,55 @@ export default function RefundPolicyPage() {
 
           <div className="prose prose-slate max-w-none">
             <p className="text-gray-600 mb-6">
-              <strong>Last Updated:</strong> March 2026
+              <strong>Last Updated:</strong> October 2026. This page summarizes the cancellation
+              terms in our <Link href="/terms" className="text-[#1D2D44] hover:underline">Terms of Service</Link>,
+              which take precedence if anything differs.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Deposit Policy
+              Payment
             </h2>
             <p className="text-gray-600 mb-4">
-              Your deposit locks in your spot! A 25% down payment (DP) is required at the
-              time of booking to secure your reservation. Please note that while the deposit
-              is non-refundable, we are happy to apply the full amount toward your next
-              rescheduled date.
+              All prices are in US dollars. Payment in full confirms your place. We do not
+              hold places before payment clears.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Cancellation by Guest
+              Cancellation by Guest: Trips
             </h2>
             <p className="text-gray-600 mb-4">
-              The initial down payment (DP) is non-refundable but remains fully transferable
-              to a future rescheduled date. For any additional payments made beyond the DP,
-              the following refund schedule applies based on your cancellation date:
+              Multi-day hosted trips (accommodation, transfers, and activities). Refunds are based
+              on the date we receive your cancellation in writing:
             </p>
             <ul className="list-disc pl-6 text-gray-600 mb-4 space-y-2">
-              <li><strong>90+ days before travel:</strong> 100% refund of additional payments (DP held as credit)</li>
-              <li><strong>60-89 days before travel:</strong> 75% refund of additional payments (DP held as credit)</li>
-              <li><strong>30-59 days before travel:</strong> 50% refund of additional payments (DP held as credit)</li>
-              <li><strong>15-29 days before travel:</strong> 25% refund of additional payments (DP held as credit)</li>
-              <li><strong>Less than 15 days before travel:</strong> No refund of payments; however, your DP remains on file for a future booking</li>
+              <li><strong>90 or more days before departure:</strong> full refund, less a $500 per person administration fee</li>
+              <li><strong>60 to 89 days:</strong> 50% refund</li>
+              <li><strong>30 to 59 days:</strong> 25% refund</li>
+              <li><strong>Fewer than 30 days:</strong> no refund</li>
+            </ul>
+            <p className="text-gray-600 mb-4">
+              These terms exist because we pay hotels, airlines, and local operators in advance
+              on your behalf, and those payments are not refundable to us.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+              Cancellation by Guest: Clinics
+            </h2>
+            <p className="text-gray-600 mb-4">
+              Clinic Week, the Two-Day Pass, and other coaching and court-time products:
+            </p>
+            <ul className="list-disc pl-6 text-gray-600 mb-4 space-y-2">
+              <li><strong>30 or more days before your first session:</strong> full refund</li>
+              <li><strong>Fewer than 30 days:</strong> no refund, but you may transfer your place to another player at no charge</li>
             </ul>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Rescheduling
+              Transfers
             </h2>
             <p className="text-gray-600 mb-4">
-              Your deposit is fully transferable to a future trip date, subject to
-              availability. Rescheduling may result in price adjustments if package
-              costs have changed for the new date.
+              You may transfer a trip booking to another person up to 30 days before departure at
+              no charge, subject to our approval of the replacement guest and any supplier
+              name-change fees, which you pay.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
@@ -84,12 +97,11 @@ export default function RefundPolicyPage() {
               <li>Minimum guest count not met for group experiences</li>
             </ul>
             <p className="text-gray-600 mb-4">
-              If we cancel your booking, you will receive either:
+              If we cancel your booking for any reason other than force majeure, you receive a full
+              refund of what you paid us. If a session or departure does not reach its minimum
+              number, you may move to another available date or take a full refund of the affected
+              portion.
             </p>
-            <ul className="list-disc pl-6 text-gray-600 mb-4 space-y-2">
-              <li>A full refund of all amounts paid, OR</li>
-              <li>A credit for the full amount toward a future booking</li>
-            </ul>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
               Add-On &amp; Activity Refunds
@@ -155,7 +167,7 @@ export default function RefundPolicyPage() {
               <a href="mailto:support@thepickleballpassport.org" className="text-[#1D2D44] hover:underline">
                 support@thepickleballpassport.org
               </a>{' '}
-              or call +1 (234) 567-890.
+              or call +1 512-564-8522.
             </p>
           </div>
 

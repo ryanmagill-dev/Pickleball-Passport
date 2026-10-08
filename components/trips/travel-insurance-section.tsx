@@ -79,7 +79,7 @@ export function TravelInsuranceSection() {
           <span className="font-serif font-semibold text-[#1D2D44]">
             Tip:
           </span>{' '}
-          Purchase travel insurance within 14 days of your initial trip deposit
+          Purchase travel insurance within 14 days of booking your trip
           to maximize coverage options, including pre-existing condition waivers.
         </p>
       </div>

@@ -398,19 +398,33 @@ export default function TrustAndSafetyPage() {
                 <div className="flex items-start gap-4 p-4 bg-emerald-50 rounded-lg">
                   <div className="flex-shrink-0 w-24 text-center">
                     <div className="text-2xl font-bold text-emerald-700">
-                      30+ days
+                      90+ days
                     </div>
-                    <div className="text-xs text-emerald-600">
-                      before departure
-                    </div>
+                    <div className="text-xs text-emerald-600">before departure</div>
                   </div>
                   <div className="flex-1">
                     <div className="font-semibold text-gray-900 mb-1">
-                      80% Refund
+                      Full Refund, less $500
                     </div>
                     <p className="text-sm text-gray-600">
-                      Cancel 30 or more days before your departure date and
-                      receive an 80% refund of your package price.
+                      Cancel 90 or more days before departure and receive a full refund, less a $500 per person administration fee.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 bg-emerald-50 rounded-lg">
+                  <div className="flex-shrink-0 w-24 text-center">
+                    <div className="text-2xl font-bold text-emerald-700">
+                      60–89 days
+                    </div>
+                    <div className="text-xs text-emerald-600">before departure</div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-900 mb-1">
+                      50% Refund
+                    </div>
+                    <p className="text-sm text-gray-600">
+                      Cancel 60 to 89 days before departure and receive a 50% refund.
                     </p>
                   </div>
                 </div>
@@ -418,19 +432,16 @@ export default function TrustAndSafetyPage() {
                 <div className="flex items-start gap-4 p-4 bg-yellow-50 rounded-lg">
                   <div className="flex-shrink-0 w-24 text-center">
                     <div className="text-2xl font-bold text-yellow-700">
-                      14–30 days
+                      30–59 days
                     </div>
-                    <div className="text-xs text-yellow-600">
-                      before departure
-                    </div>
+                    <div className="text-xs text-yellow-600">before departure</div>
                   </div>
                   <div className="flex-1">
                     <div className="font-semibold text-gray-900 mb-1">
-                      50% Refund
+                      25% Refund
                     </div>
                     <p className="text-sm text-gray-600">
-                      Cancel 14–30 days before your departure date and receive
-                      a 50% refund of your package price.
+                      Cancel 30 to 59 days before departure and receive a 25% refund.
                     </p>
                   </div>
                 </div>
@@ -438,7 +449,7 @@ export default function TrustAndSafetyPage() {
                 <div className="flex items-start gap-4 p-4 bg-red-50 rounded-lg">
                   <div className="flex-shrink-0 w-24 text-center">
                     <div className="text-2xl font-bold text-red-700">
-                      Under 14 days
+                      Under 30 days
                     </div>
                     <div className="text-xs text-red-600">before departure</div>
                   </div>
@@ -447,8 +458,7 @@ export default function TrustAndSafetyPage() {
                       Non-Refundable
                     </div>
                     <p className="text-sm text-gray-600">
-                      Cancellations made less than 14 days before departure are
-                      non-refundable due to pre-booked services.
+                      Cancellations made fewer than 30 days before departure are non-refundable due to pre-booked services.
                     </p>
                   </div>
                 </div>
@@ -456,9 +466,10 @@ export default function TrustAndSafetyPage() {
 
               <div className="mt-6 p-4 bg-gray-100 rounded-lg">
                 <p className="text-sm text-gray-700">
-                  <strong>Note:</strong> Initial deposits are always
-                  non-refundable to cover administrative and booking costs.
-                  Refunds are processed within 14 business days.
+                  <strong>Note:</strong> Trips are paid in full at booking. Clinic Week and the
+                  Two-Day Pass are fully refundable 30 or more days before your first session;
+                  after that, your place can be transferred to another player. Full terms are in
+                  our Terms of Service.
                 </p>
               </div>
             </Card>

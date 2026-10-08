@@ -190,6 +190,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/packages',
+        destination: '/trips',
+        permanent: true,
+      },
+      {
         // Nov/Dec 2026 Hua Hin departures were cancelled; February is the live Hua Hin trip
         source: '/trips/bangkok-hua-hin',
         destination: '/trips/bangkok-hua-hin/february-18-2027',
