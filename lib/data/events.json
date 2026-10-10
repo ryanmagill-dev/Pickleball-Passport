@@ -1,0 +1,47 @@
+[
+  {
+    "id": "entrepreneurs-court-oct-2026",
+    "title": "Entrepreneurs' Court",
+    "dateStart": "2026-10-24T19:00:00+07:00",
+    "dateEnd": "2026-10-24T22:00:00+07:00",
+    "location": "Pick A Court, Bangkok",
+    "priceFrom": 899,
+    "currency": "THB",
+    "description": "Two hours of pickleball with people building things. And then an hour that's actually worth staying for. No pitch decks. No panel. 24 spots, all levels welcome. Hosted with The Right Play.",
+    "posterImage": "/images/events/ec-poster-a.webp",
+    "ctaLabel": "Get tickets",
+    "ctaUrl": "https://www.ticketmelon.com/thepickleballpassport/entrepreneurs-court-oct-24",
+    "status": "active",
+    "showOnHome": true
+  },
+  {
+    "id": "clinic-week-nov-2026",
+    "title": "Clinic Week",
+    "dateStart": "2026-11-02T11:00:00+07:00",
+    "dateEnd": "2026-11-05T14:00:00+07:00",
+    "location": "Bangkok",
+    "priceFrom": 169,
+    "currency": "USD",
+    "description": "Pickleball 11am to 2pm, Nov 2 to 5. $299 for the full week or $169 for two days by card. By PromptPay it's 9,700 THB for the full week or 5,500 THB for two days.",
+    "posterImage": "/images/events/clinic-week-poster.webp",
+    "ctaLabel": "See the clinics",
+    "ctaUrl": "https://thepickleballpassport.org/clinics",
+    "status": "active",
+    "showOnHome": false
+  },
+  {
+    "id": "january-trip-2027",
+    "title": "January Trip",
+    "dateStart": "2027-01-14T00:00:00+07:00",
+    "dateEnd": "2027-01-22T23:59:00+07:00",
+    "location": "Bangkok and Chiang Mai (optional Phuket add-on)",
+    "priceFrom": 5500,
+    "currency": "USD",
+    "description": "Jan 14 to 22, 2027. Bangkok and Chiang Mai, with an optional Phuket add-on. From $5,500, paid in full.",
+    "posterImage": "/images/events/january-trip-poster.webp",
+    "ctaLabel": "See the trip",
+    "ctaUrl": "https://www.thepickleballpassport.org/trips",
+    "status": "active",
+    "showOnHome": false
+  }
+]
