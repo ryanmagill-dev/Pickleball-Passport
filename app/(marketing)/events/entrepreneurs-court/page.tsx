@@ -99,15 +99,15 @@ export default function EntrepreneursCourtPage() {
 
       <section className="py-10 sm:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <Image
               src={event.posterImage}
               alt="The Entrepreneurs' Court poster: two hours of pickleball with people building things, then an hour worth staying for. 7 to 10 PM at Pick A Court, from 899 THB, 24 spots, all levels welcome. Hosted by The Pickleball Passport and The Right Play."
               width={POSTER_WIDTH}
               height={POSTER_HEIGHT}
-              sizes="(max-width: 768px) 100vw, 480px"
+              sizes="(max-width: 1024px) 384px, 480px"
               priority
-              className="w-full max-w-sm md:max-w-none mx-auto h-auto rounded-2xl shadow-lg"
+              className="w-full max-w-sm lg:max-w-none mx-auto h-auto rounded-2xl shadow-lg"
             />
 
             <div>
