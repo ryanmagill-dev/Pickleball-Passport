@@ -3,6 +3,8 @@ import { BrandPillars } from '@/components/marketing/brand-pillars';
 import { WhyThailand } from '@/components/marketing/why-thailand';
 import { SafetySection } from '@/components/marketing/safety-section';
 import { ConciergeSection } from '@/components/marketing/concierge-section';
+import { UpcomingEvents } from '@/components/marketing/upcoming-events';
+import { getHomeEvents } from '@/lib/data/events';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -53,11 +55,15 @@ export const metadata: Metadata = {
   },
 };
 
+// Filtered at build/render time; UpcomingEvents re-checks in the browser
+const homeEvents = getHomeEvents(Date.now());
+
 export default function Home() {
   return (
     <>
       <HeroSection />
       <BrandPillars />
+      <UpcomingEvents events={homeEvents} />
       <WhyThailand />
       <SafetySection />
       <ConciergeSection />

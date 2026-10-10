@@ -9,15 +9,10 @@
 import Link from 'next/link';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Palmtree, Sun, Waves, type LucideProps } from 'lucide-react';
-
-const TikTokIcon = (props: LucideProps) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V9.17a8.16 8.16 0 004.77 1.52V7.24a4.85 4.85 0 01-1.01-.55z" />
-  </svg>
-);
+import { Mail, Phone, MapPin, Palmtree, Sun, Waves } from 'lucide-react';
 import { LogoIcon } from '@/components/ui/logo';
 import { useLeadModal } from '@/components/providers/lead-modal-provider';
+import { FollowUs } from '@/components/marketing/follow-us';
 
 const navigation = {
   explore: [
@@ -34,23 +29,6 @@ const navigation = {
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Trust & Safety', href: '/trust-and-safety' },
     { name: 'Refund Policy', href: '/refund-policy' },
-  ],
-  social: [
-    {
-      name: 'Facebook',
-      href: 'https://www.facebook.com/share/1CS1Rar7iR/?mibextid=wwXIfr',
-      icon: Facebook,
-    },
-    {
-      name: 'Instagram',
-      href: 'https://www.instagram.com/pickleball.passport',
-      icon: Instagram,
-    },
-    {
-      name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/jaron-shoptaugh-ab675574/',
-      icon: Linkedin,
-    },
   ],
 };
 
@@ -191,19 +169,7 @@ export function Footer() {
                 </div>
               </div>
 
-              {/* Social Links */}
-              <div className="flex space-x-3">
-                {navigation.social.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="w-12 h-12 rounded-xl bg-white/10 hover:bg-[#B08D55] flex items-center justify-center transition-all duration-300 hover:scale-110"
-                    aria-label={item.name}
-                  >
-                    <item.icon className="h-5 w-5 text-white" />
-                  </a>
-                ))}
-              </div>
+              <FollowUs />
             </div>
 
             {/* Explore Links */}
