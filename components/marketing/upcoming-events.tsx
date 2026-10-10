@@ -66,7 +66,9 @@ function EventCard({ event }: { event: SiteEvent }) {
             {poster}
           </Link>
         ) : (
-          <div className="flex-shrink-0">{poster}</div>
+          <a href={event.ctaUrl} target="_blank" rel="noopener" className="flex-shrink-0" tabIndex={-1} aria-hidden="true">
+            {poster}
+          </a>
         )}
         <div className="min-w-0">
           <h3 className="font-serif font-bold text-[#1D2D44] text-lg leading-snug mb-1">

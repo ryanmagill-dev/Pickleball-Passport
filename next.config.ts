@@ -45,10 +45,6 @@ const GHL_DOMAINS = [
   'https://link.msgsndr.com',
 ];
 
-const FACEBOOK_DOMAINS = [
-  'https://www.facebook.com', // Optional Facebook Page plugin (footer, off by default)
-];
-
 // Build CSP directives
 const cspDirectives = {
   'default-src': ["'self'"],
@@ -98,7 +94,6 @@ const cspDirectives = {
     ...STRIPE_DOMAINS, // Stripe Elements uses iframes
     ...GOOGLE_DOMAINS, // reCAPTCHA uses iframes
     ...GHL_DOMAINS, // Go High Level forms
-    ...FACEBOOK_DOMAINS,
   ],
   'frame-ancestors': ["'self'"],
   'form-action': ["'self'"],
