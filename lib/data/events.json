@@ -1,20 +1,5 @@
 [
   {
-    "id": "entrepreneurs-court-oct-2026",
-    "title": "Entrepreneurs' Court",
-    "dateStart": "2026-10-24T19:00:00+07:00",
-    "dateEnd": "2026-10-24T22:00:00+07:00",
-    "location": "Pick A Court, Bangkok",
-    "priceFrom": 899,
-    "currency": "THB",
-    "description": "Two hours of pickleball with people building things. And then an hour that's actually worth staying for. No pitch decks. No panel. 24 spots, all levels welcome. Hosted with The Right Play.",
-    "posterImage": "/images/events/ec-poster-a.webp",
-    "ctaLabel": "Get tickets",
-    "ctaUrl": "https://www.ticketmelon.com/thepickleballpassport/entrepreneurs-court-oct-24",
-    "status": "active",
-    "showOnHome": true
-  },
-  {
     "id": "clinic-week-nov-2026",
     "title": "Clinic Week",
     "dateStart": "2026-11-02T11:00:00+07:00",

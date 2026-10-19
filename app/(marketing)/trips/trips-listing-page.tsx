@@ -237,10 +237,10 @@ export function TripsListingPage() {
                 <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#B08D55] mb-2">Also this November</p>
                 <h2 className="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Clinic Week with Coach Travis Rhea</h2>
                 <p className="text-white/60 text-sm leading-relaxed max-w-2xl mb-4">
-                  Four sessions of mindset work and coached play in Bangkok, November 2 to 5, 11am to 2pm. Sixteen players, four courts. You sort your own hotel, we run the pickleball. Two-day passes in Bangkok or Hua Hin if you can&apos;t do the whole week.
+                  Four sessions of mindset work and coached play in Bangkok, November 2 to 5, 11am to 2pm. Sixteen players, four courts. You sort your own hotel, we run the pickleball. A two-day pass is available if you can&apos;t do the whole week.
                 </p>
                 <div className="flex flex-wrap items-center gap-2 mb-5">
-                  {['Nov 2', 'Nov 3', 'Nov 4', 'Nov 5', 'Hua Hin Nov 7'].map((d) => (
+                  {['Nov 2', 'Nov 3', 'Nov 4', 'Nov 5'].map((d) => (
                     <span key={d} className="px-3 py-1 rounded-full bg-white/10 text-white/70 text-xs font-medium">
                       {d}
                     </span>

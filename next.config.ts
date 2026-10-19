@@ -216,6 +216,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/clinics/hua-hin',
+        destination: '/clinics',
+        permanent: false,
+      },
+      {
         source: '/trips/bangkok-phuket',
         destination: '/trips/bangkok-phuket/march-18-2027',
         permanent: true,

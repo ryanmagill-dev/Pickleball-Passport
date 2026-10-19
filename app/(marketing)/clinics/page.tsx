@@ -14,10 +14,6 @@ const bangkokSchedule = [
   { day: 'Thu 5 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Final live coaching session, mini tournament.' },
 ];
 
-const huaHinSchedule = [
-  { day: 'Sat 7 Nov', time: '9am–12pm', label: 'Skills clinic, then open play to put it into action.' },
-];
-
 /* ─────────────────────── PASSES ─────────────────────── */
 
 const passes = [
@@ -45,19 +41,6 @@ const passes = [
       'One Mind Your Pickle mindset session with Coach Travis Rhea',
       'One live coaching session with Jaron and Ryan',
       'All court time, balls, water, snacks, and setup',
-    ],
-  },
-  {
-    name: 'Hua Hin Day',
-    summary: 'Skills clinic + open play, one day on the coast',
-    price: 'Details soon',
-    link: '/clinics/hua-hin',
-    external: false,
-    featured: false,
-    includes: [
-      'One skills clinic with Jaron and Ryan',
-      'Open play afterward to put it into action',
-      'Paid locally in Thailand, booking details to follow',
     ],
   },
 ];
@@ -104,8 +87,7 @@ export default function ClinicsPage() {
                 Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions in Bangkok, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
               </p>
 
-              <div className="flex flex-col items-start gap-3 mb-10">
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 mb-10">
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <Clock className="h-4 w-4 text-[#B08D55]" />
                   Nov 1–5, 2026
@@ -118,16 +100,6 @@ export default function ClinicsPage() {
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
                   Papaya Pickleball Club
                 </div>
-              </div>
-                {/* Separate event: own row so it doesn't read as a Papaya session */}
-                <Link
-                  href="/clinics/hua-hin"
-                  className="mt-3 flex items-center gap-2 bg-[#B08D55]/20 hover:bg-[#B08D55]/30 border border-[#B08D55]/40 rounded-full px-4 py-2 text-sm transition-colors"
-                >
-                  <Clock className="h-4 w-4 text-[#B08D55]" />
-                  Separate event: Nov 7, Hua Hin
-                  <ArrowRight className="h-3.5 w-3.5 text-[#B08D55]" />
-                </Link>
               </div>
 
               <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
@@ -217,21 +189,6 @@ export default function ClinicsPage() {
             ))}
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-1 mt-12">
-            Hua Hin Schedule
-          </h2>
-          <p className="text-white/50 text-sm mb-6">
-            Hua Hin · 9am to 12pm
-          </p>
-          <div className="space-y-3">
-            {huaHinSchedule.map((row) => (
-              <div key={row.day} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 bg-white rounded-xl border border-[#B08D55]/10 p-4 shadow-lg">
-                <span className="font-serif font-bold text-[#1D2D44] text-sm w-28 shrink-0">{row.day}</span>
-                <span className="text-[#B08D55] text-xs font-semibold w-20 shrink-0">{row.time}</span>
-                <span className="text-[#1D2D44]/70 text-sm">{row.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -387,14 +344,11 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week and the Two-Day Pass are Bangkok only: two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan, across Arise Pickleball and Papaya Pickleball Club. The Hua Hin day is a separate, single-day clinic, booked and paid locally in Thailand.
+            * Clinic Week and the Two-Day Pass are Bangkok only: two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan, across Arise Pickleball and Papaya Pickleball Club.
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">
-            Not included on any pass: accommodation, flights, visas, insurance, transport, meals. Hua Hin runs only with ten or more players by November 1. See the{' '}
-            <Link href="/clinics/hua-hin" className="text-[#B08D55] hover:underline font-medium">
-              Hua Hin day page
-            </Link>.
+            Not included on any pass: accommodation, flights, visas, insurance, transport, meals.
           </p>
           <p className="text-[#1D2D44]/40 text-xs mt-2">
             Need travel insurance?{' '}
@@ -452,27 +406,6 @@ export default function ClinicsPage() {
               </div>
             </div>
 
-            <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
-              <div className="relative h-44">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  poster="/images/posters/hua-hin-cave-poster.jpg"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
-                >
-                  <source src="/hua-hin-cave.mp4" type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <p className="text-white/70 text-sm font-medium">Venue to be announced</p>
-                </div>
-              </div>
-              <div className="p-4">
-                <p className="font-serif font-bold text-[#1D2D44] text-base">Hua Hin courts</p>
-                <p className="text-[#1D2D44]/60 text-sm">Hua Hin · Nov 7</p>
-              </div>
-            </div>
           </div>
 
           <div className="bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10 p-5 max-w-lg">
