@@ -31,7 +31,7 @@ const upcomingDepartures = [
     label: 'February',
     dates: 'Feb 18–26, 2027',
     route: 'Bangkok + Hua Hin',
-    price: '$5,500',
+    price: 'From $5,500*',
     href: '/trips/bangkok-hua-hin/february-18-2027',
     video: '/hua-hin-cave.mp4',
     poster: '/images/posters/hua-hin-cave-poster.jpg',
@@ -41,7 +41,7 @@ const upcomingDepartures = [
     label: 'March',
     dates: 'Mar 18–26, 2027',
     route: 'Bangkok + Phuket',
-    price: '$5,500',
+    price: 'From $5,500*',
     href: '/trips/bangkok-phuket/march-18-2027',
     video: '/phuket-pill.mp4',
     poster: '/images/posters/phuket-pill-poster.jpg',
@@ -51,7 +51,7 @@ const upcomingDepartures = [
     label: 'April',
     dates: 'Apr 12–20, 2027',
     route: 'Songkran + Wan Lai',
-    price: '$5,500',
+    price: 'From $5,500*',
     href: '/trips/bangkok-pattaya/songkran-april-2027',
     video: '/songkran-street.mp4',
     poster: '/images/posters/songkran-street-poster.jpg',
@@ -191,7 +191,7 @@ export function TripsListingPage() {
                 January
               </h3>
               <div className="flex items-center justify-between gap-4 flex-wrap">
-                <span className="font-bold text-2xl sm:text-3xl text-white">$5,500</span>
+                <span className="font-bold text-2xl sm:text-3xl text-white">$5,500<span className="block text-xs sm:text-sm font-normal text-white/70">per person, sharing a room</span></span>
                 <span className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#1D2D44] font-bold text-sm group-hover:gap-3 transition-all">
                   Apply for The Pickleball Passport <ArrowRight className="w-4 h-4" />
                 </span>
@@ -208,6 +208,9 @@ export function TripsListingPage() {
           <div className="mt-8 bg-white rounded-2xl border border-[#B08D55]/10 p-6 max-w-3xl">
             <p className="text-[#1D2D44]/60 text-sm leading-relaxed">
               One departure a month for the rest of 2027, alternating Chiang Mai and Hua Hin.
+            </p>
+            <p className="text-[#1D2D44]/50 text-xs mt-2">
+              All prices are per person, sharing a room. Private rooms are available at an extra charge. *Pricing for February to April is being finalised and is confirmed when you apply.
             </p>
             <Link
               href="/trips/calendar"

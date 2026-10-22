@@ -16,9 +16,13 @@ interface BookingModuleProps {
   spotsLeft?: number;
   totalSpots?: number;
   hidePaymentPlan?: boolean;
+  priceNote?: string;
+  priceProvisional?: boolean;
 }
 
 export function BookingModule({
+  priceNote,
+  priceProvisional = false,
   cities = 'Bangkok · Hua Hin',
   dates = 'Multiple 2026–27 departures',
   price = 5500,
@@ -53,8 +57,11 @@ export function BookingModule({
         {/* Price Display */}
         <div className="pt-2 pb-1 text-center">
           <p className="font-serif text-2xl font-bold text-[#1D2D44]">
-            From ${price.toLocaleString()}<span className="text-base font-normal text-[#1D2D44]/60">/person</span>
+            From ${price.toLocaleString()}{priceProvisional && '*'}<span className="text-base font-normal text-[#1D2D44]/60">/person</span>
           </p>
+          {priceNote && (
+            <p className="text-xs text-[#1D2D44]/70 mt-1.5 leading-relaxed">{priceNote}</p>
+          )}
           {!hidePaymentPlan && (
             <p className="text-xs text-[#1D2D44]/60 mt-1">
               3 payments of ${depositAmount.toLocaleString()}

@@ -57,10 +57,11 @@ export function March18Page() {
             </div>
 
             <div className="mb-8">
-              <span className="text-4xl font-bold text-white">$5,500</span>
+              <span className="text-4xl font-bold text-white"><span className="text-2xl font-semibold text-white/70 mr-1.5">From</span>$5,500*</span>
               <span className="text-white/50 text-lg ml-2">USD / person</span>
-              <p className="text-white/40 text-xs mt-1">Double occupancy · Private room $1,200</p>
-              <p className="text-white/40 text-xs mt-1">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
+              <p className="text-white/80 text-sm mt-2">Per person, sharing a room (double occupancy). Private rooms available at an extra charge.</p>
+              <p className="text-white/60 text-xs mt-1">*Pricing for this departure is being finalised and will be confirmed when you apply.</p>
+              <p className="text-white/60 text-xs mt-2">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
               <p className="text-[#B08D55] text-xs mt-2 font-medium">New route. Phuket court venue and final hotel rate are being confirmed, pricing may adjust.</p>
             </div>
 
@@ -91,7 +92,8 @@ export function March18Page() {
         dates="Mar 18 – Mar 26, 2027"
         price={5500}
         hidePaymentPlan={true}
-        fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
+        priceProvisional
+        priceNote="*Per person, sharing a room. Final price confirmed when you apply."
         spotsLeft={16}
         totalSpots={16}
         ContentComponent={TripSectionContentPhuket}

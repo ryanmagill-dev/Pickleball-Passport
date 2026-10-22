@@ -11,9 +11,13 @@ interface BookingModuleMobileProps {
   fullLink?: string;
   spotsLeft?: number;
   hidePaymentPlan?: boolean;
+  priceNote?: string;
+  priceProvisional?: boolean;
 }
 
 export function BookingModuleMobile({
+  priceNote,
+  priceProvisional = false,
   price = 5500,
   depositAmount = 1163,
   depositLink,
@@ -30,8 +34,9 @@ export function BookingModuleMobile({
         <div className="py-3 px-4 flex items-center justify-between gap-3">
           <div className="min-w-0">
             <p className="font-serif font-bold text-[#1D2D44] text-sm">
-              From ${price.toLocaleString()}/person
+              From ${price.toLocaleString()}{priceProvisional && '*'}/person
             </p>
+            {priceNote && <p className="text-[11px] leading-snug text-[#1D2D44]/60">{priceNote}</p>}
             {!hidePaymentPlan && (
               <p className="text-xs text-[#1D2D44]/50">
                 3 payments of ${depositAmount.toLocaleString()}

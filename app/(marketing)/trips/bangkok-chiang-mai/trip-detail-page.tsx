@@ -192,6 +192,7 @@ export function BangkokChiangMaiPage() {
         price={5500}
         hidePaymentPlan={true}
         fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
+        priceNote="Per person, sharing a room. Private room +$1,750."
         spotsLeft={16}
         totalSpots={16}
         ContentComponent={TripSectionContentChiangMai}

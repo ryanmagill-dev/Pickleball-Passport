@@ -43,7 +43,7 @@ const faqs: FAQItem[] = [
   {
     question: 'Can I join as a solo traveler?',
     answer:
-      'Absolutely. Many of our guests travel solo. It\u2019s one of the best ways to meet like-minded people. We offer single occupancy rooms (private room, premium rate) and double occupancy (shared room, matched with another solo traveler). You\u2019ll be part of a group of up to 16 for all activities, meals, and pickleball sessions.',
+      'Absolutely. Many of our guests travel solo. It\u2019s one of the best ways to meet like-minded people. We offer private rooms (single occupancy, at an extra charge) and shared rooms (double occupancy, matched with another solo traveler at no extra cost). Trip prices are per person, sharing a room. You\u2019ll be part of a group of up to 16 for all activities, meals, and pickleball sessions.',
   },
   {
     question: 'Can my non-playing partner/companion join?',

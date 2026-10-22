@@ -61,7 +61,7 @@ const extrasItems = [
   'Alcoholic beverages',
   'Spa treatments',
   'Personal shopping',
-  'Single supplement',
+  'Private room supplement (+$1,750)',
   'Phuket extension',
   'Return flight from Chiang Mai (CNX)',
 ];

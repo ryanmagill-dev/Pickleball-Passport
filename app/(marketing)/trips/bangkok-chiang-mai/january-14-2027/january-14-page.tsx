@@ -86,8 +86,11 @@ export function January14Page() {
             <div className="mb-8">
               <span className="text-4xl font-bold text-white">$5,500</span>
               <span className="text-white/50 text-lg ml-2">USD / person</span>
-              <p className="text-white/40 text-xs mt-1">Double occupancy · Private room $1,750</p>
-              <p className="text-white/40 text-xs mt-1">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
+              <p className="text-white/80 text-sm mt-2">Per person, sharing a room (double occupancy).</p>
+              <p className="text-white/80 text-sm mt-1">
+                Want your own room? <span className="font-semibold text-white">Private room +$1,750</span>, just tell us when you book.
+              </p>
+              <p className="text-white/60 text-xs mt-2">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
             </div>
 
             {/* CTAs */}
@@ -128,10 +131,13 @@ export function January14Page() {
           <div className="bg-white rounded-2xl border border-[#B08D55]/10 shadow-sm p-6 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <p className="font-serif font-bold text-[#1D2D44] text-lg mb-1">3 nights, Bang Tao Beach</p>
-              <p className="text-[#1D2D44]/50 text-sm">Beachfront resort. Private room $450.</p>
+              <p className="text-[#1D2D44]/50 text-sm">Beachfront resort.</p>
             </div>
-            <div className="text-2xl font-bold text-[#1D2D44] shrink-0">
-              $2,088<span className="text-sm font-normal text-[#1D2D44]/40 ml-1">/person</span>
+            <div className="shrink-0 sm:text-right">
+              <div className="text-2xl font-bold text-[#1D2D44]">
+                $2,088<span className="text-sm font-normal text-[#1D2D44]/40 ml-1">/person</span>
+              </div>
+              <p className="text-[#1D2D44]/70 text-xs mt-1">Sharing a room · Private room +$450</p>
             </div>
           </div>
 
@@ -184,6 +190,7 @@ export function January14Page() {
         price={5500}
         hidePaymentPlan={true}
         fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
+        priceNote="Per person, sharing a room. Private room +$1,750."
         spotsLeft={6}
         totalSpots={16}
         ContentComponent={TripSectionContentChiangMai}
