@@ -22,6 +22,7 @@ import { useLeadModal } from '@/components/providers/lead-modal-provider';
 const navigation = {
   explore: [
     { name: 'Trips', href: '/trips' },
+    { name: 'Free Thailand Playbook', href: '/thailand-pickleball-playbook' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Apply Now', href: '/apply' },
   ],
