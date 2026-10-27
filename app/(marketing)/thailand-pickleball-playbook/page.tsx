@@ -431,6 +431,14 @@ export default function ThailandPickleballPlaybookPage() {
           <source src="/playbook-sunset.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F1A2A]/90 via-[#0F1A2A]/65 to-[#0F1A2A]/30" />
+        <a
+          href="https://www.instagram.com/micahphotography1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-4 right-4 z-10 text-white/40 hover:text-white/70 transition-colors text-xs tracking-wide"
+        >
+          Aerial footage: @micahphotography1
+        </a>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#B08D55]/40 bg-white/10 backdrop-blur-sm px-4 py-1.5 text-xs font-bold tracking-[0.2em] uppercase text-[#CFB78D] mb-6">
             Free 23-Page Guide · 2026 Edition
