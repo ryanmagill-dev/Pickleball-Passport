@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X, Sparkles, BookOpen } from 'lucide-react';
 import { LogoIcon } from '@/components/ui/logo';
 import { useLeadModal } from '@/components/providers/lead-modal-provider';
 import { LanguageSwitcher } from '@/components/marketing/language-switcher';
@@ -13,7 +13,6 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Trips', href: '/trips' },
   { name: 'Clinics', href: '/clinics' },
-  { name: 'Free Playbook', href: '/thailand-pickleball-playbook' },
   { name: 'Partners', href: '/partners' },
   { name: 'About Us', href: '/about' },
   { name: 'Newsletter', href: '/newsletter' },
@@ -78,7 +77,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
+                className={`relative whitespace-nowrap px-3 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
                   isActive(item.href)
                     ? 'text-[#1D2D44] bg-[#F5E6D3]/50'
                     : 'text-[#1D2D44]/70 hover:text-[#1D2D44] hover:bg-[#F5E6D3]/30'
@@ -94,6 +93,14 @@ export function Header() {
 
           {/* Desktop CTA + Language */}
           <div className="hidden lg:flex lg:items-center lg:space-x-3">
+            {/* Lead magnet sits with the CTAs, not in the main nav */}
+            <Link
+              href="/thailand-pickleball-playbook"
+              className="hidden xl:inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-[#B08D55]/50 px-3 py-2 text-sm font-semibold text-[#1D2D44] hover:bg-[#F5E6D3]/50 transition-colors"
+            >
+              <BookOpen className="h-4 w-4 text-[#B08D55]" />
+              Free Playbook
+            </Link>
             <LanguageSwitcher />
             <Button
               onClick={() => openLeadModal()}
@@ -150,6 +157,14 @@ export function Header() {
 
             {/* Mobile CTA Buttons */}
             <div className="border-t border-[#B08D55]/20 pt-4 pb-2 space-y-3">
+              <Link
+                href="/thailand-pickleball-playbook"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex w-full items-center justify-center gap-2 rounded-md border border-[#B08D55]/50 py-3 text-base font-semibold text-[#1D2D44] hover:bg-[#F5E6D3]/50 transition-colors"
+              >
+                <BookOpen className="h-5 w-5 text-[#B08D55]" />
+                Free Thailand Playbook
+              </Link>
               <Button
                 onClick={() => { openLeadModal(); setMobileMenuOpen(false); }}
                 className="w-full bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#1D2D44] font-semibold py-6"

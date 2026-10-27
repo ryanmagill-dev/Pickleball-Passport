@@ -418,8 +418,19 @@ export default function ThailandPickleballPlaybookPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* Hero Section (Slide 1 & 2) */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#0F1A2A] via-[#1D2D44] to-[#0F1A2A] text-white py-16 sm:py-24 border-b border-[#B08D55]/30">
+      {/* Hero Section (Slide 1 & 2). clip-path + fixed video: the footage stays put while the hero scrolls over it */}
+      <section className="relative overflow-hidden [clip-path:inset(0)] bg-[#0F1A2A] text-white pt-20 pb-16 sm:pt-32 sm:pb-24 border-b border-[#B08D55]/30">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/playbook-sunset-poster.jpg"
+          className="fixed inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/playbook-sunset.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F1A2A]/90 via-[#0F1A2A]/65 to-[#0F1A2A]/30" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#B08D55]/40 bg-white/10 backdrop-blur-sm px-4 py-1.5 text-xs font-bold tracking-[0.2em] uppercase text-[#CFB78D] mb-6">
             Free 23-Page Guide · 2026 Edition
@@ -473,34 +484,34 @@ export default function ThailandPickleballPlaybookPage() {
         aria-label="Playbook Quick Jump"
         className="bg-[#FDF8F3]/95 backdrop-blur-md border-b border-[#B08D55]/20 py-3 shadow-sm"
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 overflow-x-auto">
-          <div className="flex items-center gap-2 text-xs sm:text-sm font-medium whitespace-nowrap">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+          <div className="flex min-w-0 items-center gap-1 overflow-x-auto text-xs sm:text-sm font-medium whitespace-nowrap">
             <span className="text-[#B08D55] font-bold uppercase tracking-wider mr-1">Jump to:</span>
-            <a href="#bangkok" className="px-3 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
+            <a href="#bangkok" className="px-2.5 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
               Bangkok
             </a>
-            <a href="#hua-hin" className="px-3 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
+            <a href="#hua-hin" className="px-2.5 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
               Hua Hin
             </a>
-            <a href="#pattaya" className="px-3 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
+            <a href="#pattaya" className="px-2.5 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
               Pattaya
             </a>
-            <a href="#chiang-mai" className="px-3 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
+            <a href="#chiang-mai" className="px-2.5 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
               Chiang Mai
             </a>
-            <a href="#phuket" className="px-3 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
+            <a href="#phuket" className="px-2.5 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
               Phuket
             </a>
-            <a href="#seasons-and-heat" className="px-3 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
+            <a href="#seasons-and-heat" className="px-2.5 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
               Seasons &amp; Heat
             </a>
-            <a href="#find-games" className="px-3 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
+            <a href="#find-games" className="px-2.5 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
               Booking &amp; Apps
             </a>
-            <a href="#nine-day-rhythm" className="px-3 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
+            <a href="#nine-day-rhythm" className="px-2.5 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
               9-Day Rhythm
             </a>
-            <a href="#faq" className="px-3 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
+            <a href="#faq" className="px-2.5 py-1.5 rounded-lg hover:bg-[#F5E6D3] text-[#1D2D44] transition-colors">
               FAQ
             </a>
           </div>
@@ -508,7 +519,7 @@ export default function ThailandPickleballPlaybookPage() {
             href={PLAYBOOK_PDF_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center px-3.5 py-1.5 rounded-lg bg-[#1D2D44] text-[#CFB78D] text-xs font-bold whitespace-nowrap hover:bg-[#0F1A2A] transition-colors"
+            className="hidden md:inline-flex shrink-0 items-center px-3.5 py-1.5 rounded-lg bg-[#1D2D44] text-[#CFB78D] text-xs font-bold whitespace-nowrap hover:bg-[#0F1A2A] transition-colors"
           >
             Download PDF
           </a>
