@@ -225,6 +225,11 @@ const nextConfig: NextConfig = {
         destination: '/trips/bangkok-phuket/march-18-2027',
         permanent: true,
       },
+      {
+        source: '/playbook',
+        destination: '/thailand-pickleball-playbook',
+        permanent: true,
+      },
     ];
   },
   async headers() {
