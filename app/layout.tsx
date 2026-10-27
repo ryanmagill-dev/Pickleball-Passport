@@ -43,6 +43,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://thepickleballpassport.org'),
   title: "The Pickleball Passport | Premier Pickleball Travel in Thailand",
   description: "Where Pickleball Meets Exceptional Wellness and Adventure in Thailand",
+  verification: {
+    google: "TqBXzhNGDQHJPailnK5a9YMcSDB34Vr8lP_997AIQgg",
+  },
 };
 
 export default function RootLayout({
