@@ -23,6 +23,10 @@ const navigation = {
   explore: [
     { name: 'Trips', href: '/trips' },
     { name: 'Free Thailand Playbook', href: '/thailand-pickleball-playbook' },
+    { name: 'Thailand Trip Cost Calculator', href: '/thailand-pickleball-calculator' },
+    { name: 'Bangkok Pickleball Courts', href: '/bangkok-pickleball-courts' },
+    { name: 'Best Time to Visit Thailand', href: '/best-time-to-visit-thailand-for-pickleball' },
+    { name: 'Club & Coach Retreats', href: '/pickleball-club-retreats' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Apply Now', href: '/apply' },
   ],
@@ -148,7 +152,7 @@ export function Footer() {
                 </div>
               </Link>
               <p className="text-[#7587A5] mb-8 max-w-sm text-base leading-relaxed">
-                The ultimate pickleball getaway. Curated multi-city trips with outstanding courts, boutique hotels, cultural immersion, and wellness recovery.
+                The ultimate pickleball travel experience. Curated multi-city trips with outstanding courts, boutique hotels, cultural immersion, and wellness recovery.
               </p>
 
               {/* Contact Info */}

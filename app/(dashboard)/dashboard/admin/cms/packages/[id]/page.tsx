@@ -328,7 +328,7 @@ export default function PackageContentEditorPage() {
                           setTagline(e.target.value);
                           handleFieldChange();
                         }}
-                        placeholder="Your perfect pickleball getaway"
+                        placeholder="Your perfect pickleball trip"
                         className="mt-1"
                       />
                     </div>

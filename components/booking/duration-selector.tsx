@@ -42,7 +42,7 @@ interface SampleItinerary {
 // Sample itinerary highlights based on duration
 const ITINERARY_HIGHLIGHTS: SampleItinerary = {
   7: {
-    description: 'Perfect for a quick transformation getaway',
+    description: 'Perfect for a short transformation trip',
     highlights: [
       'Initial medical consultations and assessments',
       '3 days of pickleball training and matches',

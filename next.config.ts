@@ -230,6 +230,26 @@ const nextConfig: NextConfig = {
         destination: '/thailand-pickleball-playbook',
         permanent: true,
       },
+      {
+        source: '/calculator',
+        destination: '/thailand-pickleball-calculator',
+        permanent: true,
+      },
+      {
+        source: '/bangkok-courts',
+        destination: '/bangkok-pickleball-courts',
+        permanent: true,
+      },
+      {
+        source: '/club-retreats',
+        destination: '/pickleball-club-retreats',
+        permanent: true,
+      },
+      {
+        source: '/best-time',
+        destination: '/best-time-to-visit-thailand-for-pickleball',
+        permanent: true,
+      },
     ];
   },
   async headers() {
