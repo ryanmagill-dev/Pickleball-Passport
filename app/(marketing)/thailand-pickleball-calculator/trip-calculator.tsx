@@ -17,7 +17,7 @@ interface TripState {
   season: Season;
 }
 
-const THB_PER_USD = 35;
+const THB_PER_USD = 33;
 
 const CITY_DATA: Record<
   CityKey,
@@ -394,8 +394,8 @@ export function TripCalculator() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                 {(
                   [
-                    ['condo', 'Serviced Condo / Nomad', '~1,900 THB ($54) / night'],
-                    ['boutique', '4-Star Boutique Hotel', '~3,600 THB ($103) / night'],
+                    ['condo', 'Serviced Condo / Nomad', '~1,900 THB ($58) / night'],
+                    ['boutique', '4-Star Boutique Hotel', '~3,600 THB ($109) / night'],
                     ['luxury', '5-Star Riverside / Resort', 'TPP Flagship Standard'],
                   ] as const
                 ).map(([key, title, sub]) => (

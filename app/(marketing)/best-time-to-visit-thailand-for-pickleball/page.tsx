@@ -414,7 +414,7 @@ export default function BestTimeToVisitThailandPickleballPage() {
                 Start Electrolytes Before Game 1
               </h3>
               <p className="text-sm text-[#1D2D44]/80 leading-relaxed">
-                If you wait until game 4 to drink electrolytes in 75% humidity, you are already behind. Every Thai 7-Eleven stocks Royal-D electrolyte packets for 7 THB ($0.20 USD). Drink one before stepping on court.
+                If you wait until game 4 to drink electrolytes in 75% humidity, you are already behind. Every Thai 7-Eleven stocks Royal-D electrolyte packets for 7 THB ($0.21 USD). Drink one before stepping on court.
               </p>
             </div>
             <div className="rounded-2xl bg-[#FDF8F3] p-6 border border-[#B08D55]/25">

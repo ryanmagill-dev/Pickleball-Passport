@@ -52,19 +52,19 @@ const COST_BENCHMARKS = [
   {
     category: "Open Play Session (Per Player)",
     thbRange: "150 to 350 THB",
-    usdRange: "$4 to $10 USD",
+    usdRange: "$4.50 to $11 USD",
     notes: "2 to 3 hours of organized community rotation (booked via Reclub or LINE).",
   },
   {
     category: "Private Indoor / Covered Court Rental (Per Hour)",
     thbRange: "400 to 900 THB / hr",
-    usdRange: "$11 to $26 USD / hr",
+    usdRange: "$12 to $27 USD / hr",
     notes: "Split across 4 players ($3 to $7 per person per hour). Peak evening and AC courts sit at the top of the range.",
   },
   {
     category: "Private Coaching or Small-Group Clinic",
     thbRange: "1,200 to 2,800 THB",
-    usdRange: "$35 to $80 USD",
+    usdRange: "$36 to $85 USD",
     notes: "Per session depending on coach credentials, indoor court fees, and group ratio.",
   },
   {
@@ -76,25 +76,25 @@ const COST_BENCHMARKS = [
   {
     category: "BTS Skytrain / MRT Subway Ride",
     thbRange: "25 to 62 THB",
-    usdRange: "$0.75 to $1.80 USD",
+    usdRange: "$0.76 to $1.88 USD",
     notes: "Fastest way to beat Bangkok rush-hour traffic before hopping a short taxi to the court.",
   },
   {
     category: "Thai Sports / Traditional Recovery Massage (60 to 90 min)",
     thbRange: "350 to 900 THB",
-    usdRange: "$10 to $26 USD",
+    usdRange: "$11 to $27 USD",
     notes: "Clean neighborhood spas to upscale wellness centers. Worth scheduling every 2 to 3 play days.",
   },
   {
     category: "Domestic Flight (Bangkok to Chiang Mai or Phuket)",
     thbRange: "1,400 to 3,200 THB",
-    usdRange: "$40 to $92 USD",
+    usdRange: "$42 to $97 USD",
     notes: "One-way economy fare with checked paddle bag on Bangkok Airways, Thai Smile/Thai Airways, or AirAsia.",
   },
   {
     category: "Private Van Transfer (Bangkok to Hua Hin or Pattaya)",
     thbRange: "2,200 to 3,500 THB",
-    usdRange: "$63 to $100 USD",
+    usdRange: "$67 to $106 USD",
     notes: "Door-to-door private van for 2 to 4 players with luggage. Zero airport security lines.",
   },
 ];
@@ -103,7 +103,7 @@ const CALCULATOR_FAQS = [
   {
     question: "How much does it cost to play pickleball in Thailand?",
     answer:
-      "Drop-in open play sessions in Bangkok, Chiang Mai, Hua Hin, Pattaya, and Phuket typically cost between 150 and 350 THB ($4 to $10 USD) for a two-to-three-hour session. Booking a private covered or indoor air-conditioned court runs 400 to 900 THB ($11 to $26 USD) per hour total, or roughly $3 to $7 USD per player when split four ways.",
+      "Drop-in open play sessions in Bangkok, Chiang Mai, Hua Hin, Pattaya, and Phuket typically cost between 150 and 350 THB ($4.50 to $11 USD) for a two-to-three-hour session. Booking a private covered or indoor air-conditioned court runs 400 to 900 THB ($12 to $27 USD) per hour total, or roughly $3 to $7 USD per player when split four ways.",
   },
   {
     question: "How much should I budget for Grab and BTS transport to Bangkok pickleball courts?",
@@ -211,7 +211,7 @@ export default function ThailandPickleballCalculatorPage() {
             What Pickleball Courts, Transport &amp; Recovery Actually Cost in Thailand
           </h2>
           <p className="text-base text-[#1D2D44]/75 max-w-3xl mb-8 leading-relaxed">
-            Below are the real-world 2026 price ranges in Thai Baht (THB) and US Dollars (calculated at roughly 35 THB per $1 USD) across Bangkok, Chiang Mai, Hua Hin, Pattaya, and Phuket.
+            Below are the real-world 2026 price ranges in Thai Baht (THB) and US Dollars (calculated at roughly 33 THB per $1 USD) across Bangkok, Chiang Mai, Hua Hin, Pattaya, and Phuket.
           </p>
 
           <div className="overflow-x-auto rounded-2xl border border-[#B08D55]/20 shadow-sm">
