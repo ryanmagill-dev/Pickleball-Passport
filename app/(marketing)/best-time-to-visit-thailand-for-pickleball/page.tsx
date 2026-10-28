@@ -54,7 +54,7 @@ const THREE_SEASONS = [
     tempRange: "86°F to 98°F (30°C to 37°C) · High Afternoon Heat",
     bestPairing: "Bangkok Indoor Courts + Hua Hin or Pattaya Coast",
     courtStrategy:
-      "Avoid uncovered outdoor play between 10:30 AM and 4:30 PM. Anchor your trip in dedicated indoor and high-roof covered complexes in Bangkok (Arise, Sterling, Papaya) paired with coastal breeze venues in Hua Hin (Sports Life, Bluport indoor mall court) or Pattaya (88 Pickleball, Skyline, Sunshine).",
+      "Avoid uncovered outdoor play between 10:30 AM and 4:30 PM. Anchor your trip in dedicated indoor and high-roof covered complexes in Bangkok (Arise, Sterling, Papaya) paired with coastal breeze venues in Hua Hin (Sports Life, plus Bluport in central Hua Hin) or Pattaya (88 Pickleball, Skyline, Sunshine).",
     watchOut:
       "Chiang Mai and northern Thailand experience agricultural smoky season from roughly late February through mid-April. If you travel in March or April, swap Chiang Mai for Hua Hin or Pattaya.",
   },
@@ -100,7 +100,7 @@ const MONTHLY_CALENDAR = [
     grade: "B (Peak Heat + Songkran)",
     weatherFeel: "Hottest month of the year; Songkran Thai New Year mid-month",
     chiangMaiStatus: "Avoid early April; clears after mid-April rains",
-    recommendedPairing: "Bangkok Indoor + Hua Hin Beach (Bluport AC / Sports Life)",
+    recommendedPairing: "Bangkok Indoor + Hua Hin Beach (Sports Life / Bluport)",
     courtRoofAdvice: "Strict 7:00 AM to 10:00 AM or Indoor AC",
   },
   {
@@ -178,7 +178,7 @@ const FAQ_ITEMS = [
   {
     question: "Can you still play pickleball in Thailand during the rainy season (June to October)?",
     answer:
-      "Yes, and resident players play 12 months a year. Unlike temperate rain that drizzles all day, Thailand's monsoon season usually delivers dry, sunny mornings followed by a heavy 45-to-60-minute downpour in the late afternoon. By playing in the 7:00 AM to 10:00 AM window or booking roofed venues like Arise and Sterling in Bangkok, BokBok and All-Time in Chiang Mai, or Sports Life and Bluport in Hua Hin, you lose almost zero court time.",
+      "Yes, and resident players play 12 months a year. Unlike temperate rain that drizzles all day, Thailand's monsoon season usually delivers dry, sunny mornings followed by a heavy 45-to-60-minute downpour in the late afternoon. By playing in the 7:00 AM to 10:00 AM window or booking roofed venues like Arise and Sterling in Bangkok, BokBok and All-Time in Chiang Mai, or Sports Life in Hua Hin, you lose almost zero court time.",
   },
   {
     question: "When is Chiang Mai's smoky or burning season, and where should we play instead?",
@@ -403,7 +403,7 @@ export default function BestTimeToVisitThailandPickleballPage() {
                 Play 7:00 AM to 10:00 AM or After 5:00 PM
               </h3>
               <p className="text-sm text-[#1D2D44]/80 leading-relaxed">
-                Unless you are inside an air-conditioned court (such as Bluport Hua Hin or covered indoor blocks), protect the 11:00 AM to 4:00 PM window for lunch, pool recovery, and sightseeing.
+                Unless you are on an indoor or covered court, protect the 11:00 AM to 4:00 PM window for lunch, pool recovery, and sightseeing.
               </p>
             </div>
             <div className="rounded-2xl bg-[#FDF8F3] p-6 border border-[#B08D55]/25">
