@@ -72,7 +72,7 @@ describe('Package CMS Router', () => {
     id: 'pkg_123',
     slug: 'pure-play',
     name: 'Pure Play',
-    tagline: 'Your perfect pickleball getaway',
+    tagline: 'Your perfect pickleball trip',
     description: 'A week of pure pickleball action in Thailand',
     cmsDescription: { type: 'doc', content: [{ type: 'paragraph', content: [{ type: 'text', text: 'Rich description' }] }] },
     cmsPricingText: 'Starting from $5,000',
