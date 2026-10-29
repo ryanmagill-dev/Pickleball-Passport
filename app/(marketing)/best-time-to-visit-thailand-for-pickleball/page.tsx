@@ -480,7 +480,7 @@ export default function BestTimeToVisitThailandPickleballPage() {
             Join Us in Thailand During Peak Pickleball Season
           </h2>
           <p className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Our Bangkok Clinic Week (Nov 1 to 5, 2026 at Arise and Papaya) and our monthly 2027 9-Day Trips (Jan 14 to 22 Bangkok + Chiang Mai, Feb 18 to 26 Bangkok + Hua Hin, Mar 18 to 26 Bangkok + Phuket, and Apr 12 to 20 Songkran Bangkok + Pattaya) match each travel month to the ideal regional pairing and covered court blocks.
+            Our Bangkok Clinic Week (Nov 1 to 5, 2026 at Arise, Papaya, and Pick A Court) and our monthly 2027 9-Day Trips (Jan 14 to 22 Bangkok + Chiang Mai, Feb 18 to 26 Bangkok + Hua Hin, Mar 18 to 26 Bangkok + Phuket, and Apr 12 to 20 Songkran Bangkok + Pattaya) match each travel month to the ideal regional pairing and covered court blocks.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">

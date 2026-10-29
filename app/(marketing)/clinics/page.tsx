@@ -11,7 +11,7 @@ const bangkokSchedule = [
   { day: 'Mon 2 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },
   { day: 'Tue 3 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Live coaching session.' },
   { day: 'Wed 4 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Thu 5 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Final live coaching session, mini tournament.' },
+  { day: 'Thu 5 Nov', time: '11am–2pm', venue: 'Pick A Court', label: 'Final live coaching session, mini tournament.' },
 ];
 
 /* ─────────────────────── PASSES ─────────────────────── */
@@ -100,6 +100,10 @@ export default function ClinicsPage() {
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
                   Papaya Pickleball Club
                 </div>
+                <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
+                  <MapPin className="h-4 w-4 text-[#B08D55]" />
+                  Pick A Court
+                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
@@ -174,7 +178,7 @@ export default function ClinicsPage() {
             Clinic Week Schedule
           </h2>
           <p className="text-white/50 text-sm mb-6">
-            Bangkok · 11am to 2pm · Arise Pickleball and Papaya Pickleball Club
+            Bangkok · 11am to 2pm · Arise Pickleball, Papaya Pickleball Club and Pick A Court
           </p>
           <div className="space-y-3">
             {bangkokSchedule.map((row) => (
@@ -203,7 +207,7 @@ export default function ClinicsPage() {
               <MapPin className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Where</p>
-                <p className="text-[#1D2D44]/70 text-sm">Arise Pickleball (Mon &amp; Wed) and Papaya Pickleball Club (Tue &amp; Thu), both in Bangkok.</p>
+                <p className="text-[#1D2D44]/70 text-sm">Arise Pickleball (Mon &amp; Wed), Papaya Pickleball Club (Tue) and Pick A Court (Thu), all in Bangkok.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -344,7 +348,7 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week and the Two-Day Pass are Bangkok only: two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan, across Arise Pickleball and Papaya Pickleball Club.
+            * Clinic Week and the Two-Day Pass are Bangkok only: two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan, across Arise Pickleball, Papaya Pickleball Club and Pick A Court.
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">
@@ -402,7 +406,17 @@ export default function ClinicsPage() {
               </div>
               <div className="p-4">
                 <p className="font-serif font-bold text-[#1D2D44] text-base">Papaya Pickleball Club</p>
-                <p className="text-[#1D2D44]/60 text-sm">Bangkok · Tue &amp; Thu</p>
+                <p className="text-[#1D2D44]/60 text-sm">Bangkok · Tue</p>
+              </div>
+            </div>
+
+            <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
+              <div className="relative h-44 bg-[#1D2D44] flex items-center justify-center">
+                <MapPin className="w-10 h-10 text-[#B08D55]" />
+              </div>
+              <div className="p-4">
+                <p className="font-serif font-bold text-[#1D2D44] text-base">Pick A Court</p>
+                <p className="text-[#1D2D44]/60 text-sm">Bangkok · Thu</p>
               </div>
             </div>
 
@@ -411,7 +425,7 @@ export default function ClinicsPage() {
           <div className="bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10 p-5 max-w-lg">
             <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-2">Getting There. Not Optional.</p>
             <p className="text-[#1D2D44]/70 text-sm leading-relaxed">
-              Arise Pickleball is in Udom Suk. If you&apos;re staying central, budget 30 to 40 minutes by Grab, roughly 150 to 250 baht each way. Papaya Pickleball Club travel times to follow. Easy either way, but worth knowing before you arrive rather than on the first morning.
+              Arise Pickleball is in Udom Suk. If you&apos;re staying central, budget 30 to 40 minutes by Grab, roughly 150 to 250 baht each way. Papaya Pickleball Club and Pick A Court travel times to follow. Easy either way, but worth knowing before you arrive rather than on the first morning.
             </p>
           </div>
         </div>
