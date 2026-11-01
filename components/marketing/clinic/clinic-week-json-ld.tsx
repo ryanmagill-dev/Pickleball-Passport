@@ -8,7 +8,7 @@ const clinicWeekJsonLd = {
       '@id': 'https://www.thepickleballpassport.org/clinics#clinic-week',
       name: 'Bangkok Pickleball Clinic Week with Coach Travis Rhea (Nov 2 to 5, 2026)',
       description:
-        'Four 3-hour pickleball sessions in Bangkok: mindset seminars with Coach Travis Rhea (Mind Your Pickle) on Mon Nov 2 and Wed Nov 4 at Arise Pickleball / BEAT Discovery Udomsuk, coached open play on Tue Nov 3 at Papaya Pickleball Club and Thu Nov 5 at Pick A Court Sukhumvit 62. 6 spots. Book two days with the Two-Day Pass or all four with the Full Clinic Week.',
+        'Four 3-hour pickleball sessions in Bangkok: mindset seminars with Coach Travis Rhea (Mind Your Pickle) on Mon Nov 2 and Wed Nov 4 at Arise Pickleball / BEAT Discovery Udomsuk, coached open play on Tue Nov 3 at Papaya Pickleball Club, and Thu Nov 5 at Pick A Court Sukhumvit 62 (first hour to wrap up the week, then a mini tournament on PKL.club). 6 spots. Book two days with the Two-Day Pass or all four with the Full Clinic Week.',
       url: 'https://www.thepickleballpassport.org/clinics',
       startDate: '2026-11-02T11:00:00+07:00',
       endDate: '2026-11-05T14:00:00+07:00',
@@ -124,7 +124,7 @@ const clinicWeekJsonLd = {
     {
       '@type': 'Event',
       '@id': 'https://www.thepickleballpassport.org/clinics#session-2026-11-05',
-      name: 'Clinic Week Bangkok, Thu 5 Nov: Coached open play at Pick A Court',
+      name: 'Clinic Week Bangkok, Thu 5 Nov: Wrap-up hour and mini tournament at Pick A Court',
       startDate: '2026-11-05T11:00:00+07:00',
       endDate: '2026-11-05T14:00:00+07:00',
       eventStatus: 'https://schema.org/EventScheduled',

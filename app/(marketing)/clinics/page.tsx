@@ -11,7 +11,7 @@ const bangkokSchedule = [
   { day: 'Mon 2 Nov', time: '11am to 2pm', venue: 'Arise Pickleball / BEAT Discovery Udomsuk', label: 'Mind Your Pickle mindset seminar with Coach Travis Rhea.' },
   { day: 'Tue 3 Nov', time: '11am to 2pm', venue: 'Papaya Pickleball Club', label: 'Coached open play with Jaron and Ryan.' },
   { day: 'Wed 4 Nov', time: '11am to 2pm', venue: 'Arise Pickleball / BEAT Discovery Udomsuk', label: 'Mind Your Pickle mindset seminar with Coach Travis Rhea.' },
-  { day: 'Thu 5 Nov', time: '11am to 2pm', venue: 'Pick A Court Sukhumvit 62', label: 'Coached open play with Jaron and Ryan.' },
+  { day: 'Thu 5 Nov', time: '11am to 2pm', venue: 'Pick A Court Sukhumvit 62', label: 'First hour is coached open play to wrap up the week: recap what we learned and make minor adjustments. The last two hours are a mini tournament on PKL.club, so you get your stats and test your skills.' },
 ];
 
 /* ─────────────────────── PASSES ─────────────────────── */
@@ -19,14 +19,14 @@ const bangkokSchedule = [
 const passes = [
   {
     name: 'Clinic Week',
-    summary: '4 sessions: 2 mindset, 2 coached open play',
+    summary: '4 sessions: mindset Mon and Wed, open play Tue, wrap-up and mini tournament Thu',
     price: '$299',
     link: 'https://link.fastpaydirect.com/payment-link/6aaa56229f7ff2c808a75e19',
     external: true,
     featured: true,
     includes: [
       'Two Mind Your Pickle mindset sessions with Coach Travis Rhea',
-      'Two live coaching sessions with Jaron and Ryan',
+      'Tuesday coached open play, and Thursday at Pick A Court: an hour to wrap up, then a mini tournament on PKL.club',
       'All court time, balls, water, snacks, and setup',
     ],
   },
@@ -348,7 +348,7 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week and the Two-Day Pass are Bangkok only: two mindset sessions with Coach Travis Rhea and two coached open play sessions with Jaron and Ryan, across Arise Pickleball, Papaya Pickleball Club, and Pick A Court.
+            * Clinic Week and the Two-Day Pass are Bangkok only: mindset seminars with Coach Travis Rhea on Monday and Wednesday at Arise, coached open play on Tuesday at Papaya, and Thursday at Pick A Court Sukhumvit 62 (an hour to wrap up, then a mini tournament on PKL.club).
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">

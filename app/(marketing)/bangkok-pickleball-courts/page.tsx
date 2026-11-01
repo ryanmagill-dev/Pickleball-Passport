@@ -585,7 +585,7 @@ export default function BangkokPickleballCourtsPage() {
                   Play With Us in Bangkok: Clinic Week, Nov 2 to 5
                 </h2>
                 <p className="text-sm text-white/80 leading-relaxed mb-6">
-                  Skip the Reclub waitlists. Coach Travis Rhea (Mind Your Pickle) runs mindset seminars Mon and Wed at Arise Pickleball (BEAT Discovery Udomsuk), then coached open play Tue at Papaya Pickleball Club and Thu at Pick A Court Sukhumvit 62, 11am to 2pm. Six spots. Book two days with the Two-Day Pass ($169) or all four with the Full Clinic Week ($299). Book your own hotel; we run the courts.
+                  Skip the Reclub waitlists. Coach Travis Rhea (Mind Your Pickle) runs mindset seminars Mon and Wed at Arise Pickleball (BEAT Discovery Udomsuk), then coached open play Tue at Papaya Pickleball Club. Thursday at Pick A Court Sukhumvit 62 starts with an hour to wrap up the week, then a mini tournament on PKL.club, 11am to 2pm. Six spots. Book two days with the Two-Day Pass ($169) or all four with the Full Clinic Week ($299). Book your own hotel; we run the courts.
                 </p>
               </div>
               <Link

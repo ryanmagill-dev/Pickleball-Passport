@@ -292,7 +292,7 @@ export default function ThailandPickleballCalculatorPage() {
                   Bangkok Clinic Week ($169 to $299)
                 </h3>
                 <p className="text-sm text-[#1D2D44]/75 leading-relaxed mb-4">
-                  Already in Bangkok or traveling on your own hotel points? Coach Travis Rhea (Mind Your Pickle) runs mindset seminars Mon and Wed at Arise Pickleball (BEAT Discovery Udomsuk), with coached open play Tue at Papaya Pickleball Club and Thu at Pick A Court Sukhumvit 62 (Nov 2 to 5, 2026, 11am to 2pm, 6 spots).
+                  Already in Bangkok or traveling on your own hotel points? Coach Travis Rhea (Mind Your Pickle) runs mindset seminars Mon and Wed at Arise Pickleball (BEAT Discovery Udomsuk), with coached open play Tue at Papaya Pickleball Club. Thursday at Pick A Court Sukhumvit 62 starts with an hour to wrap up the week, then a mini tournament on PKL.club (Nov 2 to 5, 2026, 11am to 2pm, 6 spots).
                 </p>
                 <ul className="space-y-2 text-xs text-[#1D2D44]/75 mb-6">
                   <li>• Two-Day Pass: $169 (2 sessions, 6 hours on court)</li>
