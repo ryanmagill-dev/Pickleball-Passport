@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
@@ -74,8 +73,18 @@ export function HeroSection() {
             <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 shadow-2xl">
               <div className="grid grid-cols-3 gap-4 md:gap-8">
                 <div className="text-center group">
-                  <div className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-3 rounded-xl bg-[#B08D55]/20 flex items-center justify-center group-hover:bg-[#B08D55]/30 transition-colors overflow-hidden">
-                    <Image src="/Pickleball--Streamline-Plump.png" alt="Pickleball" width={40} height={40} className="object-contain" />
+                  <div className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-3 rounded-xl bg-[#B08D55]/20 flex items-center justify-center group-hover:bg-[#B08D55]/30 transition-colors">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 md:w-8 md:h-8" aria-hidden="true">
+                      <g transform="rotate(-25 20 22)">
+                        <rect x="9" y="4" width="22" height="25" rx="7" fill="#B08D55" />
+                        <rect x="11" y="27.5" width="18" height="2" fill="#1D2D44" opacity="0.35" />
+                        <rect x="17" y="29" width="6" height="14" rx="2.5" fill="#B08D55" />
+                      </g>
+                      <circle cx="38" cy="37" r="6" fill="#B08D55" />
+                      <circle cx="36" cy="35" r="1.2" fill="#1D2D44" opacity="0.6" />
+                      <circle cx="40.2" cy="35.6" r="1.2" fill="#1D2D44" opacity="0.6" />
+                      <circle cx="37.6" cy="39.6" r="1.2" fill="#1D2D44" opacity="0.6" />
+                    </svg>
                   </div>
                   <div className="text-xl md:text-2xl font-bold text-white">Courts Vetted</div>
                   <div className="text-xs md:text-sm text-white/60 mt-1">Every venue inspected</div>
