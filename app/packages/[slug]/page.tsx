@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { prisma } from '@/lib/db';
+import { absoluteImageUrl, shareImageFromUrl } from '@/lib/seo/share-image';
 import { PackageDetailClient } from '@/components/marketing/package-detail-client';
 
 interface PageProps {
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = packageData.metaTitle || `${packageData.name} - Wellness Package | The Pickleball Passport`;
   const description = packageData.metaDescription || `Explore our ${packageData.name} package combining premier wellness, pickleball, and adventure in Thailand.`;
-  const imageUrl = packageData.heroImageUrl || '/og-images/package-default.jpg';
+  const image = shareImageFromUrl(packageData.heroImageUrl, `${packageData.name} - The Pickleball Passport`);
 
   return {
     title,
@@ -63,14 +64,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       url: `https://thepickleballpassport.org/packages/${slug}`,
       siteName: 'The Pickleball Passport',
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: `${packageData.name} - The Pickleball Passport`,
-        },
-      ],
+      images: [image],
       locale: 'en_US',
       type: 'website',
     },
@@ -78,7 +72,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: 'summary_large_image',
       title,
       description,
-      images: [imageUrl],
+      images: [image],
       site: '@PickleballPass',
       creator: '@PickleballPass',
     },
@@ -125,7 +119,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
     '@type': 'Product',
     name: packageData.name,
     description: packageData.description,
-    image: packageData.heroImageUrl || 'https://thepickleballpassport.org/og-images/package-default.jpg',
+    image: absoluteImageUrl(shareImageFromUrl(packageData.heroImageUrl, packageData.name)),
     brand: {
       '@type': 'Brand',
       name: 'The Pickleball Passport',

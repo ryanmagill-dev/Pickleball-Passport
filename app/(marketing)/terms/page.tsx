@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareImage } from '@/lib/seo/share-image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -69,6 +70,7 @@ export const metadata: Metadata = {
       "Review The Pickleball Passport's terms of service including booking policies, cancellation terms, liability disclaimers, and dispute resolution.",
     url: 'https://www.thepickleballpassport.org/terms',
     siteName: 'The Pickleball Passport',
+    images: [shareImage('trips')],
     locale: 'en_US',
     type: 'website',
   },
@@ -77,6 +79,7 @@ export const metadata: Metadata = {
     title: 'Terms of Service | The Pickleball Passport',
     description:
       "Review The Pickleball Passport's terms of service including booking policies, cancellation terms, liability disclaimers, and dispute resolution.",
+    images: [shareImage('trips')],
     site: '@PickleballPass',
     creator: '@PickleballPass',
   },

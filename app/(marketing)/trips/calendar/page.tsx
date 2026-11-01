@@ -96,7 +96,7 @@ export default function CalendarPage() {
         <div>
           <div className="mb-5">
             <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">The Rest of 2027</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">One departure a month, alternating Chiang Mai and Hua Hin.</p>
+            <p className="text-[#1D2D44]/50 text-sm mt-0.5">2027 routes: Bangkok + Chiang Mai in January, Bangkok + Hua Hin in February, Bangkok + Phuket in March, and Bangkok + Pattaya for Songkran in April.</p>
           </div>
           <div className="space-y-2.5">
             {provisional2027.map((row) => <ProvisionalRow key={row.month} {...row} />)}

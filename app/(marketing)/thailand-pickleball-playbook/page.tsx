@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { shareImage } from "@/lib/seo/share-image";
 
 // Self-hosted copy of the V2 playbook (public/thailand-pickleball-playbook-2026.pdf).
 // Not exported: Next.js only allows its own named exports from page files.
@@ -38,21 +39,14 @@ export const metadata: Metadata = {
     siteName: "The Pickleball Passport",
     locale: "en_US",
     type: "article",
-    images: [
-      {
-        url: "https://www.thepickleballpassport.org/og-images/homepage.jpg",
-        width: 1200,
-        height: 630,
-        alt: "The Thailand Pickleball Playbook 2026 by The Pickleball Passport",
-      },
-    ],
+    images: [shareImage("trips")],
   },
   twitter: {
     card: "summary_large_image",
     title: "The Thailand Pickleball Playbook 2026 | The Pickleball Passport",
     description:
       "Find the right games, handle the heat, and explore Thailand properly. Courts, booking apps, seasons, and a 9-day rhythm.",
-    images: ["https://www.thepickleballpassport.org/og-images/homepage.jpg"],
+    images: [shareImage("trips")],
   },
 };
 

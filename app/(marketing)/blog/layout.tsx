@@ -7,6 +7,7 @@
  */
 
 import { Metadata } from 'next';
+import { shareImage } from '@/lib/seo/share-image';
 
 export const metadata: Metadata = {
   title: 'Blog | The Pickleball Passport',
@@ -16,11 +17,13 @@ export const metadata: Metadata = {
     description: 'Stories, tips, and insights from the world of pickleball wellness travel.',
     type: 'website',
     siteName: 'The Pickleball Passport',
+    images: [shareImage('trips')],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Blog | The Pickleball Passport',
     description: 'Stories, tips, and insights from the world of pickleball wellness travel.',
+    images: [shareImage('trips')],
   },
 };
 

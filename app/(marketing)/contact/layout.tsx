@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { shareImage } from '@/lib/seo/share-image'
 
 export const metadata: Metadata = {
   title: 'Contact Us - The Pickleball Passport',
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
       'Get in touch with The Pickleball Passport. Have questions about our pickleball travel packages in Thailand? We\'re here to help.',
     url: 'https://thepickleballpassport.org/contact',
     siteName: 'The Pickleball Passport',
+    images: [shareImage('trips')],
     type: 'website',
   },
   twitter: {
@@ -17,6 +19,7 @@ export const metadata: Metadata = {
     title: 'Contact Us - The Pickleball Passport',
     description:
       'Get in touch with The Pickleball Passport. Have questions about our pickleball travel packages in Thailand? We\'re here to help.',
+    images: [shareImage('trips')],
   },
   alternates: {
     canonical: 'https://thepickleballpassport.org/contact',

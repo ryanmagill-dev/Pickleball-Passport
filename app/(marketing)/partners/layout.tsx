@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareImage } from '@/lib/seo/share-image';
 
 export const metadata: Metadata = {
   title: 'Our Partners | The Pickleball Passport',
@@ -9,14 +10,7 @@ export const metadata: Metadata = {
     description: 'Meet the creators, pros, and personalities who partner with The Pickleball Passport.',
     url: 'https://thepickleballpassport.org/partners',
     siteName: 'The Pickleball Passport',
-    images: [
-      {
-        url: '/og-images/partners.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'The Pickleball Passport Partners',
-      },
-    ],
+    images: [shareImage('trips')],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Our Partners | The Pickleball Passport',
     description: 'Meet the creators, pros, and personalities who partner with The Pickleball Passport.',
-    images: ['/og-images/partners.jpg'],
+    images: [shareImage('trips')],
     site: '@PickleballPass',
     creator: '@PickleballPass',
   },

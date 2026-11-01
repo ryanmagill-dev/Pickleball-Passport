@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareImage } from '@/lib/seo/share-image';
 
 export const metadata: Metadata = {
   title: 'Become a Partner | The Pickleball Passport',
@@ -9,14 +10,7 @@ export const metadata: Metadata = {
     description: 'Sign up to become a partner and start earning rewards for referring members to transformational wellness experiences.',
     url: 'https://thepickleballpassport.org/partner/signup',
     siteName: 'The Pickleball Passport',
-    images: [
-      {
-        url: '/og-images/partner-signup.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Become a Partner with The Pickleball Passport - Sign Up Today',
-      },
-    ],
+    images: [shareImage('trips')],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Become a Partner | The Pickleball Passport',
     description: 'Sign up to become a partner and start earning rewards for referring members to transformational wellness experiences.',
-    images: ['/og-images/partner-signup.jpg'],
+    images: [shareImage('trips')],
     site: '@PickleballPass',
     creator: '@PickleballPass',
   },

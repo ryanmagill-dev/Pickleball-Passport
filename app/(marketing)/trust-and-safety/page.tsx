@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareImage } from '@/lib/seo/share-image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
       'Vetted hotels, private transport, on-the-ground trip hosts, and curated itineraries. How we keep you covered on every trip.',
     url: 'https://www.thepickleballpassport.org/trust-and-safety',
     siteName: 'The Pickleball Passport',
+    images: [shareImage('trips')],
     locale: 'en_US',
     type: 'website',
   },
@@ -42,6 +44,7 @@ export const metadata: Metadata = {
     title: 'Trust & Safety | The Pickleball Passport',
     description:
       'Vetted hotels, private transport, on-the-ground trip hosts, and curated itineraries. How we keep you covered on every trip.',
+    images: [shareImage('trips')],
     site: '@PickleballPass',
     creator: '@PickleballPass',
   },
