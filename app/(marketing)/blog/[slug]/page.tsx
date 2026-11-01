@@ -8,6 +8,7 @@
 
 import { Metadata } from 'next';
 import { prisma } from '@/lib/db';
+import { shareImageFromUrl } from '@/lib/seo/share-image';
 import { BlogPostContent } from './blog-post-content';
 
 interface BlogPostPageProps {
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
     const title = post.metaTitle || post.title;
     const description = post.metaDescription || post.excerpt || `Read ${post.title} on The Pickleball Passport Blog`;
-    const image = post.ogImage || post.featuredImage;
+    const image = shareImageFromUrl(post.ogImage || post.featuredImage, title);
 
     return {
       title: `${title} | The Pickleball Passport Blog`,
@@ -63,14 +64,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         type: 'article',
         publishedTime: post.publishedAt?.toISOString(),
         siteName: 'The Pickleball Passport',
-        ...(image && { images: [{ url: image, width: 1200, height: 630 }] }),
+        images: [image],
         ...(post.category && { section: post.category.name }),
       },
       twitter: {
         card: 'summary_large_image',
         title,
         description,
-        ...(image && { images: [image] }),
+        images: [image],
       },
       alternates: {
         canonical: `/blog/${resolvedParams.slug}`,

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { shareImage } from "@/lib/seo/share-image";
 
 export const metadata: Metadata = {
   title:
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
       "Why the 16-player, 4-court group architecture works best for private club trips, what separates a real destination program from a chaotic group vacation, and how to partner on the ground in Thailand.",
     url: "https://www.thepickleballpassport.org/pickleball-club-retreats",
     siteName: "The Pickleball Passport",
+    images: [shareImage("trips")],
     type: "article",
     locale: "en_US",
   },
@@ -34,6 +36,7 @@ export const metadata: Metadata = {
     title: "How Pickleball Clubs Run Destination Trips to Thailand (2026 Guide)",
     description:
       "Operational guide for club owners, directors of racquet sports, and coaches planning private member trips to Thailand.",
+    images: [shareImage("trips")],
   },
 };
 

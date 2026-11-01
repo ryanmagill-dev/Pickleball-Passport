@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { shareImage } from "@/lib/seo/share-image";
 
 export const metadata: Metadata = {
   title:
@@ -30,21 +31,14 @@ export const metadata: Metadata = {
     siteName: "The Pickleball Passport",
     locale: "en_US",
     type: "article",
-    images: [
-      {
-        url: "https://www.thepickleballpassport.org/og-images/homepage.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Where to Play Pickleball in Bangkok (2026 Guide) by The Pickleball Passport",
-      },
-    ],
+    images: [shareImage("trips")],
   },
   twitter: {
     card: "summary_large_image",
     title: "Where to Play Pickleball in Bangkok (2026 Local Guide)",
     description:
       "Indoor & covered courts, BTS transit tips, Grab fares, and how to find level-matched games on Reclub & LINE in Bangkok.",
-    images: ["https://www.thepickleballpassport.org/og-images/homepage.jpg"],
+    images: [shareImage("trips")],
   },
 };
 

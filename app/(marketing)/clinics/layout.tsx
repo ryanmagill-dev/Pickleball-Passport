@@ -12,7 +12,12 @@ export const metadata: Metadata = {
     description:
       'Mindset seminars with Coach Travis Rhea, coached open play, and a Thursday mini tournament on PKL.club at Pick A Court. 6 spots. Two-Day Pass $169 or Full Clinic Week $299.',
     url: 'https://www.thepickleballpassport.org/clinics',
-    images: ['https://www.thepickleballpassport.org/images/posters/tpp-aerial-0467-poster.jpg'],
+    images: [
+      {
+        url: 'https://www.thepickleballpassport.org/images/posters/tpp-aerial-0467-poster.jpg',
+        alt: 'Aerial view of Bangkok, The Pickleball Passport clinic week',
+      },
+    ],
     type: 'website',
   },
 };

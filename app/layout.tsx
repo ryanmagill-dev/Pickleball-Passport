@@ -13,6 +13,7 @@ import { Footer } from "@/components/marketing/footer";
 import { AffiliateTracker } from "@/components/affiliate-tracker";
 import { GoogleTranslateWidget } from "@/components/marketing/google-translate-widget";
 import { isClerkEnabled } from "@/lib/auth/clerk-enabled";
+import { absoluteShareUrl, defaultShareMetadata } from "@/lib/seo/share-image";
 
 /**
  * Pickleball Passport - Official Brand Fonts
@@ -40,9 +41,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://thepickleballpassport.org'),
+  metadataBase: new URL('https://www.thepickleballpassport.org'),
   title: "The Pickleball Passport | Premier Pickleball Travel in Thailand",
   description: "Where Pickleball Meets Exceptional Wellness and Adventure in Thailand",
+  ...defaultShareMetadata,
   verification: {
     google: "TqBXzhNGDQHJPailnK5a9YMcSDB34Vr8lP_997AIQgg",
   },
@@ -59,7 +61,8 @@ export default function RootLayout({
     '@type': 'Organization',
     name: 'The Pickleball Passport',
     url: 'https://thepickleballpassport.org',
-    logo: 'https://thepickleballpassport.org/logo.png',
+    image: absoluteShareUrl('homepage'),
+    logo: 'https://www.thepickleballpassport.org/logo.png',
     description: 'Premier wellness and pickleball travel experiences in Thailand.',
     contactPoint: {
       '@type': 'ContactPoint',

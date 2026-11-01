@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareImage } from '@/lib/seo/share-image';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -71,6 +72,7 @@ export const metadata: Metadata = {
       'Learn how The Pickleball Passport protects your privacy. Our policy covers GDPR, CCPA compliance, data collection, cookies, and third-party services.',
     url: 'https://thepickleballpassport.org/privacy',
     siteName: 'The Pickleball Passport',
+    images: [shareImage('trips')],
     locale: 'en_US',
     type: 'website',
   },
@@ -79,6 +81,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy | The Pickleball Passport',
     description:
       'Learn how The Pickleball Passport protects your privacy. Our policy covers GDPR, CCPA compliance, data collection, cookies, and third-party services.',
+    images: [shareImage('trips')],
     site: '@PickleballPass',
     creator: '@PickleballPass',
   },

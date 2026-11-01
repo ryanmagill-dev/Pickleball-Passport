@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { shareImage } from "@/lib/seo/share-image";
 
 export const metadata: Metadata = {
   title:
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
       "How to match your travel month to the right Thai cities, court roof types, and daily play windows across Bangkok, Chiang Mai, Hua Hin, Pattaya, and Phuket.",
     url: "https://www.thepickleballpassport.org/best-time-to-visit-thailand-for-pickleball",
     siteName: "The Pickleball Passport",
+    images: [shareImage("trips")],
     type: "article",
     locale: "en_US",
   },
@@ -34,6 +36,7 @@ export const metadata: Metadata = {
     title: "Best Time to Visit Thailand for Pickleball (2026 Guide)",
     description:
       "Month-by-month weather, heat windows, Chiang Mai air quality calendar, and indoor court strategy for Thailand pickleball trips.",
+    images: [shareImage("trips")],
   },
 };
 

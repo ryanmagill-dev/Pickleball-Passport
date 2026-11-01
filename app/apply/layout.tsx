@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareImage } from '@/lib/seo/share-image';
 
 export const metadata: Metadata = {
   title: 'Apply for The Pickleball Passport | The Pickleball Passport',
@@ -9,14 +10,7 @@ export const metadata: Metadata = {
     description: 'Apply for a Pickleball Passport trip to Thailand. Tell us about your trip and our team will follow up.',
     url: 'https://thepickleballpassport.org/apply',
     siteName: 'The Pickleball Passport',
-    images: [
-      {
-        url: '/og-images/apply.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Apply for The Pickleball Passport',
-      },
-    ],
+    images: [shareImage('trips')],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Apply for The Pickleball Passport',
     description: 'Apply for a Pickleball Passport trip to Thailand. Tell us about your trip and our team will follow up.',
-    images: ['/og-images/apply.jpg'],
+    images: [shareImage('trips')],
     site: '@PickleballPass',
     creator: '@PickleballPass',
   },

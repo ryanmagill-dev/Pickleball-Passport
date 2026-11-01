@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { shareImage } from "@/lib/seo/share-image";
 import { TripCalculator } from "./trip-calculator";
 
 export const metadata: Metadata = {
@@ -30,21 +31,14 @@ export const metadata: Metadata = {
     siteName: "The Pickleball Passport",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "https://www.thepickleballpassport.org/og-images/homepage.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Thailand Pickleball Trip & Court Cost Calculator by The Pickleball Passport",
-      },
-    ],
+    images: [shareImage("trips")],
   },
   twitter: {
     card: "summary_large_image",
     title: "Thailand Pickleball Trip & Court Cost Calculator (2026)",
     description:
       "Calculate court fees in THB and USD, Grab transport, heat windows, and city pairings across Bangkok, Chiang Mai, Hua Hin, Pattaya, and Phuket.",
-    images: ["https://www.thepickleballpassport.org/og-images/homepage.jpg"],
+    images: [shareImage("trips")],
   },
 };
 

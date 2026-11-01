@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { March18Page } from './march-18-page';
+import { shareImage } from '@/lib/seo/share-image';
 
 export const metadata: Metadata = {
   title: 'Bangkok + Phuket: March 18 to 26, 2027 | The Pickleball Passport',
@@ -18,8 +19,16 @@ export const metadata: Metadata = {
       '9 days across Bangkok and Phuket, March 18 to 26, 2027. Coached pickleball, Phang Nga Bay by private speedboat, beachfront resort. $7,000/person.',
     url: 'https://www.thepickleballpassport.org/trips/bangkok-phuket/march-18-2027',
     siteName: 'The Pickleball Passport',
+    images: [shareImage('phuket')],
     locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bangkok + Phuket: March 18 to 26, 2027 | The Pickleball Passport',
+    description:
+      '9 days across Bangkok and Phuket, March 18 to 26, 2027. Coached pickleball, Phang Nga Bay by private speedboat, beachfront resort. $7,000/person.',
+    images: [shareImage('phuket')],
   },
   alternates: {
     canonical: 'https://www.thepickleballpassport.org/trips/bangkok-phuket/march-18-2027',

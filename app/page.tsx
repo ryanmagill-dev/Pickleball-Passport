@@ -7,6 +7,7 @@ import { ConciergeSection } from '@/components/marketing/concierge-section';
 import { UpcomingEvents } from '@/components/marketing/upcoming-events';
 import { getHomeEvents } from '@/lib/data/events';
 import type { Metadata } from 'next';
+import { shareImage } from '@/lib/seo/share-image';
 
 export const metadata: Metadata = {
   title: 'Your Personal Pickleball Concierge in Thailand | The Pickleball Passport',
@@ -27,14 +28,7 @@ export const metadata: Metadata = {
       'We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it.',
     url: 'https://www.thepickleballpassport.org',
     siteName: 'The Pickleball Passport',
-    images: [
-      {
-        url: '/og-images/homepage.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'The Pickleball Passport: Pickleball Concierge in Thailand',
-      },
-    ],
+    images: [shareImage('homepage')],
     locale: 'en_US',
     type: 'website',
   },
@@ -43,7 +37,7 @@ export const metadata: Metadata = {
     title: 'The Pickleball Passport: Your Personal Pickleball Concierge in Thailand',
     description:
       'We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it.',
-    images: ['/og-images/homepage.jpg'],
+    images: [shareImage('homepage')],
     site: '@PickleballPass',
     creator: '@PickleballPass',
   },

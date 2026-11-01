@@ -211,7 +211,7 @@ export function TripsListingPage() {
           {/* What's next */}
           <div className="mt-8 bg-white rounded-2xl border border-[#B08D55]/10 p-6 max-w-3xl">
             <p className="text-[#1D2D44]/60 text-sm leading-relaxed">
-              One departure a month for the rest of 2027, alternating Chiang Mai and Hua Hin.
+              2027 routes: Bangkok + Chiang Mai in January, Bangkok + Hua Hin in February, Bangkok + Phuket in March, and Bangkok + Pattaya for Songkran in April.
             </p>
             <Link
               href="/trips/calendar"
