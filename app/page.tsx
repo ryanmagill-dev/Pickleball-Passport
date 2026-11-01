@@ -1,4 +1,5 @@
 import { HeroSection } from '@/components/marketing/hero-section';
+import { NextDepartureBand } from '@/components/marketing/january/next-departure-band';
 import { BrandPillars } from '@/components/marketing/brand-pillars';
 import { WhyThailand } from '@/components/marketing/why-thailand';
 import { SafetySection } from '@/components/marketing/safety-section';
@@ -10,7 +11,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Your Personal Pickleball Concierge in Thailand | The Pickleball Passport',
   description:
-    'We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it. Pickleball travel to Thailand from $169.',
+    'Pickleball trips to Thailand with vetted courts, coached sessions, and five-star hotels. Next trip: Bangkok and Chiang Mai, Jan 14 to 22, 2027.',
   keywords: [
     'pickleball',
     'pickleball travel',
@@ -62,6 +63,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <NextDepartureBand />
       <BrandPillars />
       <UpcomingEvents events={homeEvents} />
       <WhyThailand />

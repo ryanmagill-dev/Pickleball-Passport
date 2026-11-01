@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { MapPin, Calendar, Trophy, ArrowRight, Leaf, ExternalLink } from 'lucide-react';
 import { TripDetailLayout } from '@/components/trips/trip-detail-layout';
 import { TripSectionContentChiangMai } from '@/components/trips/trip-section-content-chiang-mai';
+import { RouteJanButton } from '@/components/marketing/january/route-jan-button';
+import { JAN_SPOTS_LEFT } from '@/components/marketing/january/jan-trip';
 
 /* ─────────────────────── DEPARTURE DATA ─────────────────────── */
 
@@ -21,7 +23,7 @@ interface Departure {
 }
 
 const departures: Departure[] = [
-  { month: 'January 2027', price: 5500, season: 'High Season', status: 'open', phuket: true, dedicatedHref: '/trips/bangkok-chiang-mai/january-14-2027', note: 'Jan 14–22 confirmed' },
+  { month: 'January 2027', price: 5500, season: 'High Season', status: 'open', phuket: true, dedicatedHref: '/trips/bangkok-chiang-mai/january-14-2027', note: 'Jan 14 to 22 confirmed' },
 ];
 
 export function BangkokChiangMaiPage() {
@@ -65,8 +67,9 @@ export function BangkokChiangMaiPage() {
             <div className="flex flex-wrap gap-3 sm:gap-4">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                 <Calendar className="h-4 w-4 text-[#B08D55]" />
-                Multiple 2026 Departures
+                Next departure: January 14 to 22, 2027
               </div>
+              <RouteJanButton />
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                 <MapPin className="h-4 w-4 text-[#B08D55]" />
                 2 Cities, 2 Five-Star Hotels
@@ -99,7 +102,7 @@ export function BangkokChiangMaiPage() {
       <section className="py-10 sm:py-14 bg-white border-b border-[#B08D55]/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44] mb-1">2026–27 Departures</h2>
+            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44] mb-1">2027 Departures</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -174,7 +177,7 @@ export function BangkokChiangMaiPage() {
           <div className="mt-6 flex items-start gap-3 p-4 bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10">
             <Leaf className="w-4 h-4 text-[#2D5A3D] flex-shrink-0 mt-0.5" />
             <p className="text-sm text-[#1D2D44]/60 leading-relaxed">
-              Chiang Mai trips run May through January. February–April departures are not available due to regional air quality during the dry season burning period. For travel during those months, consider{' '}
+              Chiang Mai trips run May through January. February to April departures are not available due to regional air quality during the dry season burning period. For travel during those months, consider{' '}
               <Link href="/trips/bangkok-hua-hin/february-18-2027" className="text-[#B08D55] hover:underline font-medium">
                 Route A: Bangkok + Hua Hin
               </Link>{' '}
@@ -188,11 +191,11 @@ export function BangkokChiangMaiPage() {
       <TripDetailLayout
         tripName="Bangkok + Chiang Mai"
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Chiang Mai Riverside Resort"
-        dates="January 14–22, 2027"
+        dates="January 14 to 22, 2027"
         price={5500}
         hidePaymentPlan={true}
         fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
-        spotsLeft={16}
+        spotsLeft={JAN_SPOTS_LEFT}
         totalSpots={16}
         ContentComponent={TripSectionContentChiangMai}
       />

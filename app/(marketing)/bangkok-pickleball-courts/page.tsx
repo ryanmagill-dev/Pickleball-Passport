@@ -579,13 +579,13 @@ export default function BangkokPickleballCourtsPage() {
             <div className="bg-white/5 rounded-2xl border border-[#B08D55]/30 p-6 sm:p-8 flex flex-col justify-between">
               <div>
                 <span className="inline-block px-3 py-1 rounded-full bg-[#B08D55]/20 text-[#CFB78D] text-xs font-bold uppercase tracking-wider mb-3">
-                  Bangkok · Nov 1 to 5, 2026
+                  Bangkok · Nov 2 to 5, 2026 · 6 Spots
                 </span>
                 <h2 className="font-serif text-2xl font-bold text-white mb-2">
-                  Play With Us in Bangkok: Clinic Week ($169 / $299)
+                  Play With Us in Bangkok: Clinic Week, Nov 2 to 5
                 </h2>
                 <p className="text-sm text-white/80 leading-relaxed mb-6">
-                  Skip the Reclub waitlists. Join Coach Travis Rhea (Mind Your Pickle) plus Jaron and Ryan for four 3-hour sessions of mindset work and coached open play in Bangkok (Nov 2 to 5, 11am to 2pm, capped at 16 players). Book your own hotel; we run the courts.
+                  Skip the Reclub waitlists. Coach Travis Rhea (Mind Your Pickle) runs mindset seminars Mon and Wed at Arise Pickleball (BEAT Discovery Udomsuk), then coached open play Tue at Papaya Pickleball Club and Thu at Pick A Court Sukhumvit 62, 11am to 2pm. Six spots. Book two days with the Two-Day Pass ($169) or all four with the Full Clinic Week ($299). Book your own hotel; we run the courts.
                 </p>
               </div>
               <Link
@@ -599,20 +599,20 @@ export default function BangkokPickleballCourtsPage() {
             <div className="bg-white/5 rounded-2xl border border-[#B08D55]/30 p-6 sm:p-8 flex flex-col justify-between">
               <div>
                 <span className="inline-block px-3 py-1 rounded-full bg-[#B08D55]/20 text-[#CFB78D] text-xs font-bold uppercase tracking-wider mb-3">
-                  2027 Departures · Flagship &amp; Regional Trips
+                  Jan 14 to 22, 2027 · Bangkok + Chiang Mai
                 </span>
                 <h2 className="font-serif text-2xl font-bold text-white mb-2">
-                  9-Day Flagship Trips &amp; Shorter 3-to-5-Day Trips
+                  January 2027: 9 Days in Bangkok + Chiang Mai
                 </h2>
                 <p className="text-sm text-white/80 leading-relaxed mb-6">
-                  Want the entire week handled for you? Join our 9-day, 8-night flagship trips across Bangkok and Chiang Mai (starting January 14 to 22, 2027 with five-star stays and an optional 3-night Phuket extension) or our shorter 3-to-5-day regional trips in Phuket, Hua Hin, and Bangkok.
+                  Want the courts booked for you? The January 14 to 22, 2027 departure covers 8 nights in five-star hotels, 4 coached sessions, the flight to Chiang Mai, private vans, and Elephant Nature Park for $5,500 per person, paid in full. Six of 16 spots left.
                 </p>
               </div>
               <Link
-                href="/trips"
+                href="/trips/bangkok-chiang-mai/january-14-2027"
                 className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 transition-all"
               >
-                Explore 2027 Trips &amp; Apply
+                Want the courts booked for you? Join the January 2027 trip.
               </Link>
             </div>
           </div>

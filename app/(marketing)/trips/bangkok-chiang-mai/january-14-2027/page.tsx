@@ -1,10 +1,32 @@
 import { Metadata } from 'next';
 import { January14Page } from './january-14-page';
 
-export const metadata: Metadata = {
-  title: 'Bangkok + Chiang Mai: January 14–22, 2027 | Phuket Extension Available | The Pickleball Passport',
+const janTripJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristTrip',
+  name: 'Bangkok + Chiang Mai Pickleball Trip, January 14 to 22, 2027',
   description:
-    'The January 14–22, 2027 departure is the only Bangkok + Chiang Mai trip with an optional Phuket extension. 9 days. Our 5-Star Bangkok riverside hotel · Our 5-Star Chiang Mai Riverside Resort. $5,500/person.',
+    '9 days in Bangkok and Chiang Mai with four coached pickleball sessions, five-star hotels and Elephant Nature Park.',
+  url: 'https://www.thepickleballpassport.org/trips/bangkok-chiang-mai/january-14-2027',
+  touristType: 'Recreational pickleball players',
+  provider: {
+    '@type': 'Organization',
+    name: 'The Pickleball Passport',
+    url: 'https://www.thepickleballpassport.org',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '5500',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/LimitedAvailability',
+    url: 'https://www.thepickleballpassport.org/trips/bangkok-chiang-mai/january-14-2027',
+  },
+};
+
+export const metadata: Metadata = {
+  title: { absolute: 'Thailand Pickleball Trip, Jan 2027: Bangkok + Chiang Mai' },
+  description:
+    '9 days in Bangkok and Chiang Mai, Jan 14 to 22, 2027: four coached pickleball sessions, five-star hotels, Elephant Nature Park. $5,500 per person.',
   keywords: [
     'pickleball trip Thailand January 2027',
     'Bangkok Chiang Mai pickleball',
@@ -13,9 +35,9 @@ export const metadata: Metadata = {
     'Thailand pickleball travel',
   ],
   openGraph: {
-    title: 'Bangkok + Chiang Mai: January 14–22, 2027 | Phuket Extension Available',
+    title: 'Thailand Pickleball Trip, Jan 2027: Bangkok + Chiang Mai',
     description:
-      'The only Bangkok + Chiang Mai departure with an optional Phuket extension. Add 3 nights at a beachfront resort on Bang Tao Beach. $5,500/person.',
+      '9 days in Bangkok and Chiang Mai, Jan 14 to 22, 2027: four coached pickleball sessions, five-star hotels, Elephant Nature Park. $5,500 per person.',
     url: 'https://www.thepickleballpassport.org/trips/bangkok-chiang-mai/january-14-2027',
     siteName: 'The Pickleball Passport',
     locale: 'en_US',
@@ -27,5 +49,13 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <January14Page />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(janTripJsonLd) }}
+      />
+      <January14Page />
+    </>
+  );
 }

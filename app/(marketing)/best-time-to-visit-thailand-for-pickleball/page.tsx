@@ -156,7 +156,7 @@ const MONTHLY_CALENDAR = [
     grade: "A+ (Peak Kickoff)",
     weatherFeel: "Cool dry breeze arrives, Loy Krathong lantern festivals",
     chiangMaiStatus: "Prime (Loy Krathong & Yi Peng season)",
-    recommendedPairing: "Bangkok Clinic Week (Nov 1 to 5) or Bangkok + Chiang Mai",
+    recommendedPairing: "Bangkok Clinic Week (Nov 2 to 5) or Bangkok + Chiang Mai",
     courtRoofAdvice: "All court types playable morning and evening",
   },
   {
@@ -463,6 +463,18 @@ export default function BestTimeToVisitThailandPickleballPage() {
                 </h3>
                 <p className="text-sm sm:text-base text-[#1D2D44]/80 leading-relaxed">
                   {item.answer}
+                  {item.question.startsWith('What are the best months') && (
+                    <>
+                      {' '}Cool season travelers can book{' '}
+                      <Link
+                        href="/trips/bangkok-chiang-mai/january-14-2027"
+                        className="font-semibold text-[#B08D55] underline underline-offset-4"
+                      >
+                        the January Chiang Mai trip
+                      </Link>
+                      .
+                    </>
+                  )}
                 </p>
               </div>
             ))}
@@ -480,7 +492,7 @@ export default function BestTimeToVisitThailandPickleballPage() {
             Join Us in Thailand During Peak Pickleball Season
           </h2>
           <p className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Our Bangkok Clinic Week (Nov 1 to 5, 2026 at Arise and Papaya) and our monthly 2027 9-Day Trips (Jan 14 to 22 Bangkok + Chiang Mai, Feb 18 to 26 Bangkok + Hua Hin, Mar 18 to 26 Bangkok + Phuket, and Apr 12 to 20 Songkran Bangkok + Pattaya) match each travel month to the ideal regional pairing and covered court blocks.
+            Our Bangkok Clinic Week (Nov 2 to 5, 2026 at Arise Pickleball, Papaya Pickleball Club, and Pick A Court Sukhumvit 62) and our monthly 2027 9-Day Trips (Jan 14 to 22 Bangkok + Chiang Mai, Feb 18 to 26 Bangkok + Hua Hin, Mar 18 to 26 Bangkok + Phuket, and Apr 12 to 20 Songkran Bangkok + Pattaya) match each travel month to the ideal regional pairing and covered court blocks.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -488,13 +500,19 @@ export default function BestTimeToVisitThailandPickleballPage() {
               href="/clinics"
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#0F1A2A] font-bold text-sm sm:text-base shadow-xl shadow-[#B08D55]/25 transition-all"
             >
-              Explore Bangkok Clinic Week (Nov 1 to 5, 2026)
+              Explore Bangkok Clinic Week (Nov 2 to 5, 2026)
             </Link>
             <Link
               href="/trips"
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl border border-[#CFB78D]/50 bg-white/5 hover:bg-white/15 text-[#CFB78D] font-bold text-sm sm:text-base transition-all"
             >
               View Jan &amp; Feb 2027 Flagship Trips
+            </Link>
+            <Link
+              href="/trips/bangkok-chiang-mai/january-14-2027"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl border border-[#CFB78D]/50 bg-white/5 hover:bg-white/15 text-[#CFB78D] font-bold text-sm sm:text-base transition-all"
+            >
+              The January Chiang Mai Trip
             </Link>
           </div>
 

@@ -27,7 +27,7 @@ export function February18Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-4">
-              Feb 18–26, 2027 · Bangkok + Hua Hin · Clear of Chinese New Year
+              Feb 18 to 26, 2027 · Bangkok + Hua Hin · Clear of Chinese New Year
             </p>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
@@ -43,7 +43,7 @@ export function February18Page() {
             <div className="flex flex-wrap gap-3 mb-10">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                 <Calendar className="h-4 w-4 text-[#B08D55]" />
-                Feb 18 – Feb 26, 2027
+                Feb 18 to Feb 26, 2027
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                 <MapPin className="h-4 w-4 text-[#B08D55]" />
@@ -56,7 +56,7 @@ export function February18Page() {
             </div>
 
             <div className="mb-8">
-              <span className="text-4xl font-bold text-white">$5,500</span>
+              <span className="text-4xl font-bold text-white">$7,000</span>
               <span className="text-white/50 text-lg ml-2">USD / person</span>
               <p className="text-white/40 text-xs mt-1">Double occupancy · Private room $900</p>
               <p className="text-white/40 text-xs mt-1">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
@@ -84,10 +84,10 @@ export function February18Page() {
 
       {/* ── Standard Route A Details ── */}
       <TripDetailLayout
-        tripName="Bangkok + Hua Hin (Feb 18–26)"
+        tripName="Bangkok + Hua Hin (Feb 18 to 26)"
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Hua Hin Beachfront Resort"
-        dates="Feb 18 – Feb 26, 2027"
-        price={5500}
+        dates="Feb 18 to Feb 26, 2027"
+        price={7000}
         hidePaymentPlan={true}
         fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
         spotsLeft={16}

@@ -716,6 +716,18 @@ export default function ThailandPickleballPlaybookPage() {
                       <p className="text-sm text-[#1D2D44]/75 leading-relaxed">
                         {s.summary}
                       </p>
+                      {s.months === 'November to February' && (
+                        <p className="text-sm text-[#1D2D44]/75 leading-relaxed mt-3">
+                          Cool season is when we run{' '}
+                          <Link
+                            href="/trips/bangkok-chiang-mai/january-14-2027"
+                            className="font-semibold text-[#B08D55] underline underline-offset-4"
+                          >
+                            our January 14 to 22, 2027 trip to Bangkok and Chiang Mai
+                          </Link>
+                          .
+                        </p>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1063,13 +1075,13 @@ export default function ThailandPickleballPlaybookPage() {
             <div className="bg-white/5 rounded-2xl border border-[#B08D55]/30 p-6 sm:p-8 flex flex-col justify-between">
               <div>
                 <span className="inline-block px-3 py-1 rounded-full bg-[#B08D55]/20 text-[#CFB78D] text-xs font-bold uppercase tracking-wider mb-3">
-                  Bangkok · Nov 1 to 5, 2026
+                  Bangkok · Nov 2 to 5, 2026 · 6 Spots
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white mb-2">
                   Bangkok Clinic Week (No Trip Required)
                 </h3>
                 <p className="text-sm text-white/80 leading-relaxed mb-6">
-                  Already coming to Thailand or live in the region? Join Coach Travis Rhea (Mind Your Pickle) plus Jaron and Ryan for four sessions of mindset work and coached open play in Bangkok (Nov 2 to 5, 11am to 2pm, capped at 16 players). Book your own room; we run the pickleball. Full 4-session pass ($299) or Two-Day Pass ($169).
+                  Already coming to Thailand or live in the region? Coach Travis Rhea (Mind Your Pickle) runs mindset seminars Mon and Wed at Arise Pickleball (BEAT Discovery Udomsuk), then coached open play Tue at Papaya Pickleball Club and Thu at Pick A Court Sukhumvit 62, 11am to 2pm. Six spots. Choose two days with the Two-Day Pass ($169) or all four with the Full Clinic Week ($299).
                 </p>
               </div>
               <Link
@@ -1083,20 +1095,20 @@ export default function ThailandPickleballPlaybookPage() {
             <div className="bg-white/5 rounded-2xl border border-[#B08D55]/30 p-6 sm:p-8 flex flex-col justify-between">
               <div>
                 <span className="inline-block px-3 py-1 rounded-full bg-[#B08D55]/20 text-[#CFB78D] text-xs font-bold uppercase tracking-wider mb-3">
-                  2027 Departures · Flagship &amp; Regional Trips
+                  Jan 14 to 22, 2027 · Bangkok + Chiang Mai
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white mb-2">
-                  9-Day Flagship Trips &amp; Shorter 3-to-5-Day Trips
+                  January 2027: 9 Days in Bangkok + Chiang Mai
                 </h3>
                 <p className="text-sm text-white/80 leading-relaxed mb-6">
-                  Experience our 9-day, 8-night flagship Thailand trips (starting with January 14 to 22, 2027 across Bangkok and Chiang Mai with five-star riverside stays and an optional 3-night Phuket extension), or ask about our shorter 3-to-5-day regional trips in Phuket, Hua Hin, and Bangkok.
+                  Want the whole week handled? The January 14 to 22, 2027 departure covers 8 nights in five-star riverside hotels, 4 coached sessions, the flight to Chiang Mai, private vans, and Elephant Nature Park for $5,500 per person. Add 3 nights on Bang Tao Beach in Phuket for $2,088. Six spots, paid in full at booking.
                 </p>
               </div>
               <Link
-                href="/trips"
+                href="/trips/bangkok-chiang-mai/january-14-2027"
                 className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:from-[#8D7144] hover:to-[#B08D55] transition-all"
               >
-                View 2027 Trips &amp; Apply
+                See the January 2027 Trip
               </Link>
             </div>
           </div>

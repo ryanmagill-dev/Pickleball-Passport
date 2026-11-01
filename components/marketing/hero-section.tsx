@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { NextDeparturePill } from '@/components/marketing/january/next-departure-pill';
+import { JAN_URL } from '@/components/marketing/january/jan-trip';
 
 export function HeroSection() {
   return (
@@ -41,6 +43,8 @@ export function HeroSection() {
             We vet every court and handle every detail, so you just show up and play.
           </p>
 
+          <NextDeparturePill />
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
             <Button
@@ -48,8 +52,8 @@ export function HeroSection() {
               asChild
               className="text-lg px-10 py-7 bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#1D2D44] font-bold shadow-xl shadow-[#B08D55]/30 transition-all hover:shadow-2xl hover:shadow-[#B08D55]/40 hover:scale-105 rounded-xl"
             >
-              <Link href="/trips">
-                Plan My Trip
+              <Link href={JAN_URL}>
+                See the January Trip
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -59,8 +63,8 @@ export function HeroSection() {
               asChild
               className="text-lg px-10 py-7 border-white/40 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:border-white/60 font-semibold rounded-xl transition-all"
             >
-              <Link href="#why-thailand">
-                Why Thailand?
+              <Link href="/trips">
+                All Trips
               </Link>
             </Button>
           </div>
