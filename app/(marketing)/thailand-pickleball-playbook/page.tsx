@@ -79,7 +79,7 @@ const CITY_GUIDES: CityGuide[] = [
     id: "bangkok",
     regionTag: "01 · Capital Base",
     city: "Bangkok",
-    headline: "Where to Base Yourself: Bangkok",
+    headline: "where to base yourself",
     ruleOfThumb: "Location > Star Rating",
     summary:
       "Choose your base before your hotel. In Bangkok, being close to the courts, BTS or MRT lines, food, and the neighborhoods you actually want to experience matters more than adding another hotel amenity.",
@@ -108,7 +108,7 @@ const CITY_GUIDES: CityGuide[] = [
     id: "hua-hin",
     regionTag: "02 · Beach Rhythm",
     city: "Hua Hin",
-    headline: "Where to Base Yourself: Hua Hin",
+    headline: "where to base yourself",
     ruleOfThumb: "For a Slower Second Leg",
     summary:
       "A second base should feel different from Bangkok. Think slower mornings, recovery, water access, and fewer transfers. Hua Hin works well when you want real courts and a coastal pace without turning the whole trip into airport-hopping.",
@@ -137,7 +137,7 @@ const CITY_GUIDES: CityGuide[] = [
     id: "pattaya",
     regionTag: "02 · Beach Rhythm",
     city: "Pattaya",
-    headline: "Where to Base Yourself: Pattaya",
+    headline: "where to base yourself",
     ruleOfThumb: "Fast Coastal Access from Bangkok",
     summary:
       "Like Hua Hin, Pattaya gives you water access, resort recovery, and an active court scene within easy driving distance of Bangkok.",
@@ -166,7 +166,7 @@ const CITY_GUIDES: CityGuide[] = [
     id: "chiang-mai",
     regionTag: "03 · Northern Thailand",
     city: "Chiang Mai",
-    headline: "Where to Base Yourself: Chiang Mai",
+    headline: "where to base yourself",
     ruleOfThumb: "Best in the Cooler Season",
     summary:
       "Chiang Mai works best when the season is right. Pair pickleball with Northern Thai food, Lanna culture, and mountain air, but avoid building a northern trip around the burning-season months when air quality can be poor.",
@@ -195,7 +195,7 @@ const CITY_GUIDES: CityGuide[] = [
     id: "phuket",
     regionTag: "04 · Southern Islands",
     city: "Phuket",
-    headline: "Where to Base Yourself: Phuket",
+    headline: "where to base yourself",
     ruleOfThumb: "Island Recovery + Court Access",
     summary:
       "Phuket pairs Andaman Sea beaches and boat days on Phang Nga Bay with a growing island pickleball community. It works well as a 3-night beach extension or a southern leg when northern air quality dips.",
