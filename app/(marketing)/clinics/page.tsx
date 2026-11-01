@@ -3,15 +3,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, Users, Globe, Package, Award } from 'lucide-react';
+import { ClinicsJanCta } from '@/components/marketing/january/clinics-jan-cta';
 
 /* ─────────────────────── SCHEDULE ─────────────────────── */
 
 const bangkokSchedule = [
-  { day: 'Sun 1 Nov', time: 'Evening', venue: '', label: 'Arrivals. Welcome and priming dinner. No pickleball.' },
-  { day: 'Mon 2 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Tue 3 Nov', time: '11am–2pm', venue: 'Papaya Pickleball Club', label: 'Live coaching session.' },
-  { day: 'Wed 4 Nov', time: '11am–2pm', venue: 'Arise Pickleball', label: 'Mind Your Pickle mindset session with Travis.' },
-  { day: 'Thu 5 Nov', time: '11am–2pm', venue: 'Pick A Court', label: 'Final live coaching session, mini tournament.' },
+  { day: 'Mon 2 Nov', time: '11am to 2pm', venue: 'Arise Pickleball / BEAT Discovery Udomsuk', label: 'Mind Your Pickle mindset seminar with Coach Travis Rhea.' },
+  { day: 'Tue 3 Nov', time: '11am to 2pm', venue: 'Papaya Pickleball Club', label: 'Coached open play with Jaron and Ryan.' },
+  { day: 'Wed 4 Nov', time: '11am to 2pm', venue: 'Arise Pickleball / BEAT Discovery Udomsuk', label: 'Mind Your Pickle mindset seminar with Coach Travis Rhea.' },
+  { day: 'Thu 5 Nov', time: '11am to 2pm', venue: 'Pick A Court Sukhumvit 62', label: 'First hour is coached open play to wrap up the week: recap what we learned and make minor adjustments. The last two hours are a mini tournament on PKL.club, so you get your stats and test your skills.' },
 ];
 
 /* ─────────────────────── PASSES ─────────────────────── */
@@ -19,20 +19,20 @@ const bangkokSchedule = [
 const passes = [
   {
     name: 'Clinic Week',
-    summary: '4 sessions: 2 mindset, 2 live coaching',
+    summary: '4 sessions: mindset Mon and Wed, open play Tue, wrap-up and mini tournament Thu',
     price: '$299',
     link: 'https://link.fastpaydirect.com/payment-link/6aaa56229f7ff2c808a75e19',
     external: true,
     featured: true,
     includes: [
       'Two Mind Your Pickle mindset sessions with Coach Travis Rhea',
-      'Two live coaching sessions with Jaron and Ryan',
+      'Tuesday coached open play, and Thursday at Pick A Court: an hour to wrap up, then a mini tournament on PKL.club',
       'All court time, balls, water, snacks, and setup',
     ],
   },
   {
     name: 'Two-Day Pass',
-    summary: '2 sessions in Bangkok: 1 mindset, 1 live coaching',
+    summary: '2 sessions in Bangkok: 1 mindset, 1 coached open play',
     price: '$169',
     link: 'https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6',
     external: true,
@@ -84,13 +84,13 @@ export default function ClinicsPage() {
                 Four sessions.<br className="hidden sm:block" /> One week. Just the pickleball.
               </h1>
               <p className="text-xl text-white mb-8 max-w-2xl">
-                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions in Bangkok, capped at sixteen players. You book your own room and eat where you like. We run the pickleball.
+                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions in Bangkok, capped at six players. You book your own room and eat where you like. We run the pickleball.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10">
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <Clock className="h-4 w-4 text-[#B08D55]" />
-                  Nov 1–5, 2026
+                  Nov 2 to 5, 2026
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm">
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
@@ -155,7 +155,7 @@ export default function ClinicsPage() {
             Clinic Week is the opposite. Just the pickleball, priced to match. You book your own room, you get yourself to the courts, and your mornings and evenings are your own.
           </p>
           <p>
-            Sixteen players, four courts. Nobody hides at the back of a drill line.
+            Six players. Nobody hides at the back of a drill line.
           </p>
         </div>
       </section>
@@ -178,7 +178,7 @@ export default function ClinicsPage() {
             Clinic Week Schedule
           </h2>
           <p className="text-white/50 text-sm mb-6">
-            Bangkok · 11am to 2pm · Arise Pickleball, Papaya Pickleball Club and Pick A Court
+            Bangkok · 11am to 2pm · Arise Pickleball, Papaya Pickleball Club, and Pick A Court
           </p>
           <div className="space-y-3">
             {bangkokSchedule.map((row) => (
@@ -207,7 +207,7 @@ export default function ClinicsPage() {
               <MapPin className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Where</p>
-                <p className="text-[#1D2D44]/70 text-sm">Arise Pickleball (Mon &amp; Wed), Papaya Pickleball Club (Tue) and Pick A Court (Thu), all in Bangkok.</p>
+                <p className="text-[#1D2D44]/70 text-sm">Arise Pickleball at BEAT Discovery Udomsuk (Mon and Wed), Papaya Pickleball Club (Tue), and Pick A Court Sukhumvit 62 (Thu), all in Bangkok.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -221,7 +221,7 @@ export default function ClinicsPage() {
               <Users className="w-5 h-5 text-[#B08D55] flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-serif font-bold text-[#1D2D44] text-sm mb-1">Group</p>
-                <p className="text-[#1D2D44]/70 text-sm">Maximum sixteen. Four courts.</p>
+                <p className="text-[#1D2D44]/70 text-sm">Six spots.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -348,7 +348,7 @@ export default function ClinicsPage() {
           </div>
 
           <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week and the Two-Day Pass are Bangkok only: two mindset sessions with Coach Travis Rhea and two live coaching sessions with Jaron and Ryan, across Arise Pickleball, Papaya Pickleball Club and Pick A Court.
+            * Clinic Week and the Two-Day Pass are Bangkok only: mindset seminars with Coach Travis Rhea on Monday and Wednesday at Arise, coached open play on Tuesday at Papaya, and Thursday at Pick A Court Sukhumvit 62 (an hour to wrap up, then a mini tournament on PKL.club).
           </p>
 
           <p className="text-[#1D2D44]/40 text-xs mt-4">
@@ -366,7 +366,7 @@ export default function ClinicsPage() {
             </a>.
           </p>
           <p className="text-[#1D2D44]/40 text-xs mt-2">
-            Want just one session, or one-on-one coaching with Travis, Jaron, or Ryan? Message us on WhatsApp or LINE below and we&apos;ll set it up.
+            Want one-on-one coaching with Travis, Jaron, or Ryan? Message us on WhatsApp or LINE below and we&apos;ll set it up.
           </p>
         </div>
       </section>
@@ -406,7 +406,7 @@ export default function ClinicsPage() {
               </div>
               <div className="p-4">
                 <p className="font-serif font-bold text-[#1D2D44] text-base">Papaya Pickleball Club</p>
-                <p className="text-[#1D2D44]/60 text-sm">Bangkok · Tue</p>
+                <p className="text-[#1D2D44]/60 text-sm">Suan Luang, Bangkok · Tue</p>
               </div>
             </div>
 
@@ -415,8 +415,16 @@ export default function ClinicsPage() {
                 <MapPin className="w-10 h-10 text-[#B08D55]" />
               </div>
               <div className="p-4">
-                <p className="font-serif font-bold text-[#1D2D44] text-base">Pick A Court</p>
-                <p className="text-[#1D2D44]/60 text-sm">Bangkok · Thu</p>
+                <p className="font-serif font-bold text-[#1D2D44] text-base">Pick A Court Sukhumvit 62</p>
+                <p className="text-[#1D2D44]/60 text-sm">Phra Khanong Tai, Bangkok · Thu</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Pick%20A%20Court%20Sukhumvit%2062%2C%205%20Soi%20Sukhumvit%2062%20Yaek%208%2C%20Phra%20Khanong%20Tai%2C%20Bangkok%2010260"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-sm font-semibold text-[#1D2D44] underline decoration-[#B08D55] underline-offset-4"
+                >
+                  Open in Google Maps
+                </a>
               </div>
             </div>
 
@@ -425,7 +433,7 @@ export default function ClinicsPage() {
           <div className="bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10 p-5 max-w-lg">
             <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-2">Getting There. Not Optional.</p>
             <p className="text-[#1D2D44]/70 text-sm leading-relaxed">
-              Arise Pickleball is in Udom Suk. If you&apos;re staying central, budget 30 to 40 minutes by Grab, roughly 150 to 250 baht each way. Papaya Pickleball Club and Pick A Court travel times to follow. Easy either way, but worth knowing before you arrive rather than on the first morning.
+              Arise Pickleball is in Udom Suk. If you&apos;re staying central, budget 30 to 40 minutes by Grab, roughly 150 to 250 baht each way. Papaya Pickleball Club (Tue) is in Suan Luang off Pattanakarn Road, and Pick A Court (Thu) is on Sukhumvit 62 near BTS Bang Chak.
             </p>
           </div>
         </div>
@@ -514,17 +522,7 @@ export default function ClinicsPage() {
         </div>
       </section>
 
-      {/* ── Trip link ── */}
-      <section className="py-10 bg-white border-t border-[#B08D55]/10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#1D2D44]/60 text-sm">
-            Want the whole thing? We also run a{' '}
-            <Link href="/trips" className="text-[#B08D55] hover:underline font-medium">
-              9-day, 8-night trip
-            </Link>.
-          </p>
-        </div>
-      </section>
+      <ClinicsJanCta />
 
     </main>
   );

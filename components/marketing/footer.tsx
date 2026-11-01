@@ -21,6 +21,7 @@ import { useLeadModal } from '@/components/providers/lead-modal-provider';
 
 const navigation = {
   explore: [
+    { name: 'January 2027 Trip', href: '/trips/bangkok-chiang-mai/january-14-2027' },
     { name: 'Trips', href: '/trips' },
     { name: 'Free Thailand Playbook', href: '/thailand-pickleball-playbook' },
     { name: 'Thailand Trip Cost Calculator', href: '/thailand-pickleball-calculator' },

@@ -27,7 +27,7 @@ export function SongkranAprilPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-4">
-              Apr 12–20, 2027 · Songkran + Wan Lai
+              Apr 12 to 20, 2027 · Songkran + Wan Lai
             </p>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
@@ -59,7 +59,7 @@ export function SongkranAprilPage() {
             <div className="flex flex-wrap gap-3 mb-10">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                 <Calendar className="h-4 w-4 text-[#B08D55]" />
-                Apr 12 – Apr 20, 2027
+                Apr 12 to Apr 20, 2027
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                 <MapPin className="h-4 w-4 text-[#B08D55]" />
@@ -76,7 +76,7 @@ export function SongkranAprilPage() {
             </div>
 
             <div className="mb-8">
-              <span className="text-4xl font-bold text-white">$5,500</span>
+              <span className="text-4xl font-bold text-white">$7,000</span>
               <span className="text-white/50 text-lg ml-2">USD / person</span>
               <p className="text-white/40 text-xs mt-1">Double occupancy · Private room $950</p>
               <p className="text-white/40 text-xs mt-1">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
@@ -105,10 +105,10 @@ export function SongkranAprilPage() {
 
       {/* ── Songkran + Wan Lai Edition Details ── */}
       <TripDetailLayout
-        tripName="Songkran + Wan Lai (Apr 12–20)"
+        tripName="Songkran + Wan Lai (Apr 12 to 20)"
         cities="Our 5-Star Bangkok riverside hotel · Beachfront resort, Pattaya"
-        dates="Apr 12 – Apr 20, 2027"
-        price={5500}
+        dates="Apr 12 to Apr 20, 2027"
+        price={7000}
         hidePaymentPlan={true}
         fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
         spotsLeft={16}

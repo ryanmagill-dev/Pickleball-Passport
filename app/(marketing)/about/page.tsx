@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { JAN_SPOTS_LEFT, JAN_URL } from '@/components/marketing/january/jan-trip';
 import {
   ArrowRight,
   Heart,
@@ -223,17 +224,16 @@ export default function AboutPage() {
             Ready to Play the World?
           </h2>
           <p className="text-xl text-[#1D2D44]/70 mb-10 max-w-2xl mx-auto">
-            Our flagship Thailand experiences launch May 2026. Be part of
-            the first group.
+            Our next trip is Bangkok and Chiang Mai, January 14 to 22, 2027. Nine days, four coached sessions, five-star hotels, and the two of us on the ground with you. {JAN_SPOTS_LEFT} of 16 spots left.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/trips/thailand">
+            <Link href={JAN_URL}>
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#1D2D44] font-bold px-10 py-7 text-lg rounded-xl shadow-lg shadow-[#B08D55]/30 hover:shadow-xl"
               >
                 <Sparkles className="mr-2 h-5 w-5" />
-                Explore Thailand
+                See the January Trip
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>

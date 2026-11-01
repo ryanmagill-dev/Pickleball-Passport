@@ -457,6 +457,12 @@ export function TripCalculator() {
                 <p className="text-xs text-white/70 mt-1">
                   Approx. {formatNumber(r.grandThb)} THB (excluding international airfare)
                 </p>
+                <Link
+                  href="/trips/bangkok-chiang-mai/january-14-2027"
+                  className="mt-3 block text-center text-xs font-semibold text-[#CFB78D] underline underline-offset-4 hover:text-white"
+                >
+                  Compare it with our January trip, $5,500 per person, paid in full
+                </Link>
               </div>
 
               <div className="space-y-3 text-sm border-b border-white/15 pb-6">
@@ -506,7 +512,7 @@ export function TripCalculator() {
                     href="/clinics"
                     className="inline-flex items-center justify-center px-4 py-3 rounded-xl bg-white text-[#1D2D44] font-bold text-xs hover:bg-[#FDF8F3] transition-all text-center"
                   >
-                    Bangkok Clinic Week ($169 / $299)
+                    Bangkok Clinic Week (Nov 2 to 5)
                   </Link>
                   <Link
                     href="/trips"

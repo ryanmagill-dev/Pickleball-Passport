@@ -42,7 +42,7 @@ export function January14Page() {
           <div className="max-w-4xl">
             {/* Eyebrow */}
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-4">
-              January 14–22, 2027 · Bangkok + Chiang Mai · High Season
+              January 14 to 22, 2027 · Bangkok + Chiang Mai · High Season
             </p>
 
             {/* Headline */}
@@ -63,7 +63,7 @@ export function January14Page() {
               <div className="flex flex-wrap gap-3">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                   <Calendar className="h-4 w-4 text-[#B08D55]" />
-                  Jan 14 – Jan 22, 2027
+                  Jan 14 to Jan 22, 2027
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                   <MapPin className="h-4 w-4 text-[#B08D55]" />
@@ -176,11 +176,29 @@ export function January14Page() {
 
       <div className="border-t border-[#B08D55]/10" />
 
+      <section className="py-14 sm:py-16 bg-white border-b border-[#B08D55]/10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-3xl font-bold text-[#1D2D44] mb-4">Why January Is the Month to Go</h2>
+          <div className="space-y-4 text-[#1D2D44]/75 text-base leading-relaxed">
+            <p>
+              January sits in the middle of Thailand&apos;s cool season, the window our{' '}
+              <Link href="/thailand-pickleball-playbook" className="font-semibold text-[#B08D55] underline underline-offset-4">
+                Thailand Pickleball Playbook
+              </Link>{' '}
+              rates best for play in both Bangkok and Chiang Mai. Chiang Mai mornings are fresh, courts stay dry, and you can play a full session without hunting for shade. It is also the last Chiang Mai departure before the dry season burning period, when we pause trips to the north.
+            </p>
+            <p>
+              You get four coached sessions, 8 to 10 hours of pickleball in total, grouped by level so every drill fits your game. The group tops out at 16 players. The price is $5,500 per person, paid in full, with a private room for $1,750. This is also the only departure with the Phuket extension: three nights on Bang Tao Beach for $2,088.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── Standard Route B Details ── */}
       <TripDetailLayout
-        tripName="Bangkok + Chiang Mai (Jan 14–22)"
+        tripName="Bangkok + Chiang Mai (Jan 14 to 22)"
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Chiang Mai Riverside Resort"
-        dates="Jan 14 – Jan 22, 2027"
+        dates="Jan 14 to Jan 22, 2027"
         price={5500}
         hidePaymentPlan={true}
         fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"

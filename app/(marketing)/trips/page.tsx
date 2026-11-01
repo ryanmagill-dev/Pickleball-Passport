@@ -5,7 +5,7 @@ import { TripsListingPage } from './trips-listing-page';
 export const metadata: Metadata = {
   title: 'Upcoming Pickleball Trips | The Pickleball Passport',
   description:
-    'Explore our curated lineup of international pickleball travel experiences. Competitive play, boutique hotels, cultural immersion, and wellness, designed for players who want more than just a vacation.',
+    'Nine-day pickleball trips to Thailand with coached sessions and five-star hotels. Next departure: Bangkok and Chiang Mai, Jan 14 to 22, 2027.',
   openGraph: {
     title: 'Upcoming Pickleball Trips | The Pickleball Passport',
     description:

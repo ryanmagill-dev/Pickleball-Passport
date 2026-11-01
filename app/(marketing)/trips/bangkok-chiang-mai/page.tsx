@@ -2,9 +2,9 @@ import { Metadata } from 'next';
 import { BangkokChiangMaiPage } from './trip-detail-page';
 
 export const metadata: Metadata = {
-  title: 'Bangkok + Chiang Mai: 9-Day Pickleball Trip | The Pickleball Passport',
+  title: { absolute: 'Bangkok + Chiang Mai Pickleball Vacation: 9 Days in Thailand' },
   description:
-    '9-day pickleball experience through Bangkok and Chiang Mai. Our 5-Star Bangkok riverside hotel, Our 5-Star Chiang Mai Riverside Resort, 4 pickleball sessions, Elephant Nature Park, Thai cooking class. $5,500/person.',
+    'A 9-day pickleball vacation in Bangkok and Chiang Mai: coached sessions, five-star hotels, a domestic flight, Elephant Nature Park. Next departure Jan 14, 2027.',
   keywords: [
     'pickleball trip Thailand',
     'Chiang Mai pickleball',
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     '9 day Thailand trip',
   ],
   openGraph: {
-    title: 'Bangkok + Chiang Mai: 9-Day Pickleball Trip | The Pickleball Passport',
+    title: 'Bangkok + Chiang Mai Pickleball Vacation: 9 Days in Thailand',
     description:
-      '9 days across Bangkok and Chiang Mai. Our 5-Star Bangkok riverside hotel, Our 5-Star Chiang Mai Riverside Resort, pickleball sessions, and cultural immersion. $5,500/person.',
+      'A 9-day pickleball vacation in Bangkok and Chiang Mai: coached sessions, five-star hotels, a domestic flight, Elephant Nature Park. Next departure Jan 14, 2027.',
     url: 'https://www.thepickleballpassport.org/trips/bangkok-chiang-mai',
     siteName: 'The Pickleball Passport',
     locale: 'en_US',

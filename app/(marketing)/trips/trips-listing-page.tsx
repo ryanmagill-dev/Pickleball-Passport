@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { ComingSoonCard } from '@/components/trips/coming-soon-card';
 import { useReserveHref } from '@/lib/hooks/use-reserve-href';
+import { JanTripCtas } from '@/components/marketing/january/jan-trip-ctas';
+import { NextDeparturePill } from '@/components/marketing/january/next-departure-pill';
 
 /* ─────────────────────── COMING SOON ─────────────────────── */
 
@@ -29,9 +31,9 @@ const upcomingDepartures = [
   {
     id: 'february',
     label: 'February',
-    dates: 'Feb 18–26, 2027',
+    dates: 'Feb 18 to 26, 2027',
     route: 'Bangkok + Hua Hin',
-    price: '$5,500',
+    price: '$7,000',
     href: '/trips/bangkok-hua-hin/february-18-2027',
     video: '/hua-hin-cave.mp4',
     poster: '/images/posters/hua-hin-cave-poster.jpg',
@@ -39,9 +41,9 @@ const upcomingDepartures = [
   {
     id: 'march',
     label: 'March',
-    dates: 'Mar 18–26, 2027',
+    dates: 'Mar 18 to 26, 2027',
     route: 'Bangkok + Phuket',
-    price: '$5,500',
+    price: '$7,000',
     href: '/trips/bangkok-phuket/march-18-2027',
     video: '/phuket-pill.mp4',
     poster: '/images/posters/phuket-pill-poster.jpg',
@@ -49,9 +51,9 @@ const upcomingDepartures = [
   {
     id: 'april',
     label: 'April',
-    dates: 'Apr 12–20, 2027',
+    dates: 'Apr 12 to 20, 2027',
     route: 'Songkran + Wan Lai',
-    price: '$5,500',
+    price: '$7,000',
     href: '/trips/bangkok-pattaya/songkran-april-2027',
     video: '/songkran-street.mp4',
     poster: '/images/posters/songkran-street-poster.jpg',
@@ -108,7 +110,7 @@ export function TripsListingPage() {
     <main className="min-h-screen bg-[#FDF8F3]">
 
       {/* ── Featured Trip Hero ── */}
-      <section className="relative min-h-[88vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[60svh] sm:min-h-[88vh] flex items-end overflow-hidden">
         {/* Background drone footage */}
         <video
           autoPlay
@@ -141,6 +143,7 @@ export function TripsListingPage() {
             <p className="text-xl sm:text-2xl text-white/75 max-w-2xl">
               Pickleball trips to Thailand, from a single drop-in clinic to a full nine-day experience.
             </p>
+            <NextDeparturePill className="mt-5" />
           </div>
         </div>
 
@@ -185,7 +188,7 @@ export function TripsListingPage() {
                 6 of 16 seats open
               </span>
               <p className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#B08D55] mb-2">
-                Jan 14–22, 2027 · Bangkok + Chiang Mai
+                Jan 14 to 22, 2027 · Bangkok + Chiang Mai
               </p>
               <h3 className="font-serif text-4xl sm:text-6xl font-bold text-white mb-6">
                 January
@@ -193,11 +196,12 @@ export function TripsListingPage() {
               <div className="flex items-center justify-between gap-4 flex-wrap">
                 <span className="font-bold text-2xl sm:text-3xl text-white">$5,500</span>
                 <span className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-[#1D2D44] font-bold text-sm group-hover:gap-3 transition-all">
-                  Apply for The Pickleball Passport <ArrowRight className="w-4 h-4" />
+                  See the January Trip <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
             </div>
           </Link>
+          <JanTripCtas />
 
           {/* Smaller upcoming departure pills */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
@@ -237,7 +241,7 @@ export function TripsListingPage() {
                 <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#B08D55] mb-2">Also this November</p>
                 <h2 className="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Clinic Week with Coach Travis Rhea</h2>
                 <p className="text-white/60 text-sm leading-relaxed max-w-2xl mb-4">
-                  Four sessions of mindset work and coached play in Bangkok, November 2 to 5, 11am to 2pm. Sixteen players, four courts. You sort your own hotel, we run the pickleball. A two-day pass is available if you can&apos;t do the whole week.
+                  Four sessions of mindset work and coached play in Bangkok, November 2 to 5, 11am to 2pm. Six spots. You sort your own hotel, we run the pickleball. A two-day pass is available if you can&apos;t do the whole week.
                 </p>
                 <div className="flex flex-wrap items-center gap-2 mb-5">
                   {['Nov 2', 'Nov 3', 'Nov 4', 'Nov 5'].map((d) => (
