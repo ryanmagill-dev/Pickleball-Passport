@@ -4,13 +4,15 @@
  * Handles subscription confirmation via email token (E1-S11)
  */
 
+import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import ConfirmClient from './confirm-client';
+import { privatePageMetadata } from '@/lib/seo/private-metadata';
 
-export const metadata = {
-  title: 'Confirm Subscription | The Pickleball Passport',
-  description: 'Confirm your newsletter subscription',
-};
+export const metadata: Metadata = privatePageMetadata(
+  'Confirm Your Subscription | The Pickleball Passport',
+  'Confirm your newsletter subscription for trip updates. This page is not for search engines.',
+);
 
 interface PageProps {
   searchParams: Promise<{ token?: string }>;

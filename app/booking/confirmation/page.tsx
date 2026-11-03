@@ -19,6 +19,7 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import {
@@ -34,10 +35,10 @@ import {
 import Link from 'next/link'
 import { BookingConfirmationClient } from './confirmation-client'
 
-export const metadata: Metadata = {
-  title: 'Booking Confirmed | The Pickleball Passport',
-  description: 'Your booking has been confirmed!',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Booking Confirmed | The Pickleball Passport',
+  'Your booking has been confirmed!',
+)
 
 interface ConfirmationPageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>

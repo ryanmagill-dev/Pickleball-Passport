@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { shareImage } from "@/lib/seo/share-image";
+import { metadataFor } from "@/lib/seo/indexable-pages";
 
 // Self-hosted copy of the V2 playbook (public/thailand-pickleball-playbook-2026.pdf).
 // Not exported: Next.js only allows its own named exports from page files.
 const PLAYBOOK_PDF_URL = "/thailand-pickleball-playbook-2026.pdf";
 
 export const metadata: Metadata = {
-  title:
-    "The Thailand Pickleball Playbook 2026: Courts, Cities & Travel Guide | The Pickleball Passport",
-  description:
-    "Where to play pickleball in Thailand across Bangkok, Hua Hin, Pattaya, Chiang Mai, and Phuket. Vetted court directory, heat survival checklist, best seasons, and a 9-day trip rhythm.",
+  ...metadataFor("/thailand-pickleball-playbook"),
   keywords: [
     "pickleball in Thailand",
     "where to play pickleball in Bangkok",
@@ -28,26 +25,6 @@ export const metadata: Metadata = {
     "Sports Life Hua Hin pickleball",
     "Raccoon Pickleball Phuket",
   ],
-  alternates: {
-    canonical: "https://www.thepickleballpassport.org/thailand-pickleball-playbook",
-  },
-  openGraph: {
-    title: "The Thailand Pickleball Playbook 2026 | The Pickleball Passport",
-    description:
-      "Find the right games, handle the heat, and explore Thailand properly. City-by-city pickleball courts in Bangkok, Hua Hin, Pattaya, Chiang Mai, and Phuket.",
-    url: "https://www.thepickleballpassport.org/thailand-pickleball-playbook",
-    siteName: "The Pickleball Passport",
-    locale: "en_US",
-    type: "article",
-    images: [shareImage("trips")],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "The Thailand Pickleball Playbook 2026 | The Pickleball Passport",
-    description:
-      "Find the right games, handle the heat, and explore Thailand properly. Courts, booking apps, seasons, and a 9-day rhythm.",
-    images: [shareImage("trips")],
-  },
 };
 
 interface CourtVenue {

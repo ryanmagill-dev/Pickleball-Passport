@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { shareImage } from "@/lib/seo/share-image";
+import { metadataFor } from "@/lib/seo/indexable-pages";
 
 export const metadata: Metadata = {
-  title:
-    "Where to Play Pickleball in Bangkok (2026 Local Guide): Courts, BTS Access & Reclub | The Pickleball Passport",
-  description:
-    "The 2026 local guide to Bangkok pickleball courts. Compare Arise Pickleball (Udom Suk), Sterling Sport & Wellness, and Papaya Pickleball, including BTS Skytrain access, Grab fares, Reclub and LINE booking, and heat tips.",
+  ...metadataFor("/bangkok-pickleball-courts"),
   keywords: [
     "where to play pickleball in Bangkok",
     "Bangkok pickleball courts",
@@ -19,27 +16,6 @@ export const metadata: Metadata = {
     "pickleball clinics Bangkok",
     "pickleball Thailand",
   ],
-  alternates: {
-    canonical: "https://www.thepickleballpassport.org/bangkok-pickleball-courts",
-  },
-  openGraph: {
-    title:
-      "Where to Play Pickleball in Bangkok (2026 Local Guide) | The Pickleball Passport",
-    description:
-      "Compare Arise Pickleball, Sterling Sport & Wellness, and Papaya Pickleball in Bangkok. BTS access, Grab fares, Reclub & LINE booking templates, and where to stay.",
-    url: "https://www.thepickleballpassport.org/bangkok-pickleball-courts",
-    siteName: "The Pickleball Passport",
-    locale: "en_US",
-    type: "article",
-    images: [shareImage("trips")],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Where to Play Pickleball in Bangkok (2026 Local Guide)",
-    description:
-      "Indoor & covered courts, BTS transit tips, Grab fares, and how to find level-matched games on Reclub & LINE in Bangkok.",
-    images: [shareImage("trips")],
-  },
 };
 
 const BANGKOK_VENUES = [

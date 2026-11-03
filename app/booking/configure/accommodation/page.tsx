@@ -10,15 +10,16 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import { AccommodationSelector } from '@/components/booking/accommodation-selector'
 import { PricingSummary } from '@/components/booking/pricing-summary'
 
-export const metadata: Metadata = {
-  title: 'Select Accommodation | The Pickleball Passport',
-  description: 'Choose your luxury accommodation tier for your Thailand adventure.',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Select Accommodation | The Pickleball Passport',
+  'Choose your luxury accommodation tier for your Thailand adventure.',
+)
 
 export default async function AccommodationSelectionPage() {
   const user = await currentUser()

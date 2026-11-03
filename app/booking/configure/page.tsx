@@ -12,15 +12,16 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import PackageSelector from '@/components/booking/package-selector'
 import { PricingSummary } from '@/components/booking/pricing-summary'
 
-export const metadata: Metadata = {
-  title: 'Select Your Package | The Pickleball Passport',
-  description: 'Choose your transformation package and begin your journey.',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Select Your Package | The Pickleball Passport',
+  'Choose your transformation package and begin your journey.',
+)
 
 export default async function PackageSelectionPage() {
   // Protected route - require authentication

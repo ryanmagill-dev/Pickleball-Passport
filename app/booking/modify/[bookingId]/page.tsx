@@ -12,14 +12,15 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import ModificationLoader from '@/components/booking/modification-loader'
 
-export const metadata: Metadata = {
-  title: 'Modify Booking | The Pickleball Passport',
-  description: 'Modify your booking add-ons and preferences.',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Modify Booking | The Pickleball Passport',
+  'Modify your booking add-ons and preferences.',
+)
 
 interface ModificationEntryPageProps {
   params: {

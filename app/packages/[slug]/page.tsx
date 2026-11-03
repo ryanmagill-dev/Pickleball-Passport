@@ -46,14 +46,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 
   if (!packageData) {
+    const title = 'Package Not Found | The Pickleball Passport';
+    const description = 'That trip package is not available. See the current pickleball trips to Thailand.';
     return {
-      title: 'Package Not Found',
+      title,
+      description,
+      robots: { index: false, follow: false },
+      openGraph: { title, description, siteName: 'The Pickleball Passport' },
+      twitter: { card: 'summary_large_image', title, description },
     };
   }
 
-  const title = packageData.metaTitle || `${packageData.name} - Wellness Package | The Pickleball Passport`;
-  const description = packageData.metaDescription || `Explore our ${packageData.name} package combining premier wellness, pickleball, and adventure in Thailand.`;
-  const image = shareImageFromUrl(packageData.heroImageUrl, `${packageData.name} - The Pickleball Passport`);
+  const title = packageData.metaTitle || `${packageData.name} | The Pickleball Passport`;
+  const description = packageData.metaDescription || `Explore the ${packageData.name} pickleball trip to Thailand, with coached play and the details handled on the ground.`;
+  const image = shareImageFromUrl(packageData.heroImageUrl, `${packageData.name} | The Pickleball Passport`);
 
   return {
     title,

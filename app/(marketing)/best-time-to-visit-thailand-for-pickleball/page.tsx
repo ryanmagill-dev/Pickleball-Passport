@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { shareImage } from "@/lib/seo/share-image";
+import { metadataFor } from "@/lib/seo/indexable-pages";
 
 export const metadata: Metadata = {
-  title:
-    "Best Time to Visit Thailand for Pickleball (2026 Month-by-Month Weather & City Guide) | The Pickleball Passport",
-  description:
-    "When to play pickleball in Thailand month by month: cool season (Nov to Feb), peak heat and Chiang Mai smoky season pivots (Mar to May), rainy season indoor court strategy (Jun to Oct), and best city pairings.",
+  ...metadataFor("/best-time-to-visit-thailand-for-pickleball"),
   keywords: [
     "best time to visit Thailand for pickleball",
     "Thailand weather for pickleball",
@@ -16,28 +13,6 @@ export const metadata: Metadata = {
     "Bangkok indoor pickleball weather",
     "when to go to Thailand for pickleball",
   ],
-  alternates: {
-    canonical:
-      "https://www.thepickleballpassport.org/best-time-to-visit-thailand-for-pickleball",
-  },
-  openGraph: {
-    title:
-      "Best Time to Visit Thailand for Pickleball (2026 Month-by-Month Guide)",
-    description:
-      "How to match your travel month to the right Thai cities, court roof types, and daily play windows across Bangkok, Chiang Mai, Hua Hin, Pattaya, and Phuket.",
-    url: "https://www.thepickleballpassport.org/best-time-to-visit-thailand-for-pickleball",
-    siteName: "The Pickleball Passport",
-    images: [shareImage("trips")],
-    type: "article",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Best Time to Visit Thailand for Pickleball (2026 Guide)",
-    description:
-      "Month-by-month weather, heat windows, Chiang Mai air quality calendar, and indoor court strategy for Thailand pickleball trips.",
-    images: [shareImage("trips")],
-  },
 };
 
 const THREE_SEASONS = [

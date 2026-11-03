@@ -12,15 +12,16 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import DurationSelector from '@/components/booking/duration-selector'
 import { PricingSummary } from '@/components/booking/pricing-summary'
 
-export const metadata: Metadata = {
-  title: 'Select Duration | The Pickleball Passport',
-  description: 'Choose the duration of your transformation journey.',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Select Duration | The Pickleball Passport',
+  'Choose the duration of your transformation journey.',
+)
 
 export default async function DurationSelectionPage() {
   // Protected route - require authentication

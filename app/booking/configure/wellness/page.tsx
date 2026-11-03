@@ -19,16 +19,16 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import WellnessAddOnsSelector from '@/components/booking/wellness-add-ons-selector'
 import { PricingSummary } from '@/components/booking/pricing-summary'
 
-export const metadata: Metadata = {
-  title: 'Wellness Add-Ons | The Pickleball Passport',
-  description:
-    'Enhance your transformation with wellness treatments and cultural experiences.',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Wellness Add-Ons | The Pickleball Passport',
+  'Enhance your transformation with wellness treatments and cultural experiences.',
+)
 
 export default async function WellnessAddOnsPage() {
   // Protected route - require authentication

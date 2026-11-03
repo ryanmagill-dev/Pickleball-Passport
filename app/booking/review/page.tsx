@@ -12,6 +12,7 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import { BookingSummary } from '@/components/booking/booking-summary'
@@ -22,10 +23,10 @@ import { ReferralCodeInput } from '@/components/booking/referral-code-input'
 import { PaymentPlanSelector } from '@/components/booking/payment-plan-selector'
 import { ReviewPageClient } from './review-client'
 
-export const metadata: Metadata = {
-  title: 'Review Your Booking | The Pickleball Passport',
-  description: 'Review your booking details before proceeding to payment.',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Review Your Booking | The Pickleball Passport',
+  'Review your booking details before proceeding to payment.',
+)
 
 export default async function BookingReviewPage() {
   const user = await currentUser()

@@ -19,15 +19,16 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import TripSelector from '@/components/booking/trip-selector'
 import { PricingSummary } from '@/components/booking/pricing-summary'
 
-export const metadata: Metadata = {
-  title: 'Choose Departure Date | The Pickleball Passport',
-  description: 'Select your transformation journey departure date to Thailand.',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Choose Departure Date | The Pickleball Passport',
+  'Select your transformation journey departure date to Thailand.',
+)
 
 export default async function TripSelectionPage() {
   // Protected route - require authentication

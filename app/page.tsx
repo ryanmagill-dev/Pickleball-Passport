@@ -7,12 +7,10 @@ import { ConciergeSection } from '@/components/marketing/concierge-section';
 import { UpcomingEvents } from '@/components/marketing/upcoming-events';
 import { getHomeEvents } from '@/lib/data/events';
 import type { Metadata } from 'next';
-import { shareImage } from '@/lib/seo/share-image';
+import { metadataFor } from '@/lib/seo/indexable-pages';
 
 export const metadata: Metadata = {
-  title: 'Your Personal Pickleball Concierge in Thailand | The Pickleball Passport',
-  description:
-    'Pickleball trips to Thailand with vetted courts, coached sessions, and five-star hotels. Next trip: Bangkok and Chiang Mai, Jan 14 to 22, 2027.',
+  ...metadataFor('/'),
   keywords: [
     'pickleball',
     'pickleball travel',
@@ -22,32 +20,6 @@ export const metadata: Metadata = {
     'pickleball concierge',
     'pickleball trips Thailand',
   ],
-  openGraph: {
-    title: 'The Pickleball Passport: Your Personal Pickleball Concierge in Thailand',
-    description:
-      'We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it.',
-    url: 'https://www.thepickleballpassport.org',
-    siteName: 'The Pickleball Passport',
-    images: [shareImage('homepage')],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'The Pickleball Passport: Your Personal Pickleball Concierge in Thailand',
-    description:
-      'We vet every court, handle every detail, and make sure you show up, play safe, and actually enjoy it.',
-    images: [shareImage('homepage')],
-    site: '@PickleballPass',
-    creator: '@PickleballPass',
-  },
-  alternates: {
-    canonical: 'https://www.thepickleballpassport.org',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 // Filtered at build/render time; UpcomingEvents re-checks in the browser

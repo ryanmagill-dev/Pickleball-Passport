@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { shareImage } from "@/lib/seo/share-image";
+import { metadataFor } from "@/lib/seo/indexable-pages";
 
 export const metadata: Metadata = {
-  title:
-    "How Pickleball Clubs & Coaches Run Destination Trips to Thailand (2026 Guide) | The Pickleball Passport",
-  description:
-    "The operational blueprint for US, UK, Australian, and APAC pickleball club owners, racquet directors, and touring pros to host private member trips to Thailand without logistical headaches.",
+  ...metadataFor("/pickleball-club-retreats"),
   keywords: [
     "pickleball club retreats",
     "host a pickleball trip for my club",
@@ -17,27 +14,6 @@ export const metadata: Metadata = {
     "private group pickleball trips Thailand",
     "pickleball club member trips",
   ],
-  alternates: {
-    canonical: "https://www.thepickleballpassport.org/pickleball-club-retreats",
-  },
-  openGraph: {
-    title:
-      "How Pickleball Clubs & Coaches Run Destination Trips to Thailand (2026 B2B Guide)",
-    description:
-      "Why the 16-player, 4-court group architecture works best for private club trips, what separates a real destination program from a chaotic group vacation, and how to partner on the ground in Thailand.",
-    url: "https://www.thepickleballpassport.org/pickleball-club-retreats",
-    siteName: "The Pickleball Passport",
-    images: [shareImage("trips")],
-    type: "article",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "How Pickleball Clubs Run Destination Trips to Thailand (2026 Guide)",
-    description:
-      "Operational guide for club owners, directors of racquet sports, and coaches planning private member trips to Thailand.",
-    images: [shareImage("trips")],
-  },
 };
 
 const PILLARS_WHY_CLUBS_TRAVEL = [
