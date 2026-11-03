@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { shareImage } from '@/lib/seo/share-image';
+import { metadataFor } from '@/lib/seo/indexable-pages';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -54,9 +54,7 @@ function extractHeadings(content: string): Heading[] {
 }
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | The Pickleball Passport',
-  description:
-    "Review The Pickleball Passport's terms of service including booking policies, cancellation terms, liability disclaimers, and dispute resolution.",
+  ...metadataFor('/terms'),
   keywords: [
     'terms of service',
     'booking policy',
@@ -64,32 +62,6 @@ export const metadata: Metadata = {
     'refund policy',
     'The Pickleball Passport terms',
   ],
-  openGraph: {
-    title: 'Terms of Service | The Pickleball Passport',
-    description:
-      "Review The Pickleball Passport's terms of service including booking policies, cancellation terms, liability disclaimers, and dispute resolution.",
-    url: 'https://www.thepickleballpassport.org/terms',
-    siteName: 'The Pickleball Passport',
-    images: [shareImage('trips')],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Terms of Service | The Pickleball Passport',
-    description:
-      "Review The Pickleball Passport's terms of service including booking policies, cancellation terms, liability disclaimers, and dispute resolution.",
-    images: [shareImage('trips')],
-    site: '@PickleballPass',
-    creator: '@PickleballPass',
-  },
-  alternates: {
-    canonical: 'https://www.thepickleballpassport.org/terms',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function TermsOfServicePage() {

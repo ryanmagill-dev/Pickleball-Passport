@@ -226,6 +226,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/trips/bangkok-pattaya',
+        destination: '/trips/bangkok-pattaya/songkran-april-2027',
+        permanent: true,
+      },
+      {
+        source: '/how-it-works',
+        destination: '/trips',
+        permanent: true,
+      },
+      {
         source: '/playbook',
         destination: '/thailand-pickleball-playbook',
         permanent: true,

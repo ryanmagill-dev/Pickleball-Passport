@@ -8,8 +8,15 @@
  * - /booking/payment/*
  * - /booking/review/*
  *
- * Prevents static generation since these routes use Clerk for auth
+ * Checkout steps keep their own titles. They are noindex so they do not
+ * compete with the public trip pages.
  */
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+}
 
 // Render on request: these routes use Clerk hooks, which can't prerender when Clerk is disabled
 export const dynamic = 'force-dynamic'

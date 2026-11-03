@@ -7,25 +7,9 @@
  */
 
 import { Metadata } from 'next';
-import { shareImage } from '@/lib/seo/share-image';
+import { metadataFor } from '@/lib/seo/indexable-pages';
 
-export const metadata: Metadata = {
-  title: 'Blog | The Pickleball Passport',
-  description: 'Stories, tips, and insights from the world of pickleball wellness travel. Discover travel guides, health tips, and inspiring stories from our community.',
-  openGraph: {
-    title: 'Blog | The Pickleball Passport',
-    description: 'Stories, tips, and insights from the world of pickleball wellness travel.',
-    type: 'website',
-    siteName: 'The Pickleball Passport',
-    images: [shareImage('trips')],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Blog | The Pickleball Passport',
-    description: 'Stories, tips, and insights from the world of pickleball wellness travel.',
-    images: [shareImage('trips')],
-  },
-};
+export const metadata: Metadata = metadataFor('/blog');
 
 export default function BlogLayout({
   children,

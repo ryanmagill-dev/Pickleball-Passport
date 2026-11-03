@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { shareImage } from "@/lib/seo/share-image";
+import { metadataFor } from "@/lib/seo/indexable-pages";
 import { TripCalculator } from "./trip-calculator";
 
 export const metadata: Metadata = {
-  title:
-    "Thailand Pickleball Trip & Court Cost Calculator (2026 THB/USD) | The Pickleball Passport",
-  description:
-    "Free interactive Thailand pickleball trip calculator. Estimate court fees in THB and USD, Grab and BTS transport, domestic transfers, heat play windows, and 4-star vs 5-star trip budgets across Bangkok, Chiang Mai, Hua Hin, Pattaya, and Phuket.",
+  ...metadataFor("/thailand-pickleball-calculator"),
   keywords: [
     "Thailand pickleball trip cost",
     "Thailand pickleball calculator",
@@ -20,26 +17,6 @@ export const metadata: Metadata = {
     "Hua Hin pickleball trip",
     "Phuket pickleball trip cost",
   ],
-  alternates: {
-    canonical: "https://www.thepickleballpassport.org/thailand-pickleball-calculator",
-  },
-  openGraph: {
-    title: "Thailand Pickleball Trip & Court Cost Calculator (2026) | The Pickleball Passport",
-    description:
-      "Plan your Thailand pickleball budget and daily rhythm in 60 seconds. Compare court fees in THB and USD, Grab and BTS rides, city pairings, and DIY vs guided trip options.",
-    url: "https://www.thepickleballpassport.org/thailand-pickleball-calculator",
-    siteName: "The Pickleball Passport",
-    locale: "en_US",
-    type: "website",
-    images: [shareImage("trips")],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Thailand Pickleball Trip & Court Cost Calculator (2026)",
-    description:
-      "Calculate court fees in THB and USD, Grab transport, heat windows, and city pairings across Bangkok, Chiang Mai, Hua Hin, Pattaya, and Phuket.",
-    images: [shareImage("trips")],
-  },
 };
 
 const COST_BENCHMARKS = [

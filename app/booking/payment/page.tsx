@@ -15,14 +15,15 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import { PaymentPageClient } from './payment-client'
 
-export const metadata: Metadata = {
-  title: 'Complete Payment | The Pickleball Passport',
-  description: 'Securely complete your booking payment.',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Complete Payment | The Pickleball Passport',
+  'Securely complete your booking payment.',
+)
 
 export default async function PaymentPage() {
   const user = await currentUser()

@@ -4,13 +4,15 @@
  * Handles unsubscribing from newsletter (E1-S11)
  */
 
+import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import UnsubscribeClient from './unsubscribe-client';
+import { privatePageMetadata } from '@/lib/seo/private-metadata';
 
-export const metadata = {
-  title: 'Unsubscribe | The Pickleball Passport',
-  description: 'Unsubscribe from newsletter',
-};
+export const metadata: Metadata = privatePageMetadata(
+  'Leave the Newsletter | The Pickleball Passport',
+  'Unsubscribe from the trip newsletter. This page is not for search engines.',
+);
 
 interface PageProps {
   searchParams: Promise<{ email?: string; token?: string }>;

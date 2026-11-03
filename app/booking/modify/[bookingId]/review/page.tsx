@@ -11,15 +11,16 @@
  */
 
 import { Metadata } from 'next'
+import { privatePageMetadata } from '@/lib/seo/private-metadata'
 import { redirect, notFound } from 'next/navigation'
 import { currentUser } from '@clerk/nextjs/server'
 import { ModificationReviewClient } from './review-client'
 import { prisma } from '@/lib/db'
 
-export const metadata: Metadata = {
-  title: 'Review Modification | The Pickleball Passport',
-  description: 'Review your booking modification before confirming changes.',
-}
+export const metadata: Metadata = privatePageMetadata(
+  'Review Modification | The Pickleball Passport',
+  'Review your booking modification before confirming changes.',
+)
 
 interface PageProps {
   params: {

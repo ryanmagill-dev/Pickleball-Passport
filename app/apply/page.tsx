@@ -51,7 +51,7 @@ function ApplyContent() {
           </div>
           <div className="text-center mt-6">
             <p className="text-[#1D2D44]/50 text-sm mb-3">
-              Prefer to pay right away? Departures: January 2027, $5,500.
+              Prefer to pay right away? The January 2027 trip is $5,500, paid in full at booking.
             </p>
             <a
               href="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"

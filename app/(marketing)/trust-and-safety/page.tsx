@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { shareImage } from '@/lib/seo/share-image';
+import { metadataFor } from '@/lib/seo/indexable-pages';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -19,9 +19,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Trust & Safety | The Pickleball Passport',
-  description:
-    'Learn about our safety standards, vetted accommodations, private transport, and travel insurance recommendations for your pickleball trip to Thailand.',
+  ...metadataFor('/trust-and-safety'),
   keywords: [
     'travel safety',
     'Thailand travel',
@@ -29,32 +27,6 @@ export const metadata: Metadata = {
     'group travel safety',
     'Thailand tourism',
   ],
-  openGraph: {
-    title: 'Trust & Safety | The Pickleball Passport',
-    description:
-      'Vetted hotels, private transport, on-the-ground trip hosts, and curated itineraries. How we keep you covered on every trip.',
-    url: 'https://www.thepickleballpassport.org/trust-and-safety',
-    siteName: 'The Pickleball Passport',
-    images: [shareImage('trips')],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Trust & Safety | The Pickleball Passport',
-    description:
-      'Vetted hotels, private transport, on-the-ground trip hosts, and curated itineraries. How we keep you covered on every trip.',
-    images: [shareImage('trips')],
-    site: '@PickleballPass',
-    creator: '@PickleballPass',
-  },
-  alternates: {
-    canonical: 'https://www.thepickleballpassport.org/trust-and-safety',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function TrustAndSafetyPage() {
@@ -459,8 +431,8 @@ export default function TrustAndSafetyPage() {
 
               <div className="mt-6 p-4 bg-gray-100 rounded-lg">
                 <p className="text-sm text-gray-700">
-                  <strong>Note:</strong> Initial deposits are always
-                  non-refundable to cover administrative and booking costs.
+                  <strong>Note:</strong> The January 14 to 22, 2027 trip is paid in full at booking, with no deposit.
+                  On the other trips, the initial deposit is non-refundable to cover administrative and booking costs.
                   Refunds are processed within 14 business days.
                 </p>
               </div>

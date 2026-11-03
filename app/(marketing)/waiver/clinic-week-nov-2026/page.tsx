@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { privatePageMetadata } from '@/lib/seo/private-metadata';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -22,10 +23,10 @@ function formatDate(date: string | Date): string {
   return date instanceof Date ? date.toISOString().split('T')[0] : String(date);
 }
 
-export const metadata: Metadata = {
-  title: 'Clinic Week Liability Waiver | The Pickleball Passport',
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = privatePageMetadata(
+  'Clinic Week Liability Waiver | The Pickleball Passport',
+  'Liability waiver for Clinic Week in Bangkok, November 2 to 5, 2026. This page is not for search engines.',
+);
 
 export default function ClinicWeekWaiverPage() {
   const { frontmatter, content } = getWaiver();

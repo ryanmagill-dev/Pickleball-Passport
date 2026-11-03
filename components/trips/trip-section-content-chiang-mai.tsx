@@ -623,9 +623,9 @@ export function TripSectionContentChiangMai({ activeSection }: { activeSection: 
     case 'faq':
       return <TripFAQ />;
     case 'cancellation':
-      return <CancellationSection />;
+      return <CancellationSection paidInFull />;
     case 'insurance':
-      return <TravelInsuranceSection />;
+      return <TravelInsuranceSection paidInFull />;
     default:
       return <TripDetailsChiangMai />;
   }

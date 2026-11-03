@@ -16,7 +16,7 @@ const affiliates: InsuranceAffiliate[] = [
   },
 ];
 
-export function TravelInsuranceSection() {
+export function TravelInsuranceSection({ paidInFull = false }: { paidInFull?: boolean }) {
   return (
     <div className="space-y-8">
       <div>
@@ -79,8 +79,9 @@ export function TravelInsuranceSection() {
           <span className="font-serif font-semibold text-[#1D2D44]">
             Tip:
           </span>{' '}
-          Purchase travel insurance within 14 days of your initial trip deposit
-          to maximize coverage options, including pre-existing condition waivers.
+          {paidInFull
+            ? 'Purchase travel insurance within 14 days of paying for your trip to maximize coverage options, including pre-existing condition waivers.'
+            : 'Purchase travel insurance within 14 days of your initial trip deposit to maximize coverage options, including pre-existing condition waivers.'}
         </p>
       </div>
 
