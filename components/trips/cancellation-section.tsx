@@ -63,7 +63,7 @@ const colorStyles: Record<string, { border: string; bg: string; icon: string; te
   },
 };
 
-export function CancellationSection() {
+export function CancellationSection({ paidInFull = false }: { paidInFull?: boolean }) {
   return (
     <div className="space-y-8">
       <div>
@@ -78,7 +78,9 @@ export function CancellationSection() {
       {/* Deposit Note */}
       <div className="rounded-xl border-2 border-[#B08D55]/30 bg-[#FDF8F3] p-4">
         <p className="text-sm font-medium text-[#1D2D44]">
-          Your 25% deposit locks in your spot and is non-refundable, but fully transferable to a future rescheduled date.
+          {paidInFull
+            ? 'This January 14 to 22, 2027 trip is paid in full at booking, with no deposit.'
+            : 'Your 25% deposit locks in your spot and is non-refundable, but fully transferable to a future rescheduled date.'}
         </p>
       </div>
 
@@ -124,11 +126,12 @@ export function CancellationSection() {
           <CreditCard className="h-5 w-5 flex-shrink-0 text-[#B08D55] mt-0.5" />
           <div>
             <p className="font-serif font-semibold text-[#1D2D44] text-sm">
-              Deposit Credit
+              {paidInFull ? 'Paid in Full' : 'Deposit Credit'}
             </p>
             <p className="text-sm text-[#1D2D44]/70 mt-1 leading-relaxed">
-              Your deposit is always held as credit and can be applied toward
-              any future trip date.
+              {paidInFull
+                ? 'There is no deposit on this departure. You pay the trip price in full at booking.'
+                : 'Your deposit is always held as credit and can be applied toward any future trip date.'}
             </p>
           </div>
         </div>

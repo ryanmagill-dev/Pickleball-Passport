@@ -95,7 +95,7 @@ export function generateApplicationConfirmationEmail(
       <div style="margin: 16px 0; padding: 16px; background-color: #f9fafb; border-radius: 8px; border-left: 4px solid #8b5cf6;">
         <p style="margin: 0 0 8px 0; color: #111827; font-weight: 600;">3. Finalize & Book Your Trip</p>
         <p style="margin: 0; color: #6b7280; font-size: 14px;">
-          Review your package, ask any final questions, and secure your booking with a deposit to lock in your dates.
+          Review your package and ask any final questions. The January 14 to 22, 2027 trip is paid in full at booking. Other 2027 trips can be booked with a deposit.
         </p>
       </div>
     </div>

@@ -75,7 +75,7 @@ export default function ApplicationSuccessPage() {
                 <div>
                   <p className="font-semibold text-slate-900">Confirm Your Booking</p>
                   <p className="text-sm text-slate-600">
-                    Review your package, select your dates, and secure your spot with a deposit.
+                    Review your package and select your dates. The January 14 to 22, 2027 trip is paid in full at booking. Other 2027 trips can be booked with a deposit.
                   </p>
                 </div>
               </div>

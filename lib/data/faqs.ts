@@ -187,6 +187,7 @@ export const faqCategories: FAQCategory[] = [
         question: 'How do I pay?',
         answer: [
           'Each departure page has a secure payment link to reserve your spot. All prices are in USD.',
+          'The January 14 to 22, 2027 Bangkok and Chiang Mai trip is paid in full at booking, with no deposit. The February, March, and April 2027 trips can be booked with a deposit.',
           "Prefer to talk it through first? Schedule a call and we'll walk you through it.",
         ],
         link: { label: 'Schedule a call', href: '/reserve' },

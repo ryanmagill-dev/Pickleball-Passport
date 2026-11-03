@@ -431,8 +431,8 @@ export default function TrustAndSafetyPage() {
 
               <div className="mt-6 p-4 bg-gray-100 rounded-lg">
                 <p className="text-sm text-gray-700">
-                  <strong>Note:</strong> Initial deposits are always
-                  non-refundable to cover administrative and booking costs.
+                  <strong>Note:</strong> The January 14 to 22, 2027 trip is paid in full at booking, with no deposit.
+                  On the other trips, the initial deposit is non-refundable to cover administrative and booking costs.
                   Refunds are processed within 14 business days.
                 </p>
               </div>

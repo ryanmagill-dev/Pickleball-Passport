@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Nunito_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -24,20 +24,20 @@ import { absoluteShareUrl, defaultShareMetadata } from "@/lib/seo/share-image";
  * Brand Kit by: inahsempire.social
  */
 
-// Nunito Sans - Similar to Proxima Nova, used for headings
-const nunitoSans = Nunito_Sans({
+// Self-hosted variable fonts. next/font/google downloads from Google at build
+// time, and Turbopack fails when Google returns extensionless font URLs.
+const nunitoSans = localFont({
+  src: "./fonts/nunito-sans-latin.woff2",
   variable: "--font-nunito-sans",
-  subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: "200 1000",
 });
 
-// Montserrat - Body text font as per brand guidelines
-const montserrat = Montserrat({
+const montserrat = localFont({
+  src: "./fonts/montserrat-latin.woff2",
   variable: "--font-montserrat",
-  subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {

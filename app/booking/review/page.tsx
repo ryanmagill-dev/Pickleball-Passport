@@ -87,7 +87,7 @@ export default async function BookingReviewPage() {
                 <li className="flex items-start gap-2">
                   <span className="text-amber-600 mt-0.5">•</span>
                   <span>
-                    <strong>Non-refundable deposit:</strong> A 30% deposit is required to secure your booking
+                    <strong>Payment:</strong> The January 14 to 22, 2027 trip is paid in full at booking, with no deposit. Other trips can be booked with a deposit.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">

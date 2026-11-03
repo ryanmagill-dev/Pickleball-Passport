@@ -31,6 +31,13 @@ export default function RefundPolicyPage() {
             </div>
           </div>
 
+          <div className="bg-[#FDF8F3] border border-[#B08D55]/30 rounded-lg p-6 mb-8">
+            <p className="text-[#1D2D44] leading-relaxed">
+              The January 14 to 22, 2027 Bangkok and Chiang Mai trip is paid in full at booking, with no deposit.
+              Deposits apply to the other 2027 trips: February in Hua Hin, March in Phuket, and April Songkran in Pattaya.
+            </p>
+          </div>
+
           <div className="prose prose-slate max-w-none">
             <p className="text-gray-600 mb-6">
               <strong>Last Updated:</strong> March 2026
@@ -40,19 +47,19 @@ export default function RefundPolicyPage() {
               Deposit Policy
             </h2>
             <p className="text-gray-600 mb-4">
-              Your deposit locks in your spot! A 25% down payment (DP) is required at the
-              time of booking to secure your reservation. Please note that while the deposit
-              is non-refundable, we are happy to apply the full amount toward your next
-              rescheduled date.
+              The January 14 to 22, 2027 trip does not use a deposit. It is paid in full at booking.
+              For the other 2027 trips, a 25% down payment (DP) is required at the time of booking
+              to secure your reservation. That deposit is non-refundable, and we apply the full
+              amount toward your next rescheduled date.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
               Cancellation by Guest
             </h2>
             <p className="text-gray-600 mb-4">
-              The initial down payment (DP) is non-refundable but remains fully transferable
-              to a future rescheduled date. For any additional payments made beyond the DP,
-              the following refund schedule applies based on your cancellation date:
+              Where a trip was booked with a deposit, the initial down payment (DP) is non-refundable
+              but remains fully transferable to a future rescheduled date. For any additional payments
+              made beyond the DP, the following refund schedule applies based on your cancellation date:
             </p>
             <ul className="list-disc pl-6 text-gray-600 mb-4 space-y-2">
               <li><strong>90+ days before travel:</strong> 100% refund of additional payments (DP held as credit)</li>
@@ -66,9 +73,9 @@ export default function RefundPolicyPage() {
               Rescheduling
             </h2>
             <p className="text-gray-600 mb-4">
-              Your deposit is fully transferable to a future trip date, subject to
-              availability. Rescheduling may result in price adjustments if package
-              costs have changed for the new date.
+              On trips booked with a deposit, that deposit is fully transferable to a future
+              trip date, subject to availability. Rescheduling may result in price adjustments
+              if package costs have changed for the new date.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">

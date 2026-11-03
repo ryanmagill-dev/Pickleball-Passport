@@ -213,7 +213,7 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     source: 'app/(marketing)/refund-policy/layout.tsx',
     title: 'Trip Booking Refund Policy | The Pickleball Passport',
     description:
-      'How deposits and later payments work if plans change. Your deposit holds the spot and can move to a later date. Read the full refund schedule.',
+      'How payments and refunds work if plans change. The January 2027 trip is paid in full; other 2027 trips can be booked with a deposit. See the refund schedule.',
     canonical: 'https://www.thepickleballpassport.org/refund-policy',
     image: 'trips',
   },
