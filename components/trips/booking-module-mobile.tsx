@@ -11,6 +11,8 @@ interface BookingModuleMobileProps {
   fullLink?: string;
   spotsLeft?: number;
   hidePaymentPlan?: boolean;
+  privateRoomPrice?: number;
+  privateRoomLink?: string;
 }
 
 export function BookingModuleMobile({
@@ -20,6 +22,8 @@ export function BookingModuleMobile({
   fullLink,
   spotsLeft,
   hidePaymentPlan = false,
+  privateRoomPrice,
+  privateRoomLink,
 }: BookingModuleMobileProps) {
   const [showPaymentOptions, setShowPaymentOptions] = useState(false);
 
@@ -34,7 +38,7 @@ export function BookingModuleMobile({
             </p>
             {!hidePaymentPlan && (
               <p className="text-xs text-[#1D2D44]/50">
-                3 payments of ${depositAmount.toLocaleString()}
+                or 25% deposit of ${depositAmount.toLocaleString()}
               </p>
             )}
             {spotsLeft !== undefined && (
@@ -82,8 +86,9 @@ export function BookingModuleMobile({
               rel="noopener noreferrer"
               className="flex flex-col items-center justify-center rounded-lg border-2 border-[#B08D55] p-2.5 text-center hover:bg-[#B08D55]/10 transition-colors"
             >
-              <span className="text-xs font-semibold uppercase text-[#1D2D44]">Payment Plan</span>
-              <span className="text-sm font-bold text-[#1D2D44]">3 x ${depositAmount.toLocaleString()}</span>
+              <span className="text-xs font-semibold uppercase text-[#1D2D44]">25% Deposit</span>
+              <span className="text-sm font-bold text-[#1D2D44]">${depositAmount.toLocaleString()}</span>
+              <span className="text-[10px] text-[#1D2D44]/50">Balance invoiced later</span>
             </a>
             <a
               href={fullLink}
@@ -94,6 +99,16 @@ export function BookingModuleMobile({
               <span className="text-xs font-semibold uppercase text-[#1D2D44]">Pay in Full</span>
               <span className="text-sm font-bold text-[#1D2D44]">${price.toLocaleString()}</span>
             </a>
+            {privateRoomLink && privateRoomPrice !== undefined && (
+              <a
+                href={privateRoomLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-2 text-center text-xs text-[#1D2D44]/60 pt-1"
+              >
+                Travelling solo? <span className="font-semibold text-[#B08D55] underline underline-offset-2">Add a private room, ${privateRoomPrice.toLocaleString()}</span>
+              </a>
+            )}
           </div>
         )}
       </div>
