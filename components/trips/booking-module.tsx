@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { Calendar, Users } from 'lucide-react';
 import { useReserveHref } from '@/lib/hooks/use-reserve-href';
@@ -33,7 +32,6 @@ export function BookingModule({
   privateRoomPrice,
   privateRoomLink,
 }: BookingModuleProps) {
-  const [showPaymentOptions, setShowPaymentOptions] = useState(false);
   const reserveHref = useReserveHref();
 
   return (
@@ -77,61 +75,40 @@ export function BookingModule({
           </div>
         )}
 
-        {/* Dual CTA Buttons */}
+        {/* Payment buttons */}
         <div className="space-y-3">
-          {/* Primary  ·  apply form (gold) */}
-          <Link
-            href="/apply"
-            className="flex w-full min-h-12 px-5 py-3 items-center justify-center text-center text-balance leading-snug rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-semibold text-sm uppercase tracking-wider shadow-lg shadow-[#B08D55]/25 hover:shadow-xl hover:shadow-[#B08D55]/30 transition-all hover:-translate-y-0.5"
-          >
-            Apply for The Pickleball Passport
-          </Link>
-
-          {/* Secondary  ·  direct payment (outline) */}
-          {hidePaymentPlan && fullLink ? (
+          {depositLink && fullLink ? (
+            <div className="grid grid-cols-2 gap-2">
+              <a
+                href={depositLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center rounded-xl p-3 text-center bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-semibold text-sm shadow-lg shadow-[#B08D55]/25 hover:shadow-xl hover:shadow-[#B08D55]/30 transition-all hover:-translate-y-0.5"
+              >
+                <span className="text-xs font-semibold uppercase">25% Deposit</span>
+                <span className="text-base font-bold mt-0.5">${depositAmount.toLocaleString()}</span>
+                <span className="text-[11px] font-normal text-[#0F1A2A]/70">${(price - depositAmount).toLocaleString()} balance invoiced later</span>
+              </a>
+              <a
+                href={fullLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center rounded-xl border-2 border-[#B08D55] p-3 text-center hover:bg-[#B08D55]/10 transition-colors"
+              >
+                <span className="text-xs font-semibold uppercase text-[#1D2D44]">Pay in Full</span>
+                <span className="text-base font-bold text-[#1D2D44] mt-0.5">${price.toLocaleString()}</span>
+                <span className="text-[11px] text-[#1D2D44]/50">Full amount</span>
+              </a>
+            </div>
+          ) : fullLink ? (
             <a
               href={fullLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full h-12 items-center justify-center rounded-xl border border-[#1D2D44]/20 text-[#1D2D44]/70 font-semibold text-sm hover:border-[#1D2D44]/40 hover:text-[#1D2D44] transition-all"
+              className="flex w-full min-h-12 px-5 py-3 items-center justify-center text-center rounded-xl uppercase tracking-wider bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-semibold text-sm shadow-lg shadow-[#B08D55]/25 hover:shadow-xl hover:shadow-[#B08D55]/30 transition-all hover:-translate-y-0.5"
             >
-              Reserve Your Spot
+              Reserve Your Spot · ${price.toLocaleString()}
             </a>
-          ) : depositLink && fullLink ? (
-            <>
-              <button
-                type="button"
-                onClick={() => setShowPaymentOptions(!showPaymentOptions)}
-                className="flex w-full h-12 items-center justify-center rounded-xl border border-[#1D2D44]/20 text-[#1D2D44]/70 font-semibold text-sm hover:border-[#1D2D44]/40 hover:text-[#1D2D44] transition-all"
-              >
-                Reserve your place
-              </button>
-
-              {showPaymentOptions && (
-                <div className="grid grid-cols-2 gap-2">
-                  <a
-                    href={depositLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center rounded-lg border-2 border-[#B08D55] p-3 text-center hover:bg-[#B08D55]/10 transition-colors"
-                  >
-                    <span className="text-xs font-semibold uppercase text-[#1D2D44]">25% Deposit</span>
-                    <span className="text-base font-bold text-[#1D2D44] mt-0.5">${depositAmount.toLocaleString()}</span>
-                    <span className="text-xs text-[#1D2D44]/50">${(price - depositAmount).toLocaleString()} balance invoiced later</span>
-                  </a>
-                  <a
-                    href={fullLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center rounded-lg border-2 border-[#B08D55] p-3 text-center hover:bg-[#B08D55]/10 transition-colors"
-                  >
-                    <span className="text-xs font-semibold uppercase text-[#1D2D44]">Pay in Full</span>
-                    <span className="text-base font-bold text-[#1D2D44] mt-0.5">${price.toLocaleString()}</span>
-                    <span className="text-xs text-[#1D2D44]/50">Full amount</span>
-                  </a>
-                </div>
-              )}
-            </>
           ) : null}
 
           {privateRoomLink && privateRoomPrice !== undefined && (
@@ -141,7 +118,7 @@ export function BookingModule({
               rel="noopener noreferrer"
               className="block text-center text-xs text-[#1D2D44]/60 hover:text-[#1D2D44] transition-colors"
             >
-              Travelling solo? <span className="font-semibold text-[#B08D55] underline underline-offset-2">Add a private room, ${privateRoomPrice.toLocaleString()}</span>
+              Want your own room? <span className="font-semibold text-[#B08D55] underline underline-offset-2">Add a private room, ${privateRoomPrice.toLocaleString()}</span>
             </a>
           )}
         </div>
