@@ -109,8 +109,11 @@ export function SongkranAprilPage() {
         cities="Our 5-Star Bangkok riverside hotel · Beachfront resort, Pattaya"
         dates="Apr 12 to Apr 20, 2027"
         price={7000}
-        hidePaymentPlan={true}
-        fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
+        depositAmount={1750}
+        depositLink="https://link.fastpaydirect.com/payment-link/6aed81cfe72ac5e6bc5e814b"
+        fullLink="https://link.fastpaydirect.com/payment-link/6aed81a418be8d04a49bdaea"
+        privateRoomPrice={950}
+        privateRoomLink="https://link.fastpaydirect.com/payment-link/6aed8214e72ac5e6bc5e814d"
         spotsLeft={16}
         totalSpots={16}
         ContentComponent={TripSectionContentSongkran}

@@ -90,8 +90,11 @@ export function March18Page() {
         cities="Our 5-Star Bangkok riverside hotel · Beachfront resort, Bang Tao Beach"
         dates="Mar 18 to Mar 26, 2027"
         price={7000}
-        hidePaymentPlan={true}
-        fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
+        depositAmount={1750}
+        depositLink="https://link.fastpaydirect.com/payment-link/6aed812de72ac5e6bc5e8147"
+        fullLink="https://link.fastpaydirect.com/payment-link/6aed810618be8d04a49bdae6"
+        privateRoomPrice={1200}
+        privateRoomLink="https://link.fastpaydirect.com/payment-link/6aed817e18be8d04a49bdae8"
         spotsLeft={16}
         totalSpots={16}
         ContentComponent={TripSectionContentPhuket}

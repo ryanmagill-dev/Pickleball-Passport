@@ -88,8 +88,11 @@ export function February18Page() {
         cities="Our 5-Star Bangkok riverside hotel · Our 5-Star Hua Hin Beachfront Resort"
         dates="Feb 18 to Feb 26, 2027"
         price={7000}
-        hidePaymentPlan={true}
-        fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
+        depositAmount={1750}
+        depositLink="https://link.fastpaydirect.com/payment-link/6aed807ae72ac5e6bc5e8144"
+        fullLink="https://link.fastpaydirect.com/payment-link/6aed7fe318be8d04a49bdae4"
+        privateRoomPrice={900}
+        privateRoomLink="https://link.fastpaydirect.com/payment-link/6aed80dee72ac5e6bc5e8146"
         spotsLeft={16}
         totalSpots={16}
         ContentComponent={TripSectionContentHuaHinFeb}

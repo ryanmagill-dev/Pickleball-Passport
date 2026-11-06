@@ -16,6 +16,8 @@ interface TripDetailLayoutProps {
   spotsLeft?: number;
   totalSpots?: number;
   hidePaymentPlan?: boolean;
+  privateRoomPrice?: number;
+  privateRoomLink?: string;
   ContentComponent?: React.ComponentType<{ activeSection: TripSection }>;
 }
 
@@ -30,6 +32,8 @@ export function TripDetailLayout({
   spotsLeft,
   totalSpots,
   hidePaymentPlan,
+  privateRoomPrice,
+  privateRoomLink,
   ContentComponent,
 }: TripDetailLayoutProps) {
   if (!ContentComponent) {
@@ -87,6 +91,8 @@ export function TripDetailLayout({
                   spotsLeft={spotsLeft}
                   totalSpots={totalSpots}
                   hidePaymentPlan={hidePaymentPlan}
+                  privateRoomPrice={privateRoomPrice}
+                  privateRoomLink={privateRoomLink}
                 />
               </Suspense>
             </div>
@@ -105,6 +111,8 @@ export function TripDetailLayout({
           fullLink={fullLink}
           spotsLeft={spotsLeft}
           hidePaymentPlan={hidePaymentPlan}
+          privateRoomPrice={privateRoomPrice}
+          privateRoomLink={privateRoomLink}
         />
       </Suspense>
     </>
