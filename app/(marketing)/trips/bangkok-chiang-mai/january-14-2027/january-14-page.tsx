@@ -92,13 +92,15 @@ export function January14Page() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link
-                href="/apply"
+              <a
+                href="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
               >
-                Apply for The Pickleball Passport
+                Reserve Your Spot · $5,500
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

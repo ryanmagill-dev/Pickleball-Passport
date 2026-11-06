@@ -65,13 +65,23 @@ export function March18Page() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link
-                href="/apply"
+              <a
+                href="https://link.fastpaydirect.com/payment-link/6aed812de72ac5e6bc5e8147"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
               >
-                Apply for The Pickleball Passport
+                Pay 25% Deposit · $1,750
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
+              <a
+                href="https://link.fastpaydirect.com/payment-link/6aed810618be8d04a49bdae6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/40 text-white font-bold text-sm hover:bg-white/10 transition-all"
+              >
+                Pay in Full · $7,000
+              </a>
             </div>
           </div>
         </div>
