@@ -50,8 +50,8 @@ Curated pickleball travel experiences — exceptional pickleball, boutique hotel
 ## Getting Started
 
 ```bash
-git clone git@github.com:RugbyCharger/pickleball-passport.git
-cd pickleball-passport
+git clone git@github.com:ryanmagill-dev/Pickleball-Passport.git
+cd Pickleball-Passport
 npm install
 cp .env.example .env   # then fill in values (see SETUP.md)
 npm run db:push         # push Prisma schema to Supabase

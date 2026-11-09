@@ -23,7 +23,7 @@ If you prefer to set up manually:
 
 ```bash
 # 1. Clone repository
-git clone git@github.com:RugbyCharger/Pickleball-Passport.git
+git clone git@github.com:ryanmagill-dev/Pickleball-Passport.git
 cd Pickleball-Passport
 
 # 2. Install dependencies
