@@ -61,7 +61,7 @@ echo "Ready to continue! 🚀"
 ## Git Repository Details
 
 ### Repository
-- **URL:** `git@github.com:RugbyCharger/Pickleball-Passport.git`
+- **URL:** `git@github.com:ryanmagill-dev/Pickleball-Passport.git`
 - **Branch:** `main`
 - **Working Directory:** `/Users/grantcharge/Pickleball-Passport`
 
@@ -76,14 +76,14 @@ echo "Ready to continue! 🚀"
 # Verify SSH connection
 ssh -T git@github.com
 
-# Should output: "Hi RugbyCharger! You've successfully authenticated..."
+# Should output: "Hi ryanmagill-dev! You've successfully authenticated..."
 
 # Verify remote
 git remote -v
 
 # Should show:
-# origin  git@github.com:RugbyCharger/Pickleball-Passport.git (fetch)
-# origin  git@github.com:RugbyCharger/Pickleball-Passport.git (push)
+# origin  git@github.com:ryanmagill-dev/Pickleball-Passport.git (fetch)
+# origin  git@github.com:ryanmagill-dev/Pickleball-Passport.git (push)
 ```
 
 ### Git Workflow
@@ -397,7 +397,7 @@ fe12b34 test(E4-S6): Add Phase 10 API integration tests - 33 tests passing
 
 ## Contact Info
 
-- **GitHub:** RugbyCharger/Pickleball-Passport
+- **GitHub:** https://github.com/ryanmagill-dev/Pickleball-Passport
 - **SSH Key:** Managed by 1Password (automatic authentication)
 - **Branch:** main
 - **Working Directory:** `/Users/grantcharge/Pickleball-Passport`

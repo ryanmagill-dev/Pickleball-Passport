@@ -14,7 +14,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 # Configuration - UPDATE THESE IF NEEDED
-REPO_URL="git@github.com:RugbyCharger/Pickleball-Passport.git"
+REPO_URL="git@github.com:ryanmagill-dev/Pickleball-Passport.git"
 REPO_NAME="Pickleball-Passport"
 WORK_DIR="$HOME/Projects"
 SSH_KEY_NAME="github_ssh_key"  # Update to match your 1Password item name
