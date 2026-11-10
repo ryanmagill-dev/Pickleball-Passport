@@ -6,6 +6,13 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
+const TRIPS = [
+  { name: 'Bangkok + Chiang Mai', dates: 'Jan 14 to 22, 2027', price: '$5,500', href: '/trips/bangkok-chiang-mai/january-14-2027' },
+  { name: 'Bangkok + Hua Hin', dates: 'Feb 18 to 26, 2027', price: '$7,000', href: '/trips/bangkok-hua-hin/february-18-2027' },
+  { name: 'Bangkok + Phuket', dates: 'Mar 18 to 26, 2027', price: '$7,000', href: '/trips/bangkok-phuket/march-18-2027' },
+  { name: 'Songkran: Bangkok + Pattaya', dates: 'Apr 12 to 20, 2027', price: '$7,000', href: '/trips/bangkok-pattaya/songkran-april-2027' },
+];
+
 function ApplyContent() {
   const reserveHref = useReserveHref();
 
@@ -50,18 +57,24 @@ function ApplyContent() {
             <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
           </div>
           <div className="text-center mt-6">
-            <p className="text-[#1D2D44]/50 text-sm mb-3">
-              Prefer to pay right away? The January 2027 trip is $5,500, paid in full at booking.
+            <p className="text-[#1D2D44]/70 text-sm font-semibold mb-3">
+              Ready to book? Choose your trip.
             </p>
-            <a
-              href="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
-            >
-              Reserve Your Spot · $5,500
-              <ArrowRight className="w-4 h-4" />
-            </a>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-w-lg mx-auto">
+              {TRIPS.map((trip) => (
+                <Link
+                  key={trip.href}
+                  href={trip.href}
+                  className="flex items-center justify-between gap-2 rounded-xl border border-[#B08D55]/30 bg-white px-4 py-3 text-left text-sm hover:border-[#B08D55] transition-colors"
+                >
+                  <span>
+                    <span className="block font-semibold text-[#1D2D44]">{trip.name}</span>
+                    <span className="block text-xs text-[#1D2D44]/50">{trip.dates} · {trip.price}</span>
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-[#B08D55] shrink-0" />
+                </Link>
+              ))}
+            </div>
             <p className="text-[#1D2D44]/40 text-xs mt-5">
               Prefer to talk it through first?{' '}
               <Link href={reserveHref} className="text-[#B08D55] hover:underline font-medium">
