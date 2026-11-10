@@ -260,6 +260,38 @@ const nextConfig: NextConfig = {
         destination: '/best-time-to-visit-thailand-for-pickleball',
         permanent: true,
       },
+      // Retired URLs flagged as 404 in Search Console.
+      // permanent: true is a 308. Google treats that the same as a 301.
+      {
+        source: '/&',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/trips/bangkok-weekend',
+        destination: '/trips',
+        permanent: true,
+      },
+      {
+        source: '/trips/bangkok-hua-hin/july-16-2026',
+        destination: '/trips/bangkok-hua-hin/february-18-2027',
+        permanent: true,
+      },
+      {
+        source: '/loy-krathong',
+        destination: '/trips/bangkok-chiang-mai',
+        permanent: true,
+      },
+      {
+        source: '/trips/loy-krathong',
+        destination: '/trips/bangkok-chiang-mai',
+        permanent: true,
+      },
+      {
+        source: '/trips/hua-hin-escape',
+        destination: '/trips/bangkok-hua-hin/february-18-2027',
+        permanent: true,
+      },
     ];
   },
   async headers() {
