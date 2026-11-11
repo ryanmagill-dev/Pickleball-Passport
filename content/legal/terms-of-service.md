@@ -53,22 +53,16 @@ gratuities are not included unless stated.
 All cancellations must be sent in writing to support@thepickleballpassport.org.
 The date we receive your email is the cancellation date.
 
-### Clinic Products
+### Clinic Products and Trip Products
 
-- **30 or more days** before your first session: full refund.
-- **Fewer than 30 days**: no refund, but you may transfer your place to
-  another player at no charge. Just tell us who is coming instead.
-
-### Trip Products
-
-- **90 or more days** before departure: full refund less a $500 per person
-  administration fee.
-- **60 to 89 days**: 50% refund.
-- **30 to 59 days**: 25% refund.
-- **Fewer than 30 days**: no refund.
+A portion of every payment (15–20%, depending on timing and supplier
+commitments) is non-refundable. There is no full-refund window.
 
 These terms exist because we pay hotels, airlines and local operators in
 advance on your behalf, and those payments are not refundable to us.
+
+You may transfer a Clinic Product place to another player. Tell us who is
+coming instead. Supplier name-change fees, if any, are yours to pay.
 
 ### Transfers
 

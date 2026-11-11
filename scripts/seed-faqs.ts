@@ -234,8 +234,8 @@ const faqs: Record<string, { question: string; answer: string[]; sortOrder: numb
     {
       question: 'What is the cancellation and refund policy?',
       answer: [
-        'Cancellations 60+ days before departure receive a full refund minus a $500 processing fee. Cancellations 30\u201360 days before departure receive a 50% refund. Cancellations less than 30 days before departure are non-refundable.',
-        'You can also transfer your booking to another person at no charge up to 30 days before departure, or opt for a full trip credit (no processing fee) valid for 12 months if you cancel 60+ days out.',
+        'A portion of every payment (15–20%, depending on timing and supplier commitments) is non-refundable. There is no full-refund window.',
+        'Email support@thepickleballpassport.org to cancel. We confirm the refundable amount from the payments already made.',
       ],
       sortOrder: 3,
     },

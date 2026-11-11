@@ -2,24 +2,19 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { CalendarJanRow } from '@/components/marketing/january/calendar-jan-row';
-
-/* ─────────────────────── DATA ─────────────────────── */
-
-const provisional2027 = [
-  { month: 'May 2027', route: 'Route B · Chiang Mai', dates: 'Thu May 20 to Fri May 28' },
-  { month: 'June 2027', route: 'Route A · Hua Hin', dates: 'Thu Jun 17 to Fri Jun 25' },
-  { month: 'July 2027', route: 'Route B · Chiang Mai', dates: 'Thu Jul 15 to Fri Jul 23' },
-  { month: 'August 2027', route: 'Route A · Hua Hin', dates: 'Thu Aug 19 to Fri Aug 27' },
-  { month: 'September 2027', route: 'Route B · Chiang Mai', dates: 'Thu Sep 16 to Fri Sep 24' },
-  { month: 'October 2027', route: 'Route A · Hua Hin', dates: 'Thu Oct 14 to Fri Oct 22' },
-  { month: 'November 2027', route: 'Route B · Chiang Mai', dates: 'Thu Nov 11 to Fri Nov 19' },
-  { month: 'December 2027', route: 'Route A · Hua Hin', dates: 'Thu Dec 9 to Fri Dec 17' },
-];
+import { listedDepartures } from '@/lib/trips/public-schedule';
 
 /* ─────────────────────── PROVISIONAL ROW ─────────────────────── */
 
-function ProvisionalRow({ month, route, dates }: { month: string; route: string; dates: string }) {
+function ProvisionalRow({
+  month, route, dates, price, href,
+}: {
+  month: string;
+  route: string;
+  dates: string;
+  price: string | null;
+  href: string | null;
+}) {
   return (
     <div className="rounded-xl border border-[#1D2D44]/10 bg-white p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
       <div className="flex items-center gap-3 flex-wrap">
@@ -28,12 +23,14 @@ function ProvisionalRow({ month, route, dates }: { month: string; route: string;
         <span className="text-xs text-[#1D2D44]/40">{dates}</span>
       </div>
       <div className="flex items-center gap-4">
-        <span className="text-sm font-bold text-[#1D2D44]">$7,000<span className="text-xs font-normal text-[#1D2D44]/40 ml-1">/person</span></span>
+        {price ? (
+          <span className="text-sm font-bold text-[#1D2D44]">{price}<span className="text-xs font-normal text-[#1D2D44]/40 ml-1">/person</span></span>
+        ) : null}
         <Link
-          href="/notify"
+          href={href ?? '/notify'}
           className="text-xs font-semibold text-[#B08D55] hover:text-[#8D7144] transition-colors flex items-center gap-1 whitespace-nowrap"
         >
-          Hold my interest <ArrowRight className="w-3 h-3" />
+          {href ? 'See this trip' : 'Hold my interest'} <ArrowRight className="w-3 h-3" />
         </Link>
       </div>
     </div>
@@ -61,15 +58,15 @@ export default function CalendarPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-[#0F1A2A]/85" />
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-3">All Dates</p>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-3">2026 to 2027 Departure Calendar</h1>
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-3">Departure Calendar</h1>
           <p className="text-white/70 text-base max-w-2xl">
-            Every product, every month. Reserve your month and we&apos;ll confirm exact dates with you.
+            January and February 2027 are open. December 9 to 17, 2027 is Koh Chang. Other 2027 dates are not on sale yet.
           </p>
           <Link
             href="/trips"
             className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-[#B08D55] hover:text-[#CFB78D] transition-colors"
           >
-            Looking for January to April 2027? See our featured departures <ArrowRight className="w-3.5 h-3.5" />
+            See the January and February trips <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
       </section>
@@ -90,20 +87,23 @@ export default function CalendarPage() {
           </Link>
         </div>
 
-        <CalendarJanRow />
-
-        {/* ── Rest of 2027, provisional ── */}
         <div>
           <div className="mb-5">
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">The Rest of 2027</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">2027 routes: Bangkok + Chiang Mai in January, Bangkok + Hua Hin in February, Bangkok + Phuket in March, and Bangkok + Pattaya for Songkran in April.</p>
+            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Open dates</h2>
+            <p className="text-[#1D2D44]/50 text-sm mt-0.5">January and February 2027 are the trips you can book now. December 9 to 17, 2027 is Koh Chang.</p>
           </div>
           <div className="space-y-2.5">
-            {provisional2027.map((row) => <ProvisionalRow key={row.month} {...row} />)}
+            {listedDepartures().map((row) => (
+              <ProvisionalRow
+                key={row.id}
+                month={row.monthLabel}
+                route={row.route}
+                dates={row.dates}
+                price={row.priceLabel}
+                href={row.href}
+              />
+            ))}
           </div>
-          <p className="text-[#1D2D44]/40 text-xs mt-4 leading-relaxed max-w-2xl">
-            Dates are confirmed about 90 days before departure, once rooms are locked. If a date moves, everyone on the list hears first.
-          </p>
         </div>
 
       </div>

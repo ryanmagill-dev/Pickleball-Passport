@@ -1,18 +1,14 @@
-import { Metadata } from 'next';
-import { March18Page } from './march-18-page';
-import { metadataFor } from '@/lib/seo/indexable-pages';
+import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
+import { TRIPS_HOME } from '@/lib/trips/public-schedule';
 
+// Hidden while listed is false in lib/trips/public-schedule.ts.
+// The trip page component is still in march-18-page.tsx.
 export const metadata: Metadata = {
-  ...metadataFor('/trips/bangkok-phuket/march-18-2027'),
-  keywords: [
-    'pickleball trip Thailand',
-    'pickleball travel',
-    'Bangkok pickleball',
-    'Phuket pickleball',
-    'March 2027 Thailand trip',
-  ],
+  robots: { index: false, follow: false },
+  title: 'Trips',
 };
 
 export default function Page() {
-  return <March18Page />;
+  redirect(TRIPS_HOME);
 }

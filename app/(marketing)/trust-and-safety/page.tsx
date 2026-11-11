@@ -367,73 +367,16 @@ export default function TrustAndSafetyPage() {
             {/* Cancellation Timeline */}
             <Card className="p-6 mb-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                Cancellation Refund Schedule
+                Cancellation
               </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4 p-4 bg-emerald-50 rounded-lg">
-                  <div className="flex-shrink-0 w-24 text-center">
-                    <div className="text-2xl font-bold text-emerald-700">
-                      30+ days
-                    </div>
-                    <div className="text-xs text-emerald-600">
-                      before departure
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-gray-900 mb-1">
-                      80% Refund
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Cancel 30 or more days before your departure date and
-                      receive an 80% refund of your package price.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-yellow-50 rounded-lg">
-                  <div className="flex-shrink-0 w-24 text-center">
-                    <div className="text-2xl font-bold text-yellow-700">
-                      14–30 days
-                    </div>
-                    <div className="text-xs text-yellow-600">
-                      before departure
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-gray-900 mb-1">
-                      50% Refund
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Cancel 14–30 days before your departure date and receive
-                      a 50% refund of your package price.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-red-50 rounded-lg">
-                  <div className="flex-shrink-0 w-24 text-center">
-                    <div className="text-2xl font-bold text-red-700">
-                      Under 14 days
-                    </div>
-                    <div className="text-xs text-red-600">before departure</div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-gray-900 mb-1">
-                      Non-Refundable
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Cancellations made less than 14 days before departure are
-                      non-refundable due to pre-booked services.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
+              <p className="text-sm text-gray-700 leading-relaxed">
+                A portion of every payment (15–20%, depending on timing and supplier commitments) is non-refundable. There is no full-refund window.
+              </p>
               <div className="mt-6 p-4 bg-gray-100 rounded-lg">
                 <p className="text-sm text-gray-700">
                   <strong>Note:</strong> The January 14 to 22, 2027 trip is paid in full at booking, with no deposit.
-                  On the other trips, the initial deposit is non-refundable to cover administrative and booking costs.
-                  Refunds are processed within 14 business days.
+                  The February 18 to 26, 2027 trip can be booked with a 25% deposit.
+                  Email support and we confirm the refundable amount. Refunds are processed within 14 business days.
                 </p>
               </div>
             </Card>
@@ -490,7 +433,7 @@ export default function TrustAndSafetyPage() {
               </h3>
               <p className="text-sm text-gray-700 mb-3">
                 We understand that unexpected events happen. The following
-                situations may qualify for full refunds or free rescheduling:
+                situations are reviewed one by one. They are not an automatic full refund:
               </p>
               <ul className="text-sm text-gray-700 space-y-2">
                 <li className="flex items-start gap-2">
