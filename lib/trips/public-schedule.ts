@@ -5,9 +5,8 @@
  * public site (listings, calendar, sitemap, and internal links) and redirects
  * its page to /trips. Flip the flag when the next schedule is ready.
  *
- * December 9 to 17 was stored as "December 2027 · Hua Hin". Those dates are
- * the December trip, and the destination is Koh Chang. It is shown as
- * December 2026. Weekday names were dropped because they only matched 2027.
+ * December 9 to 17, 2027 is Koh Chang. It stays listed with no price and no
+ * itinerary page. The row links to /notify while costing is unfinished.
  */
 
 export const TRIPS_HOME = '/trips';
@@ -24,15 +23,6 @@ export type ScheduledDeparture = {
 
 export const SCHEDULED_DEPARTURES: ScheduledDeparture[] = [
   {
-    id: '2026-12-koh-chang',
-    monthLabel: 'December 2026',
-    dates: 'Dec 9 to Dec 17',
-    route: 'Koh Chang',
-    priceLabel: null,
-    href: null,
-    listed: true,
-  },
-  {
     id: '2027-01-chiang-mai',
     monthLabel: 'January',
     dates: 'Jan 14 to 22, 2027',
@@ -48,6 +38,15 @@ export const SCHEDULED_DEPARTURES: ScheduledDeparture[] = [
     route: 'Bangkok + Hua Hin',
     priceLabel: '$7,000',
     href: '/trips/bangkok-hua-hin/february-18-2027',
+    listed: true,
+  },
+  {
+    id: '2027-12-koh-chang',
+    monthLabel: 'December 2027',
+    dates: 'Dec 9 to Dec 17',
+    route: 'Koh Chang',
+    priceLabel: null,
+    href: null,
     listed: true,
   },
   {

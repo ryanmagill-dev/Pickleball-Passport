@@ -60,7 +60,7 @@ export default function CalendarPage() {
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-3">All Dates</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-3">Departure Calendar</h1>
           <p className="text-white/70 text-base max-w-2xl">
-            December 2026 in Koh Chang, then January and February 2027. Later 2027 dates are not on sale yet.
+            January and February 2027 are open. December 9 to 17, 2027 is Koh Chang. Other 2027 dates are not on sale yet.
           </p>
           <Link
             href="/trips"
@@ -90,7 +90,7 @@ export default function CalendarPage() {
         <div>
           <div className="mb-5">
             <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#1D2D44]">Open dates</h2>
-            <p className="text-[#1D2D44]/50 text-sm mt-0.5">December 9 to 17, 2026 is Koh Chang. January and February 2027 are the trips you can book now.</p>
+            <p className="text-[#1D2D44]/50 text-sm mt-0.5">January and February 2027 are the trips you can book now. December 9 to 17, 2027 is Koh Chang.</p>
           </div>
           <div className="space-y-2.5">
             {listedDepartures().map((row) => (

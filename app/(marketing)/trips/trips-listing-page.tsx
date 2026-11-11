@@ -212,7 +212,7 @@ export function TripsListingPage() {
           {/* What's next */}
           <div className="mt-8 bg-white rounded-2xl border border-[#B08D55]/10 p-6 max-w-3xl">
             <p className="text-[#1D2D44]/60 text-sm leading-relaxed">
-              December 9 to 17, 2026 is Koh Chang. In 2027, January is Bangkok and Chiang Mai, and February is Bangkok and Hua Hin.
+              January is Bangkok and Chiang Mai, and February is Bangkok and Hua Hin. December 9 to 17, 2027 is Koh Chang.
             </p>
             <Link
               href="/trips/calendar"

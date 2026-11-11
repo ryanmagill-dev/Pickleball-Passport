@@ -2,15 +2,22 @@ import { describe, expect, it } from 'vitest';
 import { hiddenTripPaths, isDepartureListed, listedDepartures } from '@/lib/trips/public-schedule';
 
 describe('public schedule', () => {
-  it('lists Koh Chang in December 2026 plus January and February 2027 only', () => {
+  it('lists January, February, and December 9 to 17, 2027 Koh Chang', () => {
     const listed = listedDepartures();
     expect(listed.map((departure) => departure.id)).toEqual([
-      '2026-12-koh-chang',
       '2027-01-chiang-mai',
       '2027-02-hua-hin',
+      '2027-12-koh-chang',
     ]);
-    expect(listed.find((departure) => departure.id === '2026-12-koh-chang')?.route).toBe('Koh Chang');
-    expect(listed.find((departure) => departure.id === '2026-12-koh-chang')?.route).not.toContain('Hua Hin');
+    const kohChang = listed.find((departure) => departure.id === '2027-12-koh-chang');
+    expect(kohChang).toMatchObject({
+      monthLabel: 'December 2027',
+      dates: 'Dec 9 to Dec 17',
+      route: 'Koh Chang',
+      priceLabel: null,
+      href: null,
+      listed: true,
+    });
   });
 
   it('hides March, April, and later 2027 departures without deleting them', () => {

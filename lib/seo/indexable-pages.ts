@@ -42,7 +42,7 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     source: 'app/(marketing)/trips/page.tsx',
     title: 'Upcoming Pickleball Trips | The Pickleball Passport',
     description:
-      'Open pickleball trips: Koh Chang on December 9 to 17, 2026, Bangkok and Chiang Mai in January 2027, and Bangkok and Hua Hin in February 2027.',
+      'Open pickleball trips: Bangkok and Chiang Mai in January 2027, Bangkok and Hua Hin in February 2027, and Koh Chang on December 9 to 17, 2027.',
     canonical: 'https://www.thepickleballpassport.org/trips',
     image: 'trips',
   },
@@ -51,7 +51,7 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     source: 'app/(marketing)/trips/calendar/layout.tsx',
     title: 'Pickleball Trip Calendar | The Pickleball Passport',
     description:
-      'Open departure dates: Koh Chang on December 9 to 17, 2026, Bangkok and Chiang Mai on January 14, 2027, and Bangkok plus Hua Hin in February.',
+      'Open departure dates: Bangkok and Chiang Mai on January 14, 2027, Bangkok plus Hua Hin in February, and Koh Chang on December 9 to 17, 2027.',
     canonical: 'https://www.thepickleballpassport.org/trips/calendar',
     image: 'trips',
   },

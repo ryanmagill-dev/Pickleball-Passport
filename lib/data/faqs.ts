@@ -41,7 +41,7 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'Where do you go?',
         answer: [
-          'Open departures: Koh Chang on December 9 to 17, 2026; Bangkok and Chiang Mai on January 14 to 22, 2027; and Bangkok and Hua Hin on February 18 to 26, 2027.',
+          'Open departures: Bangkok and Chiang Mai on January 14 to 22, 2027; Bangkok and Hua Hin on February 18 to 26, 2027; and Koh Chang on December 9 to 17, 2027.',
         ],
         link: { label: 'See all departures', href: '/trips' },
       },
