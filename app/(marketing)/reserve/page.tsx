@@ -3,22 +3,15 @@
 import { Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { forwardSearchParams } from '@/lib/attribution';
 
 const GHL_CALENDAR_URL = 'https://api.leadconnectorhq.com/widget/bookings/tpp-discoverycall';
 
-function getCookieValue(name: string): string | null {
-  if (typeof document === 'undefined') return null;
-  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-  return match ? decodeURIComponent(match[2]) : null;
-}
-
 function ReserveForm() {
   const searchParams = useSearchParams();
-  const ref = searchParams.get('ref') || getCookieValue('referral_code') || '';
-
-  const iframeSrc = ref
-    ? `${GHL_CALENDAR_URL}?ref=${encodeURIComponent(ref)}`
-    : GHL_CALENDAR_URL;
+  // Search params are available during SSR. Cookie-only credit is added by
+  // AffiliateTracker after hydration, so the server and client markup match.
+  const iframeSrc = forwardSearchParams(GHL_CALENDAR_URL, searchParams.toString());
 
   return (
     <main className="min-h-screen bg-[#FDF8F3]">

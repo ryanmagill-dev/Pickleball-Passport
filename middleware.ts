@@ -1,6 +1,7 @@
 import { clerkMiddleware, createRouteMatcher, type ClerkMiddlewareAuth } from '@clerk/nextjs/server'
 import { NextResponse, type NextRequest } from 'next/server'
 import { isClerkEnabled } from '@/lib/auth/clerk-enabled'
+import { applyAttributionCookies } from '@/lib/attribution-middleware'
 import { checkRateLimit, getIpAddress, getRateLimitHeaders } from '@/lib/rate-limit'
 import { validateOrigin, isMutationMethod } from '@/lib/security/origin-validation'
 
@@ -17,6 +18,16 @@ const isWebhookRoute = createRouteMatcher([
   '/api/webhooks/whatsapp(.*)',
   '/api/cron(.*)',
 ])
+
+// Prefetch and /r/{code} must not consume first-touch. /r writes cookies on its redirect.
+function shouldApplyAttribution(request: NextRequest): boolean {
+  const path = request.nextUrl.pathname
+  if (path.startsWith('/api') || path.startsWith('/trpc') || path.startsWith('/r/')) return false
+  if (request.headers.get('next-router-prefetch')) return false
+  if (request.headers.get('x-middleware-prefetch')) return false
+  const purpose = `${request.headers.get('purpose') ?? ''} ${request.headers.get('sec-purpose') ?? ''} ${request.headers.get('x-purpose') ?? ''}`.toLowerCase()
+  return !purpose.includes('prefetch')
+}
 
 // `auth` is null when Clerk is disabled (no keys): auth-only routes then fail closed.
 async function handleRequest(request: NextRequest, auth: ClerkMiddlewareAuth | null) {
@@ -103,7 +114,9 @@ async function handleRequest(request: NextRequest, auth: ClerkMiddlewareAuth | n
   }
 
   // Public routes and all other requests -> allow through
-  return NextResponse.next()
+  const response = NextResponse.next()
+  if (shouldApplyAttribution(request)) applyAttributionCookies(request, response)
+  return response
 }
 
 export default isClerkEnabled
