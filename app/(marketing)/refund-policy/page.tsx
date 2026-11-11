@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { DollarSign } from 'lucide-react';
+import { GUEST_REFUND_POLICY } from '@/lib/content/refund-policy';
 
 export default function RefundPolicyPage() {
   return (
@@ -33,14 +34,15 @@ export default function RefundPolicyPage() {
 
           <div className="bg-[#FDF8F3] border border-[#B08D55]/30 rounded-lg p-6 mb-8">
             <p className="text-[#1D2D44] leading-relaxed">
-              The January 14 to 22, 2027 Bangkok and Chiang Mai trip is paid in full at booking, with no deposit.
-              Deposits apply to the other 2027 trips: February in Hua Hin, March in Phuket, and April Songkran in Pattaya.
+              {GUEST_REFUND_POLICY}{' '}
+              The January 14 to 22, 2027 Bangkok and Chiang Mai trip is paid in full at booking.
+              The February 18 to 26, 2027 Bangkok and Hua Hin trip can be booked with a 25% deposit.
             </p>
           </div>
 
           <div className="prose prose-slate max-w-none">
             <p className="text-gray-600 mb-6">
-              <strong>Last Updated:</strong> March 2026
+              <strong>Last Updated:</strong> November 2026
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
@@ -48,34 +50,22 @@ export default function RefundPolicyPage() {
             </h2>
             <p className="text-gray-600 mb-4">
               The January 14 to 22, 2027 trip does not use a deposit. It is paid in full at booking.
-              For the other 2027 trips, a 25% down payment (DP) is required at the time of booking
-              to secure your reservation. That deposit is non-refundable, and we apply the full
-              amount toward your next rescheduled date.
+              The February 18 to 26, 2027 trip can be reserved with a 25% deposit, which is part of the trip price.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
               Cancellation by Guest
             </h2>
             <p className="text-gray-600 mb-4">
-              Where a trip was booked with a deposit, the initial down payment (DP) is non-refundable
-              but remains fully transferable to a future rescheduled date. For any additional payments
-              made beyond the DP, the following refund schedule applies based on your cancellation date:
+              {GUEST_REFUND_POLICY} Email support@thepickleballpassport.org to cancel. We confirm the refundable amount from the payments already made.
             </p>
-            <ul className="list-disc pl-6 text-gray-600 mb-4 space-y-2">
-              <li><strong>90+ days before travel:</strong> 100% refund of additional payments (DP held as credit)</li>
-              <li><strong>60-89 days before travel:</strong> 75% refund of additional payments (DP held as credit)</li>
-              <li><strong>30-59 days before travel:</strong> 50% refund of additional payments (DP held as credit)</li>
-              <li><strong>15-29 days before travel:</strong> 25% refund of additional payments (DP held as credit)</li>
-              <li><strong>Less than 15 days before travel:</strong> No refund of payments; however, your DP remains on file for a future booking</li>
-            </ul>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
               Rescheduling
             </h2>
             <p className="text-gray-600 mb-4">
-              On trips booked with a deposit, that deposit is fully transferable to a future
-              trip date, subject to availability. Rescheduling may result in price adjustments
-              if package costs have changed for the new date.
+              Ask us about moving a booking to another open date. A move depends on space,
+              and the price can change if that date costs more. The non-refundable portion above still applies.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">

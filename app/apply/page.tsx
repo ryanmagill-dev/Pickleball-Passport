@@ -6,12 +6,16 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
-const TRIPS = [
-  { name: 'Bangkok + Chiang Mai', dates: 'Jan 14 to 22, 2027', price: '$5,500', href: '/trips/bangkok-chiang-mai/january-14-2027' },
-  { name: 'Bangkok + Hua Hin', dates: 'Feb 18 to 26, 2027', price: '$7,000', href: '/trips/bangkok-hua-hin/february-18-2027' },
-  { name: 'Bangkok + Phuket', dates: 'Mar 18 to 26, 2027', price: '$7,000', href: '/trips/bangkok-phuket/march-18-2027' },
-  { name: 'Songkran: Bangkok + Pattaya', dates: 'Apr 12 to 20, 2027', price: '$7,000', href: '/trips/bangkok-pattaya/songkran-april-2027' },
-];
+import { listedDepartures } from '@/lib/trips/public-schedule';
+
+const TRIPS = listedDepartures()
+  .filter((departure) => departure.href && departure.priceLabel)
+  .map((departure) => ({
+    name: departure.route,
+    dates: departure.dates,
+    price: departure.priceLabel as string,
+    href: departure.href as string,
+  }));
 
 function ApplyContent() {
   const reserveHref = useReserveHref();

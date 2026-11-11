@@ -1,20 +1,14 @@
-import { Metadata } from 'next';
-import { SongkranAprilPage } from './songkran-april-page';
-import { metadataFor } from '@/lib/seo/indexable-pages';
+import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
+import { TRIPS_HOME } from '@/lib/trips/public-schedule';
 
+// Hidden while listed is false in lib/trips/public-schedule.ts.
+// The trip page component is still in songkran-april-page.tsx.
 export const metadata: Metadata = {
-  ...metadataFor('/trips/bangkok-pattaya/songkran-april-2027'),
-  keywords: [
-    'Songkran Thailand',
-    'Wan Lai Pattaya',
-    'pickleball trip Thailand',
-    'Bangkok water festival',
-    'Songkran 2027',
-    'Bangkok pickleball',
-    'Pattaya pickleball',
-  ],
+  robots: { index: false, follow: false },
+  title: 'Trips',
 };
 
 export default function Page() {
-  return <SongkranAprilPage />;
+  redirect(TRIPS_HOME);
 }

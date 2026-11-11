@@ -119,7 +119,7 @@ const FAQ_ITEMS = [
   {
     question: 'What happens if I need to cancel my trip?',
     answer:
-      'Cancellation policies vary depending on how far in advance you cancel. Cancellations more than 90 days before departure receive a full refund minus a processing fee. Cancellations between 60-90 days receive 50% refund. Cancellations within 60 days are non-refundable. We strongly recommend purchasing travel insurance.',
+      'A portion of every payment (15–20%, depending on timing and supplier commitments) is non-refundable. There is no full-refund window. We strongly recommend purchasing travel insurance.',
   },
 ];
 

@@ -87,7 +87,7 @@ export default async function BookingReviewPage() {
                 <li className="flex items-start gap-2">
                   <span className="text-amber-600 mt-0.5">•</span>
                   <span>
-                    <strong>Payment:</strong> The January 14 to 22, 2027 trip is paid in full at booking, with no deposit. Other trips can be booked with a deposit.
+                    <strong>Payment:</strong> The January 14 to 22, 2027 trip is paid in full at booking, with no deposit. The February 18 to 26, 2027 trip can be booked with a 25% deposit. A portion of every payment (15–20%, depending on timing and supplier commitments) is non-refundable. There is no full-refund window.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { ComingSoonCard } from '@/components/trips/coming-soon-card';
+import { isDepartureListed } from '@/lib/trips/public-schedule';
 import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 import { JanTripCtas } from '@/components/marketing/january/jan-trip-ctas';
 import { NextDeparturePill } from '@/components/marketing/january/next-departure-pill';
@@ -58,7 +59,7 @@ const upcomingDepartures = [
     video: '/songkran-street.mp4',
     poster: '/images/posters/songkran-street-poster.jpg',
   },
-];
+].filter((departure) => isDepartureListed(departure.href));
 
 function DeparturePill({
   label, dates, route, price, href, video, poster,
@@ -204,14 +205,14 @@ export function TripsListingPage() {
           <JanTripCtas />
 
           {/* Smaller upcoming departure pills */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 max-w-3xl">
             {upcomingDepartures.map((dep) => <DeparturePill key={dep.id} {...dep} />)}
           </div>
 
           {/* What's next */}
           <div className="mt-8 bg-white rounded-2xl border border-[#B08D55]/10 p-6 max-w-3xl">
             <p className="text-[#1D2D44]/60 text-sm leading-relaxed">
-              2027 routes: Bangkok + Chiang Mai in January, Bangkok + Hua Hin in February, Bangkok + Phuket in March, and Bangkok + Pattaya for Songkran in April.
+              December 9 to 17, 2026 is Koh Chang. In 2027, January is Bangkok and Chiang Mai, and February is Bangkok and Hua Hin.
             </p>
             <Link
               href="/trips/calendar"

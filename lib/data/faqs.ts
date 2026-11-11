@@ -41,8 +41,7 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'Where do you go?',
         answer: [
-          'Every trip starts in Bangkok, then continues to a second destination depending on the departure: Hua Hin, Chiang Mai, Phuket, or Pattaya for our Songkran edition.',
-          'Bangkok for energy and street food. Hua Hin for the Gulf Coast. Chiang Mai for temples and nature. Phuket for islands and beaches.',
+          'Open departures: Koh Chang on December 9 to 17, 2026; Bangkok and Chiang Mai on January 14 to 22, 2027; and Bangkok and Hua Hin on February 18 to 26, 2027.',
         ],
         link: { label: 'See all departures', href: '/trips' },
       },
@@ -187,7 +186,7 @@ export const faqCategories: FAQCategory[] = [
         question: 'How do I pay?',
         answer: [
           'Each departure page has a secure payment link to reserve your spot. All prices are in USD.',
-          'The January 14 to 22, 2027 Bangkok and Chiang Mai trip is paid in full at booking, with no deposit. The February, March, and April 2027 trips can be booked with a deposit.',
+          'The January 14 to 22, 2027 Bangkok and Chiang Mai trip is paid in full at booking, with no deposit. The February 18 to 26, 2027 Bangkok and Hua Hin trip can be booked with a 25% deposit.',
           "Prefer to talk it through first? Schedule a call and we'll walk you through it.",
         ],
         link: { label: 'Schedule a call', href: '/reserve' },
@@ -195,7 +194,7 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'What is the cancellation and refund policy?',
         answer: [
-          'Refunds depend on how far before departure you cancel. Our Refund Policy has the full schedule.',
+          'A portion of every payment (15–20%, depending on timing and supplier commitments) is non-refundable. There is no full-refund window.',
         ],
         link: { label: 'Read the Refund Policy', href: '/refund-policy' },
       },

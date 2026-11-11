@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next'
+import { hiddenTripPaths, TRIPS_HOME } from './lib/trips/public-schedule'
 
 /**
  * Security Headers Configuration
@@ -201,6 +202,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...hiddenTripPaths().map((source) => ({
+        source,
+        destination: TRIPS_HOME,
+        permanent: false,
+      })),
       {
         // Nov/Dec 2026 Hua Hin departures were cancelled; February is the live Hua Hin trip
         source: '/trips/bangkok-hua-hin',
@@ -234,13 +240,13 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/trips/bangkok-phuket',
-        destination: '/trips/bangkok-phuket/march-18-2027',
-        permanent: true,
+        destination: TRIPS_HOME,
+        permanent: false,
       },
       {
         source: '/trips/bangkok-pattaya',
-        destination: '/trips/bangkok-pattaya/songkran-april-2027',
-        permanent: true,
+        destination: TRIPS_HOME,
+        permanent: false,
       },
       {
         source: '/how-it-works',

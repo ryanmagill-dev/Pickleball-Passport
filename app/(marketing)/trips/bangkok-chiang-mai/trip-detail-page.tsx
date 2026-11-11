@@ -47,7 +47,7 @@ export function BangkokChiangMaiPage() {
             {/* Tag pill */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium mb-6">
               <Calendar className="w-4 h-4 text-[#B08D55]" />
-              May through January
+              January 14 to 22, 2027
             </div>
 
             {/* Headline */}
@@ -177,11 +177,11 @@ export function BangkokChiangMaiPage() {
           <div className="mt-6 flex items-start gap-3 p-4 bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10">
             <Leaf className="w-4 h-4 text-[#2D5A3D] flex-shrink-0 mt-0.5" />
             <p className="text-sm text-[#1D2D44]/60 leading-relaxed">
-              Chiang Mai trips run May through January. February to April departures are not available due to regional air quality during the dry season burning period. For travel during those months, consider{' '}
+              The open Chiang Mai departure is January 14 to 22, 2027. For February, see{' '}
               <Link href="/trips/bangkok-hua-hin/february-18-2027" className="text-[#B08D55] hover:underline font-medium">
-                Route A: Bangkok + Hua Hin
-              </Link>{' '}
-              which operates year-round.
+                Bangkok + Hua Hin, February 18 to 26, 2027
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -203,7 +203,7 @@ export function BangkokChiangMaiPage() {
       {/* Cross-link to Hua Hin route */}
       <section className="py-12 bg-[#0F1A2A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70 text-base mb-3">Prefer the beach over the mountains? Route A visits Hua Hin on Thailand&apos;s Gulf Coast and runs year-round, including February through April.</p>
+          <p className="text-white/70 text-base mb-3">Prefer the beach over the mountains? February 18 to 26, 2027 is Bangkok and Hua Hin.</p>
           <Link
             href="/trips/bangkok-hua-hin/february-18-2027"
             className="inline-flex items-center gap-2 text-[#B08D55] hover:text-[#CFB78D] font-semibold transition-colors"

@@ -5,7 +5,7 @@ import { trpc } from '@/lib/trpc/client'
 import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
 import { Loader2, X, Users } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 
 interface CompanionBooking {
   id: string
@@ -63,12 +63,6 @@ export default function CancellationModal({
     }
   })
 
-  // Calculate days until trip (stable within render)
-  const daysUntilTrip = useMemo(() => {
-    const now = Date.now()
-    return Math.floor((new Date(tripStartDate).getTime() - now) / (1000 * 60 * 60 * 24))
-  }, [tripStartDate])
-
   // Determine if this is a linked booking scenario
   const hasCompanion = !isCompanionBooking && !!companionBooking
   const hasPrimaryBooking = isCompanionBooking && !!primaryBooking
@@ -77,24 +71,6 @@ export default function CancellationModal({
   const effectiveTotalPrice = (hasCompanion && cancelBothBookings)
     ? totalPrice + (companionBooking?.totalPrice || 0)
     : totalPrice
-
-  // Calculate refund amount (client-side for display only - server validates)
-  let refundAmount = 0
-  let refundPercentage = 0
-  const PROCESSING_FEE = 500 // $500
-
-  if (daysUntilTrip > 60) {
-    refundAmount = effectiveTotalPrice / 100 - PROCESSING_FEE
-    refundPercentage = 100
-  } else if (daysUntilTrip >= 30) {
-    refundAmount = (effectiveTotalPrice / 100) * 0.5
-    refundPercentage = 50
-  }
-
-  // Ensure refund amount is not negative
-  if (refundAmount < 0) {
-    refundAmount = 0
-  }
 
   // Companion name for display
   const companionName = companionBooking?.guestFirstName && companionBooking?.guestLastName
@@ -226,64 +202,19 @@ export default function CancellationModal({
           {/* Refund Policy Display */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
             <h3 className="font-semibold text-gray-900 mb-3">Refund Policy</h3>
-            <p className="text-sm text-gray-700 mb-3">
-              Your trip is in <strong className="font-semibold text-blue-900">{daysUntilTrip} days</strong>.
+            <p className="text-sm text-gray-700">
+              A portion of every payment (15–20%, depending on timing and supplier commitments) is non-refundable. There is no full-refund window.
+              Support confirms the refundable amount before it is sent.
             </p>
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li className={`flex items-start gap-2 ${daysUntilTrip > 60 ? 'font-semibold text-green-700' : ''}`}>
-                <span className="mt-0.5">{daysUntilTrip > 60 ? '✓' : '•'}</span>
-                <span>More than 60 days: 100% refund minus $500 processing fee</span>
-              </li>
-              <li className={`flex items-start gap-2 ${daysUntilTrip >= 30 && daysUntilTrip <= 60 ? 'font-semibold text-green-700' : ''}`}>
-                <span className="mt-0.5">{daysUntilTrip >= 30 && daysUntilTrip <= 60 ? '✓' : '•'}</span>
-                <span>30-60 days: 50% refund</span>
-              </li>
-              <li className={`flex items-start gap-2 ${daysUntilTrip < 30 ? 'font-semibold text-red-700' : ''}`}>
-                <span className="mt-0.5">{daysUntilTrip < 30 ? '✓' : '•'}</span>
-                <span>Less than 30 days: Non-refundable (reschedule available)</span>
-              </li>
-            </ul>
           </div>
 
           {/* Refund Amount */}
-          {refundAmount > 0 ? (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Refund Calculation</h3>
-              <p className="text-sm text-gray-700 mb-1">
-                Original price: ${(totalPrice / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-              </p>
-              {refundPercentage === 100 && (
-                <p className="text-sm text-gray-700 mb-1">
-                  Processing fee: $500.00
-                </p>
-              )}
-              {refundPercentage === 50 && (
-                <p className="text-sm text-gray-700 mb-1">
-                  Refund rate: 50%
-                </p>
-              )}
-              <p className="text-lg font-semibold text-green-700 mt-2">
-                You will receive: ${refundAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-              </p>
-              <p className="text-xs text-gray-600 mt-2">
-                Refund will be processed to your original payment method within 5-10 business days.
-              </p>
-            </div>
-          ) : (
-            <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
-              <h3 className="font-semibold text-red-900 mb-2">Non-Refundable</h3>
-              <p className="text-sm text-gray-700 mb-2">
-                Since your trip is less than 30 days away, this booking is non-refundable.
-              </p>
-              <p className="text-sm text-gray-700">
-                You can reschedule once instead of canceling. Contact our support team at{' '}
-                <a href="mailto:support@thepickleballpassport.org" className="text-blue-600 hover:text-blue-700 underline">
-                  support@thepickleballpassport.org
-                </a>{' '}
-                for assistance.
-              </p>
-            </div>
-          )}
+          <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6">
+            <p className="text-sm text-gray-700">
+              Total paid: ${(effectiveTotalPrice / 100).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}.
+              {' '}The refundable amount is not the full payment.
+            </p>
+          </div>
 
           {/* Action Buttons */}
           <div className="flex flex-col-reverse sm:flex-row gap-3 justify-end">

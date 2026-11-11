@@ -31,7 +31,7 @@ function getPackageFAQs(packageName: string): FAQItem[] {
     {
       question: 'What is your cancellation policy?',
       answer:
-        'We offer flexible cancellation up to 60 days before departure with a full refund minus a $500 processing fee. Cancellations 30-60 days prior receive 50% refund. Within 30 days, deposits are non-refundable. We strongly recommend travel insurance.',
+        'A portion of every payment (15–20%, depending on timing and supplier commitments) is non-refundable. There is no full-refund window. We strongly recommend travel insurance.',
     },
     {
       question: 'Do I need a visa for Thailand?',

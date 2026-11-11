@@ -42,16 +42,16 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     source: 'app/(marketing)/trips/page.tsx',
     title: 'Upcoming Pickleball Trips | The Pickleball Passport',
     description:
-      'Nine-day pickleball trips to Thailand in 2027: Chiang Mai in January, Hua Hin in February, Phuket in March, and Pattaya for Songkran in April.',
+      'Open pickleball trips: Koh Chang on December 9 to 17, 2026, Bangkok and Chiang Mai in January 2027, and Bangkok and Hua Hin in February 2027.',
     canonical: 'https://www.thepickleballpassport.org/trips',
     image: 'trips',
   },
   {
     path: '/trips/calendar',
     source: 'app/(marketing)/trips/calendar/layout.tsx',
-    title: '2027 Pickleball Trip Calendar | The Pickleball Passport',
+    title: 'Pickleball Trip Calendar | The Pickleball Passport',
     description:
-      'Every 2027 pickleball departure on one calendar: Bangkok with Chiang Mai, Hua Hin, Phuket, and Songkran in Pattaya. Compare dates before you apply.',
+      'Open departure dates: Koh Chang on December 9 to 17, 2026, Bangkok and Chiang Mai on January 14, 2027, and Bangkok plus Hua Hin in February.',
     canonical: 'https://www.thepickleballpassport.org/trips/calendar',
     image: 'trips',
   },
@@ -80,24 +80,6 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     description:
       'February 18 to 26, 2027: four nights in Bangkok, then four nights on the Gulf in Hua Hin. Coached pickleball in both cities. $7,000 per person.',
     canonical: 'https://www.thepickleballpassport.org/trips/bangkok-hua-hin/february-18-2027',
-    image: 'trips',
-  },
-  {
-    path: '/trips/bangkok-phuket/march-18-2027',
-    source: 'app/(marketing)/trips/bangkok-phuket/march-18-2027/page.tsx',
-    title: 'Bangkok + Phuket, Mar 2027 | The Pickleball Passport',
-    description:
-      'March 18 to 26, 2027: Bangkok, then Bang Tao Beach and a private speedboat day in Phang Nga Bay. Coached pickleball in both cities. $7,000 per person.',
-    canonical: 'https://www.thepickleballpassport.org/trips/bangkok-phuket/march-18-2027',
-    image: 'phuket',
-  },
-  {
-    path: '/trips/bangkok-pattaya/songkran-april-2027',
-    source: 'app/(marketing)/trips/bangkok-pattaya/songkran-april-2027/page.tsx',
-    title: 'Songkran Pattaya Trip, Apr 2027 | The Pickleball Passport',
-    description:
-      'April 12 to 20, 2027: official Songkran in Bangkok, then coached pickleball and the Wan Lai finale in Pattaya. Nine days. $7,000 per person.',
-    canonical: 'https://www.thepickleballpassport.org/trips/bangkok-pattaya/songkran-april-2027',
     image: 'trips',
   },
   {
@@ -213,7 +195,7 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     source: 'app/(marketing)/refund-policy/layout.tsx',
     title: 'Trip Booking Refund Policy | The Pickleball Passport',
     description:
-      'How payments and refunds work if plans change. The January 2027 trip is paid in full; other 2027 trips can be booked with a deposit. See the refund schedule.',
+      'If your plans change, a portion of every payment (15-20%, depending on timing and supplier commitments) is non-refundable. No full refund ever.',
     canonical: 'https://www.thepickleballpassport.org/refund-policy',
     image: 'trips',
   },
