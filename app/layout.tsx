@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 // ClerkProvider works with static pages when NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
@@ -13,6 +14,8 @@ import { Footer } from "@/components/marketing/footer";
 import { AffiliateTracker } from "@/components/affiliate-tracker";
 import { GoogleTranslateWidget } from "@/components/marketing/google-translate-widget";
 import { isClerkEnabled } from "@/lib/auth/clerk-enabled";
+import { gaMeasurementId } from "@/lib/analytics/ga";
+import { GaInteractions } from "@/components/google-analytics";
 import { absoluteShareUrl, defaultShareMetadata } from "@/lib/seo/share-image";
 
 /**
@@ -55,6 +58,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = gaMeasurementId();
+
   // Organization JSON-LD Schema for SEO
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -104,6 +109,12 @@ export default function RootLayout({
           </Providers>
           <Analytics />
           <SpeedInsights />
+          {gaId ? (
+            <>
+              <GoogleAnalytics gaId={gaId} />
+              <GaInteractions />
+            </>
+          ) : null}
         </body>
       </html>
   );

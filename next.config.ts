@@ -45,6 +45,15 @@ const GHL_DOMAINS = [
   'https://link.msgsndr.com',
 ];
 
+// GA4. script-src needs the tag host; collect calls and the pixel need the rest.
+const GA_SCRIPT_HOSTS = ['https://www.googletagmanager.com'];
+const GA_COLLECT_HOSTS = [
+  'https://www.google-analytics.com',
+  'https://*.google-analytics.com',
+  'https://*.analytics.google.com',
+  'https://www.googletagmanager.com',
+];
+
 // Build CSP directives
 const cspDirectives = {
   'default-src': ["'self'"],
@@ -56,6 +65,7 @@ const cspDirectives = {
     ...STRIPE_DOMAINS,
     ...GOOGLE_DOMAINS,
     ...GHL_DOMAINS,
+    ...GA_SCRIPT_HOSTS,
   ],
   'style-src': [
     "'self'",
@@ -73,6 +83,7 @@ const cspDirectives = {
     ...GOOGLE_DOMAINS,
     'https://*.googleusercontent.com', // Google profile images
     'https://images.unsplash.com', // Destination photography
+    ...GA_COLLECT_HOSTS,
   ],
   'font-src': [
     "'self'",
@@ -87,6 +98,7 @@ const cspDirectives = {
     ...GOOGLE_DOMAINS,
     ...MUX_DOMAINS,
     ...GHL_DOMAINS,
+    ...GA_COLLECT_HOSTS,
   ],
   'frame-src': [
     "'self'",
