@@ -2,8 +2,11 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle, MapPin, Clock, ArrowRight, QrCode, Users, Globe, Package, Award } from 'lucide-react';
+import { MapPin, Clock, ArrowRight, Users, Globe, Package, Award } from 'lucide-react';
 import { ClinicsJanCta } from '@/components/marketing/january/clinics-jan-cta';
+import { JAN_PRICE, JAN_URL } from '@/components/marketing/january/jan-trip';
+
+const FEB_URL = '/trips/bangkok-hua-hin/february-18-2027';
 
 /* ─────────────────────── SCHEDULE ─────────────────────── */
 
@@ -12,37 +15,6 @@ const bangkokSchedule = [
   { day: 'Tue 3 Nov', time: '11am to 2pm', venue: 'Papaya Pickleball Club', label: 'Coached open play with Jaron and Ryan.' },
   { day: 'Wed 4 Nov', time: '11am to 2pm', venue: 'Arise Pickleball / BEAT Discovery Udomsuk', label: 'Mind Your Pickle mindset seminar with Coach Travis Rhea.' },
   { day: 'Thu 5 Nov', time: '11am to 2pm', venue: 'Pick A Court Sukhumvit 62', label: 'First hour is coached open play to wrap up the week: recap what we learned and make minor adjustments. The last two hours are a mini tournament on PKL.club, so you get your stats and test your skills.' },
-];
-
-/* ─────────────────────── PASSES ─────────────────────── */
-
-const passes = [
-  {
-    name: 'Clinic Week',
-    summary: '4 sessions: mindset Mon and Wed, open play Tue, wrap-up and mini tournament Thu',
-    price: '$299',
-    link: 'https://link.fastpaydirect.com/payment-link/6aaa56229f7ff2c808a75e19',
-    external: true,
-    featured: true,
-    includes: [
-      'Two Mind Your Pickle mindset sessions with Coach Travis Rhea',
-      'Tuesday coached open play, and Thursday at Pick A Court: an hour to wrap up, then a mini tournament on PKL.club',
-      'All court time, balls, water, snacks, and setup',
-    ],
-  },
-  {
-    name: 'Two-Day Pass',
-    summary: '2 sessions in Bangkok: 1 mindset, 1 coached open play',
-    price: '$169',
-    link: 'https://link.fastpaydirect.com/payment-link/6aaa56b2f426560dbc2f08a6',
-    external: true,
-    featured: false,
-    includes: [
-      'One Mind Your Pickle mindset session with Coach Travis Rhea',
-      'One live coaching session with Jaron and Ryan',
-      'All court time, balls, water, snacks, and setup',
-    ],
-  },
 ];
 
 /* ─────────────────────── PAGE ─────────────────────── */
@@ -78,13 +50,13 @@ export default function ClinicsPage() {
             {/* Left — copy */}
             <div>
               <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B08D55] mb-3">
-                Clinic Week · Bangkok
+                Past event. Bangkok
               </p>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-                Four sessions.<br className="hidden sm:block" /> One week. Just the pickleball.
+                Clinic Week has ended
               </h1>
               <p className="text-xl text-white mb-8 max-w-2xl">
-                Coach Travis Rhea on mindset. Jaron and Ryan on court. Four sessions in Bangkok, capped at six players. You book your own room and eat where you like. We run the pickleball.
+                November 2 to 5, 2026 is over. The next trips are January 14 to 22, 2027 in Bangkok and Chiang Mai ({JAN_PRICE} per person, paid in full) and February 18 to 26, 2027 in Bangkok and Hua Hin ($7,000 per person).
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10">
@@ -107,21 +79,19 @@ export default function ClinicsPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
-                <a
-                  href="https://link.fastpaydirect.com/payment-link/6aaa56229f7ff2c808a75e19"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={JAN_URL}
                   className="inline-flex whitespace-nowrap items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
                 >
-                  Reserve your spot · $299
+                  See the January Trip
                   <ArrowRight className="w-4 h-4" />
-                </a>
-                <a
-                  href="#two-day-pass"
+                </Link>
+                <Link
+                  href={FEB_URL}
                   className="inline-flex whitespace-nowrap items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all"
                 >
-                  Two-Day Pass · $169
-                </a>
+                  See the February Trip
+                </Link>
               </div>
             </div>
 
@@ -149,13 +119,10 @@ export default function ClinicsPage() {
       <section className="py-12 sm:py-16 bg-white border-b border-[#B08D55]/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 text-[#1D2D44]/75 text-base leading-relaxed">
           <p>
-            Most pickleball travel makes you buy the whole thing. Hotel, transport, guide, itinerary, whether you wanted it or not.
+            Clinic Week was four sessions in Bangkok, November 2 to 5, 2026. That week is over, and passes are no longer for sale.
           </p>
           <p>
-            Clinic Week is the opposite. Just the pickleball, priced to match. You book your own room, you get yourself to the courts, and your mornings and evenings are your own.
-          </p>
-          <p>
-            Six players. Nobody hides at the back of a drill line.
+            The schedule below is what we played. For a full trip, see January or February.
           </p>
         </div>
       </section>
@@ -178,7 +145,7 @@ export default function ClinicsPage() {
             Clinic Week Schedule
           </h2>
           <p className="text-white/50 text-sm mb-6">
-            Bangkok · 11am to 2pm · Arise Pickleball, Papaya Pickleball Club, and Pick A Court
+            November 2 to 5, 2026. This week has ended. Bangkok, 11am to 2pm.
           </p>
           <div className="space-y-3">
             {bangkokSchedule.map((row) => (
@@ -287,240 +254,6 @@ export default function ClinicsPage() {
         </div>
       </section>
 
-      {/* ── Choose Your Pass ── */}
-      <section id="two-day-pass" className="py-12 sm:py-16 bg-[#FDF8F3] border-b border-[#B08D55]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-2">
-            Choose Your Pass
-          </h2>
-          <p className="text-[#1D2D44]/60 text-sm mb-8">
-            Court time, coaching, and equipment. Room, transport, and meals are yours to arrange.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {passes.map((pass) => {
-              const cardClass = `rounded-2xl border p-6 flex flex-col hover:shadow-md transition-all group ${
-                pass.featured
-                  ? 'bg-[#0F1A2A] border-[#B08D55]/40 hover:border-[#B08D55]/70'
-                  : 'bg-white border-[#B08D55]/10 hover:border-[#B08D55]/30'
-              }`;
-              const content = (
-                <>
-                  {pass.featured && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#B08D55] text-white text-xs font-bold mb-3 self-start">
-                      BEST VALUE
-                    </span>
-                  )}
-                  <p className={`font-serif font-bold text-lg mb-1 ${pass.featured ? 'text-white' : 'text-[#1D2D44]'}`}>
-                    {pass.name}
-                  </p>
-                  <p className={`text-sm mb-4 ${pass.featured ? 'text-white/50' : 'text-[#1D2D44]/50'}`}>
-                    {pass.summary}
-                  </p>
-                  <ul className="space-y-1.5 mb-5 flex-1">
-                    {pass.includes.map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <CheckCircle className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${pass.featured ? 'text-[#B08D55]' : 'text-[#B08D55]'}`} />
-                        <span className={`text-xs ${pass.featured ? 'text-white/70' : 'text-[#1D2D44]/70'}`}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex items-center justify-between mt-auto">
-                    <span className={`font-bold text-xl ${pass.featured ? 'text-white' : 'text-[#1D2D44]'}`}>
-                      {pass.price}
-                    </span>
-                    <span className="flex items-center gap-1 text-[#B08D55] font-bold text-sm group-hover:gap-2 transition-all">
-                      {pass.external ? 'Reserve' : 'Learn more'} <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </>
-              );
-              return pass.external ? (
-                <a key={pass.name} href={pass.link} target="_blank" rel="noopener noreferrer" className={cardClass}>
-                  {content}
-                </a>
-              ) : (
-                <Link key={pass.name} href={pass.link} className={cardClass}>
-                  {content}
-                </Link>
-              );
-            })}
-          </div>
-
-          <p className="text-[#1D2D44]/60 text-xs mt-6 leading-relaxed">
-            * Clinic Week and the Two-Day Pass are Bangkok only: mindset seminars with Coach Travis Rhea on Monday and Wednesday at Arise, coached open play on Tuesday at Papaya, and Thursday at Pick A Court Sukhumvit 62 (an hour to wrap up, then a mini tournament on PKL.club).
-          </p>
-
-          <p className="text-[#1D2D44]/40 text-xs mt-4">
-            Not included on any pass: accommodation, flights, visas, insurance, transport, meals.
-          </p>
-          <p className="text-[#1D2D44]/40 text-xs mt-2">
-            Need travel insurance?{' '}
-            <a
-              href="https://www.squaremouth.com/?aid=24050"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#B08D55] hover:underline font-medium"
-            >
-              Compare plans with our partner, Squaremouth
-            </a>.
-          </p>
-          <p className="text-[#1D2D44]/40 text-xs mt-2">
-            Want one-on-one coaching with Travis, Jaron, or Ryan? Message us on WhatsApp or LINE below and we&apos;ll set it up.
-          </p>
-        </div>
-      </section>
-
-      {/* ── Venue / Getting there ── */}
-      <section className="py-12 sm:py-16 bg-white border-t border-[#B08D55]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1D2D44] mb-2">
-            Venues
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8 max-w-5xl">
-            <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
-              <div className="relative h-44">
-                <Image
-                  src="/arise-group.jpeg"
-                  alt="The Pickleball Passport group at Arise Pickleball courts"
-                  fill
-                  className="object-cover object-[50%_72%]"
-                  sizes="(max-width: 768px) 100vw, 340px"
-                />
-              </div>
-              <div className="p-4">
-                <p className="font-serif font-bold text-[#1D2D44] text-base">Arise Pickleball courts</p>
-                <p className="text-[#1D2D44]/60 text-sm">Udom Suk, Bangkok · Mon &amp; Wed</p>
-              </div>
-            </div>
-
-            <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
-              <div className="relative h-44">
-                <Image
-                  src="/papaya2.jpg"
-                  alt="The Pickleball Passport group at Papaya Pickleball Club"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 768px) 100vw, 340px"
-                />
-              </div>
-              <div className="p-4">
-                <p className="font-serif font-bold text-[#1D2D44] text-base">Papaya Pickleball Club</p>
-                <p className="text-[#1D2D44]/60 text-sm">Suan Luang, Bangkok · Tue</p>
-              </div>
-            </div>
-
-            <div className="bg-[#FDF8F3] rounded-2xl border border-[#B08D55]/10 overflow-hidden">
-              <div className="relative h-44 bg-[#1D2D44] flex items-center justify-center">
-                <MapPin className="w-10 h-10 text-[#B08D55]" />
-              </div>
-              <div className="p-4">
-                <p className="font-serif font-bold text-[#1D2D44] text-base">Pick A Court Sukhumvit 62</p>
-                <p className="text-[#1D2D44]/60 text-sm">Phra Khanong Tai, Bangkok · Thu</p>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Pick%20A%20Court%20Sukhumvit%2062%2C%205%20Soi%20Sukhumvit%2062%20Yaek%208%2C%20Phra%20Khanong%20Tai%2C%20Bangkok%2010260"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-block text-sm font-semibold text-[#1D2D44] underline decoration-[#B08D55] underline-offset-4"
-                >
-                  Open in Google Maps
-                </a>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="bg-[#FDF8F3] rounded-xl border border-[#B08D55]/10 p-5 max-w-lg">
-            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-2">Getting There. Not Optional.</p>
-            <p className="text-[#1D2D44]/70 text-sm leading-relaxed">
-              Arise Pickleball is in Udom Suk. If you&apos;re staying central, budget 30 to 40 minutes by Grab, roughly 150 to 250 baht each way. Papaya Pickleball Club (Tue) is in Suan Luang off Pattanakarn Road, and Pick A Court (Thu) is on Sukhumvit 62 near BTS Bang Chak.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PromptPay QR (Thailand local payments) ── */}
-      <section className="py-12 sm:py-16 bg-[#FDF8F3] border-t border-[#B08D55]/10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl border border-[#B08D55]/10 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <div className="flex-shrink-0 flex items-center justify-center w-24 h-24 rounded-xl bg-[#FDF8F3] border-2 border-dashed border-[#B08D55]/30">
-              <QrCode className="w-10 h-10 text-[#B08D55]/40" />
-            </div>
-            <div>
-              <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-1">
-                Paying in Thailand? ชำระเงินในไทย
-              </p>
-              <h3 className="font-serif text-xl font-bold text-[#1D2D44] mb-2">
-                PromptPay: No Stripe Fees
-              </h3>
-              <p className="text-[#1D2D44]/60 text-sm leading-relaxed mb-3">
-                If you&apos;re based in Thailand, scan the QR code below to pay via PromptPay, standard Thai bank transfer, zero international fees. Screenshot it and go.
-              </p>
-              <p className="text-sm font-semibold text-[#1D2D44]">
-                ฿9,700 for the full week · ฿5,500 for the Two-Day Pass
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-6 bg-white rounded-2xl border border-[#B08D55]/10 p-6 flex flex-col items-center">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 overflow-hidden rounded-lg">
-              <Image
-                src="/newqr.jpeg"
-                alt="PromptPay QR code"
-                fill
-                className="object-contain"
-                sizes="320px"
-              />
-            </div>
-            <p className="text-xs text-[#1D2D44]/40 mt-3">
-              PromptPay · Screenshot and scan in any Thai banking app
-            </p>
-          </div>
-
-          {/* ── LINE + WhatsApp (questions before paying) ── */}
-          <div className="mt-6 bg-white rounded-2xl border border-[#B08D55]/10 p-6 sm:p-8">
-            <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#B08D55] mb-4 text-center">
-              Questions before you pay? Chat with Jaron
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
-              <a
-                href="https://line.me/ti/p/-PkfPC68L8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2"
-              >
-                <div className="relative w-40 h-40 sm:w-44 sm:h-44 overflow-hidden rounded-xl border border-[#B08D55]/10">
-                  <Image
-                    src="/line-qr-jaron.png"
-                    alt="Add Jaron on LINE, QR code"
-                    fill
-                    className="object-cover"
-                    sizes="176px"
-                  />
-                </div>
-                <span className="text-xs font-semibold text-[#1D2D44]/60">Scan to add on LINE</span>
-              </a>
-              <a
-                href="https://wa.me/qr/GELZNRU2267RE1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2"
-              >
-                <div className="relative w-48 h-48 sm:w-52 sm:h-52 overflow-hidden rounded-xl border border-[#B08D55]/10">
-                  <Image
-                    src="/whatsapp-qr-jaron.png"
-                    alt="Add Jaron on WhatsApp, QR code"
-                    fill
-                    className="object-contain bg-[#5CBD6D]"
-                    sizes="208px"
-                  />
-                </div>
-                <span className="text-xs font-semibold text-[#1D2D44]/60">Scan to add on WhatsApp</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <ClinicsJanCta />
 

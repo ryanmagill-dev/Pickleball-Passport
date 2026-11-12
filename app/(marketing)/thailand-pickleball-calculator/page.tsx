@@ -89,7 +89,7 @@ const CALCULATOR_FAQS = [
   {
     question: "Is it better to book a DIY Thailand pickleball trip or join an organized group?",
     answer:
-      "If you have flexible time and enjoy coordinating Reclub waitlists, messaging venues on LINE a week ahead, and booking your own hotels and transfers, Thailand is very rewarding to travel independently. If you want guaranteed court blocks, 16 level-matched players, pro coaching, five-star riverside and boutique hotels, and zero logistics stress, joining a Bangkok Clinic Week ($169 to $299) or a 9-day flagship trip saves 15 to 20 hours of planning.",
+      "If you have flexible time and enjoy coordinating Reclub waitlists, messaging venues on LINE a week ahead, and booking your own hotels and transfers, Thailand is very rewarding to travel independently. If you want guaranteed court blocks, 16 level-matched players, pro coaching, five-star riverside and boutique hotels, and zero logistics stress, a 9-day flagship trip saves 15 to 20 hours of planning. January 14 to 22, 2027 is $5,500. February 18 to 26, 2027 is $7,000.",
   },
 ];
 
@@ -257,25 +257,24 @@ export default function ThailandPickleballCalculatorPage() {
             <div className="bg-white rounded-2xl border border-[#B08D55]/30 p-6 flex flex-col justify-between shadow-sm">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#B08D55]">
-                  Option 02 · Book Your Own Hotel, We Run the Courts
+                  Option 02 · Open 2027 Trips
                 </span>
                 <h3 className="font-serif text-xl font-bold text-[#1D2D44] mt-1 mb-3">
-                  Bangkok Clinic Week ($169 to $299)
+                  January and February
                 </h3>
                 <p className="text-sm text-[#1D2D44]/75 leading-relaxed mb-4">
-                  Already in Bangkok or traveling on your own hotel points? Coach Travis Rhea (Mind Your Pickle) runs mindset seminars Mon and Wed at Arise Pickleball (BEAT Discovery Udomsuk), with coached open play Tue at Papaya Pickleball Club. Thursday at Pick A Court Sukhumvit 62 starts with an hour to wrap up the week, then a mini tournament on PKL.club (Nov 2 to 5, 2026, 11am to 2pm, 6 spots).
+                  Clinic Week in November 2026 has ended. The trips you can book now are January 14 to 22 in Bangkok and Chiang Mai, and February 18 to 26 in Bangkok and Hua Hin.
                 </p>
                 <ul className="space-y-2 text-xs text-[#1D2D44]/75 mb-6">
-                  <li>• Two-Day Pass: $169 (2 sessions, 6 hours on court)</li>
-                  <li>• Full Clinic Week: $299 (all 4 days, 12 hours)</li>
-                  <li>• 6 spots: book two days or all four</li>
+                  <li>• January 14 to 22, 2027: $5,500 per person, paid in full</li>
+                  <li>• February 18 to 26, 2027: $7,000 per person</li>
                 </ul>
               </div>
               <Link
-                href="/clinics"
+                href="/trips"
                 className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#1D2D44] text-[#CFB78D] font-bold text-xs hover:bg-[#0F1A2A] transition-colors"
               >
-                View Bangkok Clinic Week
+                See the trips
               </Link>
             </div>
 

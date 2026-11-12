@@ -1046,20 +1046,20 @@ export default function ThailandPickleballPlaybookPage() {
             <div className="bg-white/5 rounded-2xl border border-[#B08D55]/30 p-6 sm:p-8 flex flex-col justify-between">
               <div>
                 <span className="inline-block px-3 py-1 rounded-full bg-[#B08D55]/20 text-[#CFB78D] text-xs font-bold uppercase tracking-wider mb-3">
-                  Bangkok · Nov 2 to 5, 2026 · 6 Spots
+                  Feb 18 to 26, 2027 · Bangkok + Hua Hin
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-white mb-2">
-                  Bangkok Clinic Week (No Trip Required)
+                  February 2027: Bangkok and Hua Hin
                 </h3>
                 <p className="text-sm text-white/80 leading-relaxed mb-6">
-                  Already coming to Thailand or live in the region? Coach Travis Rhea (Mind Your Pickle) runs mindset seminars Mon and Wed at Arise Pickleball (BEAT Discovery Udomsuk), then coached open play Tue at Papaya Pickleball Club. Thursday at Pick A Court Sukhumvit 62 starts with an hour to wrap up the week, then a mini tournament on PKL.club, 11am to 2pm. Six spots. Choose two days with the Two-Day Pass ($169) or all four with the Full Clinic Week ($299).
+                  Clinic Week in November 2026 has ended. The February 18 to 26, 2027 trip is nine days in Bangkok and Hua Hin, with coached pickleball in both cities. $7,000 per person. A 25% deposit holds your place.
                 </p>
               </div>
               <Link
-                href="/clinics"
+                href="/trips/bangkok-hua-hin/february-18-2027"
                 className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white text-[#1D2D44] font-bold text-sm hover:bg-[#FDF8F3] transition-all"
               >
-                Explore Bangkok Clinic Week
+                See the February Trip
               </Link>
             </div>
 

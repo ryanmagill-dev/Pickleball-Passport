@@ -1,5 +1,4 @@
-// Clinic Week (Nov 2 to 5, 2026). Venues confirmed for the Sunday pack.
-// Offers stay $299 Full Clinic Week and $169 Two-Day Pass. Six spots.
+// Clinic Week (Nov 2 to 5, 2026) has ended. No offers. Pages stay reachable.
 const clinicWeekJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -8,7 +7,7 @@ const clinicWeekJsonLd = {
       '@id': 'https://www.thepickleballpassport.org/clinics#clinic-week',
       name: 'Bangkok Pickleball Clinic Week with Coach Travis Rhea (Nov 2 to 5, 2026)',
       description:
-        'Four 3-hour pickleball sessions in Bangkok: mindset seminars with Coach Travis Rhea (Mind Your Pickle) on Mon Nov 2 and Wed Nov 4 at Arise Pickleball / BEAT Discovery Udomsuk, coached open play on Tue Nov 3 at Papaya Pickleball Club, and Thu Nov 5 at Pick A Court Sukhumvit 62 (first hour to wrap up the week, then a mini tournament on PKL.club). 6 spots. Book two days with the Two-Day Pass or all four with the Full Clinic Week.',
+        'Four pickleball sessions in Bangkok, November 2 to 5, 2026, with Coach Travis Rhea. This event has ended.',
       url: 'https://www.thepickleballpassport.org/clinics',
       startDate: '2026-11-02T11:00:00+07:00',
       endDate: '2026-11-05T14:00:00+07:00',
@@ -21,24 +20,6 @@ const clinicWeekJsonLd = {
       ],
       organizer: { '@id': 'https://www.thepickleballpassport.org/#organization' },
       maximumAttendeeCapacity: 6,
-      offers: [
-        {
-          '@type': 'Offer',
-          name: 'Clinic Week Pass (all 4 days)',
-          price: '299',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/LimitedAvailability',
-          url: 'https://www.thepickleballpassport.org/clinics',
-        },
-        {
-          '@type': 'Offer',
-          name: 'Two-Day Pass (1 mindset seminar + 1 coached open play)',
-          price: '169',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/LimitedAvailability',
-          url: 'https://www.thepickleballpassport.org/clinics',
-        },
-      ],
       subEvent: [
         { '@id': 'https://www.thepickleballpassport.org/clinics#session-2026-11-02' },
         { '@id': 'https://www.thepickleballpassport.org/clinics#session-2026-11-03' },

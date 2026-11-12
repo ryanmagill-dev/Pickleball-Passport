@@ -42,7 +42,7 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     source: 'app/(marketing)/trips/page.tsx',
     title: 'Upcoming Pickleball Trips | The Pickleball Passport',
     description:
-      'Nine-day pickleball trips to Thailand in 2027: Chiang Mai in January, Hua Hin in February, Phuket in March, and Pattaya for Songkran in April.',
+      'Nine-day pickleball trips you can book now. Bangkok and Chiang Mai, January 14 to 22, 2027, $5,500. Bangkok and Hua Hin, February 18 to 26, $7,000.',
     canonical: 'https://www.thepickleballpassport.org/trips',
     image: 'trips',
   },
@@ -51,7 +51,7 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     source: 'app/(marketing)/trips/calendar/layout.tsx',
     title: '2027 Pickleball Trip Calendar | The Pickleball Passport',
     description:
-      'Every 2027 pickleball departure on one calendar: Bangkok with Chiang Mai, Hua Hin, Phuket, and Songkran in Pattaya. Compare dates before you apply.',
+      'Open 2027 pickleball trips: Bangkok and Chiang Mai, January 14 to 22, $5,500 per person, and Bangkok and Hua Hin, February 18 to 26, $7,000 per person.',
     canonical: 'https://www.thepickleballpassport.org/trips/calendar',
     image: 'trips',
   },
@@ -105,7 +105,7 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     source: 'app/(marketing)/clinics/layout.tsx',
     title: 'Bangkok Clinic Week, Nov 2026 | The Pickleball Passport',
     description:
-      'November 2 to 5, 2026 in Bangkok: mindset sessions with Coach Travis Rhea, coached open play, and a Thursday mini tournament. Six spots only.',
+      'Bangkok Clinic Week, November 2 to 5, 2026, has ended and is no longer on sale. Next pickleball trips: January 14 to 22 and February 18 to 26, 2027.',
     canonical: 'https://www.thepickleballpassport.org/clinics',
     image: CLINIC_IMAGE,
   },

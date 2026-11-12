@@ -6,13 +6,12 @@ import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Sparkles, BookOpen } from 'lucide-react';
 import { LogoIcon } from '@/components/ui/logo';
-import { useLeadModal } from '@/components/providers/lead-modal-provider';
 import { LanguageSwitcher } from '@/components/marketing/language-switcher';
+import { JAN_URL } from '@/components/marketing/january/jan-trip';
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Trips', href: '/trips' },
-  { name: 'Clinics', href: '/clinics' },
   { name: 'Partners', href: '/partners' },
   { name: 'About Us', href: '/about' },
   { name: 'Newsletter', href: '/newsletter' },
@@ -22,7 +21,6 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const { openLeadModal } = useLeadModal();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -103,11 +101,13 @@ export function Header() {
             </Link>
             <LanguageSwitcher />
             <Button
-              onClick={() => openLeadModal()}
+              asChild
               className="bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#1D2D44] font-semibold shadow-lg shadow-[#B08D55]/30 transition-all hover:shadow-xl hover:shadow-[#B08D55]/40"
             >
-              <Sparkles className="mr-2 h-4 w-4" />
-              Start Your Journey
+              <Link href={JAN_URL}>
+                <Sparkles className="mr-2 h-4 w-4" />
+                Start Your Journey
+              </Link>
             </Button>
           </div>
 
@@ -166,11 +166,13 @@ export function Header() {
                 Free Thailand Playbook
               </Link>
               <Button
-                onClick={() => { openLeadModal(); setMobileMenuOpen(false); }}
+                asChild
                 className="w-full bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#1D2D44] font-semibold py-6"
               >
-                <Sparkles className="mr-2 h-5 w-5" />
-                Start Your Journey
+                <Link href={JAN_URL} onClick={() => setMobileMenuOpen(false)}>
+                  <Sparkles className="mr-2 h-5 w-5" />
+                  Start Your Journey
+                </Link>
               </Button>
               <div className="flex justify-center pt-1">
                 <LanguageSwitcher />

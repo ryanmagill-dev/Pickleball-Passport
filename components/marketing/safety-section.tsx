@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Shield, MapPin, Calendar, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { BackgroundVideo } from '@/components/marketing/background-video';
 
 const points = [
   {
@@ -24,16 +25,11 @@ const points = [
 export function SafetySection() {
   return (
     <section className="relative overflow-hidden py-20">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
+      <BackgroundVideo
+        src="/tpp-aerial-0453.mp4"
         poster="/images/posters/tpp-aerial-0453-poster.jpg"
-        className="absolute inset-0 w-full h-full object-cover object-center"
-      >
-        <source src="/tpp-aerial-0453.mp4" type="video/mp4" />
-      </video>
+        showPlayControl={false}
+      />
       <div className="absolute inset-0 bg-[#1D2D44]/90" />
       <div className="container px-4 mx-auto relative z-10">
         <div className="max-w-4xl mx-auto">

@@ -9,8 +9,6 @@ import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 const TRIPS = [
   { name: 'Bangkok + Chiang Mai', dates: 'Jan 14 to 22, 2027', price: '$5,500', href: '/trips/bangkok-chiang-mai/january-14-2027' },
   { name: 'Bangkok + Hua Hin', dates: 'Feb 18 to 26, 2027', price: '$7,000', href: '/trips/bangkok-hua-hin/february-18-2027' },
-  { name: 'Bangkok + Phuket', dates: 'Mar 18 to 26, 2027', price: '$7,000', href: '/trips/bangkok-phuket/march-18-2027' },
-  { name: 'Songkran: Bangkok + Pattaya', dates: 'Apr 12 to 20, 2027', price: '$7,000', href: '/trips/bangkok-pattaya/songkran-april-2027' },
 ];
 
 function ApplyContent() {

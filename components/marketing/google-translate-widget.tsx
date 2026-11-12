@@ -18,6 +18,11 @@ const INCLUDED_LANGUAGES = 'th,zh-CN,zh-TW,id,ms,tl,vi,ja,ko,hi,ta,es,fr,de,pt,a
 
 export function GoogleTranslateWidget() {
   useEffect(() => {
+    // English visitors never need this script. Load it only after a language
+    // cookie is set (the switcher writes the cookie, then reloads).
+    const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]*)/);
+    const code = match ? decodeURIComponent(match[1]).split('/')[2] : '';
+    if (!code || code === 'en') return;
     if (document.getElementById('google-translate-script')) return;
 
     // Google Translate rewrites text nodes in place, which can conflict with

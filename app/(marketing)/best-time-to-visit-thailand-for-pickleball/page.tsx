@@ -134,7 +134,7 @@ const MONTHLY_CALENDAR = [
     grade: "A+ (Peak Kickoff)",
     weatherFeel: "Cool dry breeze arrives, Loy Krathong lantern festivals",
     chiangMaiStatus: "Prime (Loy Krathong & Yi Peng season)",
-    recommendedPairing: "Bangkok Clinic Week (Nov 2 to 5) or Bangkok + Chiang Mai",
+    recommendedPairing: "Bangkok + Chiang Mai",
     courtRoofAdvice: "All court types playable morning and evening",
   },
   {
@@ -470,15 +470,15 @@ export default function BestTimeToVisitThailandPickleballPage() {
             Join Us in Thailand During Peak Pickleball Season
           </h2>
           <p className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Our Bangkok Clinic Week (Nov 2 to 5, 2026 at Arise Pickleball, Papaya Pickleball Club, and Pick A Court Sukhumvit 62) and our monthly 2027 9-Day Trips (Jan 14 to 22 Bangkok + Chiang Mai, Feb 18 to 26 Bangkok + Hua Hin, Mar 18 to 26 Bangkok + Phuket, and Apr 12 to 20 Songkran Bangkok + Pattaya) match each travel month to the ideal regional pairing and covered court blocks.
+            Clinic Week in November 2026 has ended. The trips open now are January 14 to 22, 2027 in Bangkok and Chiang Mai ($5,500 per person) and February 18 to 26, 2027 in Bangkok and Hua Hin ($7,000 per person).
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <Link
-              href="/clinics"
+              href="/trips/bangkok-hua-hin/february-18-2027"
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] hover:from-[#8D7144] hover:to-[#B08D55] text-[#0F1A2A] font-bold text-sm sm:text-base shadow-xl shadow-[#B08D55]/25 transition-all"
             >
-              Explore Bangkok Clinic Week (Nov 2 to 5, 2026)
+              See the February Trip
             </Link>
             <Link
               href="/trips"

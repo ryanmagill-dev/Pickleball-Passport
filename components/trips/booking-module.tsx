@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Calendar, Users } from 'lucide-react';
 import { useReserveHref } from '@/lib/hooks/use-reserve-href';
+import { DatesInterestCta } from '@/components/marketing/dates-interest-cta';
 
 interface BookingModuleProps {
   tripName?: string;
@@ -17,6 +18,7 @@ interface BookingModuleProps {
   hidePaymentPlan?: boolean;
   privateRoomPrice?: number;
   privateRoomLink?: string;
+  interestOnly?: boolean;
 }
 
 export function BookingModule({
@@ -31,6 +33,7 @@ export function BookingModule({
   hidePaymentPlan = false,
   privateRoomPrice,
   privateRoomLink,
+  interestOnly = false,
 }: BookingModuleProps) {
   const reserveHref = useReserveHref();
 
@@ -52,7 +55,9 @@ export function BookingModule({
 
       {/* Content Area */}
       <div className="p-5 space-y-4">
-        {/* Price Display */}
+        {interestOnly ? (
+          <DatesInterestCta />
+        ) : (
         <div className="pt-2 pb-1 text-center">
           <p className="font-serif text-2xl font-bold text-[#1D2D44]">
             From ${price.toLocaleString()}<span className="text-base font-normal text-[#1D2D44]/60">/person</span>
@@ -63,9 +68,10 @@ export function BookingModule({
             </p>
           )}
         </div>
+        )}
 
         {/* Spots Counter */}
-        {spotsLeft !== undefined && totalSpots !== undefined && (
+        {!interestOnly && spotsLeft !== undefined && totalSpots !== undefined && (
           <div className="flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-sm font-semibold bg-[#1D2D44]/5 text-[#1D2D44] border border-[#1D2D44]/10">
             <Users className="w-4 h-4 text-[#B08D55]" />
             {spotsLeft === 0
@@ -76,6 +82,7 @@ export function BookingModule({
         )}
 
         {/* Payment buttons */}
+        {!interestOnly && (
         <div className="space-y-3">
           {depositLink && fullLink ? (
             <div className="grid grid-cols-2 gap-2">
@@ -122,13 +129,16 @@ export function BookingModule({
             </a>
           )}
         </div>
+        )}
 
+        {!interestOnly && (
         <p className="text-center text-xs text-[#1D2D44]/40">
           Prefer to talk it through?{' '}
           <Link href={reserveHref} className="text-[#B08D55] hover:underline font-medium">
             Schedule a call
           </Link>
         </p>
+        )}
       </div>
     </div>
   );

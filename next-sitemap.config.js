@@ -13,6 +13,8 @@ module.exports = {
     '/sign-up/*',
     '/booking/*',
     '/redirect',
+    '/trips/bangkok-phuket/march-18-2027',
+    '/trips/bangkok-pattaya/songkran-april-2027',
   ],
   robotsTxtOptions: {
     policies: [

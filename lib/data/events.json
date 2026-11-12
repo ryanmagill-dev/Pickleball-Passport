@@ -7,11 +7,11 @@
     "location": "Bangkok",
     "priceFrom": 169,
     "currency": "USD",
-    "description": "Pickleball 11am to 2pm, Nov 2 to 5. $299 for the full week or $169 for two days by card. By PromptPay it's 9,700 THB for the full week or 5,500 THB for two days.",
+    "description": "November 2 to 5, 2026 in Bangkok has ended. See the January and February 2027 trips.",
     "posterImage": "/images/events/clinic-week-poster.webp",
-    "ctaLabel": "See the clinics",
-    "ctaUrl": "https://thepickleballpassport.org/clinics",
-    "status": "active",
+    "ctaLabel": "See the January trip",
+    "ctaUrl": "https://www.thepickleballpassport.org/trips/bangkok-chiang-mai/january-14-2027",
+    "status": "ended",
     "showOnHome": false
   },
   {

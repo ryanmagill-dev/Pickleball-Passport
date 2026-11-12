@@ -1,9 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Calendar, MapPin, Users } from 'lucide-react';
+import { BackgroundVideo } from '@/components/marketing/background-video';
+import { ArrowRight, Calendar, MapPin } from 'lucide-react';
 import { TripDetailLayout } from '@/components/trips/trip-detail-layout';
 import { TripSectionContentPhuket } from '@/components/trips/trip-section-content-phuket';
+import { DatesInterestCta } from '@/components/marketing/dates-interest-cta';
+import { JAN_URL } from '@/components/marketing/january/jan-trip';
 
 /* ─────────────────────── COMPONENT ─────────────────────── */
 
@@ -13,16 +16,11 @@ export function March18Page() {
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden text-white py-16 sm:py-20">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <BackgroundVideo
+          src="/hero-drone.mp4"
           poster="/images/posters/hero-drone-poster.jpg"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        >
-          <source src="/hero-drone.mp4" type="video/mp4" />
-        </video>
+          playControlClassName="top-6 left-4"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#0F1A2A]/90" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
@@ -50,39 +48,9 @@ export function March18Page() {
                 <MapPin className="h-4 w-4 text-[#B08D55]" />
                 2 Cities, Bangkok to the Andaman Coast
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
-                <Users className="h-4 w-4 text-[#B08D55]" />
-                16 spots open
-              </div>
             </div>
 
-            <div className="mb-8">
-              <span className="text-4xl font-bold text-white">$7,000</span>
-              <span className="text-white/50 text-lg ml-2">USD / person</span>
-              <p className="text-white/40 text-xs mt-1">Double occupancy · Private room $1,200</p>
-              <p className="text-white/40 text-xs mt-1">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
-              <p className="text-[#B08D55] text-xs mt-2 font-medium">New route. Phuket court venue and final hotel rate are being confirmed, pricing may adjust.</p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://link.fastpaydirect.com/payment-link/6aed812de72ac5e6bc5e8147"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
-              >
-                Pay 25% Deposit · $1,750
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="https://link.fastpaydirect.com/payment-link/6aed810618be8d04a49bdae6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/40 text-white font-bold text-sm hover:bg-white/10 transition-all"
-              >
-                Pay in Full · $7,000
-              </a>
-            </div>
+            <DatesInterestCta tone="dark" />
           </div>
         </div>
 
@@ -99,28 +67,30 @@ export function March18Page() {
         tripName="Bangkok + Phuket (Mar 18 to 26)"
         cities="Our 5-Star Bangkok riverside hotel · Beachfront resort, Bang Tao Beach"
         dates="Mar 18 to Mar 26, 2027"
-        price={7000}
-        depositAmount={1750}
-        depositLink="https://link.fastpaydirect.com/payment-link/6aed812de72ac5e6bc5e8147"
-        fullLink="https://link.fastpaydirect.com/payment-link/6aed810618be8d04a49bdae6"
-        privateRoomPrice={1200}
-        privateRoomLink="https://link.fastpaydirect.com/payment-link/6aed817e18be8d04a49bdae8"
-        spotsLeft={16}
-        totalSpots={16}
+        interestOnly
         ContentComponent={TripSectionContentPhuket}
       />
 
       {/* Cross-link */}
       <section className="py-12 bg-[#0F1A2A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70 text-base mb-3">Not travelling in March? View the full departure calendar.</p>
-          <Link
-            href="/trips/calendar"
-            className="inline-flex items-center gap-2 text-[#B08D55] hover:text-[#CFB78D] font-semibold transition-colors"
-          >
-            All departures
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <p className="text-white/70 text-base mb-4">Trips you can book now.</p>
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href={JAN_URL}
+              className="inline-flex items-center gap-2 text-[#B08D55] hover:text-[#CFB78D] font-semibold transition-colors"
+            >
+              January 14 to 22
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/trips/bangkok-hua-hin/february-18-2027"
+              className="inline-flex items-center gap-2 text-[#B08D55] hover:text-[#CFB78D] font-semibold transition-colors"
+            >
+              February 18 to 26
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
     </main>

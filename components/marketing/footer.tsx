@@ -6,6 +6,7 @@
  * Tropical resort-inspired footer with a GHL "Contact Us" form embed
  */
 
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
@@ -17,7 +18,60 @@ const TikTokIcon = (props: LucideProps) => (
   </svg>
 );
 import { LogoIcon } from '@/components/ui/logo';
-import { useLeadModal } from '@/components/providers/lead-modal-provider';
+import { JAN_URL } from '@/components/marketing/january/jan-trip';
+
+function FooterContactForm() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [loadForm, setLoadForm] = useState(false);
+
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setLoadForm(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '120px' },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={containerRef}
+      className="max-w-md mx-auto bg-white rounded-2xl border border-[#B08D55]/10 shadow-lg overflow-hidden text-left"
+    >
+      {loadForm ? (
+        <>
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/DOYQ7o4C8pR6V0hSLxcm"
+            style={{ width: '100%', height: '778px', border: 'none', borderRadius: '3px' }}
+            id="inline-footer-DOYQ7o4C8pR6V0hSLxcm"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Website: Contact Us"
+            data-height="778"
+            data-layout-iframe-id="inline-footer-DOYQ7o4C8pR6V0hSLxcm"
+            data-form-id="DOYQ7o4C8pR6V0hSLxcm"
+            title="Website: Contact Us"
+          />
+          <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
+        </>
+      ) : (
+        <div className="h-[778px]" aria-hidden="true" />
+      )}
+    </div>
+  );
+}
 
 const navigation = {
   explore: [
@@ -29,7 +83,7 @@ const navigation = {
     { name: 'Best Time to Visit Thailand', href: '/best-time-to-visit-thailand-for-pickleball' },
     { name: 'Club & Coach Retreats', href: '/pickleball-club-retreats' },
     { name: 'FAQ', href: '/faq' },
-    { name: 'Apply Now', href: '/apply' },
+    { name: 'Apply Now', href: JAN_URL },
   ],
   company: [
     { name: 'About Us', href: '/about' },
@@ -44,7 +98,7 @@ const navigation = {
   social: [
     {
       name: 'Facebook',
-      href: 'https://www.facebook.com/share/1CS1Rar7iR/?mibextid=wwXIfr',
+      href: 'https://www.facebook.com/profile.php?id=61588121918620',
       icon: Facebook,
     },
     {
@@ -62,7 +116,6 @@ const navigation = {
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { openLeadModal } = useLeadModal();
   const pathname = usePathname();
   // /contact and /apply already embed this same GHL form in the page body
   const showContactForm = pathname !== '/contact' && pathname !== '/apply';
@@ -95,27 +148,7 @@ export function Footer() {
               Tell us a little about yourself and our team will get back to you.
             </p>
 
-            {/* GHL "Website: Contact Us" form (submissions go straight to the CRM) */}
-            <div className="max-w-md mx-auto bg-white rounded-2xl border border-[#B08D55]/10 shadow-lg overflow-hidden text-left">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/DOYQ7o4C8pR6V0hSLxcm"
-                style={{ width: '100%', height: '778px', border: 'none', borderRadius: '3px' }}
-                id="inline-footer-DOYQ7o4C8pR6V0hSLxcm"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Website: Contact Us"
-                data-height="778"
-                data-layout-iframe-id="inline-footer-DOYQ7o4C8pR6V0hSLxcm"
-                data-form-id="DOYQ7o4C8pR6V0hSLxcm"
-                title="Website: Contact Us"
-              />
-              <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
-            </div>
+            <FooterContactForm />
 
           </div>
         </div>
@@ -221,23 +254,13 @@ export function Footer() {
               <ul className="space-y-4">
                 {navigation.explore.map((item) => (
                   <li key={item.name}>
-                    {item.name === 'Apply Now' ? (
-                      <button
-                        onClick={() => openLeadModal()}
-                        className="text-white/70 hover:text-[#B08D55] transition-colors flex items-center gap-2 group"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#B08D55]/50 group-hover:bg-[#B08D55] transition-colors" />
-                        {item.name}
-                      </button>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className="text-white/70 hover:text-[#B08D55] transition-colors flex items-center gap-2 group"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#B08D55]/50 group-hover:bg-[#B08D55] transition-colors" />
-                        {item.name}
-                      </Link>
-                    )}
+                    <Link
+                      href={item.href}
+                      className="text-white/70 hover:text-[#B08D55] transition-colors flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#B08D55]/50 group-hover:bg-[#B08D55] transition-colors" />
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { DatesInterestCta } from '@/components/marketing/dates-interest-cta';
 
 interface BookingModuleMobileProps {
   tripName?: string;
@@ -12,6 +13,7 @@ interface BookingModuleMobileProps {
   hidePaymentPlan?: boolean;
   privateRoomPrice?: number;
   privateRoomLink?: string;
+  interestOnly?: boolean;
 }
 
 export function BookingModuleMobile({
@@ -23,6 +25,7 @@ export function BookingModuleMobile({
   hidePaymentPlan = false,
   privateRoomPrice,
   privateRoomLink,
+  interestOnly = false,
 }: BookingModuleMobileProps) {
   const [showPaymentOptions, setShowPaymentOptions] = useState(false);
 
@@ -30,6 +33,11 @@ export function BookingModuleMobile({
     <>
       {/* Fixed Bottom Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-[#B08D55]/20 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
+        {interestOnly ? (
+          <div className="px-4 py-3">
+            <DatesInterestCta compact />
+          </div>
+        ) : (
         <div className="py-3 px-4 flex items-center justify-between gap-3">
           <div className="min-w-0">
             <p className="font-serif font-bold text-[#1D2D44] text-sm">
@@ -67,6 +75,7 @@ export function BookingModuleMobile({
             ) : null}
           </div>
         </div>
+        )}
 
         {/* Expandable payment options */}
         {showPaymentOptions && depositLink && fullLink && (

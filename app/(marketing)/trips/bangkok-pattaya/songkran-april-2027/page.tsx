@@ -4,6 +4,7 @@ import { metadataFor } from '@/lib/seo/indexable-pages';
 
 export const metadata: Metadata = {
   ...metadataFor('/trips/bangkok-pattaya/songkran-april-2027'),
+  robots: { index: false, follow: true },
   keywords: [
     'Songkran Thailand',
     'Wan Lai Pattaya',

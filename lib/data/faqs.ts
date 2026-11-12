@@ -114,9 +114,9 @@ export const faqCategories: FAQCategory[] = [
       {
         question: "Can I just do the pickleball without the trip?",
         answer: [
-          'Yes. Clinic Week in Bangkok is four sessions of mindset work and coached play, with no trip required. You book your own room; we run the pickleball.',
+          'Clinic Week in Bangkok, November 2 to 5, 2026, has ended. The next trips are January 14 to 22, 2027 in Bangkok and Chiang Mai, and February 18 to 26, 2027 in Bangkok and Hua Hin.',
         ],
-        link: { label: 'See Clinic Week', href: '/clinics' },
+        link: { label: 'See the January Trip', href: '/trips/bangkok-chiang-mai/january-14-2027' },
       },
     ],
   },
