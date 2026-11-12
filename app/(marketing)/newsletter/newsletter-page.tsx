@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import { BackgroundVideo } from '@/components/marketing/background-video';
 import Script from 'next/script';
 import { Sun, Calendar, Sparkles, Globe, Mail } from 'lucide-react';
 
@@ -70,16 +70,11 @@ export function NewsletterPage() {
 
       {/* GHL Form */}
       <section className="relative overflow-hidden py-16 sm:py-20">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <BackgroundVideo
+          src="/hero-drone.mp4"
           poster="/images/posters/hero-drone-poster.jpg"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        >
-          <source src="/hero-drone.mp4" type="video/mp4" />
-        </video>
+          showPlayControl={false}
+        />
         <div className="absolute inset-0 bg-[#FDF8F3]/70" />
         <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-6">
           <div className="bg-white rounded-2xl shadow-xl shadow-[#1D2D44]/10 border border-[#B08D55]/10 overflow-hidden">

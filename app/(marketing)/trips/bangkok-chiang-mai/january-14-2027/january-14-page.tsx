@@ -5,6 +5,7 @@ import { CheckCircle, ArrowRight, Calendar, MapPin, Users, TreePalm, ExternalLin
 import { TripDetailLayout } from '@/components/trips/trip-detail-layout';
 import { TripSectionContentChiangMai } from '@/components/trips/trip-section-content-chiang-mai';
 import { useReserveHref } from '@/lib/hooks/use-reserve-href';
+import { JAN_SPOTS_LEFT, JAN_TOTAL_SPOTS } from '@/components/marketing/january/jan-trip';
 
 /* ─────────────────────── PHUKET DATA ─────────────────────── */
 
@@ -73,7 +74,7 @@ export function January14Page() {
               <div className="flex flex-wrap gap-3">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
                   <Users className="h-4 w-4 text-[#B08D55]" />
-                  6 of 16 spaces remaining
+                  {JAN_SPOTS_LEFT} of {JAN_TOTAL_SPOTS} spaces remaining
                 </div>
                 <div className="flex items-center gap-2 bg-[#B08D55]/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold">
                   <TreePalm className="h-4 w-4 text-[#B08D55]" />
@@ -204,8 +205,8 @@ export function January14Page() {
         price={5500}
         hidePaymentPlan={true}
         fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
-        spotsLeft={6}
-        totalSpots={16}
+        spotsLeft={JAN_SPOTS_LEFT}
+        totalSpots={JAN_TOTAL_SPOTS}
         ContentComponent={TripSectionContentChiangMai}
       />
     </main>

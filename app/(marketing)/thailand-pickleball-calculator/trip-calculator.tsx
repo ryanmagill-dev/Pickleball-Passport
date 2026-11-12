@@ -509,10 +509,10 @@ export function TripCalculator() {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Link
-                    href="/clinics"
+                    href="/trips/bangkok-chiang-mai/january-14-2027"
                     className="inline-flex items-center justify-center px-4 py-3 rounded-xl bg-white text-[#1D2D44] font-bold text-xs hover:bg-[#FDF8F3] transition-all text-center"
                   >
-                    Bangkok Clinic Week (Nov 2 to 5)
+                    January 14 to 22 Trip
                   </Link>
                   <Link
                     href="/trips"

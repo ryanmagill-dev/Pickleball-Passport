@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { BackgroundVideo } from '@/components/marketing/background-video';
 import { ArrowRight, Calendar, MapPin, Users } from 'lucide-react';
 import { TripDetailLayout } from '@/components/trips/trip-detail-layout';
 import { TripSectionContentPhuket } from '@/components/trips/trip-section-content-phuket';
@@ -13,16 +14,11 @@ export function March18Page() {
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden text-white py-16 sm:py-20">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <BackgroundVideo
+          src="/hero-drone.mp4"
           poster="/images/posters/hero-drone-poster.jpg"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        >
-          <source src="/hero-drone.mp4" type="video/mp4" />
-        </video>
+          playControlClassName="top-6 left-4"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#0F1A2A]/90" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">

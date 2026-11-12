@@ -49,7 +49,6 @@ const includedItems = [
   'Chiang Rai day trip',
   'Dedicated local guide and van',
   'Trip host support throughout',
-  'Passport membership, member profile, community access, first stamp',
 ];
 
 const extrasItems = [

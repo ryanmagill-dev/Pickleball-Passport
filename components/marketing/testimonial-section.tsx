@@ -3,6 +3,7 @@
 import { TestimonialGallery } from '@/components/testimonials/testimonial-gallery';
 import { Palmtree, Sun, Waves, Star, ArrowRight, Quote } from 'lucide-react';
 import Link from 'next/link';
+import { JAN_URL } from '@/components/marketing/january/jan-trip';
 
 export function TestimonialSection() {
   return (
@@ -59,7 +60,7 @@ export function TestimonialSection() {
         {/* CTA */}
         <div className="text-center mt-12">
           <Link
-            href="/apply"
+            href={JAN_URL}
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] px-8 py-4 font-semibold text-[#1D2D44] transition-all hover:shadow-xl hover:shadow-[#B08D55]/30 hover:-translate-y-0.5 shadow-lg shadow-[#B08D55]/20"
           >
             Start Your Journey

@@ -1,6 +1,7 @@
+import { Suspense, type ReactNode } from "react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { ClerkProvider } from "@clerk/nextjs";
+import { MaybeClerk } from "@/components/providers/maybe-clerk";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   const gaId = gaMeasurementId();
 
@@ -77,6 +78,7 @@ export default function RootLayout({
       availableLanguage: ['English'],
     },
     sameAs: [
+      'https://www.facebook.com/profile.php?id=61588121918620',
       'https://www.instagram.com/pickleball.passport',
       'https://www.linkedin.com/in/jaron-shoptaugh-ab675574/',
     ],
@@ -119,6 +121,10 @@ export default function RootLayout({
       </html>
   );
 
-  // Clerk is optional: skip the provider when its keys are absent (see lib/auth/clerk-enabled.ts)
-  return isClerkEnabled ? <ClerkProvider>{page}</ClerkProvider> : page;
+  // Clerk loads only on account and checkout routes. Marketing pages render immediately.
+  return (
+    <Suspense fallback={null}>
+      <MaybeClerk enabled={isClerkEnabled}>{page}</MaybeClerk>
+    </Suspense>
+  );
 }
