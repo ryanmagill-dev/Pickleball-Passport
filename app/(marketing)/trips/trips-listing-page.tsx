@@ -47,26 +47,14 @@ function DeparturePill({
   video: string | null; poster: string | null;
 }) {
   return (
-    <Link
-      href={href}
-      className="group relative block rounded-2xl overflow-hidden min-h-[220px] sm:min-h-[260px] shadow-lg shadow-[#1D2D44]/10"
-    >
-      {video ? (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={poster ?? undefined}
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        >
-          <source src={video} type="video/mp4" />
-        </video>
+    <div className="group relative block min-h-[220px] overflow-hidden rounded-2xl shadow-lg shadow-[#1D2D44]/10 sm:min-h-[260px]">
+      {video && poster ? (
+        <BackgroundVideo src={video} poster={poster} playControlClassName="top-3 left-3" />
       ) : (
         <div className="absolute inset-0 bg-[#0F1A2A]" />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10 transition-all group-hover:from-black/90" />
-      <div className="relative z-10 h-full flex flex-col justify-end p-5 sm:p-6">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10 transition-all group-hover:from-black/90" />
+      <Link href={href} className="relative z-10 flex h-full min-h-[220px] flex-col justify-end p-5 sm:min-h-[260px] sm:p-6">
         <p className="text-xs font-bold tracking-widest uppercase text-[#B08D55] mb-1">{route}</p>
         <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mb-1">{label}</h3>
         <p className="text-white/60 text-xs mb-3">{dates}</p>
@@ -76,8 +64,8 @@ function DeparturePill({
             Details <ArrowRight className="w-3.5 h-3.5" />
           </span>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
@@ -141,23 +129,15 @@ export function TripsListingPage() {
             </p>
           </div>
 
-          <Link
-            href={JAN_URL}
-            className="group relative block rounded-3xl overflow-hidden min-h-[420px] sm:min-h-[500px] shadow-xl shadow-[#1D2D44]/10"
-          >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
+          <div className="group relative block min-h-[420px] overflow-hidden rounded-3xl shadow-xl shadow-[#1D2D44]/10 sm:min-h-[500px]">
+            <BackgroundVideo
+              src="/chiang-mai-pill.mp4"
               poster="/images/posters/chiang-mai-pill-poster.jpg"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-            >
-              <source src="/chiang-mai-pill.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10 transition-all group-hover:from-black/90" />
+              playControlClassName="top-4 left-4"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10 transition-all group-hover:from-black/90" />
 
-            <div className="relative z-10 h-full flex flex-col justify-end p-8 sm:p-12">
+            <Link href={JAN_URL} className="relative z-10 flex h-full min-h-[420px] flex-col justify-end p-8 sm:min-h-[500px] sm:p-12">
               <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-[#B08D55] text-[#0F1A2A] text-xs font-bold mb-4 self-start">
                 {JAN_SPOTS_LEFT} of {JAN_TOTAL_SPOTS} seats open
               </span>
@@ -173,8 +153,8 @@ export function TripsListingPage() {
                   See the January Trip <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
           <JanTripCtas />
 
           {/* Smaller upcoming departure pills */}

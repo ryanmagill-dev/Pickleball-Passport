@@ -6,6 +6,7 @@ import { TripDetailLayout } from '@/components/trips/trip-detail-layout';
 import { TripSectionContentChiangMai } from '@/components/trips/trip-section-content-chiang-mai';
 import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 import { JAN_SPOTS_LEFT, JAN_TOTAL_SPOTS } from '@/components/marketing/january/jan-trip';
+import { BackgroundVideo } from '@/components/marketing/background-video';
 
 /* ─────────────────────── PHUKET DATA ─────────────────────── */
 
@@ -28,16 +29,11 @@ export function January14Page() {
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden text-white py-16 sm:py-20">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <BackgroundVideo
+          src="/chiang-mai-header.mp4"
           poster="/images/posters/chiang-mai-header-poster.jpg"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        >
-          <source src="/chiang-mai-header.mp4" type="video/mp4" />
-        </video>
+          playControlClassName="top-4 right-4"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#0F1A2A]/90" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
