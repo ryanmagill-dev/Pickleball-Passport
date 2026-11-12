@@ -18,6 +18,7 @@ interface TripDetailLayoutProps {
   hidePaymentPlan?: boolean;
   privateRoomPrice?: number;
   privateRoomLink?: string;
+  interestOnly?: boolean;
   ContentComponent?: React.ComponentType<{ activeSection: TripSection }>;
 }
 
@@ -34,6 +35,7 @@ export function TripDetailLayout({
   hidePaymentPlan,
   privateRoomPrice,
   privateRoomLink,
+  interestOnly = false,
   ContentComponent,
 }: TripDetailLayoutProps) {
   if (!ContentComponent) {
@@ -93,6 +95,7 @@ export function TripDetailLayout({
                   hidePaymentPlan={hidePaymentPlan}
                   privateRoomPrice={privateRoomPrice}
                   privateRoomLink={privateRoomLink}
+                  interestOnly={interestOnly}
                 />
               </Suspense>
             </div>
@@ -113,6 +116,7 @@ export function TripDetailLayout({
           hidePaymentPlan={hidePaymentPlan}
           privateRoomPrice={privateRoomPrice}
           privateRoomLink={privateRoomLink}
+          interestOnly={interestOnly}
         />
       </Suspense>
     </>

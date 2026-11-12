@@ -1,9 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Calendar, MapPin, Users, Droplets } from 'lucide-react';
+import { ArrowRight, Calendar, MapPin, Droplets } from 'lucide-react';
 import { TripDetailLayout } from '@/components/trips/trip-detail-layout';
 import { TripSectionContentSongkran } from '@/components/trips/trip-section-content-songkran';
+import { DatesInterestCta } from '@/components/marketing/dates-interest-cta';
+import { JAN_URL } from '@/components/marketing/january/jan-trip';
 
 /* ─────────────────────── COMPONENT ─────────────────────── */
 
@@ -65,43 +67,13 @@ export function SongkranAprilPage() {
                 <MapPin className="h-4 w-4 text-[#B08D55]" />
                 Bangkok + Pattaya
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm">
-                <Users className="h-4 w-4 text-[#B08D55]" />
-                16 spots open
-              </div>
               <div className="flex items-center gap-2 bg-[#B08D55]/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-semibold">
                 <Droplets className="h-4 w-4 text-[#B08D55]" />
                 Wan Lai Apr 19
               </div>
             </div>
 
-            <div className="mb-8">
-              <span className="text-4xl font-bold text-white">$7,000</span>
-              <span className="text-white/50 text-lg ml-2">USD / person</span>
-              <p className="text-white/40 text-xs mt-1">Double occupancy · Private room $950</p>
-              <p className="text-white/40 text-xs mt-1">Travelling solo? We&apos;ll pair you with another solo traveller in the group at no extra cost. Plenty of people do.</p>
-              <p className="text-[#B08D55] text-xs mt-2 font-medium">New route. Festival-week hotel rates in both cities are being confirmed, price may adjust.</p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://link.fastpaydirect.com/payment-link/6aed81cfe72ac5e6bc5e814b"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
-              >
-                Pay 25% Deposit · $1,750
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="https://link.fastpaydirect.com/payment-link/6aed81a418be8d04a49bdaea"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border border-white/40 text-white font-bold text-sm hover:bg-white/10 transition-all"
-              >
-                Pay in Full · $7,000
-              </a>
-            </div>
+            <DatesInterestCta tone="dark" />
           </div>
         </div>
 
@@ -118,28 +90,30 @@ export function SongkranAprilPage() {
         tripName="Songkran + Wan Lai (Apr 12 to 20)"
         cities="Our 5-Star Bangkok riverside hotel · Beachfront resort, Pattaya"
         dates="Apr 12 to Apr 20, 2027"
-        price={7000}
-        depositAmount={1750}
-        depositLink="https://link.fastpaydirect.com/payment-link/6aed81cfe72ac5e6bc5e814b"
-        fullLink="https://link.fastpaydirect.com/payment-link/6aed81a418be8d04a49bdaea"
-        privateRoomPrice={950}
-        privateRoomLink="https://link.fastpaydirect.com/payment-link/6aed8214e72ac5e6bc5e814d"
-        spotsLeft={16}
-        totalSpots={16}
+        interestOnly
         ContentComponent={TripSectionContentSongkran}
       />
 
       {/* Cross-link */}
       <section className="py-12 bg-[#0F1A2A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/70 text-base mb-3">Prefer a quieter week? View the full departure calendar.</p>
-          <Link
-            href="/trips/calendar"
-            className="inline-flex items-center gap-2 text-[#B08D55] hover:text-[#CFB78D] font-semibold transition-colors"
-          >
-            All departures
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <p className="text-white/70 text-base mb-4">Trips you can book now.</p>
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href={JAN_URL}
+              className="inline-flex items-center gap-2 text-[#B08D55] hover:text-[#CFB78D] font-semibold transition-colors"
+            >
+              January 14 to 22
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/trips/bangkok-hua-hin/february-18-2027"
+              className="inline-flex items-center gap-2 text-[#B08D55] hover:text-[#CFB78D] font-semibold transition-colors"
+            >
+              February 18 to 26
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
     </main>
