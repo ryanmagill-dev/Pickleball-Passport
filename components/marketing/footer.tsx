@@ -18,7 +18,7 @@ const TikTokIcon = (props: LucideProps) => (
   </svg>
 );
 import { LogoIcon } from '@/components/ui/logo';
-import { useLeadModal } from '@/components/providers/lead-modal-provider';
+import { JAN_URL } from '@/components/marketing/january/jan-trip';
 
 function FooterContactForm() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -83,7 +83,7 @@ const navigation = {
     { name: 'Best Time to Visit Thailand', href: '/best-time-to-visit-thailand-for-pickleball' },
     { name: 'Club & Coach Retreats', href: '/pickleball-club-retreats' },
     { name: 'FAQ', href: '/faq' },
-    { name: 'Apply Now', href: '/apply' },
+    { name: 'Apply Now', href: JAN_URL },
   ],
   company: [
     { name: 'About Us', href: '/about' },
@@ -116,7 +116,6 @@ const navigation = {
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { openLeadModal } = useLeadModal();
   const pathname = usePathname();
   // /contact and /apply already embed this same GHL form in the page body
   const showContactForm = pathname !== '/contact' && pathname !== '/apply';
@@ -255,23 +254,13 @@ export function Footer() {
               <ul className="space-y-4">
                 {navigation.explore.map((item) => (
                   <li key={item.name}>
-                    {item.name === 'Apply Now' ? (
-                      <button
-                        onClick={() => openLeadModal()}
-                        className="text-white/70 hover:text-[#B08D55] transition-colors flex items-center gap-2 group"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#B08D55]/50 group-hover:bg-[#B08D55] transition-colors" />
-                        {item.name}
-                      </button>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        className="text-white/70 hover:text-[#B08D55] transition-colors flex items-center gap-2 group"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#B08D55]/50 group-hover:bg-[#B08D55] transition-colors" />
-                        {item.name}
-                      </Link>
-                    )}
+                    <Link
+                      href={item.href}
+                      className="text-white/70 hover:text-[#B08D55] transition-colors flex items-center gap-2 group"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#B08D55]/50 group-hover:bg-[#B08D55] transition-colors" />
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
