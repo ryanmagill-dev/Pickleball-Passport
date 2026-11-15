@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { metadataFor } from "@/lib/seo/indexable-pages";
+import { BackgroundVideo } from "@/components/marketing/background-video";
 
 // Self-hosted copy of the V2 playbook (public/thailand-pickleball-playbook-2026.pdf).
 // Not exported: Next.js only allows its own named exports from page files.
@@ -389,18 +390,15 @@ export default function ThailandPickleballPlaybookPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* Hero Section (Slide 1 & 2). clip-path + fixed video: the footage stays put while the hero scrolls over it */}
+      {/* Hero. clip-path + fixed video: the footage stays put while the hero scrolls over it. Phones get the still only. */}
       <section className="relative overflow-hidden [clip-path:inset(0)] bg-[#0F1A2A] text-white pt-20 pb-16 sm:pt-32 sm:pb-24 border-b border-[#B08D55]/30">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <BackgroundVideo
+          src="/playbook-sunset.mp4"
           poster="/images/playbook-sunset-poster.jpg"
-          className="fixed inset-0 w-full h-full object-cover object-center"
-        >
-          <source src="/playbook-sunset.mp4" type="video/mp4" />
-        </video>
+          position="fixed"
+          priority
+          showPlayControl={false}
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F1A2A]/90 via-[#0F1A2A]/65 to-[#0F1A2A]/30" />
         <a
           href="https://www.instagram.com/micahphotography1"

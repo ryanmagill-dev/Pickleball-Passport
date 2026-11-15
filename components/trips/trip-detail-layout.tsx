@@ -19,6 +19,8 @@ interface TripDetailLayoutProps {
   privateRoomPrice?: number;
   privateRoomLink?: string;
   interestOnly?: boolean;
+  /** January mobile bar: a schedule-a-call button beside Reserve. */
+  showTalkFirst?: boolean;
   ContentComponent?: React.ComponentType<{ activeSection: TripSection }>;
 }
 
@@ -36,6 +38,7 @@ export function TripDetailLayout({
   privateRoomPrice,
   privateRoomLink,
   interestOnly = false,
+  showTalkFirst = false,
   ContentComponent,
 }: TripDetailLayoutProps) {
   if (!ContentComponent) {
@@ -104,7 +107,7 @@ export function TripDetailLayout({
       </div>
 
       {/* Mobile booking bar + expandable sheet (padding for bottom bar) */}
-      <div className="h-16 lg:hidden" />
+      <div className={showTalkFirst ? 'h-28 lg:hidden' : 'h-16 lg:hidden'} />
       <Suspense>
         <BookingModuleMobile
           tripName={tripName}
@@ -117,6 +120,7 @@ export function TripDetailLayout({
           privateRoomPrice={privateRoomPrice}
           privateRoomLink={privateRoomLink}
           interestOnly={interestOnly}
+          showTalkFirst={showTalkFirst}
         />
       </Suspense>
     </>

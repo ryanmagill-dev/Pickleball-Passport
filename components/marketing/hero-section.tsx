@@ -27,6 +27,9 @@ export function HeroSection() {
           <p className="mt-2 text-base text-white/85 sm:text-lg">
             {JAN_SPOTS_LEFT} of {JAN_TOTAL_SPOTS} spots left. Paid in full.
           </p>
+          <p className="mt-3 max-w-xl text-sm leading-snug text-white/85 sm:text-base">
+            Includes four coached sessions, five-star hotels, and Elephant Nature Park.
+          </p>
 
           <div className="mt-6 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <Button

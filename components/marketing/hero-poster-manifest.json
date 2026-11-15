@@ -1,0 +1,9 @@
+{
+  "/images/posters/hero-drone-poster.jpg": {"mobile": [640,800], "desktop": [1200,1920]},
+  "/images/posters/chiang-mai-header-poster.jpg": {"mobile": [640,800], "desktop": [1200,1920]},
+  "/images/posters/hua-hin-cave-poster.jpg": {"mobile": [640,800], "desktop": [968]},
+  "/images/posters/tpp-aerial-0453-poster.jpg": {"mobile": [640,800], "desktop": [1200,1920]},
+  "/images/posters/tpp-aerial-0450-poster.jpg": {"mobile": [640,800], "desktop": [1200,1920]},
+  "/images/posters/chiang-mai-pill-poster.jpg": {"mobile": [640,800], "desktop": [960]},
+  "/images/playbook-sunset-poster.jpg": {"mobile": [640,800], "desktop": [1200,1920]}
+}

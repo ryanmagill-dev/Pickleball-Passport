@@ -29,6 +29,7 @@ export function SafetySection() {
         src="/tpp-aerial-0453.mp4"
         poster="/images/posters/tpp-aerial-0453-poster.jpg"
         showPlayControl={false}
+        deferUntilVisible
       />
       <div className="absolute inset-0 bg-[#1D2D44]/90" />
       <div className="container px-4 mx-auto relative z-10">
