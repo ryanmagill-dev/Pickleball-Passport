@@ -33,6 +33,7 @@ export function January14Page() {
           src="/chiang-mai-header.mp4"
           poster="/images/posters/chiang-mai-header-poster.jpg"
           playControlClassName="top-4 right-4"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#0F1A2A]/90" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -50,8 +51,11 @@ export function January14Page() {
             <p className="text-xl text-[#B08D55] italic mb-4">
               The only departure with a Phuket Extension option.
             </p>
+            <p className="mb-3 max-w-2xl text-sm leading-snug text-white/90 sm:text-base">
+              Includes 8 nights in five-star hotels with daily breakfast, 4 coached sessions, and Elephant Nature Park.
+            </p>
 
-            <p className="text-white/70 text-base leading-relaxed mb-8 max-w-2xl">
+            <p className="text-white/70 text-base leading-relaxed mb-4 max-w-2xl">
               The January 14 departure follows the standard Route B format: 9 days across Bangkok and Chiang Mai, with one distinction. This is the only Chiang Mai departure where you can add a Phuket extension and fly home from the beach. Three nights at a beachfront resort on Bang Tao Beach.
             </p>
 
@@ -88,16 +92,22 @@ export function January14Page() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all"
+                className="inline-flex w-full items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#B08D55] to-[#CFB78D] text-[#0F1A2A] font-bold text-sm shadow-lg shadow-[#B08D55]/30 hover:shadow-xl transition-all sm:w-auto"
               >
                 Reserve Your Spot · $5,500
                 <ArrowRight className="w-4 h-4" />
               </a>
+              <Link
+                href={reserveHref}
+                className="inline-flex w-full items-center justify-center rounded-xl border border-white/40 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur-sm transition-all hover:bg-white/20 sm:w-auto"
+              >
+                Talk to our team first
+              </Link>
             </div>
           </div>
         </div>
@@ -203,6 +213,7 @@ export function January14Page() {
         fullLink="https://link.fastpaydirect.com/payment-link/6aa938089f7ff2c808a75ad4"
         spotsLeft={JAN_SPOTS_LEFT}
         totalSpots={JAN_TOTAL_SPOTS}
+        showTalkFirst
         ContentComponent={TripSectionContentChiangMai}
       />
     </main>

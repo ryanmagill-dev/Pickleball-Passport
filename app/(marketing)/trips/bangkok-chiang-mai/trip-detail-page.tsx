@@ -36,6 +36,7 @@ export function BangkokChiangMaiPage() {
           src="/chiang-mai-header.mp4"
           poster="/images/posters/chiang-mai-header-poster.jpg"
           playControlClassName="top-4 right-4"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-[#0F1A2A]/90" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

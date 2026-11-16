@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef, useState } from 'react';
-import Image from 'next/image';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { HeroPoster } from '@/components/marketing/hero-poster';
 
 type Props = {
   src: string;
@@ -9,14 +9,35 @@ type Props = {
   /** When false, smaller screens keep the poster and never request the file. */
   showPlayControl?: boolean;
   playControlClassName?: string;
+  /** First-screen hero: preload the phone poster. */
   priority?: boolean;
+  /** Below the fold: do not request the poster until the frame is near. */
+  deferUntilVisible?: boolean;
+  /** fixed keeps playbook footage clipped to the hero while the page scrolls. */
+  position?: 'absolute' | 'fixed';
 };
+
+const DESKTOP_VIDEO_QUERY = '(min-width: 1024px) and (prefers-reduced-motion: no-preference)';
+
+function subscribeDesktopVideo(onChange: () => void) {
+  const media = window.matchMedia(DESKTOP_VIDEO_QUERY);
+  media.addEventListener('change', onChange);
+  return () => media.removeEventListener('change', onChange);
+}
+
+function desktopVideoSnapshot() {
+  return window.matchMedia(DESKTOP_VIDEO_QUERY).matches;
+}
+
+function desktopVideoServerSnapshot() {
+  return false;
+}
 
 /**
  * Background clip for marketing heroes.
- * Screens 1024px and wider autoplay. Smaller screens show the poster and
- * load the file only after a tap. The source media query keeps the mp4 off
- * the first mobile download.
+ * The still is a sized AVIF/WebP. The mp4 is mounted only on screens 1024px
+ * and wider that are not asking for reduced motion, or after a tap.
+ * Phones never download the file on first paint.
  */
 export function BackgroundVideo({
   src,
@@ -24,51 +45,67 @@ export function BackgroundVideo({
   showPlayControl = true,
   playControlClassName = 'bottom-28 left-4',
   priority = false,
+  deferUntilVisible = false,
+  position = 'absolute',
 }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const frameRef = useRef<HTMLDivElement>(null);
   const [play, setPlay] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const [visible, setVisible] = useState(!deferUntilVisible);
+  const canAutoplay = useSyncExternalStore(
+    subscribeDesktopVideo,
+    desktopVideoSnapshot,
+    desktopVideoServerSnapshot,
+  );
 
-  function onPlay() {
+  useEffect(() => {
+    if (!deferUntilVisible || visible) return;
+    const frame = frameRef.current;
+    if (!frame) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) setVisible(true);
+      },
+      { rootMargin: '480px 0px' },
+    );
+    observer.observe(frame);
+    return () => observer.disconnect();
+  }, [deferUntilVisible, visible]);
+
+  useEffect(() => {
+    if (!play) return;
     const video = videoRef.current;
     if (!video) return;
     video.src = src;
     video.play().catch(() => {});
-    setPlay(true);
-  }
+  }, [play, src]);
+
+  const mountVideo = visible && (canAutoplay || play);
+  const frameClass = position === 'fixed' ? 'fixed inset-0' : 'absolute inset-0';
 
   return (
-    <>
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster={poster}
-        preload="none"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-      >
-        <source
-          src={src}
-          type="video/mp4"
-          media={play ? undefined : '(min-width: 1024px) and (prefers-reduced-motion: no-preference)'}
-        />
-      </video>
-      {!play && (
-        <Image
-          src={poster}
-          alt=""
-          fill
-          priority={priority}
-          sizes="100vw"
-          className="object-cover object-center lg:hidden"
-        />
+    <div ref={frameRef} className={`pointer-events-none ${frameClass}`}>
+      {visible && !videoPlaying && <HeroPoster poster={poster} priority={priority} />}
+      {mountVideo && (
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          onPlaying={() => setVideoPlaying(true)}
+          className={`absolute inset-0 h-full w-full object-cover object-center ${play ? 'block' : 'hidden lg:block'}`}
+        >
+          {!play && <source src={src} type="video/mp4" media={DESKTOP_VIDEO_QUERY} />}
+        </video>
       )}
-      {!play && showPlayControl && (
+      {visible && !play && showPlayControl && (
         <button
           type="button"
-          onClick={onPlay}
-          className={`absolute z-20 inline-flex items-center gap-2 rounded-full bg-black/55 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm hover:bg-black/70 lg:hidden ${playControlClassName}`}
+          onClick={() => setPlay(true)}
+          className={`pointer-events-auto absolute z-20 inline-flex items-center gap-2 rounded-full bg-black/55 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm hover:bg-black/70 lg:hidden ${playControlClassName}`}
         >
           <span
             aria-hidden="true"
@@ -77,6 +114,6 @@ export function BackgroundVideo({
           Play video
         </button>
       )}
-    </>
+    </div>
   );
 }

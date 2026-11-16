@@ -1,7 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { DatesInterestCta } from '@/components/marketing/dates-interest-cta';
+import { useReserveHref } from '@/lib/hooks/use-reserve-href';
 
 interface BookingModuleMobileProps {
   tripName?: string;
@@ -14,6 +16,7 @@ interface BookingModuleMobileProps {
   privateRoomPrice?: number;
   privateRoomLink?: string;
   interestOnly?: boolean;
+  showTalkFirst?: boolean;
 }
 
 export function BookingModuleMobile({
@@ -26,8 +29,10 @@ export function BookingModuleMobile({
   privateRoomPrice,
   privateRoomLink,
   interestOnly = false,
+  showTalkFirst = false,
 }: BookingModuleMobileProps) {
   const [showPaymentOptions, setShowPaymentOptions] = useState(false);
+  const reserveHref = useReserveHref();
 
   return (
     <>
@@ -38,7 +43,8 @@ export function BookingModuleMobile({
             <DatesInterestCta compact />
           </div>
         ) : (
-        <div className="py-3 px-4 flex items-center justify-between gap-3">
+        <div className="px-4 py-3">
+          <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
             <p className="font-serif font-bold text-[#1D2D44] text-sm">
               From ${price.toLocaleString()}/person
@@ -74,6 +80,15 @@ export function BookingModuleMobile({
               </button>
             ) : null}
           </div>
+          </div>
+          {showTalkFirst && (
+            <Link
+              href={reserveHref}
+              className="mt-1.5 flex w-full items-center justify-center rounded-xl border border-[#1D2D44]/15 bg-[#FDF8F3] px-4 py-2 text-xs font-bold text-[#1D2D44]"
+            >
+              Talk to our team first
+            </Link>
+          )}
         </div>
         )}
 
