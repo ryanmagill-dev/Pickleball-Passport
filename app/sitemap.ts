@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { GIVEAWAY_CANONICAL, GIVEAWAY_LIVE } from '@/lib/giveaway/config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.thepickleballpassport.org'
@@ -25,5 +26,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/testimonials`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/apply`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    ...(GIVEAWAY_LIVE
+      ? [{
+          url: GIVEAWAY_CANONICAL,
+          lastModified: new Date(),
+          changeFrequency: 'weekly' as const,
+          priority: 0.6,
+        }]
+      : []),
   ]
 }

@@ -117,8 +117,13 @@ const navigation = {
 export function Footer() {
   const currentYear = new Date().getFullYear();
   const pathname = usePathname();
-  // /contact and /apply already embed this same GHL form in the page body
-  const showContactForm = pathname !== '/contact' && pathname !== '/apply';
+  // /contact and /apply already embed this same GHL form in the page body.
+  // /giveaway has its own entry form, so the contact form would catch the wrong leads.
+  const showContactForm =
+    pathname !== '/contact' &&
+    pathname !== '/apply' &&
+    pathname !== '/giveaway' &&
+    pathname !== '/giveaway/';
   return (
     <footer className="relative overflow-hidden" id="newsletter">
       {/* Decorative wave top border */}

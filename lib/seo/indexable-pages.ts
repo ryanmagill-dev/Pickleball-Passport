@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { GIVEAWAY_LIVE, giveawayIndexablePage } from '@/lib/giveaway/config'
 import { shareImage, type ShareImage, type ShareImageKey } from '@/lib/seo/share-image'
 
 /**
@@ -302,6 +303,7 @@ export const INDEXABLE_PAGES: IndexablePage[] = [
     image: 'trips',
     ogType: 'article',
   },
+  ...(GIVEAWAY_LIVE ? [giveawayIndexablePage] : []),
 ]
 
 const pagesByPath = new Map(INDEXABLE_PAGES.map((page) => [page.path, page]))

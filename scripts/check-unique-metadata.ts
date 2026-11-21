@@ -8,6 +8,7 @@
  */
 import fs from 'fs'
 import path from 'path'
+import { GIVEAWAY_LIVE } from '../lib/giveaway/config'
 import { INDEXABLE_PAGES, indexableMetadataErrors } from '../lib/seo/indexable-pages'
 
 const ROOT = path.resolve(__dirname, '..')
@@ -58,6 +59,8 @@ const NOINDEX_PREFIXES = [
   '/support',
   '/apply/success',
   '/waiver',
+  // /giveaway is a preview until GIVEAWAY_LIVE is true. Then it is indexable.
+  ...(GIVEAWAY_LIVE ? [] : ['/giveaway']),
 ]
 
 function walk(dir: string, found: string[] = []): string[] {
