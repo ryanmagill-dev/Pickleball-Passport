@@ -200,7 +200,21 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
+    // FOUNDER VIDEO — change the address between the quotes to send
+    // /founder-video and /founder-video/ somewhere else.
+    // A YouTube or Google Drive link is fine.
+    // Example: 'https://www.youtube.com/watch?v=VIDEO_ID'
+    // Leave the rest of this file alone. permanent: false keeps this temporary,
+    // so the new address is used after the next deploy and browsers do not
+    // keep the old one. Query parameters such as utm_source are kept.
+    const founderVideoUrl = 'https://www.thepickleballpassport.org/'
+
     return [
+      {
+        source: '/founder-video',
+        destination: founderVideoUrl,
+        permanent: false,
+      },
       {
         // Nov/Dec 2026 Hua Hin departures were cancelled; February is the live Hua Hin trip
         source: '/trips/bangkok-hua-hin',
