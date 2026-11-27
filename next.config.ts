@@ -185,6 +185,12 @@ const securityHeaders = [
   },
 ];
 
+// FOUNDER VIDEO QR DESTINATION: change this URL to swap the video.
+// Printed on the trifolds as https://www.thepickleballpassport.org/founder-video
+// Temporary redirect only (307). Query strings such as UTM params are kept.
+// Use '/', a YouTube link, a Google Drive link, or an on-site path like '/trips'.
+const FOUNDER_VIDEO_QR_DESTINATION = '/'
+
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   typescript: {
@@ -201,6 +207,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        // Uses FOUNDER_VIDEO_QR_DESTINATION above. Do not hardcode a second URL here.
+        source: '/founder-video',
+        destination: FOUNDER_VIDEO_QR_DESTINATION,
+        permanent: false,
+      },
       {
         // Nov/Dec 2026 Hua Hin departures were cancelled; February is the live Hua Hin trip
         source: '/trips/bangkok-hua-hin',
